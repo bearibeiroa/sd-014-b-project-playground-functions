@@ -40,6 +40,14 @@ function highestCount(array) {
   return array.filter(isHighest).length;
 }
 
+// Desafio 6, outra possibilidade
+// function highestCount(array) {
+//   function isHighest(value) {
+//     return value === Math.max.apply(null, array);
+//   }
+//   return array.filter(isHighest).length;
+// }
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if ((cat1 + cat2) / 2 === mouse) {
