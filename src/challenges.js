@@ -5,7 +5,7 @@ function compareTrue(statement1, statement2) {
     resultado = true;
   } else {
     resultado = false;
-  }   
+  }
   return resultado;
 }
 
@@ -17,15 +17,20 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(setence) {
-  let returnArray = setence.split(''); //Split a string into an array of substrings * note que se nao tive espaço em " " vai retonar a separação por letra
-  for (let i = 0; i < returnArray.length; i += 1) { //returnArray é array que retorna a substring que vieram da string principal (propriedade ),                                          //o valor da lenght de array agora será 3 porque sao tres substrings
-    return returnArray;                         
-}
+  let returnArray = setence.split(''); // Split a string into an array of substrings * note que se nao tive espaço em " " vai retonar a separação por letra
+  for (let i = 0; i < returnArray.length; i += 1) { // returnArray é array que retorna a substring que vieram da string principal (propriedade ) //o valor da lenght de array agora será 3 porque sao tres substrings
+    return returnArray;
+  }
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(parametro) {
+  let firstItem = parametro[0];
+  let lasItem = parametro[parametro.length - 1];
+  let firstAndLast = [];
+  for (let i = 0; i < parametro.length; i += 1) { // ${} template literals/to embed expressions within normal strings
+    firstAndLast = `${lasItem} , ${firstItem}`; // Template literals are enclosed by the backtick (` `)
+  } return firstAndLast;                    
 }
 
 // Desafio 5
