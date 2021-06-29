@@ -62,17 +62,17 @@ function highestCount(array) {
   for (let i = 0; i < array.length; i += 1) {
 
     if (i === 0) {
-      aux = array[i];
+      aux = array;
     }
 
-    if (array[i] > aux) {
-      aux = array[i];
+    if (array > aux) {
+      aux = array;
     }
   }
 
   for (let i = 0; i < array.length; i += 1) {
 
-    if (array[i] === aux) {
+    if (array === aux) {
       result += 1;
     }
   }
@@ -100,13 +100,13 @@ function fizzBuzz(array) {
   let result = [];
 
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+    if (array % 3 === 0 && array % 5 === 0) {
       result.push("fizzBuzz");
-    } else if (array[i] % 3 === 0 && array[i] % 5 != 0) {
+    } else if (array % 3 === 0 && array % 5 != 0) {
       result.push("fizz");
-    } else if (array[i] % 5 === 0 && array[i] % 3 != 0) {
+    } else if (array % 5 === 0 && array % 3 != 0) {
       result.push("buzz");
-    } else if (array[i] % 3 != 0 && array[i] % 5 != 0) {
+    } else if (array % 3 != 0 && array % 5 != 0) {
       result.push("bug!");
     }
   }
@@ -114,11 +114,66 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+
+  phrase = phrase.split("");
+
+  for (let i = 0; i < phrase.length; i += 1) {
+    if (phrase[i] === 'a') {
+      phrase[i] = '1';
+    }
+
+    if (phrase[i] === 'e') {
+      phrase[i] = '2';
+    }
+
+    if (phrase[i] === 'i') {
+      phrase[i] = '3';
+    }
+
+    if (phrase[i] === 'o') {
+      phrase[i] = '4';
+    }
+
+    if (phrase[i] === 'u') {
+      phrase[i] = '5';
+    }
+    
+  }
+
+  return phrase.join("");
+  
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+
+  phrase = phrase.split("");
+
+  for (let i = 0; i < phrase.length; i += 1) {
+    if (phrase[i] === '1') {
+      phrase[i] = 'a';
+    }
+
+    if (phrase[i] === '2') {
+      phrase[i] = 'e';
+    }
+
+    if (phrase[i] === '3') {
+      phrase[i] = 'i';
+    }
+
+    if (phrase[i] === '4') {
+      phrase[i] = 'o';
+    }
+
+    if (phrase[i] === '5') {
+      phrase[i] = 'u';
+    }
+    
+  }
+
+  return phrase.join("");
+
 }
 
 module.exports = {
