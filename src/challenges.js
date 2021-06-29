@@ -39,8 +39,16 @@ return theAmount;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let winCat1 = Math.abs(cat1 - mouse);
+  let winCat2 = Math.abs(cat2 - mouse);
+    if(winCat1 < winCat2){
+      return "cat1"
+    } if(winCat2 < winCat1){
+      return "cat2"
+    } if(winCat1 === winCat2){
+      return "os gatos trombam e o rato foge"
+    }
 }
 
 // Desafio 8
