@@ -9,8 +9,18 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let divisor = [''];
+  let counter = 0;
+  for (let index = 0; index < sentence.length; index += 1) {
+    if (sentence[index] !== ' ') {
+      divisor[counter] += sentence[index];
+    } else {
+      counter += 1;
+      divisor[counter] = '';
+    }
+  }
+  return divisor;
 }
 
 // Desafio 4
