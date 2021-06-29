@@ -42,12 +42,25 @@ function footballPoints(wins, ties) {
   }
   return points;
 }
-console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let higherNumber = numbers[0];
+  for (let index in numbers) {
+    if (numbers[index] >= higherNumber) {
+      higherNumber = numbers[index];
+    }
+  }
+  let numberVerify = higherNumber
+  let timesHigherRepeat = 0;
+  for (let index in numbers) {
+    if (numberVerify === numbers[index]) {
+      timesHigherRepeat += 1;
+    }
+  }
+  return timesHigherRepeat;
 }
+console.log(highestCount([-2, -2, -1]));
 
 // Desafio 7
 function catAndMouse() {
