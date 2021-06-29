@@ -1,11 +1,5 @@
 // Desafio 1
-function compareTrue(num1, num2, num 3) {
-
-  num1+num2=num3;
-
-  return num3;
-  // seu código aqui
-}
+const compareTrue = (x, y) => x === true && y === true;
 
 // Desafio 2
 function calcArea() {
