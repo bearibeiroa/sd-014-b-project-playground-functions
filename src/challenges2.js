@@ -63,8 +63,17 @@ function generatePhoneNumber(numeroDeTelefone) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA,lineB,lineC) {
   // seu código aqui
+  let a = lineA;
+  let b = lineB;
+  let c = lineC;
+  // condição encontrada no site https://mundoeducacao.uol.com.br/matematica/condicao-existencia-um-triangulo.htm#:~:text=S%C3%B3%20ir%C3%A1%20existir%20um%20tri%C3%A2ngulo,soma%20dos%20outros%20dois%20lados.
+if (Math.abs(b-c) < a && a < (b+c) && Math.abs(a-c) < b && b < (a+c) && Math.abs(a-b) < c && c < (a+b)){
+  return true;
+} else {
+  return false;
+}
 }
 
 // Desafio 13
