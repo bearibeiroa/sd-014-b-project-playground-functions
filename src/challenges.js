@@ -4,8 +4,9 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  const area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
