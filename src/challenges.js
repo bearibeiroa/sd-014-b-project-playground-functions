@@ -44,7 +44,7 @@ function highestCount(int) {
   return cont;
   // seu código aqui
 }
-
+console.log(highestCount([0, 0, 0]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distUm = (mouse - cat1); let distDois = (mouse - cat2);
