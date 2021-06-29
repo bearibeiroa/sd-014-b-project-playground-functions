@@ -30,23 +30,49 @@ function concatName(arrayStrings) {
 function footballPoints(wins, ties) {
   let points = 0;
 
+  //Faz adição dos pontos das vitórias
   for(let indexWins = 1; indexWins <= wins; indexWins += 1) {
     points += 3;
   }
 
+  //Faz adição dos pontos dos empates
   for(let indexTies = 1; indexTies <= ties; indexTies += 1) {
     points += 1;
   }
 
+  //Retorna o número de pontos de acordo com vitórias e empates
   return points;
 }
 
-console.log(footballPoints(1, 2));
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(vetor) {
+  //Verifica qual é o maior número
+  let maiorNumero = 0;
+
+  for(let count = 0; count < vetor.length; count += 1) {
+    let guardarNumero = vetor[count];
+
+    if(guardarNumero > maiorNumero) {
+      maiorNumero = guardarNumero;
+    }
+  }
+
+  //Verifica quantas vezes o maior numero aparece
+
+  let countNumber = 0;
+
+  for(let index = 0; index < vetor.length; index += 1) {
+    if(vetor[index] == maiorNumero) {
+      countNumber += 1;
+    }
+  }
+
+  //Retorna a quantidade de vezes que o maior numero aparece
+  return countNumber;
+
 }
+
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
