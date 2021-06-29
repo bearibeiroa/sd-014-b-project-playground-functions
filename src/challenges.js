@@ -30,7 +30,7 @@ function concatName(parametro) {
   let firstAndLast = [];
   for (let i = 0; i < parametro.length; i += 1) { // ${} template literals/to embed expressions within normal strings
     firstAndLast = `${lasItem} , ${firstItem}`; // Template literals are enclosed by the backtick (` `)
-  } return firstAndLast;                    
+  } return firstAndLast;
 }
 
 // Desafio 5
@@ -42,8 +42,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let counter = 0;// definição do contador de repetição do maior número
+  let highestNumber = 0; // definição da variável que vai receber o maior número da array
+  let frequencia = 0; // define a frequencia de comparação inicial
+for (let i = 0; i < array.length; i += 1) { // seleciona o atual elemento da array
+    for (let j = i; j < array.length; j += 1) { // faz o loop atraves dos proximos elementos na array  
+      if (array[i] === array[j]) { // ver se o elemento ocorre de novo na array 
+        counter += 1; // incrementar o contador se sim. 
+      } else if (array[highestNumber] > array[i]) { // compara a frequencia do elemento atual com a frequencia de comparaçao compare current items frequency with maximum frequency
+        frequencia = counter; // if frequencia de comparaçao é menor (se repete) a frequencia de comparaçao  store m in mf for upcoming elements           
+      }
+    }
+    return counter;
+  }
 }
 
 // Desafio 7
