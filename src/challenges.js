@@ -45,11 +45,12 @@ console.log(footballPoints(14, 8))
 
 // Desafio 6
 function highestCount(listNumber) {
+//  listNumber = Math.abs(listNumber);
   let higherNumber = 0;
   let countMaior = 0;
-  for(let indice in listNumber) {
-    if(higherNumber < listNumber[indice]){
-      higherNumber = listNumber[indice];
+  for(let indice of listNumber) {
+    if(higherNumber < Math.abs(indice)){
+      higherNumber = indice;
     }
   }
 //  return higherNumber
@@ -59,11 +60,13 @@ function highestCount(listNumber) {
   }
   return countMaior  
 }
-
-//console.log(highestCount([0, 0, 0]))
+console.log(highestCount([-2, -2, -1, -1]))
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  if(cat1 > cat2){
+
+  }
   // seu código aqui
 }
 
