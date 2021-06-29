@@ -44,7 +44,7 @@ function highestCount(int) {
   return cont;
   // seu código aqui
 }
-console.log(highestCount([9, 1, 2, 9, 3, 9, 7]));
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -67,18 +67,18 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
+function fizzBuzz(str) {
   let answer = [];
-  for (let index = 0; index < array.length; index++) {
-    if (array[index] % 3 === 0) {
-      if (array[index] % 5 === 0) {
-        answer.push('fizzbuzz');
+  for (let index = 0; index < str.length; index++) {
+    if (str[index] % 3 === 0) {
+      if (str[index] % 5 === 0) {
+        answer.push('fizzBuzz');
       }
       else {
         answer.push('fizz');
       }
     }
-    else if (array[index] % 5 === 0) {
+    else if (str[index] % 5 === 0) {
       answer.push('buzz');
     }
     else {
