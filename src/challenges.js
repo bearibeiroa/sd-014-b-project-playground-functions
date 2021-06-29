@@ -1,10 +1,6 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return param1 === true && param2 === true;
 }
 
 // Desafio 2
@@ -13,8 +9,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+//Para este desafio foi pesquisado sobre o método split no seguinte site:
+//https://www.w3schools.com/jsref/jsref_split.asp
+function splitSentence(string) {
+  return string.split(' ');
 }
 
 // Desafio 4
