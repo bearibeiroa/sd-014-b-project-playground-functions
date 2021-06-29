@@ -17,11 +17,11 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence() {
-    let nomeString = "go Trybe";
-    let resultadoEspaco = nomeString.split(" ", 2);
+    let nomeString = "foguete";
+    let resultadoEspaco = nomeString.split((/[\s,]+/), 3);
     return resultadoEspaco
 }
-console.log(splitSentence("go Trybe"));
+
 
 // Desafio 4
 function concatName() {
