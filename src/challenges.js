@@ -23,14 +23,20 @@ function splitSentence(value) {
 // Desafio 4
 function concatName(value) {
   // seu código aqui
-  let ultimoIndex = value.length -1;
-  let concatenado = (value[ultimoIndex]) + ', ' + value[0];
+  let ultimoIndex = value[(value.length) - 1];
+  let primeiroIndex = value[0];
+  let separador = ', ';
+  let concatenado = ultimoIndex + separador + primeiroIndex;
   return concatenado;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let vitorias = wins * 3;
+  let empates = ties * 1;
+  let result = vitorias + empates;
+  return result;
 }
 
 // Desafio 6
