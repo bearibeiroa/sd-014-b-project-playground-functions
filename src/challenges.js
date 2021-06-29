@@ -24,10 +24,10 @@ function concatName(arrayC) {
   let stringC = arrayC[arrayC.length - 1] + ', ' + arrayC[0];
   return stringC;
 }
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = wins * 3 + ties;
+  return pontos;
 }
 
 // Desafio 6
