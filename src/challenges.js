@@ -55,6 +55,7 @@ const fizzBuzz = (arrs) => {
 };
 
 // Desafio 9
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 const encode = (str) => {
   let eStr = str.split('');
   let pushStr = [];

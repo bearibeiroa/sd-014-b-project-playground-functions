@@ -1,7 +1,12 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+const techList = (t, name) => {
+  if (t.length === 0) return 'Vazio!';
+  const t2 = t.sort();
+  const list = t2.map((tech) => ({ tech, name }));
+
+  return list;
+};
 
 // Desafio 11
 function generatePhoneNumber() {
