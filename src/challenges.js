@@ -21,8 +21,11 @@ function splitSentence(value) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(value) {
   // seu código aqui
+  let ultimoIndex = value.length -1;
+  let concatenado = (value[ultimoIndex]) + ', ' + value[0];
+  return concatenado;
 }
 
 // Desafio 5
