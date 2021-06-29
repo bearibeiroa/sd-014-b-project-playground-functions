@@ -2,19 +2,13 @@
 const compareTrue = (x, y) => x === true && y === true;
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
+const calcArea = (base, height) => (base * height) / 2;
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+const splitSentence = (str) => str.split(' ');
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+const concatName = (str1, str2) => str1.concat(str2);
 
 // Desafio 5
 function footballPoints() {
