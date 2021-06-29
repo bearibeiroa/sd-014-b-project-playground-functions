@@ -17,10 +17,9 @@ calcArea(10, 50)
 calcArea(5, 2)
 calcArea(51, 1)
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   // seu código aqui
 }
-
 // Desafio 4
 function concatName() {
   // seu código aqui
