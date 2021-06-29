@@ -25,13 +25,15 @@ function splitSentence(phrase) {
 function concatName(vetor) {
   // seu código aqui
   let firstName = vetor[0];
-  let lastName = vetor[vetor.length -1];
+  let lastName = vetor[vetor.length - 1];
   return lastName + ' , ' + firstName;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let points = ((wins * 3) + ties);
+  return points;
 }
 
 // Desafio 6
