@@ -16,12 +16,10 @@ function calcArea(base, height) {
 
 
 // Desafio 3
-function splitSentence() {
-    let nomeString = "foguete";
-    let resultadoEspaco = nomeString.split((/[\s,]+/), 3);
-    return resultadoEspaco
+function splitSentence(valueSentence) {
+    let resultSentence = valueSentence.split(' ');
+    return resultSentence;
 }
-
 
 // Desafio 4
 function concatName() {
