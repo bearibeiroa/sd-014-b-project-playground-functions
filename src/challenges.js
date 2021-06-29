@@ -8,7 +8,7 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   let area = 0;
   area = (base * height) / 2;
   return area;
@@ -21,10 +21,17 @@ function splitSentence(word) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(word) {
+  let firstItem = '';
+  let lastItem = '';
 
+  for (let index in word) {
+    firstItem = word[0];
+    lastItem = word[word.length - 1];
+    return lastItem + ', ' + firstItem;
+  }
+}
+concatName( ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
 function footballPoints() {
   // seu código aqui
