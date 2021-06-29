@@ -1,31 +1,63 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(a,b) {
+  let compare = true;
+  if (a && b === true) {
+    compare = true;
+  } else {
+    compare = false;
+  }
+  return compare;
   // seu código aqui
 }
+console.log(compareTrue(true,true));
+console.log(compareTrue(false,true));
+console.log(compareTrue(true,false));
+console.log(compareTrue(false,false));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  let area = (base * height)/2;
+  return area;
 }
+console.log(calcArea(10,50));
+console.log(calcArea(5,2));
+console.log(calcArea(51,1))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let palavra = string.split(' ');
+  return palavra;
 }
+console.log(splitSentence('go Trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let sum = [];
+  for (i = 0; i < array.length; i++) {
+  sum = sum += array[i];
 }
+return sum;
+}
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  let pontos = (wins * 3) + ties;  
+  return pontos;
 }
+console.log(footballPoints(14, 8))
+console.log(footballPoints(1, 2))
+console.log(footballPoints(0, 0))
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let contNumero = 0;
+  let contRepetido = 0;
+  
 }
 
 // Desafio 7
