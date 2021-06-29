@@ -23,8 +23,8 @@ function splitSentence(str) {
 function concatName(vetor) {
   let posicaoFinal = vetor[(vetor.length - 1)];
   let posicaoInicial = vetor[0];
-  let concatenated = posicaoFinal.concat(', ', + posicaoInicial);
-  return concatenated; 
+  let concatenado = posicaoFinal.concat(', ' + posicaoInicial);
+  return concatenado;
 }
 
 // Desafio 5
