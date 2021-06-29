@@ -1,10 +1,16 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(lista, name) {
+  let sort = lista.sort();
+  let nicolasLista = [];
+  for (index in sort) {
+    nicolasLista.push({'tech' : sort[index] , 'name' : name});
+  }
+  return nicolasLista.sort();
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Nicolas"));
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(onzeNumeros) {
   // seu código aqui
 }
 
