@@ -37,8 +37,7 @@ function highestCount(palavra) {
   for (let index = 0; index < palavra.length; index += 1) {    
     if (palavra[index] > maior) {
       maior= palavra[index];
-    }     
-    console.log(maior)       
+    }            
     let contador = 0;
     for (let index = 0; index < palavra.length; index += 1) {
       if (palavra[index] === maior) {
@@ -48,7 +47,7 @@ function highestCount(palavra) {
     return contador;
   }
 }
-console.log(highestCount([-2, -2, -1]))
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let DistanciaCat1 = Math.abs(mouse - cat1);
@@ -61,13 +60,13 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-
+console.log(catAndMouse([2, 15, 7, 9, 45]))
 // Desafio 8
 function fizzBuzz(vetor) {
   let vetorDecodificado = vetor;
   let fizz = 'fizz';
   let fizBuz = 'fizzBuzz';
-  let buzz = 'Buzz';
+  let buzz = 'buzz';
   let bug = 'bug!';
   for (let index = 0; index < vetorDecodificado.length; index += 1) {
     if (
@@ -85,7 +84,7 @@ function fizzBuzz(vetor) {
   }
   return vetorDecodificado;
 }
-
+console.log(fizzBuzz([9, 25]))
 // Desafio 9
 function encode() {
   // seu código aqui
