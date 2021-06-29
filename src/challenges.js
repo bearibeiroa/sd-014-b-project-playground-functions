@@ -18,12 +18,14 @@ function splitSentence(string) {
   let word = '';
   let arrayOfWords = [];
   for (let index = 0; index < string.length; index += 1) {
-    word += string[index];
-    if (string[index] === ' ') {
+    if (string[index]!= ' ') {
+      word += string[index];
+    } else {
       arrayOfWords.push(word);
       word = '';
     }
-    if (string[index] === string[string.length - 1]) {
+
+    if (index === string.length - 1) {
       arrayOfWords.push(word);
       word = '';
     }
@@ -31,10 +33,13 @@ function splitSentence(string) {
   return arrayOfWords;
 }
 
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayOfStrings) {
+  let result = arrayOfStrings[arrayOfStrings.length -1] + ', ' + arrayOfStrings[0];
+  return result;
 }
+
 
 // Desafio 5
 function footballPoints() {
