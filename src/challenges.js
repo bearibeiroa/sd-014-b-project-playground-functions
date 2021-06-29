@@ -8,7 +8,7 @@ const calcArea = (base, height) => (base * height) / 2;
 const splitSentence = (str) => str.split(' ');
 
 // Desafio 4
-const concatName = (arr) => arr.join();
+const concatName = (arr) => `${arr[arr.length - 1]}, ${arr[0]}`;
 
 // Desafio 5
 const footballPoints = (win, tie) => win * 3 + tie;
@@ -21,9 +21,9 @@ const highestCount = (arr) => {
 };
 
 // Desafio 7
-const catAndMouse = (mouse, cat, catt) => {
-  let dis1 = Math.abs(cat - mouse);
-  let dis2 = Math.abs(catt - mouse);
+const catAndMouse = (mouse, cat1, cat2) => {
+  let dis1 = Math.abs(cat2 - mouse);
+  let dis2 = Math.abs(cat1 - mouse);
   if (dis1 > dis2) return 'cat2';
   if (dis1 > dis2) return 'cat1';
   return 'os gatos trombam e o rato foge';
