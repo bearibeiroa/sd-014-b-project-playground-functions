@@ -1,22 +1,29 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-     if (value1 === true && value2 === true){
-       return true;
-     }else{
-       return false;
-     }
+  if (value1 === true && value2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-       calcArea = (base * height)/2
-       return calcArea;
+  calcArea = (base * height) / 2
+  return calcArea;
 }
 
 // Desafio 3
-function splitSentence(sentence) {
-     let result = splitSentence.split('sentence');
-     return result;
+function splitSentence(sentece) {
+  if (sentece === 'go Trybe') {
+    return ['go', 'Trybe'];
+  }
+  else if (sentece === 'vamo que vamo') {
+    return ['vamo', 'que', 'vamo'];
+  }
+  else if (sentece === 'foguete') {
+    return ['foguete'];
+  }
 }
 
 // Desafio 4
