@@ -61,16 +61,15 @@ for (let i = 0; i < array.length; i += 1) { // seleciona o atual elemento da arr
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanCat1 = mouse - cat1;
-  let distanCat2 = mouse - cat2;
-  let winnerCat;
+  let distanCat1 = Math.abs(mouse - cat1/); // the absolute value or modulus of a real number
+  let distanCat2 = Math.abs(mouse - cat2);
   if (distanCat1 > distanCat2) {
-    winnerCat = 'cat1';
+   return 'cat1';
   } else if (distanCat2 > distanCat1) {
-    winnerCat = 'cat2';
+    return 'cat2';
   } else {
-    winnerCat = 'os gatos trombam e o rato foge';
-  } return winnerCat;
+    return 'os gatos trombam e o rato foge';
+  } 
 }
 
 // Desafio 8
@@ -108,7 +107,7 @@ function decode(string2) {
     .replace(/4/g, 'o')
     .replace(/5/g, 'u');
 }
-  
+
 module.exports = {
   calcArea,
   catAndMouse,
