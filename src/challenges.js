@@ -37,7 +37,7 @@ const catAndMouse = (mouse, cat1, cat2) => {
 };
 
 // Desafio 8
-const fizzBuzz = (fbArr) => {
+function fizzBuzz(fbArr) {
   const fbArr2 = [];
   for (let check of fbArr) {
     if (check % 3 === 0 && check % 5 === 0) {
@@ -53,10 +53,10 @@ const fizzBuzz = (fbArr) => {
     }
   }
   return fbArr2;
-};
+}
 
 // Desafio 9
-const encode = (stringE) => {
+function encode(stringE) {
   let stringE2 = [];
 
   for (let ind = 0; ind < stringE.length; ind += 1) {
@@ -79,7 +79,7 @@ const encode = (stringE) => {
     }
   }
   return stringE2.join('');
-};
+}
 
 function decode() {
   // seu código aqui
