@@ -59,8 +59,17 @@ for (let i = 0; i < array.length; i += 1) { // seleciona o atual elemento da arr
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanCat1 = mouse - cat1;
+  let distanCat2 = mouse - cat2;
+  let winnerCat;
+  if (distanCat1 > distanCat2) {
+    winnerCat = 'cat1';
+  } else if (distanCat2 > distanCat1) {
+    winnerCat = 'cat2';
+  } else {
+    winnerCat = 'os gatos trombam e o rato foge';
+  } return winnerCat;
 }
 
 // Desafio 8
