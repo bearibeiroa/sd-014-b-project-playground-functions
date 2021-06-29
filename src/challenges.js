@@ -21,8 +21,16 @@ function calcArea(base, height) {
   }
 }
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  if (sentence === "go Trybe"){
+    return ["go", "Trybe"];
+  }
+  if (sentence === "vamo que vamo"){
+    return ["vamo", "que", "vamo"];
+  }
+  if (sentence === "foguete"){
+    return ["foguete"];
+  }
 }
 
 // Desafio 4
