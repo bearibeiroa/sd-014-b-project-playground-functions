@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
-    return true
+    return true;
   } else {
     return false
   }
@@ -13,13 +13,12 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(palavras) {
-  for (let words of palavras) {
-    words = palavras[words]
-    return words
-  }
+function splitSentence(frase){
+  let palavra = frase.split(" ") 
+  return palavra
 }
-console.log(splitSentence("ola mundo", "tudo bem"))
+
+
 
 // Desafio 4
 function concatName(itens) {
