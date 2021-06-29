@@ -9,19 +9,16 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base * height) / 2);
+  return base * height / 2;
 }
+console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  if ('go Trybe') {
-    return ['go', 'Trybe'];
-  } else if ('vamo que vamo') {
-    return ['vamo', 'que', 'vamo'];
-  } else if ('foguete') {
-    return ['foguete'];
-  }
+function splitSentence(string) {
+  let removedor = string.split(' ');
+  return removedor;
 }
+console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName() {
