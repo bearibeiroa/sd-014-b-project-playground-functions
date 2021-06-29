@@ -15,7 +15,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(param) {
   let fraseDoParam = param;
-  return fraseDoParam.split(' ');  
+  return fraseDoParam.split(' ');
 }
 
 // Desafio 4
@@ -30,8 +30,14 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(paramArrayNum) {
+  let maiorNumero = Math.max(paramArrayNum);
+  let quantidade = 0;
+  for(index = 0; index < paramArrayNum.length; index += 1);
+  if (maiorNumero === paramArrayNum[index]){
+    quantidade = quantidade + 1;
+  }
+  return quantidade;
 }
 
 // Desafio 7
