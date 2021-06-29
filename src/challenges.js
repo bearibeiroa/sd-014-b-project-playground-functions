@@ -3,7 +3,7 @@ function compareTrue(boolean1, boolean2) {
   if (boolean1 && boolean2) {
     return true;
   }
-  return false
+  return false;
 }
 
 // Desafio 2
@@ -14,12 +14,12 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // Função split() estudada através da documentação Source:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
-  return string.split(" ");
+  return string.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ', ' + array[0];
+  return array[array.length - 1] + ', '+ array[0];
 }
 
 // Desafio 5
@@ -28,8 +28,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumeros) {
+  let maiorNumero = arrayNumeros[0];
+  let repeticoes = 0;
+  for (let index = 0; index < arrayNumeros.length; index++) {
+    if (arrayNumeros[index] > maiorNumero) {
+      maiorNumero = arrayNumeros[index];
+    }
+  }
+  for (let index2 = 0; index2 < arrayNumeros.length; index2++) {
+    if (maiorNumero === arrayNumeros[index2]) {
+      repeticoes++;
+    }
+  }
+  return repeticoes;
 }
 
 // Desafio 7
