@@ -39,13 +39,14 @@ const catAndMouse = (mouse, cat1, cat2) => {
 
 // Desafio 8
 const fizzBuzz = (arr) => {
-  const check = arr.map((x) => {
-    if (x % 3 === 0 && x % 5 === 0) return 'fizzBuzz';
-    if (x % 3 === 0) return 'fizz';
-    if (x % 5 === 0) return 'buzz';
-    return 'bug!';
-  });
-  return check;
+  const arr2 = [];
+  for (let check of arr) {
+    if (x % 3 === 0 && x % 5 === 0) arr2.push('fizzbuzz');
+    if (x % 3 === 0) arr2.psuh('fizz');
+    if (x % 5 === 0) arr2.push('buzz');
+    else arr2.push('bug!');
+  }
+  return arr2;
 };
 
 // Desafio 9
