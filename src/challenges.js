@@ -46,19 +46,31 @@ function highestCount(arrayNumeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  //Função retirada da Documentação Mozilla Source:https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+  //  Função retirada da Documentação Mozilla Source:https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
   if (Math.abs(Math.abs(cat1 - mouse)) < Math.abs(cat2 - mouse)) {
-    return 'cat1'
-  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
-    return 'cat2'
-  } else if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)){
-    return 'os gatos trombam e o rato foge'
+    return 'cat1';
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    return 'cat2';
+  } else if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let retorno = [];
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      retorno.push('fizzBuzz')
+    } else if (array[index] % 3 === 0) {
+      retorno.push('fizz')
+    } else if (array[index] % 5 === 0) {
+      retorno.push('buzz')
+    } else {
+      retorno.push('bug!')
+    }
+  }
+  return retorno
 }
 
 // Desafio 9
