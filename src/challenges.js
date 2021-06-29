@@ -1,8 +1,9 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable complexity */
 // Desafio 1
 function compareTrue(firstBool, secondBool) {
-  if (firstBool == true && secondBool == true) {
+  if (firstBool === true && secondBool === true) {
     return true;
   }
   return false;
@@ -12,7 +13,6 @@ function compareTrue(firstBool, secondBool) {
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
-  console.log(area);
 }
 
 // Desafio 3    // método split. referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
