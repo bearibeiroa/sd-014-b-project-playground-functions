@@ -53,7 +53,7 @@ function highestCount(arrayOfNumbers) {
   let biggestNumber = 0;
   let repetitions = 0;
   for (number of arrayOfNumbers) {
-    if (number > biggestNumber) {
+    if (Math.abs(number) > biggestNumber) {
       biggestNumber = number;
     }
   } 
