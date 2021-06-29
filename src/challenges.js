@@ -90,14 +90,49 @@ function fizzBuzz(valor) {
   };
   return numeros;
 }
-console.log(fizzBuzz([9, 25]));
+
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let fraseAlterada = [ ];
+  for (index in frase) {
+    if (frase[index] === 'a') {
+      fraseAlterada.push('1');
+    } else if (frase[index] === 'e') {
+      fraseAlterada.push('2');
+    } else if (frase[index] === 'i') {
+      fraseAlterada.push('3');
+    } else if (frase[index] === 'o') {
+      fraseAlterada.push('4');
+    } else if (frase[index] === 'u') {
+      fraseAlterada.push('5');
+    } else {
+      fraseAlterada.push(frase[index]);
+    }
+  }
+  let fraseAlteradaS = fraseAlterada.join(''); 
+  return fraseAlteradaS;
 }
-function decode() {
-  // seu código aqui
+
+function decode(frase) {
+  let fraseAlterada = [ ];
+  for (index in frase) {
+    if (frase[index] === '1') {
+      fraseAlterada.push('a');
+    } else if (frase[index] === '2') {
+      fraseAlterada.push('e');
+    } else if (frase[index] === '3') {
+      fraseAlterada.push('i');
+    } else if (frase[index] === '4') {
+      fraseAlterada.push('o');
+    } else if (frase[index] === '5') {
+      fraseAlterada.push('u');
+    } else {
+      fraseAlterada.push(frase[index]);
+    }
+  }
+  let fraseAlteradaS = fraseAlterada.join(''); 
+  return fraseAlteradaS;
 }
 
 module.exports = {
