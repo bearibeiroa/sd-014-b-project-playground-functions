@@ -14,11 +14,11 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(phraseReceived) {
   let phrasesArray = [];
-  let tempPhrase = "";
-  for (letter of phraseReceived) {
-    if (letter === " ") {
+  let tempPhrase = '';
+  for (let letter of phraseReceived) {
+    if (letter === ' ') {
       phrasesArray.push(tempPhrase);
-      tempPhrase = "";
+      tempPhrase = '';
     } else {
       tempPhrase += letter;
     }
@@ -31,8 +31,11 @@ function splitSentence(phraseReceived) {
 function concatName(namesArray) {
   let namesArrayLength = namesArray.length;
   let primeiroItem = namesArray[0];
+  let ordemInvertida = '';
   let ultimoItem = namesArray[namesArrayLength - 1];
-  let ordemInvertida = ultimoItem + ", " + primeiroItem;
+  ordemInvertida += ultimoItem;
+  ordemInvertida += ', ';
+  ordemInvertida += primeiroItem;
   return ordemInvertida;
 }
 
