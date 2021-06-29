@@ -34,20 +34,19 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(maiorrepetido) {
   let maiorNumber = 0;
-  let numberOfHits = 0;
   for (index in maiorrepetido){
     if (maiorrepetido[index] > maiorNumber){
       maiorNumber = maiorrepetido[index];
     }
   }
-  for (index2 in maiorrepetido) {
-    if (maiorrepetido[index2] === maiorNumber) {
+  let numberOfHits = 0;
+  for (index in maiorrepetido) {
+    if (maiorrepetido[index] === maiorNumber) {
       numberOfHits += 1;
     }
   }
   return numberOfHits;
 }
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
