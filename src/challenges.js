@@ -1,18 +1,19 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
   if (boolean1 && boolean2) {
-    return true
+    return true;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  // Função split() estudada através da documentação Source:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+  return string.split(" ")
 }
 
 // Desafio 4
