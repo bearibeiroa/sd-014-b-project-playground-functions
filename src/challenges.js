@@ -12,8 +12,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-
+function splitSentence(string) {
+  return string.split(" ");
+}
 
 // Desafio 4
 function concatName() {
@@ -58,5 +59,5 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence,
-};
+  splitSentence
+}
