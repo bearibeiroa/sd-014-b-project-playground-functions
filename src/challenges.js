@@ -11,9 +11,10 @@ function calcArea(base, height) {
 }
 // Desafio 3
 function splitSentence(palavra) {
-  for (let i in palavra) {
-
-  }
+  let splittedSentence = palavra.split('\s');
+  palavra.trim();
+  
+  return splittedSentence;
 /* 3 - Crie uma função que divida a frase
 Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
 Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
@@ -23,9 +24,8 @@ Retorne o valor ['go', 'Trybe'] se a função receber a string 'go Trybe'
 Retorne o valor ['vamo', 'que', 'vamo']. se a função receber a string 'vamo que vamo'
 Retorne o valor ['foguete'] se a função receber a string 'foguete' */
 // seu código aqui
-//palavra = 
-
 }
+console.log(splitSentence("vamo que vamo"));
 
 // Desafio 4
 function concatName(recebeItem) {
@@ -47,34 +47,33 @@ O que será verificado:
   Retorne 0 pontos quando o time tenha 0 vitórias e 0 empates */
 
 function footballPoints(wins, ties) {
-
+/*
   for (let i of wins) {
 
   }
-
-  }
-  wins = wins * 3;
+ wins = wins * 3;
   ties = ties + 1;
 
   return ;
 }
 
-console.log(footballPoints(14,8));
+console.log(footballPoints(14,8)); */
 // Desafio 6
 function highestCount(numeros) {
 
   let bigValue = 0; // comparação de numeros
   let counter = 0; //  variavel que vai contar quantas vezes repetiu o numero
   let repeats = 0; // 
-  for(let i in numeros){
+  for(let i in numeros) {
     if (numeros[bigValue] < numeros[i]) {
       bigValue = i;
     }
-
-    if (numeros[i] == numeros[bigValue] {
-      compare = numeros[i];
+  for(let i2 of numeros) {
+    if (numeros[i2] == numeros[bigValue]) {
+      compare = numeros[i2];
       counter += 1;
-      }
+    }
+  }
     return bigValue;
   }
 }
@@ -82,25 +81,19 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-/*Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão caçando um mesmo rato chamado mouse. Imagine que os animais estão em uma reta, cada um em uma posição representada por um número.
+  let distMouseCat1 = mouse - cat1 *-1;
+  let distMouseCat2 = mouse - cat2 *-1;
 
-
-Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2, nessa ordem, calcule as distâncias entre o rato e cada um dos gatos, em seguida, retorne qual dos felinos irá alcançar o rato primeiro (aquele que estiver mais perto do rato).
-
-Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua função deverá retornar "cat2".
-
-Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge".
-
-O que será verificado:
-
-  Retorne a string 'cat2' caso a função catAndMouse receba os parâmetros onde gato cat2 esteja a 2 unidades de distância do rato e cat1 esteja a 3 unidades de distância do rato
-
-  Retorne a string 'cat1' caso a função catAndMouse receba os parâmetros onde gato cat1 esteja a 6 unidades de distância do rato e cat2 esteja a 12 unidades de distância do rato
-
-  Retorne a string 'os gatos trombam e o rato foge' caso a função catAndMouse receba os parâmetros onde os gatos estejam na mesma distância do rato */
- // return 'os gatos trombam e o rato foge';
+  if (distMouseCat1 === distMouseCat2) {
+    return 'os gatos trombam e o rato foge';
+  } else if (distMouseCat1 > distMouseCat2) {
+    return 'cat2';
+  } else {
+    return 'cat1'
+  }
 }
-console.log(catAndMouse(5,2,3))
+console.log(catAndMouse(1,2,5))
+
 // Desafio 8
 /* Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
 
@@ -114,15 +107,24 @@ Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar
 O que será verificado:
 
     Retorne as strings ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado os parâmetros [2, 15, 7, 9, 45] para a função fizzBuzz
-
     Retorne as strings ['bug!', 'fizz'] quando é passado os parâmetros [7, 9] para a função fizzBuzz
-
     Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para a função fizzBuzz
  */
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numBuzz) {
+  
+  for (let i of numBuzz) {
+    if (numBuzz[i] % 3 == 0) {
+      numBuzz[i] = 'fizz';
+    } else if (numBuzz[i] % 5 == 0) {
+      numBuzz[i] = 'fizz';
+    } else if (numBuzz[i] % 5 == 0 && numBuzz[i] % 3 ==0) {
+      numBuzz[i] = 'fizzBuzz';
+    } else {
+      numBuzz[i] = 'bug!';
+    }
+  }
 }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 /*Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
 
@@ -142,10 +144,12 @@ O que será verificado:
 
     Retorne uma string decodificada quando a função decode for utilizada
  */
-function encode() {
+function encode(word) {
+
   // seu código aqui
 }
-function decode() {
+function decode(word) {
+  
   // seu código aqui
 }
 
