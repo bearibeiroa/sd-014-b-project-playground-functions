@@ -60,13 +60,26 @@ function highestCount(valueList) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+let result = [];
+for (let index = 0; index < numbers.length; index += 1) {
+  if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+    result.push('fizzBuzz');
+  } else if (numbers[index] % 3 === 0) {
+    result.push('fizz');
+  } else if (numbers[index] % 5 === 0) {
+    result.push('buzz');
+  } else {
+    result.push('bug!');
+  }
+}
+  return result;
 }
 
 // Desafio 9
