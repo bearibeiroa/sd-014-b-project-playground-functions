@@ -11,6 +11,9 @@ function calcArea(base, height) {
 }
 // Desafio 3
 function splitSentence(palavra) {
+  for (let i in palavra) {
+
+  }
 /* 3 - Crie uma função que divida a frase
 Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
 Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
@@ -20,30 +23,18 @@ Retorne o valor ['go', 'Trybe'] se a função receber a string 'go Trybe'
 Retorne o valor ['vamo', 'que', 'vamo']. se a função receber a string 'vamo que vamo'
 Retorne o valor ['foguete'] se a função receber a string 'foguete' */
 // seu código aqui
-palavra = 
+//palavra = 
 
 }
 
 // Desafio 4
 function concatName(recebeItem) {
-/*Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
-
-Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
-
-O que será verificado:
-
-    Retorne 'Paolillo, Lucas' quando o parâmetro passado na funcão concatName seja ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-
-    Retorne 'ré, foguete' quando o parâmetro passado na funcão concatName seja ['foguete', 'não', 'tem', 'ré']
-
-    Retorne 'captain, captain' quando o parâmetro passado na funcão concatName seja ['captain', 'my', 'captain'] */
   let primeiroNome = recebeItem[0]; 
   let ultimoNome = recebeItem[recebeItem.length-1];
- 
-  return [ultimoNome, primeiroNome];
-}
-console.log(concatName(['captain', 'my', 'captain']));
+  let juntaNome = ultimoNome + ', ' + primeiroNome;
 
+  return juntaNome;
+}
 // Desafio 5
 /*Escreva uma função com o nome footballPoints que receba o número de vitórias (esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato.
 
@@ -57,45 +48,37 @@ O que será verificado:
 
 function footballPoints(wins, ties) {
 
+  for (let i of wins) {
 
+  }
+
+  }
+  wins = wins * 3;
+  ties = ties + 1;
+
+  return ;
 }
 
+console.log(footballPoints(14,8));
 // Desafio 6
 function highestCount(numeros) {
-  let compare = 0;
-  let contador = 0;
-  let repeats = 0;
+
+  let bigValue = 0; // comparação de numeros
+  let counter = 0; //  variavel que vai contar quantas vezes repetiu o numero
+  let repeats = 0; // 
   for(let i in numeros){
-    if (numeros[i] === numeros[compare] && numeros[repeats] < numeros[i]) {
-      compare = numeros[i];
-      contador += 1;
+    if (numeros[bigValue] < numeros[i]) {
+      bigValue = i;
     }
-    
-    // if (numeros[compare] < numeros[i]) {
-    //   compare = i;
-    // }
+
+    if (numeros[i] == numeros[bigValue] {
+      compare = numeros[i];
+      counter += 1;
+      }
+    return bigValue;
   }
-  return compare;
 }
-
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-
-
-
-  /*Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.
-
-Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9 (maior número do array) se repete.
-
-O que será verificado:
-
-Retorne 2 quando o parâmetro passado na função highestCount seja [9, 1, 2, 3, 9, 5, 7]
-
-Retorne 1 quando o parâmetro passado na função highestCount seja [0, 4, 4, 4, 9, 2, 1]
-
-Retorne 3 quando o parâmetro passado na função highestCount seja [0, 0, 0] */
-  
-  // seu código aqui
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -115,7 +98,7 @@ O que será verificado:
   Retorne a string 'cat1' caso a função catAndMouse receba os parâmetros onde gato cat1 esteja a 6 unidades de distância do rato e cat2 esteja a 12 unidades de distância do rato
 
   Retorne a string 'os gatos trombam e o rato foge' caso a função catAndMouse receba os parâmetros onde os gatos estejam na mesma distância do rato */
-  return 'os gatos trombam e o rato foge';
+ // return 'os gatos trombam e o rato foge';
 }
 console.log(catAndMouse(5,2,3))
 // Desafio 8
