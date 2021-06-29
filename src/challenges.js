@@ -35,7 +35,7 @@ function highestCount(arrays) {
   let maxNumber = Math.max(...arrays);
   let result = 0;
   for (let index = 0; index < arrays.length; index += 1) {
-    if (arrays[index] == maxNumber) {
+    if (arrays[index] === maxNumber) {
       result += 1;
     }
   }
@@ -43,8 +43,13 @@ function highestCount(arrays) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return 'cat1';
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    return 'cat2';
+  } else Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse);
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
