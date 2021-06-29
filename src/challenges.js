@@ -27,7 +27,7 @@ function splitSentence(string) {
 function concatName(arrayString) {
   // seu código aqui
   let index = arrayString.length - 1;
-  let resultString = `${arrayString[index]} ${arrayString[0]}`;
+  let resultString = `${arrayString[index]}, ${arrayString[0]}`;
 
   return resultString;
 }
