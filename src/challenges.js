@@ -27,10 +27,9 @@ function concatName(array) {
   let primeiroItem = array[0];
   let ultimoItem = 0;
 
-  for (index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     ultimoItem = array[index];
   }
-  
   return ultimoItem + ', ' + primeiroItem;
 }
 
