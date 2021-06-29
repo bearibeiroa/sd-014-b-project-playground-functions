@@ -18,8 +18,10 @@ function splitSentence(go) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array, concat, space) {
+  space = ', ';
+  concat = array[array.length - 1] + space + array[0];
+  return concat;
 }
 
 // Desafio 5
