@@ -50,16 +50,24 @@ function highestCount(array) {
   }
   return contador; 
 } 
-  console.log(highestCount([-9, -2, -2, -3, -2, -2, -11]));
+ 
   
   // verificar numero maior
   // quantidade de vezes que o nomero maior aparece
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if((cat1 > cat2) && (cat1 > mouse)){
+    return "cat2";
+  }else if ((cat2 > cat1) && (cat2 > mouse)){
+    return "cat1"; 
+}else if(cat1 === cat2){
+  return "os gatos trombam e o rato foge";
 }
+}
+console.log(catAndMouse(1, 0, 2));
+
 
 // Desafio 8
 function fizzBuzz() {
@@ -85,4 +93,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
