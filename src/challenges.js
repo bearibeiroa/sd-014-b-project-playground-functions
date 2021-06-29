@@ -20,12 +20,17 @@ console.log(calcArea(10, 50));
 function splitSentence(frase) {
   return frase.split(" ")
 }
-console.log(splitSentence("go trybe"))
+console.log(splitSentence("go trybe"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lista) {
+  let first = lista[0]
+  let n = lista.length
+  let last = lista[n-1]
+  let names = [first, last]
+  return names.join()
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
