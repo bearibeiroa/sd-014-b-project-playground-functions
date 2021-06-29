@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(valorUm,ValorDois){
+function compareTrue(valorUm, ValorDois){
   if(valorUm === true && ValorDois === true){
     return true
   }else{
@@ -14,8 +14,9 @@ function calcArea(base, heigth) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let resposta = string.split(' ')
+  return resposta
 }
 
 // Desafio 4
