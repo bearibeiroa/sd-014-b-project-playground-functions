@@ -15,9 +15,14 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(param) {
+  let arrSplit = param.split(' ');
+  return arrSplit
 }
+/* Nota do aluno: Para fazer o desafio 3 pesquisei e achei um vídeo no youtube do canal @CodeVault que 
+me ajudou a achar a função 'split'
+source: 'https://www.youtube.com/watch?v=hTZmGihfU_w'
+*/
 
 // Desafio 4
 function concatName() {
