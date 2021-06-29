@@ -29,12 +29,25 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
 }
-console.log(footballPoints(0, 0));
+
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(maiorrepetido) {
+  let maiorNumber = 0;
+  let numberOfHits = 0;
+  for (index in maiorrepetido){
+    if (maiorrepetido[index] > maiorNumber){
+      maiorNumber = maiorrepetido[index];
+    }
+  }
+  for (index2 in maiorrepetido) {
+    if (maiorrepetido[index2] === maiorNumber) {
+      numberOfHits += 1;
+    }
+  }
+  return numberOfHits;
 }
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
