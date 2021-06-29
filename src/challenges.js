@@ -36,10 +36,9 @@ function concatName(array) {
   let namesummed = name1 + ', '+ name2;
   return namesummed;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 
-// Desafio 
+// Desafio 5
 function footballPoints(wins,ties) {
   let winspoints = wins*3;
   let tiespoints = ties;
@@ -73,9 +72,22 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(ary) {
+  testfizzbuzz = [];
+  for (let index2 = 0; index2 < ary.length; index2 +=1){
+    if (ary[index2] % 3 == 0 && ary[index2] % 5 != 0){
+      testfizzbuzz.push("fizz");
+    } else if (ary[index2] % 3 != 0 && ary[index2] % 5 == 0){
+      testfizzbuzz.push("buzz");
+    } else if (ary[index2] % 3 == 0 && ary[index2] % 5 == 0){
+      testfizzbuzz.push("fizzBuzz");
+    } else {
+     testfizzbuzz.push("bug!");
+    } 
+  }
+  return testfizzbuzz;
 }
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
