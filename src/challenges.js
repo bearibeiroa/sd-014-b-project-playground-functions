@@ -25,28 +25,81 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winPoints = wins * 3;
+  let tiePoints = ties * 1;
+  return (tiePoints + winPoints);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorNumero = array[0];
+  let contador = 0;
+  for (let numero of array) {
+    if (numero > maiorNumero) {
+      maiorNumero = numero;
+    }
+  }
+  for (let numero of array) {
+    if (numero === maiorNumero) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  cat1 = Math.abs(cat1);
+  cat2 = Math.abs(cat2);
+  if (cat1 === cat2) {
+    return "os gatos trombam e o rato foge";
+  } else if (cat1 < cat2){
+    return "cat1";
+  } else if (cat2 < cat1){
+    return "cat2";
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  for (let numero in array) {
+    if (array[numero] % 3 == 0 && array[numero] % 5 == 0){
+      array.splice(numero, 1, "fizzBuzz");
+    } else if (array[numero] % 3 != 0 && array[numero] % 5 != 0) {
+      array.splice(numero, 1, "bug!");
+    } else if (array[numero] % 3 == 0) {
+      array.splice(numero, 1, "fizz");
+    } else{
+      array.splice(numero, 1, "buzz");
+    }
+  }
+  return array;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let codigo = '';
+  let split = string.split('');
+  for(let index in split){
+    if(split[index] === 'a'){
+      split.splice(index,1,1)
+    }
+   else if(split[index] === 'e'){
+      split.splice(index,1,2)
+    }
+    else if(split[index] === 'i'){
+      split.splice(index,1,3)
+    }
+    else if(split[index] === 'o'){
+      split.splice(index,1,4)
+    }
+    else if(split[index] === 'u'){
+      split.splice(index,1,5)
+    }
+    codigo += (split[index]);
+  }
+  return codigo;
 }
 function decode() {
   // seu código aqui
