@@ -16,8 +16,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(setence) {
+  let returnArray = setence.split(''); //Split a string into an array of substrings * note que se nao tive espaço em " " vai retonar a separação por letra
+  for (let i = 0; i < returnArray.length; i += 1) { //returnArray é array que retorna a substring que vieram da string principal (propriedade ),                                          //o valor da lenght de array agora será 3 porque sao tres substrings
+    return returnArray;                         
+}
 }
 
 // Desafio 4
