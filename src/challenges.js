@@ -27,8 +27,8 @@ function concatName(lista) {
   let first = lista[0]
   let n = lista.length
   let last = lista[n-1]
-  let names = [first, last]
-  return names.join()
+  let names = [last, first]
+  return names.join(", ")
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
