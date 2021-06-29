@@ -40,7 +40,7 @@ const catAndMouse = (mouse, cat1, cat2) => {
 // Desafio 8
 const fizzBuzz = (arr) => {
   const arr2 = [];
-  for (let check of arr) {
+  for (let x of arr) {
     if (x % 3 === 0 && x % 5 === 0) arr2.push('fizzbuzz');
     if (x % 3 === 0) arr2.psuh('fizz');
     if (x % 5 === 0) arr2.push('buzz');
