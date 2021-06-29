@@ -5,18 +5,32 @@ function compareTrue(b1, b2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = ( base * height ) / 2;
-
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let words = []
+  let word = '';
+  sentence += ' ';
+  for(let count = 0; count < sentence.length; count++) {
+    if(sentence[count] == ' ') {
+    words.push(word);
+    word ='';
+    } else {
+      word = word + sentence[count];
+    }
+  }
+  return words;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(concat) {
+  let str1 = concat[0]
+  let str2 = concat[concat.length-1];
+  let str3 = [];
+  return (str2 +', '+str1);
 }
 
 // Desafio 5
