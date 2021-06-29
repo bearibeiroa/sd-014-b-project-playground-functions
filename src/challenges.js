@@ -26,13 +26,11 @@ function concatName(arrayOfStrings) {
     let resultConcat = arrayOfStrings[arrayOfStrings.length - 1] + ', ' + arrayOfStrings[0];
     return resultConcat;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
-console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
-function footballPoints() {
-    // seu código aqui
+function footballPoints(wins, ties) {
+    let points = (wins * 3) + (ties * 1);
+    return points
 }
 
 // Desafio 6
