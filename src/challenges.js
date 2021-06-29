@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(firstBool, secondBool) {
-  if(firstBool == true && secondBool == true){
+  if (firstBool == true && secondBool == true){
     return true;
   } else {
     return false;
@@ -21,13 +21,13 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayOfNames) {
+  return (arrayOfNames[arrayOfNames.length-1] + ", " + arrayOfNames[0]);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((3 * wins) + (ties));
 }
 
 // Desafio 6
