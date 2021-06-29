@@ -31,10 +31,17 @@ function footballPoints(wins, ties) {
   return totalPoints
 }
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  //funções max e apply informadas pela fonte: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/Apply
+  let higherNumber = Math.max.apply(null, array)
+  let count = 0;
+  for (let index in array) {
+    if (higherNumber === array[index]) {
+      count += 1
+    }
+  }
+  return count
 }
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
