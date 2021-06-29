@@ -16,16 +16,20 @@ function calcArea(base, altura) {
 }
 
 // Desafio 3
-function splitSentence(string, separator) {
+function splitSentence(string) {
   // seu código aqui
-  let arrayString = string.split(separator);
+  let arrayString = string.split(' ');
 
   return arrayString;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrayString) {
   // seu código aqui
+  let index = arrayString.length - 1;
+  let resultString = `${arrayString[index]} ${arrayString[0]}`;
+
+  return resultString;
 }
 
 // Desafio 5
