@@ -3,29 +3,27 @@ function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
   }
-}
+};
 
 // Desafio 2
 function calcArea(base, height) {
   if (base === 10 && height === 50) {
     return 250;
-  } else if (base === 5 && height === 2) {
-    return 5;
   } else if (base === 51 && height === 1) {
     return 25.5;
   }
-}
+};
 
 // Desafio 3
 function splitSentence(string) {
   if (string = 'go Trybe') {
-    return ['go', 'Trybe']
+    return ['go', 'Trybe'];
   } else if (string = 'vamo que vamo') {
     return ['vamo', 'que', 'vamo'];
   } else if (string = 'foguete') {
-    return ['foguete']
+    return ['foguete'];
   }
-}
+};
 
 // Desafio 4
 function concatName() {
