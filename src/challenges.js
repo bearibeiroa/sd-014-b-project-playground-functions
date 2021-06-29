@@ -35,7 +35,7 @@ function highestCount(paramArrayNum) {
   let quantidade = 0;
   for(index = 0; index < paramArrayNum.length; index += 1);
   if (maiorNumero === paramArrayNum[index]){
-    quantidade = quantidade + 1;
+    quantidade += 1;
   }
   return quantidade;
 }
