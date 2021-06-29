@@ -1,3 +1,14 @@
+// Função para verificar repetições dentro de um Array;
+function countReptition(lista, number) {
+  let value = 0;
+  for (let cont = 0; cont < lista.length; cont += 1) {
+    if (number === lista[cont]) {
+      value += 1;
+    }
+  }
+  return value;
+}
+
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
@@ -40,8 +51,12 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(valueList) {
   // seu código aqui
+  let maiorValor = Math.max(...valueList);
+  let repetitions = countReptition(valueList, maiorValor);
+
+  return repetitions;
 }
 
 // Desafio 7
@@ -58,6 +73,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
