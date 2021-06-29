@@ -20,9 +20,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  const firstIndex = 0;
-  let lastIndex = array.length - 1;
-  let concatString = array[lastIndex] + ', ' + array[firstIndex];
+  let concatString = array[array.length - 1] + ', ' + array[0];
 
   return concatString;
 }
@@ -51,8 +49,19 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Distance = cat1 - mouse;
+  cat1Distance = Math.abs(cat1Distance)
+  let cat2Distance = cat2 - mouse;
+  cat2Distance = Math.abs(cat2Distance)
+
+  if (cat1Distance > cat2Distance){
+    return "cat2"
+  } else if (cat1Distance < cat2Distance) {
+    return "cat1"
+  } else if(cat1Distance === cat2Distance){
+    return "os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
