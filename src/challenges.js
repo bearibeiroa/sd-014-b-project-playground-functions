@@ -31,7 +31,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(itens) {
-  return (itens[itens.length -1] + ', ' + names[0])
+  return (itens[itens.length -1] + ', ' + itens[0])
 }
 
 // Desafio 5
