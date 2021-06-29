@@ -31,11 +31,14 @@ function concatName(word) {
     return lastItem + ', ' + firstItem;
   }
 }
-concatName( ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  let pointsWins = wins * 3;
+  let pointsTies = ties * 1;
+  let totalPoints = pointsWins + pointsTies;
+  return totalPoints;
 }
+
 
 // Desafio 6
 function highestCount() {
