@@ -25,8 +25,10 @@ source: 'https://www.youtube.com/watch?v=hTZmGihfU_w'
 */
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(param1) {
+  let lastName = param1[param1.length - 1];
+  let firstName = param1[0];
+  return lastName + ', ' + firstName
 }
 
 // Desafio 5
