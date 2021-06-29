@@ -2,7 +2,7 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-}   return false;
+  } return false;
 }
 
 // Desafio 2
@@ -33,20 +33,14 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let highNumber = array[1];
+  let highNumber = Math.max.apply(null, array);
   let numberCount = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > highNumber) {
-      highNumber = array[index];
-    } 
-    // return highNumber;
-  } 
-  for (let secondIndex = 0; secondIndex < array.length; secondIndex +=1) {
-    if (highNumber === array[index]) {
+  for (let index=0; index < array.length; index += 1) {
+    if (array[index] === highNumber) {
       numberCount += 1;
-    } 
-    // return numberCount;
-  } 
+    }
+  }
+  return numberCount
 }
 
 // Desafio 7
@@ -56,26 +50,26 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   } else if (cat1 < cat2) {
     return 'cat1';
-  } (cat1 > cat2)
-    return 'cat2';
+  } else {
+    (cat1 > cat2)
+  return 'cat2';
   }
+}
  
 // Desafio 8
 function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1){
-  if ((array[index] % 3 === 0)){
-  return "fizz";
-  } else if ((array[index] % 5 === 0)){
+    if ((array[index] % 3 === 0)) {
+    return "fizz";
+    } else if ((array[index] % 5 === 0)) {
     return "buzz";
-  } if ((number % 3 === 0) && (array[index] % 5 === 0)){
+    } if ((number % 3 === 0) && (array[index] % 5 === 0)){
       return "fizzBuzz";
-  } else {
+    } else {
       return "bug!";
     }    
   } 
    } 
-
-
 
 // Desafio 9
 function encode(string) {
