@@ -20,13 +20,13 @@ function splitSentence(param) {
 
 // Desafio 4
 function concatName(paramDeArray) {
-  let primeiroEUltimo = paramDeArray[paramDeArray.length - 1] + ', ' + paramDeArray[0] ;
+  let primeiroEUltimo = paramDeArray[paramDeArray.length - 1] + ', ' + paramDeArray[0];
   return primeiroEUltimo;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
