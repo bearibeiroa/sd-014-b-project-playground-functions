@@ -38,8 +38,13 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(frase) {
   // seu código aqui
+
+  let ultimoNome = frase[frase.length-1];
+  let primeiroNome = frase[0];
+  let nomesConcatenados = ultimoNome + ", "+ primeiroNome
+  return nomesConcatenados
 }
 
 // Desafio 5
