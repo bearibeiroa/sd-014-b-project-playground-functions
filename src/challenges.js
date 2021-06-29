@@ -11,7 +11,7 @@ function compareTrue(value1, value2) {
 // Desafio 2
 function calcArea(base, height) {
   // vai receber um valor chamado base e outra de altura chamada height
-  return (base * height) / 2; 
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -21,15 +21,15 @@ function splitSentence(fraseTeste) {
 }
 // Desafio 4
 function concatName(lista) {
-let primeiroNome = lista[0];
-let ultimoNome = lista[lista.length -1];
-return (ultimoNome + ', ' + primeiroNome);
-
+  let primeiroNome = lista[0];
+  let ultimoNome = lista[lista.length - 1];
+  return (ultimoNome + ', ' + primeiroNome);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pointsTime = (wins * 3) + ties;
+  return (pointsTime);
 }
 
 // Desafio 6
