@@ -44,6 +44,7 @@ function highestCount(int) {
   return cont;
   // seu código aqui
 }
+console.log(highestCount([9, 1, 2, 9, 3, 9, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -92,38 +93,40 @@ function encode() {
   let newText = '';
   for(let l of text) {
     if(l === "a") {
-        newText += "1";
+      newText += "1";
     } else if (l === "e") {
-        newText += "2";
+      newText += "2";
     } else if (l==="i") {
-       newText += "3";
+      newText += "3";
     } else if (l === "o") {
-        newText += "4";
+      newText += "4";
     } else if (l ==="u") {
-        newText += "5";
+      newText += "5";
     } else {
-        newText += l;
+      newText += l;
     }
+    return console.log(newText);
 } 
   // seu código aqui
 }
 function decode() {
   let newText = '';
   for(let l of text) {
-      if(l === "1") {
-          newText += "a";
-      } else if (l === "2") {
-          newText += "3";
-      } else if (l==="3") {
-         newText += "i";
-      } else if (l === "4") {
-          newText += "o";
-      } else if (l ==="5") {
-          newText += "u";
-      } else {
-          newText += l;
-      }
+    if(l === "1") {
+    newText += "a";
+  } else if (l === "2") {
+    newText += "3";
+  } else if (l==="3") {
+    newText += "i";
+  } else if (l === "4") {
+    newText += "o";
+  } else if (l ==="5") {
+    newText += "u";
+  } else {
+    newText += l;
+  }
   } 
+  return console.log(newText);
   // seu código aqui
 }
 
