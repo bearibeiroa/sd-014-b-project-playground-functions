@@ -45,10 +45,10 @@ const catAndMouse = (mouse, cat1, cat2) => {
 // Desafio 8
 const fizzBuzz = (arr) => {
   const arr2 = [];
-  for (let x of arr) {
-    if (x % 3 === 0 && x % 5 === 0) arr2.push('fizzbuzz');
-    if (x % 3 === 0) arr2.psuh('fizz');
-    if (x % 5 === 0) arr2.push('buzz');
+  for (let test of arr) {
+    if (test % 3 === 0 && x % 5 === 0) arr2.push('fizzbuzz');
+    if (test % 3 === 0) arr2.psuh('fizz');
+    if (test % 5 === 0) arr2.push('buzz');
     else arr2.push('bug!');
   }
   return arr2;
