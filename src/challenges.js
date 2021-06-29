@@ -1,6 +1,11 @@
 // Desafio 1
 function compareTrue(number, booleanValor) {
-  booleanValor = number >= 10 && number <= 20 ? true
+  if (number === 10 && number >= 20) {
+    booleanValor = true;
+  } else {
+    booleanValor = false;
+  }
+  return booleanValor;
 }
 
 // Desafio 2
