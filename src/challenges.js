@@ -100,12 +100,47 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodedString = [];
+  for (indice in string) {
+    if (string[indice] === "a") {
+      encodedString.push("1");
+    }else if (string[indice] === "e") {
+      encodedString.push("2");
+    } else if (string[indice] === "i") {
+      encodedString.push("3");
+    } else if (string[indice] === "o") {
+      encodedString.push("4");
+    } else if (string[indice] === "u") {
+      encodedString.push("5");
+    } else {
+      encodedString.push(string[indice]);
+    }
+  }
+  return encodedString.join('');
 }
-function decode() {
-  // seu código aqui
+console.log(encode("hi there!"));
+
+function decode(string) {
+  let decodedString = [];
+  for (indice in string) {
+    if (string[indice] === "1") {
+      decodedString.push("a");
+    }else if (string[indice] === "2") {
+      decodedString.push("e");
+    } else if (string[indice] === "3") {
+      decodedString.push("i");
+    } else if (string[indice] === "4") {
+      decodedString.push("o");
+    } else if (string[indice] === "5") {
+      decodedString.push("u");
+    } else {
+      decodedString.push(string[indice]);
+    }
+  }
+  return decodedString.join('');
 }
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
