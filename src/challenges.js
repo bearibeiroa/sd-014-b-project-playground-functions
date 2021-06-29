@@ -9,18 +9,19 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) /2
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(param) {
-  let fraseDoParam = param ;
-  return fraseDoParam.split(" ");  
+  let fraseDoParam = param;
+  return fraseDoParam.split(' ');  
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(paramDeArray) {
+  let primeiroEUltimo = paramDeArray[paramDeArray.length - 1] + ', ' + paramDeArray[0] ;
+  return primeiroEUltimo;
 }
 
 // Desafio 5
