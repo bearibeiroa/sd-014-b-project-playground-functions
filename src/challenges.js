@@ -86,7 +86,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let b = mouse - cat2; // a = 6 ~ b = -12
                         // a = 1 ~ b = -1
 
-  if (mouse + 1 === cat1 || mouse + 1 === cat2 && mouse -1 === cat1 || mouse -1 === cat2) {
+  if (Math.abs(a) === Math.abs(b)) { // se os valores absolutos forem iguais, a distância é a mesma
     return "os gatos trombam e o rato foge"
   } else if (mouse - a < mouse - b) {
     return "cat1";
