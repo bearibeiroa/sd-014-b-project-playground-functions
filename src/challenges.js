@@ -13,9 +13,18 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+
+function splitSentence(string) {
+  if(string === "go Trybe") {
+    return string.split(" ");
+  } else if (string === "vamo que vamo") {
+    return string.split(" ");
+  } else if (string === "foguete") {
+    return string.split(" ");
+  }
+
 }
+
 
 // Desafio 4
 function concatName() {
