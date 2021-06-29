@@ -1,12 +1,11 @@
-// Desafio 4
+// Desafio 5
+let winss = 14; // 3 pts
+let tiess = 8; // 1 pt
+// return: 50pts
 
-let arrayy = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-// return: Paolillo, Lucas
-
-function concatName(array) {
-  let string = '';
-  string = (array[0] + ', ' + array[array.length - 1]);
-  return string;
+function footballPoints(wins, ties) {
+  //let qtdPontos = 
+  return (wins * 3) + (ties * 1);
 }
 
-console.log(concatName(arrayy));
+console.log(footballPoints(winss, tiess));
