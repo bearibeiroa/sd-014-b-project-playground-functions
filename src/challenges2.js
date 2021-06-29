@@ -1,6 +1,11 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name) {
+  let objectList = [];
+  let techsAndNames = {};
+
+  for (let i = 0; i < techs.length; i += 1) {
+    techsAndNames['']
+  }
 }
 
 // Desafio 11

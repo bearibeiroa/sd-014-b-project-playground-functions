@@ -62,17 +62,17 @@ function highestCount(array) {
   for (let i = 0; i < array.length; i += 1) {
 
     if (i === 0) {
-      aux = array;
+      aux = array[i];
     }
 
-    if (array > aux) {
-      aux = array;
+    if (array[i] > aux) {
+      aux = array[i];
     }
   }
 
   for (let i = 0; i < array.length; i += 1) {
 
-    if (array === aux) {
+    if (array[i] === aux) {
       result += 1;
     }
   }
