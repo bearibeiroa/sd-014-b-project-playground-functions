@@ -19,8 +19,11 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let lastWord = array[array.length - 1];
+  let firstWord = array[0];
+  let words = lastWord + ", " + firstWord
+  return words
 }
 
 // Desafio 5
