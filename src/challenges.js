@@ -1,11 +1,17 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 == true && valor2 == true) {
+  if (valor1 === true && valor2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
+
+/* - Linha **3**: Replace this if-then-else statement by a single return statement.
+- Linha **3**: Expected '===' and instead saw '=='.
+- Linha **3**: Remove the unnecessary boolean literal.
+- Linha **3**: Expected '===' and instead saw '=='.
+- Linha **3**: Remove the unnecessary boolean literal.
+- Linha **5**: Unnecessary 'else' after 'return'. */
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
