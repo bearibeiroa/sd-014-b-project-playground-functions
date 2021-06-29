@@ -19,7 +19,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let concat = array[array.length - 1] + ',' + ' '  + array[0];
+  let concat = array[array.length - 1] + ',' + ' ' + array[0];
   return concat;
 }
 
@@ -50,12 +50,12 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   } if (cat1 < cat2) {
     return 'cat1';
-  } else {
+  } {
     (cat1 > cat2);
     return 'cat2';
   }
-} 
- 
+}
+
 // Desafio 8
 function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1){
