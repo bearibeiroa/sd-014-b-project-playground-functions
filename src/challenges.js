@@ -12,8 +12,19 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phraseReceived) {
+  let phrasesArray = [];
+  let tempPhrase = "";
+  for (letter of phraseReceived) {
+    if (letter === " ") {
+      phrasesArray.push(tempPhrase);
+      tempPhrase = "";
+    } else {
+      tempPhrase += letter;
+    }
+  }
+  phrasesArray.push(tempPhrase);
+  return phrasesArray;
 }
 
 // Desafio 4
