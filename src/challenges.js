@@ -37,21 +37,26 @@ const catAndMouse = (mouse, cat1, cat2) => {
 };
 
 // Desafio 8
-function fizzBuzz(fbArr) {
-  const fbArr2 = [];
-  for (let check of fbArr) {
-    if (check % 3 === 0 && check % 5 === 0) {
-      fbArr2.push('fizzbuzz');
-    } else if (check % 3 === 0) {
-      fbArr2.push('fizz');
-    } else if (check % 5 === 0) {
-      fbArr2.push('buzz');
+const fizzBuzz = (array) => {
+  let pushArray = [];
+  let buggybuzz;
+  for (let k = 0; k < array.length; k += 1) {
+    if (array[k] % 3 === 0 && array[k] % 5 === 0) {
+      buggybuzz = 'fizzBuzz';
+      pushArray.push(buggybuzz);
+    } else if (array[k] % 3 === 0) {
+      buggybuzz = 'fizz';
+      pushArray.push(buggybuzz);
+    } else if (array[k] % 5 === 0) {
+      buggybuzz = 'buzz';
+      pushArray.push(buggybuzz);
     } else {
-      fbArr2.push('bug!');
+      buggybuzz = 'bug!';
+      pushArray.push(buggybuzz);
     }
   }
-  return fbArr2;
-}
+  return pushArray;
+};
 
 // Desafio 9
 function encode(stringE) {
@@ -87,15 +92,13 @@ function decode(stringD) {
     } else if (stringD[ind2] === '4') {
       stringD2.push('o');
     } else if (stringD[ind2] === '5') {
-      decodedString.push('u');
+      stringD2.push('u');
     } else {
-      stringD2.push(stringD[index]);
+      stringD2.push(stringD2[ind2]);
     }
-    // Return the array but joining it without a comma
   }
 
-  // Return the array but joining it without a comma
-  return decodedString.join('');
+  return stringD2.join('');
 }
 
 module.exports = {
