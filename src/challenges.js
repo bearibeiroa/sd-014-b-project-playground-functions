@@ -9,15 +9,15 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-//Para este desafio foi pesquisado sobre o método split no seguinte site:
-//https://www.w3schools.com/jsref/jsref_split.asp
+// Para este desafio foi pesquisado sobre o método split no seguinte site:
+// https://www.w3schools.com/jsref/jsref_split.asp
 function splitSentence(string) {
   return string.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  return arrayString[arrayString.length -1] + ', ' + arrayString[0];
 }
 
 // Desafio 5
