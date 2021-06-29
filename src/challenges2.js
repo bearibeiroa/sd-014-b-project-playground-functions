@@ -56,11 +56,14 @@ function generatePhoneNumber(array) {
   return resultString;
 }
 
-console.log(generatePhoneNumber([1, 2, 4, 2, 5, 6, 8, 8, 9, 0, 1]))
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let lineAIsOK = lineB + lineC > lineA && Math.abs(lineC - lineB) < lineA;
+  let lineBIsOK = lineA + lineC > lineB && Math.abs(lineC - lineA) < lineB;
+  let lineCIsOK = lineB + lineA > lineC && Math.abs(lineA - lineB) < lineC;
+  let allOK = lineAIsOK && lineBIsOK && lineCIsOK;
+  
+  return allOK;
 }
 
 // Desafio 13
