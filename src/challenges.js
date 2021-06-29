@@ -47,12 +47,32 @@ function highestCount(maiorrepetido) {
   }
   return numberOfHits;
 }
-console.log(highestCount([0, 0, 0]));
+
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1;
+  let distCat2;
+  if(cat1 > mouse){
+    distCat1 = cat1 - mouse;
+  } else {
+    distCat1 = mouse - cat1;
+  }
+  if(cat2 > mouse){
+    distCat2 = cat2 - mouse;
+  } else {
+    distCat2 = mouse - cat2;
+  }
+  
+  if (distCat1 < distCat2){
+    return 'cat1';
+  } else if (distCat2 < distCat1){
+    return 'cat2'
+  } else {
+    return 'Os gatos trombam e o rato foge';
+  }
 }
+console.log(catAndMouse(10, 14, 6));
 
 // Desafio 8
 function fizzBuzz() {
