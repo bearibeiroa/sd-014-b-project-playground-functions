@@ -16,12 +16,14 @@ function calcArea(base, heigth) {
 function splitSentence(frase) {
   return frase.split(" ")
 }
-console.log(splitSentence('foguete'));
+
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  //let names = array[array.length -1 , 0];
+  return array[array.length - 1] + ", " + array[0];
 }
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
