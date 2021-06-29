@@ -18,8 +18,10 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let names = "";
+  names = array[array.length - 1 + ', ' + array[0]];
+  return names;
 }
 
 // Desafio 5
