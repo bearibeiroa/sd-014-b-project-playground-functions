@@ -2,12 +2,17 @@
 function techList(lista, name) {
   let sort = lista.sort();
   let nicolasLista = [];
-  for (index in sort) {
-    nicolasLista.push({'tech' : sort[index] , 'name' : name});
+  if (lista.length === 0){
+    return 'Vazio';
+  } else {
+    for (index in sort) {
+      nicolasLista.push({'tech' : sort[index] , 'name' : name});
+    }
   }
-  return nicolasLista.sort();
+  
+  return nicolasLista;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Nicolas"));
+console.log(techList([], "Nicolas"));
 
 // Desafio 11
 function generatePhoneNumber(onzeNumeros) {
