@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 // Desafio 1
 function compareTrue(first, second) {
   if (first === true && second === true) {
@@ -33,8 +34,23 @@ function footballPoints(wins, ties, total) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(list, biggerNumber, numberOfHits) {
+  for (let index = 0; index < list.length; index += 1) {
+    if (biggerNumber === undefined) {
+      biggerNumber = list[index];
+    } else if (biggerNumber <= list[index]) {
+      biggerNumber = list[index];
+    }
+  }
+  for (let index = 0; index < list.length; index += +1) {
+    if (numberOfHits === undefined) {
+      numberOfHits = 0;
+    }
+    if (biggerNumber === list[index]) {
+      numberOfHits += 1;
+    }
+  }
+  return numberOfHits;
 }
 
 // Desafio 7
