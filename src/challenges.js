@@ -103,11 +103,31 @@ function encode(string) {
   }
   return encoding
 }
-console.log(encode('Meu nome é michael'))
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let encoding = '';
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]){
+      case '1':
+        encoding += 'a'
+        break
+      case '2':
+        encoding += 'e'
+        break
+      case '3':
+        encoding += 'i'
+        break
+      case '4':
+        encoding += 'o'
+        break
+      case '5':
+        encoding += 'u'
+        break
+      default:
+        encoding += string[index]
+    }
+  }
+  return encoding
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
