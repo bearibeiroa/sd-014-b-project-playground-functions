@@ -17,22 +17,17 @@ function splitSentence(string) {
   let result = string.split(" ");
   return result;
 }
-console.log(splitSentence("foguete"));
+
 
 // Desafio 4
 function concatName(array) {
-  let nome = "";
-  let nome2 = "";
-  let result;
+  let array2 = "";
   for(let keys = 0; keys <= array.length -1; keys +=1){
-      nome = array[0];
-      nome2 = array[array.length - 1];
+      array2 = array[array.length - 1] +", " + array[0];
   }
-  result = nome2 + " " + nome;
-    return result;
-    
+    return array2;    
 }
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+
 
 // Desafio 5
 function footballPoints() {
