@@ -1,7 +1,12 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  console.log('Alteração apenas para comitar')
+function compareTrue(number1, number2) {
+  
+  if (number1 + number2 >= 10) {
+    return true
+  }
+  else {
+    return false
+  }
 }
 
 // Desafio 2
