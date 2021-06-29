@@ -14,6 +14,7 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
+console.log(calcArea(3, 4));
 
 // Desafio 3
 function splitSentence(setence) {
@@ -91,12 +92,26 @@ let arrayFizBuzz = [];
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  return string.replace(/a/g, '1') // Specifies the value to be returned to the function caller
+    .replace(/e/g, '2') // Perform a global replacement /x/g, o g faz replace global
+    .replace(/i/g, '3')
+    .replace(/o/g,'4')
+    .replace(/u/g, '5'); // se colocar ";" entre eles vai dar errado
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hi there!'));
+
+function decode(string2) {
+  return string2.replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
 }
+
+// Desafio 10
+function spliteSentence ()
+
 
 module.exports = {
   calcArea,
