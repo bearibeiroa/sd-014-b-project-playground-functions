@@ -22,8 +22,8 @@ function splitSentence() {
 function concatName(array) {
   let lastWord = array[array.length - 1];
   let firstWord = array[0];
-  let words = lastWord + ", " + firstWord
-  return words
+  let words = lastWord + ", " + firstWord;
+  return words;
 }
 
 // Desafio 5
@@ -42,8 +42,20 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let result = [];
+  for(let index = 0; index < array.length; index += 1){
+    if (array[index] % 5 === 0 && array[index] % 3 === 0){
+        result.push("fizzBuzz")
+}else if (array[index] % 5 === 0){
+    result.push("buzz")
+}else if (array[index] % 3 === 0){
+    result.push("fizz")
+    }else {
+        result.push("bug!")
+    }
+  }
+  return result
 }
 
 // Desafio 9
