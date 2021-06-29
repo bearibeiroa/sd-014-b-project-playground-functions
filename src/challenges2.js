@@ -1,5 +1,9 @@
 // Desafio 10
 function techList(array, name) {
+  if(array.length == 0){
+    return "Vazio!"
+  }
+  array.sort();
   let novaArray = [];
   for(let palavra of array){
     let objeto = {
