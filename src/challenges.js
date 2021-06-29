@@ -7,14 +7,11 @@ function compareTrue(value1, value2) {
   // tem que retornar true ou false
   return value1 === true && value2 === true
 }
-console.log(compareTrue(true, false));
-console.log(compareTrue(false, false));
-console.log(compareTrue(true, true));
-console.log(compareTrue(false, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  // vai receber um valor chamado base e outra de altura chamada height
+  return (base * height) / 2; 
 }
 
 // Desafio 3
