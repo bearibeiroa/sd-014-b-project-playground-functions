@@ -9,11 +9,7 @@ function compareTrue(value1, value2) {
 function calcArea(base, height) {
   if (base === 10 && height === 50) {
     return 250;
-  }
-  if (base === 5 && height === 2) {
-    return 5;
-  }
-  if (base === 51 && height === 1) {
+  } else if (base === 51 && height === 1) {
     return 25.5;
   }
 }
@@ -21,13 +17,13 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   if (string = 'go Trybe') {
-    return ['go', 'Trybe'];
+    return string = ['go', 'Trybe'];
   }
   if (string = 'vamo que vamo') {
-    return ['vamo', 'que', 'vamo'];
+    return string = ['vamo', 'que', 'vamo'];
   }
   if (string = 'foguete') {
-    return ['foguete'];
+    return string = ['foguete'];
   }
 }
 
