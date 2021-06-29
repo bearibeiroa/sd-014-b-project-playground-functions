@@ -15,7 +15,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  var concat = (array[array.length - 1] + ', ' + array[0]);
+  var concat = array[array.length - 1];
+  concat += ', ';
+  concat += array[0];
   return concat;
 }
 
@@ -25,12 +27,12 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numeros) {
+function highestCount(numbers) {
   var maior, cont = 0;
-  maior = Math.max(...numeros);
+  maior = Math.max(...numbers);
 
-  for (const key in numeros) {
-    if (maior == numeros[key]){
+  for (const key in numbers) {
+    if (maior == numbers[key]){
       cont++;
     }
   }
@@ -50,8 +52,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  var array = [];
+  for (const key in numbers) {
+    if ((numbers[key] % 5 === 0) && (numbers[key] % 3 === 0)) {
+      array.push('fizzBuzz');
+    } else if (numbers[key] % 3 === 0) {
+      array.push('fizz');
+    } else if (numbers[key] % 5 === 0) {
+      array.push('buzz');
+    } else {
+      array.push('bug!');
+    }
+  }
+  return array;
 }
 
 // Desafio 9
