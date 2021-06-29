@@ -7,10 +7,11 @@ function compareTrue(reposta1, reposta2) {
   return false
 }
 
-
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  let answer = base*height/2;
+  return answer
 }
 
 // Desafio 3
