@@ -92,11 +92,44 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let result = '';
+  for (let index of string) {
+    if(index === 'a') {
+      result += '1';
+    } else if (index === 'e') {
+      result += '2';
+    } else if (index === 'i') {
+      result += '3';
+    } else if (index === 'o') {
+      result += '4';
+    } else if (index === 'u') {
+      result += '5';
+    } else {
+      result += index
+    }
+  }
+  return result;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let result = '';
+  for (let index of string) {
+    if(index === '1') {
+      result += 'a';
+    } else if (index === '2') {
+      result += 'e';
+    } else if (index === '3') {
+      result += 'i';
+    } else if (index === '4') {
+      result += 'o';
+    } else if (index === '5') {
+      result += 'u';
+    } else {
+      result += index
+    }
+  }
+  return result;
 }
 
 module.exports = {
