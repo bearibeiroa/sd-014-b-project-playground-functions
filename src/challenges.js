@@ -17,7 +17,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayString) {
-  return arrayString[arrayString.length - 1] + ', ' + arrayString[0];
+  return arrayString[arrayString.length - 1] + ", " + arrayString[0];
 }
 
 // Desafio 5
@@ -27,6 +27,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// Foi pesquisado o seguinte site para entender a função Math.max:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 function highestCount(arrayNumbers) {
   let higherNumber = Math.max.apply(null, arrayNumbers);
   let count = 0;
@@ -40,8 +42,19 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// Não estava passando no último teste, então pesquisei sobre o método Math.abs no seguinte site:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Distance = Math.abs(cat1 - mouse);
+  let cat2Distance = Math.abs(cat2 - mouse);
+  
+  if (cat1Distance > cat2Distance) {
+    return "cat2";
+  } else if (cat2Distance > cat1Distance) {
+    return "cat1";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }  
 }
 
 // Desafio 8
