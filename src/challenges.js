@@ -32,6 +32,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// eslint-disable-next-line sonarjs/cognitive-complexity
 function highestCount(conta) {
   conta.sort(); conta.reverse();
   let counter = 0;
@@ -48,10 +49,22 @@ function highestCount(conta) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let pos = cat1 + mouse;
+  let pos2 = cat2 + mouse;
+  if (cat2 - mouse === 1 && cat1 + mouse === 1) {
+    return 'os gatos trombam e o rato foge';
+  }
+  if (pos < pos2) {
+    return 'cat1';
+  }
+  if (pos2 < pos) {
+    return 'cat2';
+  }
 }
+console.log(catAndMouse(1, 0, 2));
 
+/* 1 */
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
