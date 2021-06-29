@@ -101,8 +101,28 @@ function encode(string) {
   }
   return codigo;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let mensagem = '';
+  let split = string.split('');
+  for(let index in split){
+    if(split[index] === '1'){
+      split.splice(index,1,'a')
+    }
+   else if(split[index] === '2'){
+      split.splice(index,1,'e')
+    }
+    else if(split[index] === '3'){
+      split.splice(index,1,'i')
+    }
+    else if(split[index] === '4'){
+      split.splice(index,1,'o')
+    }
+    else if(split[index] === '5'){
+      split.splice(index,1,'u')
+    }
+    mensagem += (split[index]);
+  }
+  return mensagem;
 }
 
 module.exports = {
