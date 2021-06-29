@@ -74,32 +74,42 @@ function highestCount(arrayDeNumeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-}
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+  let distance1 = Math.abs(Math.abs(mouse) - Math.abs(cat1));
+  let distance2 = Math.abs(Math.abs(mouse) - Math.abs(cat2));
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+  if (distance2 < distance1) {
+    return "cat2"
+  } else if (distance1 < distance2) {
+    return "cat1"
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
 }
-function decode() {
-  // seu código aqui
-}
+  // Desafio 8
+  function fizzBuzz() {
+    // seu código aqui
+  }
 
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  highestCount,
-  splitSentence,
-};
+  // Desafio 9
+  function encode() {
+    // seu código aqui
+  }
+  function decode() {
+    // seu código aqui
+  }
+
+  module.exports = {
+    calcArea,
+    catAndMouse,
+    compareTrue,
+    concatName,
+    decode,
+    encode,
+    fizzBuzz,
+    footballPoints,
+    highestCount,
+    splitSentence,
+  };
