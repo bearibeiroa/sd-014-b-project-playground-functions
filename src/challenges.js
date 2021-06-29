@@ -1,3 +1,7 @@
+//Arrow Function: https://codeburst.io/javascript-understand-arrow-function-syntax-ab4081bba85b
+
+//Funções no geral encontradas em w3schools.com
+
 // Desafio 1
 const compareTrue = (x, y) => x === true && y === true;
 
@@ -37,6 +41,7 @@ const catAndMouse = (mouse, cat1, cat2) => {
 };
 
 // Desafio 8
+//ref https://developer.mozilla.org/ "Mapeando um array de números usando uma função callback que contém um argumento"
 const fizzBuzz = (arrs) => {
   const r = arrs.map((n) => {
     if (n % 3 === 0 && n % 5 === 0) return 'fizzBuzz';
