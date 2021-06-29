@@ -37,13 +37,18 @@ function splitSentence(sentence) {
 function concatName(array) {
     let firstName = array[0];
     let lastName = array [array.length - 1];
-    return lastName + "," + firstName;
+    return lastName + ", " + firstName;
   }
  
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+    let winsPoints = wins * 3;
+    let tiesPoints = ties;
+    let totalPoints = winsPoints + tiesPoints;
+    return totalPoints;
+  
 }
 
 // Desafio 6
