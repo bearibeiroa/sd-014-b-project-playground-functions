@@ -2,28 +2,31 @@
 function compareTrue(reposta1, reposta2) {
   // seu código aqui 
   if (reposta1 && reposta2 === true) {
-    return true
+    return true;
   }
-  return false
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   let answer = ((base * height) / 2);
-  return answer
+  return answer;
 }
 
 // Desafio 3
 function splitSentence(phrase) {
   // seu código aqui
-  let vetor = phrase.split(" ");
-  return vetor
+  let vetor = phrase.split(' ');
+  return vetor;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(vetor) {
   // seu código aqui
+  let firstName = vetor[0];
+  let lastName = vetor[vetor.length -1];
+  return lastName + ' , ' + firstName;
 }
 
 // Desafio 5
