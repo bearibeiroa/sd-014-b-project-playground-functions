@@ -8,17 +8,18 @@ const calcArea = (base, height) => (base * height) / 2;
 const splitSentence = (str) => str.split(' ');
 
 // Desafio 4
-const concatName = (str1, str2) => str1.concat(str2);
+const concatName = (arr) => arr.join(', ');
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+const footballPoints = (wim, tie) => win * 3 + tie;
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+const highestCount = (arr) => {
+  var max = Math.max(...arr);
+  var countmax = arr.filter(max).length;
+
+  return countmax;
+};
 
 // Desafio 7
 function catAndMouse() {
