@@ -21,8 +21,9 @@ function splitSentence(str) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(myArray) {
+  concat = myArray[myArray.length - 1];
+  return concat + ', ' + myArray[0] 
 }
 
 // Desafio 5
