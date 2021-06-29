@@ -13,10 +13,24 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(str) {
+function splitSentence(phrase) {
   let arrayOfStrings = [];
-  //TO DO
+  let currentChar = '';
+  let currentWord = '';
+  for (let i = 0; i < phrase.length; i += 1) {
+    currentChar = phrase[i];
+    if (currentChar == ' ') {
+      arrayOfStrings.push(currentWord); 
+      currentWord = '';
+    } else {
+      currentWord = currentWord + currentChar;
+    }
+  }
+  arrayOfStrings.push(currentWord); 
+
+  return arrayOfStrings;
 }
+
 
 // Desafio 4
 function concatName(array) {
