@@ -37,21 +37,28 @@ const catAndMouse = (mouse, cat1, cat2) => {
 };
 
 // Desafio 8
-const fizzBuzz = (arr) => {
-  const arr2 = [];
-  for (let test of arr) {
-    if (test % 3 === 0 && test % 5 === 0) arr2.push('fizzbuzz');
-    if (test % 3 === 0) arr2.psuh('fizz');
-    if (test % 5 === 0) arr2.push('buzz');
-    else arr2.push('bug!');
+const fizzBuzz = (fbArr) => {
+  const fbArr2 = [];
+  for (let check of fbArry) {
+    if (check % 3 === 0 && check % 5 === 0) {
+      fbArr2.push('fizzbuzz');
+    }
+    if (check % 3 === 0) {
+      fbArr2.push('fizz');
+    }
+    if (check % 5 === 0) {
+      fbArr2.push('buzz');
+    } else {
+      fbArr2.push('bug!');
+    }
   }
-  return arr2;
+  return fbArr2;
 };
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
+const encode = (str) => {
+  let str2;
+};
 function decode() {
   // seu código aqui
 }
