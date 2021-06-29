@@ -52,21 +52,31 @@ function catAndMouse(mouse, cat1, cat2) {
   let ratoXgato2 = (mouse - cat2);
   if (ratoXgato1 < 0){
     ratoXgato1 = ratoXgato1 * (-1);
-  } else if (ratoXgato2 < 0){
+  } else if (ratoXgato2 < 0) {
     ratoXgato2 = ratoXgato2 * (-1);
   }
-  if (ratoXgato1 < ratoXgato2){
+  if (ratoXgato1 < ratoXgato2) {
     return 'cat1';
-  } else if (ratoXgato1 === ratoXgato2){
-    return "os gatos trombam e o rato foge";
+  } else if (ratoXgato1 === ratoXgato2) {
+    return 'os gatos trombam e o rato foge';
   } else {
-    return'cat2';
+    return 'cat2';
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayFzBz) {
+  let arrayFzBzNomes = [];
+  for (let index = 0; index < arrayFzBz.length; index += 1){
+    if (arrayFzBz[index] % 5 === 0 && arrayFzBz[index] % 3 === 0){
+      arrayFzBzNomes.push('fizzBuzz')
+    } else if (arrayFzBz[index] % 5 === 0){
+      arrayFzBzNomes.push('buzz')
+    } else if (arrayFzBz[index] % 3 === 0){
+      arrayFzBzNomes.push('fizz')
+    } else arrayFzBzNomes.push('bug!')
+  }
+  return arrayFzBzNomes;
 }
 
 // Desafio 9
