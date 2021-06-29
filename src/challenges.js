@@ -17,8 +17,8 @@ function splitSentence(stringValue) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  return `${names.pop()}, ${names.shift()}`;
 }
 
 // Desafio 5
