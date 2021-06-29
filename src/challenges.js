@@ -1,25 +1,38 @@
 // Desafio 1
-// O operador && sempre vai retornar o 1º valor quando for true.
-function compareTrue(valor1, valor2) {
-  let result = valor1 && valor2;
-  switch(result) {
-    case valor1:
-      console.log('true');
-      break
-    case valor2:
-      console.log('false');
+
+function compareTrue(a, b) {
+  if (a === true && b === true) {
+   return true;
+  } else {
+   return false;
   }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  return base*height/2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(frase) {
+ let array = [];
+ let word = '';
+  for (index = 0; index < frase.length; index +=1){
+    if (frase[index] === ' '){
+      array.push(word);
+      word = '';
+    } else {
+      word += frase[index];
+    }   
+  }
+    array.push(word);
+    word = '';
+  return array;
+  }
+
+  console.log(splitSentence('O Grêmio está horrível'));
+  
+
 
 // Desafio 4
 function concatName() {
