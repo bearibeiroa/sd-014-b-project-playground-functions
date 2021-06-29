@@ -30,15 +30,29 @@ function concatName(palavra) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let vitoria = wins * 3;
+  let result = vitoria + ties;
+  return result;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(palavra) {
+  let maior = palavra[0];
+  for (index = 0; index < palavra.length; index += 1) {
+    if (palavra[index] > maior) {
+      maior += palavra[index];
+    }
+    let contador = 0;
+    for (index = 0; index < palavra.length; index += 1) {
+      if (palavra[index] === maior) {
+        contador += 1;
+      }
+    }
+    return contador;
+  }
 }
-
+console.log(highestCount( [0, 4, 4, 4, 9, 2, 1]))
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
