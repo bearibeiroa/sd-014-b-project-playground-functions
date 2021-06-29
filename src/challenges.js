@@ -108,19 +108,7 @@ function decode(string2) {
     .replace(/4/g, 'o')
     .replace(/5/g, 'u');
 }
-
-// Desafio 10
-function splitSentence (techIn, nameIn) {
-  let objectOut = [];
-  if (techIn.length == 0) {
-    return 'Vazio';      
-  }
-  techIn.sort();
-  for (let i = 0; i < techIn.length; i += 1) {
-    objectOut.push({tech: techIn[i], name: nameIn });
-  } return objectOut;
-}
-
+  
 module.exports = {
   calcArea,
   catAndMouse,
