@@ -15,17 +15,17 @@ const footballPoints = (win, tie) => win * 3 + tie;
 
 // Desafio 6
 const highestCount = (arr) => {
-  var max = Math.max(...arr);
-  var countmax = arr.filter(max).length;
+  let max = Math.max(...arr);
+  let countmax = arr.filter(max).length;
   return countmax;
 };
 
 // Desafio 7
 const catAndMouse = (mouse, cat, catt) => {
-  var dis1 = Math.abs(cat - mouse);
-  var dis2 = Math.abs(catt - mouse);
+  let dis1 = Math.abs(cat - mouse);
+  let dis2 = Math.abs(catt - mouse);
   if (dis1 > dis2) return 'cat2';
-  if (dist1 > dist2) return 'cat1';
+  if (dis1 > dis2) return 'cat1';
   return 'os gatos trombam e o rato foge';
 };
 
