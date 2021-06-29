@@ -38,12 +38,13 @@ function footballPoints(wins, ties) {
 // Desafio 6
 
 function highestCount(value) {
+  
   let highNumber = 0;
   let sameNumber = 0;
 
   /* descobrir qual é o maior número */
   for (let index = 0; index < value.length; index += 1) {
-    if (highNumber < value[index]) {
+    if (highNumber < Math.abs(value[index])) {
       highNumber = value[index]
     }
   }
@@ -56,8 +57,9 @@ function highestCount(value) {
   }
   return sameNumber
 }
-let kk = [0, 4, 4, 4, 9, 2, 1]
-console.log(highestCount(kk))
+
+
+
 
 // Desafio 7
 function catAndMouse() {
