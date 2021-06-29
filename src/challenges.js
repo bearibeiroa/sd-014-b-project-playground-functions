@@ -1,6 +1,7 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
+  console.log('Alteração apenas para comitar')
 }
 
 // Desafio 2
