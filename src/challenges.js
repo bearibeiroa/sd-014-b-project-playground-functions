@@ -69,12 +69,27 @@ function catAndMouse(mouse, cat1, cat2,) {
   }else{
     return "cat2"
   }
+  // nao estou orgulhoso do meu exercicio 7
 }
-// nao estou orgulhoso do meu exercicio 7
+
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  resposta = []
+  for(let index = 0; index < array.length; index += 1){
+
+    if(array[index]%3 === 0 && array[index]%5 === 0){
+      resposta.push('fizzBuzz')
+    }else if(array[index]%3 === 0){
+      resposta.push('fizz')
+    }else if(array[index]%5 === 0){
+      resposta.push('buzz')
+    }else{
+      resposta.push('bug!')
+    }
+
+  }
+  return resposta
 }
 
 // Desafio 9
