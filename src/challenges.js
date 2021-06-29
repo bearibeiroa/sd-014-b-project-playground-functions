@@ -1,7 +1,7 @@
 // Desafio 1
-function compareTrue(number1, number2, number3) {
+function compareTrue(n1, n2) {
 
-  if (number1 > number2 && number1 > number3) {
+  if (n1 === true && n2 === true) {
     return true;
   }
   else {
