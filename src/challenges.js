@@ -18,8 +18,9 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(phrase) {
+  let primeiro = `${phrase.pop()}, ${phrase.shift()}`;
+  return primeiro;
 }
 
 // Desafio 5
