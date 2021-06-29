@@ -3,6 +3,7 @@ function compareTrue(boolean1, boolean2) {
   if (boolean1 && boolean2) {
     return true;
   }
+  return false
 }
 
 // Desafio 2
