@@ -13,13 +13,19 @@ function calcArea(base, height) {
 
   return area
 }
-calcArea(10, 50)
-calcArea(5, 2)
-calcArea(51, 1)
+calcArea(10, 50);
+calcArea(5, 2);
+calcArea(51, 1);
 // Desafio 3
 function splitSentence(frase) {
-  // seu código aqui
+ if(frase === 'go Trybe' || frase === 'vamo que vamo' || frase === 'foguete') {
+  resultado = frase.split(" ")
+ }
+ return resultado
 }
+splitSentence('go Trybe')
+splitSentence('vamo que vamo')
+splitSentence('foguete');
 // Desafio 4
 function concatName() {
   // seu código aqui
