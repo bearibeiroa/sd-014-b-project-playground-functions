@@ -2,14 +2,14 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-    } else {
-    return false; 
-  } 
+  } else {
+    return false;
+  }
 } 
 
 // Desafio 2
 function calcArea(base, height) {
-  let result = (base * height/2);
+  let result = ((base * height)/2);
   return result;
 }
 
