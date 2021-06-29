@@ -97,10 +97,25 @@ function catAndMouse(mouse, cat1, cat2) {
 
 }
 
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let words = [];
+
+  for(let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 5 == 0 && numbers[i] % 3 == 0) {
+      words.push('fizzBuzz');
+    } else if (numbers[i] % 3 == 0) {
+      words.push('fizz');
+    } else if (numbers[i] % 5 == 0) {
+      words.push('buzz');
+    } else {
+      words.push('bug!');
+    }
+  }
+  return words;
 }
+
 
 // Desafio 9
 function encode() {
