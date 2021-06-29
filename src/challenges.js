@@ -31,6 +31,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 // Consultei o MDN Web Docs para implementar a 'arrow function expressions' do ES2015 e poder usar a função sort para números inteiros.
 // Link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
 function highestCount(array) {
   array = array.sort((a, b) => a - b);
   function isHighest(value) {
@@ -40,8 +41,16 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if ((cat1 + cat2) / 2 === mouse) {
+    return 'os gatos trombam e o rato foge';
+  }
+  if (mouse + cat1 < mouse + cat2) {
+    return 'cat1';
+  }
+  if (mouse + cat1 > mouse + cat2) {
+    return 'cat2';
+  }
 }
 
 // Desafio 8
