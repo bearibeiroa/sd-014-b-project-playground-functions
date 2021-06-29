@@ -77,7 +77,7 @@ function catAndMouse(mouse, cat1, cat2) {
     distanceMouseCat2 = mouse - cat2;
   }
   if (distanceMouseCat1 === distanceMouseCat2) {
-    result = 'os gatos trobam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   } else if (distanceMouseCat1 < distanceMouseCat2) {
     result = 'cat1';
   } else {
@@ -107,11 +107,55 @@ function fizzBuzz(arrayOfNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(toBeEncoded) {
+  let pwdVault = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  }
+  let encodedWordArray = [];
+  for (let index = 0; index < toBeEncoded.length; index += 1) {
+    encodedWordArray.push(toBeEncoded[index]);
+  }
+  for (let key in pwdVault) {
+    for (let index = 0; index < encodedWordArray.length; index += 1) {
+      if (encodedWordArray[index] === key) {
+        encodedWordArray[index] = pwdVault[key];
+      }
+    }
+  }
+  let encodedWord = '';
+  for (let index = 0; index < encodedWordArray.length; index += 1) {
+    encodedWord += encodedWordArray[index];
+  }
+  return encodedWord;
 }
-function decode() {
-  // seu código aqui
+function decode(toBeDecoded) {
+  let pwdVault = {
+    '1': 'a',
+    '2': 'e',
+    '3': 'i',
+    '4': 'o',
+    '5': 'u',
+  }
+  let decodedWordArray = [];
+  for (let index = 0; index < toBeDecoded.length; index += 1) {
+    decodedWordArray.push(toBeDecoded[index]);
+  }
+  for (let key in pwdVault) {
+    for (let index = 0; index < decodedWordArray.length; index += 1) {
+      if (decodedWordArray[index] === key) {
+        decodedWordArray[index] = pwdVault[key];
+      }
+    }
+  }
+  let decodedWord = '';
+  for (let index = 0; index < decodedWordArray.length; index += 1) {
+    decodedWord += decodedWordArray[index];
+  }
+  return decodedWord;
 }
 
 module.exports = {
