@@ -49,9 +49,28 @@ function highestCount(arrayDeNumeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2,) {
+  if(cat1 > mouse){
+    cat1 = cat1 - mouse
+  }else{
+    cat1 = mouse - cat1
+  }
+
+  if(cat2 > mouse){
+    cat2 = cat2 - mouse
+  }else{
+    cat2 = mouse - cat2
+  }
+
+  if(cat1 === cat2){
+    return "os gatos trombam e o rato foge"
+  }else if(cat1 < cat2){
+    return "cat1"
+  }else{
+    return "cat2"
+  }
 }
+// nao estou orgulhoso do meu exercicio 7
 
 // Desafio 8
 function fizzBuzz() {
