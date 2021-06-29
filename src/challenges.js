@@ -42,11 +42,9 @@ function fizzBuzz(fbArr) {
   for (let check of fbArr) {
     if (check % 3 === 0 && check % 5 === 0) {
       fbArr2.push('fizzbuzz');
-    }
-    if (check % 3 === 0) {
+    } else if (check % 3 === 0) {
       fbArr2.push('fizz');
-    }
-    if (check % 5 === 0) {
+    } else if (check % 5 === 0) {
       fbArr2.push('buzz');
     } else {
       fbArr2.push('bug!');
@@ -62,17 +60,13 @@ function encode(stringE) {
   for (let ind = 0; ind < stringE.length; ind += 1) {
     if (stringE[ind] === 'a') {
       stringE2.push('1');
-    }
-    if (stringE[ind] === 'e') {
+    } else if (stringE[ind] === 'e') {
       stringE2.push('2');
-    }
-    if (stringE[ind] === 'i') {
+    } else if (stringE[ind] === 'i') {
       stringE2.push('3');
-    }
-    if (stringE[ind] === 'o') {
+    } else if (stringE[ind] === 'o') {
       stringE2.push('4');
-    }
-    if (stringE[ind] === 'u') {
+    } else if (stringE[ind] === 'u') {
       stringE2.push('5');
     } else {
       stringE2.push(stringE[ind]);
@@ -81,8 +75,27 @@ function encode(stringE) {
   return stringE2.join('');
 }
 
-function decode() {
-  // seu código aqui
+function decode(stringD) {
+  let stringD2 = [];
+  for (let ind2 = 0; ind2 < stringD.length; ind2 += 1) {
+    if (stringD[ind2] === '1') {
+      stringD2.push('a');
+    } else if (stringD[ind2] === '2') {
+      stringD2.push('e');
+    } else if (stringD[ind2] === '3') {
+      stringD2.push('i');
+    } else if (stringD[ind2] === '4') {
+      stringD2.push('o');
+    } else if (stringD[ind2] === '5') {
+      decodedString.push('u');
+    } else {
+      stringD2.push(stringD[index]);
+    }
+    // Return the array but joining it without a comma
+  }
+
+  // Return the array but joining it without a comma
+  return decodedString.join('');
 }
 
 module.exports = {
