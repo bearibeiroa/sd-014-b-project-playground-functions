@@ -45,15 +45,26 @@ function highestCount(numeros) {
         contNumero += 1;
       }
     }
-  return contNumero;
+  return contNumero
 }
 
 
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distMouseCat1 = (mouse - cat1)**2;
+  let distMouseCat2 = (mouse - cat2)**2;
+  
+  if (distMouseCat1 < distMouseCat2) {
+    return ("cat1");
+  }
+  else {
+    if (distMouseCat2 < distMouseCat1) {
+      return ("cat2");
+    }
+    else { return ("os gatos trombam e o rato foge")}
+  }// seu código aqui
 }
 
 // Desafio 8
