@@ -19,7 +19,10 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(string) {
   let i = string.length - 1;
-  let array = string[i] + ', ' + string[0];
+  let array = string[i];
+  // Peguei a susgestão de Mairton para o erro de concatenação
+  array += ', ';
+  array += string[0];
   return array;
 }
 
