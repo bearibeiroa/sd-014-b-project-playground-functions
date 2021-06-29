@@ -98,13 +98,7 @@ function fizzBuzz(arrayOfNumbers) {
 
 // Desafio 9
 function encode(toBeEncoded) {
-  let pwdVault = {
-    a: '1',
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5',
-  };
+  let pwdVault = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   let encodedWordArray = [];
   for (let index = 0; index < toBeEncoded.length; index += 1) {
     encodedWordArray.push(toBeEncoded[index]);
@@ -123,7 +117,7 @@ function encode(toBeEncoded) {
   return encodedWord;
 }
 function decode(toBeDecoded) {
-  let pwdVault = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u', };
+  let pwdVault = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   let decodedWordArray = [];
   for (let index = 0; index < toBeDecoded.length; index += 1) {
     decodedWordArray.push(toBeDecoded[index]);

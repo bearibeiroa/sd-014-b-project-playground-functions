@@ -1,6 +1,19 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, name) {
+  if (techArray === []) {
+    return 'Vazio!';
+  } else {
+    let listaTechName = [];
+    for (let key in techArray) {
+      let objetoTechName = {
+        tech: techArray[key],
+        name: name
+      }
+      listaTechName.push(objetoTechName);
+    }
+    return listaTechName.sort((a, b) => (a.tech > b.tech) ? 1 : -1);
+    //Referência para a linha acima: https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/
+  }  
 }
 
 // Desafio 11
