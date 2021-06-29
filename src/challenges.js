@@ -37,51 +37,55 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 
-function highestCount(value){
+function highestCount(value) {
   let highNumber = 0;
-  let someNumber = 0;
+  let sameNumber = 0;
 
-  for (let numberIndex = 0; numberIndex < value.length; numberIndex += 1) {
-
-
-    if (value[numberIndex] > highNumber) {
-      highNumber = value[numberIndex]
-    }
-
-    if (highNumber === value[numberIndex]) {
-      someNumber += 1
+  /* descobrir qual é o maior número */
+  for (let index = 0; index < value.length; index += 1) {
+    if (highNumber < value[index]) {
+      highNumber = value[index]
     }
   }
-  return someNumber
+
+  /* contar quantas vezes ele se repete */
+  for (let index = 0; index < value.length; index += 1) {
+    if (highNumber === value[index]) {
+      sameNumber += 1;
+    }
+  }
+  return sameNumber
+}
+let kk = [0, 3, 6, 4, 6, 5, 6, 3, 6]
+console.log(highestCount(kk))
+
+// Desafio 7
+function catAndMouse() {
+  // seu código aqui
 }
 
- // Desafio 7
-  function catAndMouse() {
-    // seu código aqui
-  }
+// Desafio 8
+function fizzBuzz() {
+  // seu código aqui
+}
 
-  // Desafio 8
-  function fizzBuzz() {
-    // seu código aqui
-  }
+// Desafio 9
+function encode() {
+  // seu código aqui
+}
+function decode() {
+  // seu código aqui
+}
 
-  // Desafio 9
-  function encode() {
-    // seu código aqui
-  }
-  function decode() {
-    // seu código aqui
-  }
-
-  module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    highestCount,
-    splitSentence,
-  };
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
+};
