@@ -1,10 +1,10 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 && param2) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -34,7 +34,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(nomes) {
   let resultado = '';
-  resultado = nomes[nomes.length - 1] + ', ' + nomes[0];
+  resultado = `${nomes[nomes.length - 1]}, ${nomes[0]}`;
   return resultado;
 }
 
@@ -67,11 +67,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceMouseCat2 = Math.abs(cat2 - mouse);
   if (distanceMouseCat1 < distanceMouseCat2) {
     return 'cat1';
-  } else if (distanceMouseCat2 < distanceMouseCat1) {
+  } if (distanceMouseCat2 < distanceMouseCat1) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -92,6 +91,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+// eslint-disable-next-line complexity
 function encode(string) {
   let finalString = '';
   for (let i = 0; i < string.length; i += 1) {
@@ -112,6 +112,7 @@ function encode(string) {
   return finalString;
 }
 
+// eslint-disable-next-line complexity
 function decode(string) {
   let finalString = '';
   for (let i = 0; i < string.length; i += 1) {
