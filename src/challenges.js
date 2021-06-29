@@ -1,34 +1,18 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) {
-    return true
-  } else {
-    return false
-  }
+  console.log('oi');
+  return a && b;
 }
-
 // Desafio 2
+
 function calcArea(base, height) {
-  if (base === 10 && height === 50) {
-    let calculo = (base * height) / 2
-
-    return calculo
-
-  } else if (base === 5 && height === 2) {
-    let calculo = (base * height) / 2
-
-    return calculo
-
-  } else if (base === 51 && height === 1) {
-    let calculo = (base * height) / 2
-
-    return calculo
-  }
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  const arrayDaFraseDelimitadoPorEspacos = frase.split(' ');
+  return arrayDaFraseDelimitadoPorEspacos;
 }
 
 // Desafio 4
