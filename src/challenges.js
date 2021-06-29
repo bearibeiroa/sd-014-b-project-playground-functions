@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if(valor1 === true && valor2 === true){
+  if (valor1 === true && valor2 === true) {
     return true
   } else {
     return false
@@ -9,25 +9,26 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height)/2
+  return (base * height) / 2
 }
 
 // Desafio 3
 function splitSentence(palavras) {
-    let palavr = []
-    palavras = palavras.split('')
-    return palavras
+  for (let words of palavras) {
+    words = palavras[words]
+    return words
   }
-console.log(splitSentence("ola pessoas"))
+}
+console.log(splitSentence("ola mundo", "tudo bem"))
 
 // Desafio 4
 function concatName(itens) {
-  return (itens[itens.length-1]+','+itens[0])
+  return (itens[itens.length - 1] + ',' + itens[0])
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = (wins*3)+(ties*1)
+  let points = (wins * 3) + (ties * 1)
 }
 
 // Desafio 6
