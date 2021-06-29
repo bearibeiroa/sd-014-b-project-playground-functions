@@ -17,16 +17,17 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayString) {
-  return arrayString[arrayString.length -1] + ', ' + arrayString[0];
+  return arrayString[arrayString.length - 1] + ', ' + arrayString[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPoints = wins * 3 + ties * 1;
+  return totalPoints;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumbers) {
   // seu código aqui
 }
 
