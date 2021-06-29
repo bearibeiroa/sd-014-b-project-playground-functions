@@ -5,6 +5,7 @@ function compareTrue(valueA, valueB) {
   }
   return false;
 }
+
 // Desafio 2
 function calcArea(base, height) {
   let areaTriangulo = (base * height) / 2;
@@ -12,8 +13,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  let phrase2 = phrase.split(' ');
+  return phrase2;
 }
 
 // Desafio 4
