@@ -11,20 +11,23 @@ function compareTrue(valor1, valor2) {
 function calcArea(base, height) {
   return (base*height)/2
 }
-console.log(calcArea(10,50))
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(palavras) {
+    let palavr = []
+    palavras = palavras.split('')
+    return palavras
+  }
+console.log(splitSentence("ola pessoas"))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(itens) {
+  return (itens[itens.length-1]+','+itens[0])
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (wins*3)+(ties*1)
 }
 
 // Desafio 6
