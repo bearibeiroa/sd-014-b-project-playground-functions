@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-one-iteration-loop */
+/* eslint-disable max-len */
 /* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable complexity */
 // Desafio 1
@@ -65,6 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
+// Desafio 8
 function fizzBuzz(nums) {
   let total = [];
   for (let i = 0; i < nums.length; i += 1) {
@@ -82,11 +85,17 @@ function fizzBuzz(nums) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// Referencia tirada do W3 school.
+function encode(parametro) {
+  let e = parametro.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3).replace(/o/g, 4)
+    .replace(/u/g, 5);
+  return e;
 }
-function decode() {
-  // seu código aqui
+
+function decode(parametro2) {
+  let e = parametro2.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o')
+    .replace(/5/g, 'u');
+  return e;
 }
 
 module.exports = {
