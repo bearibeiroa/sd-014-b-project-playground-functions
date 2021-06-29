@@ -70,10 +70,24 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-}
+  let pcat1 = 0;
+  let pcat2 = 0;
+  if(mouse > cat1) {
+    pcat1 = mouse - cat1;
+  } else pcat1 = cat1 - mouse;
+  if(mouse > cat2) {
+    pcat2 = mouse - cat2;
+  } else pcat2 = cat2 - mouse;
 
+  if (pcat1 > pcat2) {
+    return 'cat2';
+  } if (pcat1 === pcat2) {
+    return 'os gatos trombam e o rato foge';
+  } else return 'cat1';
+}
+console.log(catAndMouse(1, 0, 2));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
