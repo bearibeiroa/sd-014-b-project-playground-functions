@@ -37,25 +37,15 @@ const catAndMouse = (mouse, cat1, cat2) => {
 };
 
 // Desafio 8
-const fizzBuzz = (array) => {
-  let pushArray = [];
-  let buggybuzz;
-  for (let k = 0; k < array.length; k += 1) {
-    if (array[k] % 3 === 0 && array[k] % 5 === 0) {
-      buggybuzz = 'fizzBuzz';
-      pushArray.push(buggybuzz);
-    } else if (array[k] % 3 === 0) {
-      buggybuzz = 'fizz';
-      pushArray.push(buggybuzz);
-    } else if (array[k] % 5 === 0) {
-      buggybuzz = 'buzz';
-      pushArray.push(buggybuzz);
-    } else {
-      buggybuzz = 'bug!';
-      pushArray.push(buggybuzz);
-    }
-  }
-  return pushArray;
+const fizzBuzz = (arrs) => {
+  const r = arrs.map((n) => {
+    if (n % 3 === 0 && n % 5 === 0) return 'fizzBuzz';
+    if (n % 3 === 0) return 'fizz';
+    if (n % 5 === 0) return 'buzz';
+    return 'bug!';
+  });
+
+  return r;
 };
 
 // Desafio 9
