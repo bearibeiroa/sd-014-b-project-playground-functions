@@ -105,8 +105,8 @@ function encode() {
     } else {
       newText += l;
     }
-    return console.log(newText);
 } 
+return console.log(newText);
   // seu código aqui
 }
 function decode() {
