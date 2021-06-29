@@ -107,22 +107,58 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   // Desafio 9
-  function encode() {
+  function encode(frase) {
     // seu código aqui
+    let arrayFrase = frase.split('');
+    let resultado = [];
+    for (let index = 0; index < arrayFrase.length; index += 1){
+      if (arrayFrase[index] === 'a') {
+        resultado.push('1');
+      } else if (arrayFrase[index] === 'e') {
+        resultado.push('2');
+      } else if (arrayFrase[index] === 'i') {
+        resultado.push('3');
+      } else if (arrayFrase[index] === 'o') {
+        resultado.push('4');
+      } else if (arrayFrase[index] === 'u') {
+        resultado.push('5');
+      } else {
+        resultado.push(arrayFrase[index]);
+      }
+    }
+    return resultado.join('');
   }
-  function decode() {
+  function decode(frase) {
     // seu código aqui
+    let arrayFrase = frase.split('');
+    let resultado = [];
+    for (let index = 0; index < arrayFrase.length; index += 1){
+      if (arrayFrase[index] === '1') {
+        resultado.push('a');
+      } else if (arrayFrase[index] === '2') {
+        resultado.push('e');
+      } else if (arrayFrase[index] === '3') {
+        resultado.push('i');
+      } else if (arrayFrase[index] === '4') {
+        resultado.push('o');
+      } else if (arrayFrase[index] === '5') {
+        resultado.push('u');
+      } else {
+        resultado.push(arrayFrase[index]);
+      }
+    }
+    return resultado.join('');
   }
 
   module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    highestCount,
-    splitSentence,
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
   };
