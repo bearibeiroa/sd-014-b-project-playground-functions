@@ -1,22 +1,21 @@
 // Desafio 1
-function compareTrue(a,b) {
-  if(a===b){
+function compareTrue(a, b) {
+  if (a === b) {
     return true;
-  }
-  else{
+  } else {
     return false;
   }
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   let result = (base * height) / 2;
   return result;
 }
 
 // Desafio 3
 function splitSentence(stringVariavel) {
-  let resultado = stringVariavel.split(" ");
+  let resultado = stringVariavel.split(' ');
   return resultado;
 }
 
@@ -49,46 +48,44 @@ function highestCount(palavra) {
         contador += 1;
       }
     }
-    return (contador);
+    return contador;
   }
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let DistanciaCat1= Math.abs(mouse - cat1);
-  let DistanciaCat2= Math.abs(mouse -cat2);
-  if(DistanciaCat1>DistanciaCat2){
-    return 'cat1'
-  }
-  else if(DistanciaCat1<DistanciaCat2){
-    return 'cat2'
-  }
-  else{
-    return 'os gatos trombam e o rato foge'
+  let DistanciaCat1 = Math.abs(mouse - cat1);
+  let DistanciaCat2 = Math.abs(mouse - cat2);
+  if (DistanciaCat1 > DistanciaCat2) {
+    return 'cat1';
+  } else if (DistanciaCat1 < DistanciaCat2) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
 function fizzBuzz() {
-  let vetorDecodificado =vetor;
-  let fizz= "fizz";
-  let fizBuz= "fizzBuzz";
-  let buzz= "Buzz";
-  let bug= "bug!"
-  for(index=0; index<vetor.length; index +=1){
-    if(vetorDecodificado[index]%3===0 && vetorDecodificado[index]%5===0){
-      vetorDecodificado[index]= fizBuz;
-    }
-    else if(vetorDecodificado[index]%3===0){
+  let vetorDecodificado = vetor;
+  let fizz = 'fizz';
+  let fizBuz = 'fizzBuzz';
+  let buzz = 'Buzz';
+  let bug = 'bug!';
+  for (index = 0; index < vetor.length; index += 1) {
+    if (
+      vetorDecodificado[index] % 3 === 0 &&
+      vetorDecodificado[index] % 5 === 0
+    ) {
+      vetorDecodificado[index] = fizBuz;
+    } else if (vetorDecodificado[index] % 3 === 0) {
       vetorDecodificado[index] = fizz;
+    } else if (vetorDecodificado[index] % 5 === 0) {
+      vetorDecodificado[index] = buzz;
+    } else {
+      vetorDecodificado[index] = bug;
     }
-    else if(vetorDecodificado[index]%5===0){
-      vetorDecodificado[index]= buzz;
-    }
-    else{
-      vetorDecodificado[index]= bug;
-    }
-  } 
+  }
   return vetorDecodificado;
 }
 
