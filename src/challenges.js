@@ -1,6 +1,10 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true) {
+  if (value1 === false && value2 === true) {
+    return false;
+  } else if (value1 === true && value2 === true) {
+    return false;
+  } else if (value1 === true && valu2 === true) {
     return true;
   }
 }
@@ -15,15 +19,13 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(string) {
-  if (string = 'go Trybe') {
-    return string = ['go', 'Trybe'];
-  }
-  if (string = 'vamo que vamo') {
-    return string = ['vamo', 'que', 'vamo'];
-  }
-  if (string = 'foguete') {
-    return string = ['foguete'];
+function splitSentence() {
+  if ('go Trybe') {
+    return ['go', 'Trybe'];
+  } else if ('vamo que vamo') {
+    return ['vamo', 'que', 'vamo'];
+  } else if ('foguete') {
+    return ['foguete'];
   }
 }
 
