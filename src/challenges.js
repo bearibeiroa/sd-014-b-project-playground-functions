@@ -1,3 +1,5 @@
+/*algumas referencias retiradas do w3 schools, geralmente funções de JS, split, abs, filter etc..*/
+
 // Desafio 1
 const compareTrue = (x, y) => x === true && y === true;
 
@@ -22,10 +24,12 @@ const highestCount = (arr) => {
 
 // Desafio 7
 const catAndMouse = (mouse, cat1, cat2) => {
-  let dis1 = Math.abs(cat2 - mouse);
-  let dis2 = Math.abs(cat1 - mouse);
-  if (dis1 > dis2) return 'cat2';
-  if (dis1 > dis2) return 'cat1';
+  let dist1 = Math.abs(cat1 - mouse);
+  let distCat2 = Math.abs(cat2 - mouse);
+
+  if (dist1 > dist2) return 'cat2';
+  if (dist2 > dist1) return 'cat1';
+
   return 'os gatos trombam e o rato foge';
 };
 
