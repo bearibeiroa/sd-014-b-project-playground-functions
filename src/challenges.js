@@ -28,8 +28,12 @@ function splitSentence(phraseReceived) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(namesArray) {
+  let namesArrayLength = namesArray.length;
+  let primeiroItem = namesArray[0];
+  let ultimoItem = namesArray[namesArrayLength - 1];
+  let ordemInvertida = ultimoItem + ", " + primeiroItem;
+  return ordemInvertida;
 }
 
 // Desafio 5
