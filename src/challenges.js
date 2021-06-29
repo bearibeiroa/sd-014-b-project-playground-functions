@@ -31,8 +31,10 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(array) {
-  let nameConcatened = [array[array.length-1]+', '+array[0]];
-  return nameConcatened;
+  let name1 = array[array.length-1];
+  let name2 = array[0];
+  let namesummed = name1 + ', '+ name2;
+  return namesummed;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
