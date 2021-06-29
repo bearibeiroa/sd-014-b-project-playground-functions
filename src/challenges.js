@@ -60,13 +60,13 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   if((cat1 > cat2) && (cat1 > mouse)){
     return "cat2";
-  }else if ((cat2 > cat1) && (cat2 > mouse)){
-    return "cat1"; 
-}else if(cat1 === cat2){
-  return "os gatos trombam e o rato foge";
+  }else if(((cat1 === mouse - 1) && (cat2 === mouse + 1)) || ((cat2 === mouse - 1) && (cat1 === mouse + 1))){
+    return "os gatos trombam e o rato foge";
+}else {
+  return "cat1";
 }
 }
-console.log(catAndMouse(1, 0, 2));
+console.log(catAndMouse(6, 1, 7));
 
 
 // Desafio 8
