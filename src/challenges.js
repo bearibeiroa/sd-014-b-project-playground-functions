@@ -21,8 +21,9 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nameDivided) {
+  let firstAndLast = (nameDivided[nameDivided.length - 1] + ', ' + nameDivided[0]);
+  return firstAndLast;
 }
 
 // Desafio 5
