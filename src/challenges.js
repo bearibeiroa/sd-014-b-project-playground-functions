@@ -1,6 +1,14 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
+  let reposta1 = true;
+  let reposta2 = false;
+  if(reposta1 && reposta2 === true){
+    return true
+  }else{
+    return false
+  }
+  
 }
 
 // Desafio 2
