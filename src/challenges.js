@@ -1,5 +1,9 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(num1, num2, num 3) {
+
+  num1+num2=num3;
+
+  return num3;
   // seu código aqui
 }
 
