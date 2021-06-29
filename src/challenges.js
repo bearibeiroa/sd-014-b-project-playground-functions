@@ -52,9 +52,16 @@ function highestCount(vetor) {
   for(let count = 0; count < vetor.length; count += 1) {
     let guardarNumero = vetor[count];
 
-    if(guardarNumero > maiorNumero) {
-      maiorNumero = guardarNumero;
+    if(vetor[count] > 0) {
+      if(guardarNumero > maiorNumero) {
+        maiorNumero = guardarNumero;
+      }
+    } else if(vetor[count] < 0){
+      if(guardarNumero < maiorNumero) {
+        maiorNumero = guardarNumero;
+      }
     }
+
   }
 
   //Verifica quantas vezes o maior numero aparece
@@ -72,12 +79,26 @@ function highestCount(vetor) {
 
 }
 
-console.log(highestCount([0, 0, 0]));
+console.log(highestCount([-2, -2, -1]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  //Calcula distancia entre os gatos e o rato e transforma em positivo qualquer numero
+  //Para não ter perigo de dar número negativo
+  distanceCat1 = Math.abs(cat1 - mouse);
+  distanceCat2 = Math.abs(cat2 - mouse);
+
+  if(distanceCat1 < distanceCat2) {
+    return 'cat1';
+  } else if(distanceCat2 < distanceCat1){
+    return 'cat2';
+  } else if(distanceCat1 === distanceCat2){
+    return 'os gatos trombam e o rato foge';
+  };
+
 }
+
+console.log(catAndMouse(1, 3, 3));
 
 // Desafio 8
 function fizzBuzz() {
