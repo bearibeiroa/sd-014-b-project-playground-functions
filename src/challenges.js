@@ -14,8 +14,10 @@ function splitSentence(text) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array = ['']) {
+  let first = array[0] || '';
+  let last = array[array.length - 1] || '';
+  return `${last}, ${first}`;
 }
 
 // Desafio 5
