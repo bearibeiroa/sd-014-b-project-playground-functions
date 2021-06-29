@@ -1,16 +1,18 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if(value1 === true && value2 === true){
+  // seu código aqui
+  if (value1 === true && value2 === true) {
     return true;
-  }
-  else{
+  } else {
     return false;
   }
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  let calc = (base * height) / 2;
+  return calc;
 }
 
 // Desafio 3
