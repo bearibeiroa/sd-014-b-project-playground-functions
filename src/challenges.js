@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if(value1 === true && value2 === true){
+  if (value1 === true && value2 === true) { 
     return true;
   } else {
     return false;
@@ -124,7 +124,7 @@ function decode(word) {
       break;
     } 
   }
-  let resposta = splitWord.join("");
+  let resposta = splitWord.join('');
   return resposta;
 }
 
