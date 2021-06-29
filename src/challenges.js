@@ -10,13 +10,18 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  let split = [];
+  for (let index = 0; index < phrase; index += 1) {
+   split = phrase.push(phrase[index]);
+  }
+  return split;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(value) {
+  let soma = value[value.length -1] + ', ' + value[0];
+  return soma;
 }
 
 // Desafio 5
