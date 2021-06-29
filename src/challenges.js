@@ -32,8 +32,12 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrayNames) {
   // seu código aqui
+  let tamanhoArray = arrayNames.length - 1;
+  let stringNames = arrayNames[tamanhoArray];
+  stringNames += ', ' + arrayNames[0];
+  return stringNames;
 }
 
 // Desafio 5
