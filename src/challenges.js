@@ -56,21 +56,37 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   // Os três animais estão em uma reta, então o parâmetro que define a posição relativa dos 3 no "plano" é composto apenas por um número, inserido pelo usuário.
   // Preciso calcular a distância de cada um dos gatos com relação ao rato.
-  let cat1MouseDist = (cat1 - mouse)**2; // Poderia usar o Math.abs() para determinar o módulo, mas
-  let cat2MouseDist = (cat2 - mouse)**2; // como ele não pede o valor, deixei da forma como fora originalmente concebido.
+  let cat1MouseDist = (cat1 - mouse) ** 2; // Poderia usar o Math.abs() para determinar o módulo e acabar com o problema de um dos gatos em uma posição menor que a do rato. Encontrei a função no developer.mozilla depois de finalizar o exercício, mas como ele não pede o valor, deixei da forma como fora originalmente concebido.
+  let cat2MouseDist = (cat2 - mouse) ** 2;
   // Agora preciso compará-las
   if (cat1MouseDist > cat2MouseDist) {
-    return 'cat2'
+    return 'cat2';
   } else if (cat1MouseDist < cat2MouseDist) {
-    return 'cat1'
+    return 'cat1';
   } else {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let newArray = [];
+  // É necessário pegar cada valor do array e fazer 4 verificações: se (1) é divísil por 3, (2) por 5, (3) por 3 e 5 ou (4) por nennhum dos dois.
+  // Para pegar cada valor do array:
+  for (let index = 0; index < array.length; index += 1) {
+    let division3 = array[index] % 3;
+    let division5 = array[index] % 5;
+    if (division3 === 0 && division5 === 0) {
+      newArray.push('fizzBuzz');
+    } else if (division3 === 0) {
+      newArray.push('fizz');
+    } else if (division5 === 0) {
+      newArray.push('buzz');
+    } else {
+      newArray.push('bug!');
+    }
+  }
+  return newArray;
 }
 
 // Desafio 9
