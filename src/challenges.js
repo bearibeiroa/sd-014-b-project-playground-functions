@@ -55,7 +55,7 @@ function highestCount(arrayOfNumbers) {
       largerNumber = number;
       largeNumCounter = 1;
     } else if (number === largerNumber) {
-      largeNumCounter++;
+      largeNumCounter += 1;
     }
   }
   return largeNumCounter;
@@ -66,19 +66,44 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceMouseCat1 = mouse - cat1;
   let distanceMouseCat2 = mouse - cat2;
   let result = '';
-  if (distanceMouseCat1 === distanceMouseCat2) {
-    result = 'os gatos trombam e o rato foge';
-  } else if (distanceMouseCat2 < distanceMouseCat1) {
-    result = 'cat2';
+  if (mouse <= cat1) {
+    distanceMouseCat1 = cat1 - mouse;
   } else {
+    distanceMouseCat1 = mouse - cat1;
+  }
+  if (mouse <= cat2) {
+    distanceMouseCat2 = cat2 - mouse;
+  } else {
+    distanceMouseCat2 = mouse - cat2;
+  }
+  if (distanceMouseCat1 === distanceMouseCat2) {
+    result = 'os gatos trobam e o rato foge';
+  } else if (distanceMouseCat1 < distanceMouseCat2) {
     result = 'cat1';
+  } else {
+    result = 'cat2';
   }
   return result;
 }
 
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayOfNumbers) {
+  let fizzBuzzArray = [];
+  for (let number of arrayOfNumbers) {
+    if (number % 3 != 0 && number % 5 !=0) {
+      fizzBuzzArray.push('bug!');
+    } else if (number % 3 === 0 && number % 5 === 0) {
+      fizzBuzzArray.push('fizzBuzz');
+    } else if (number % 3 === 0 && number % 5 != 0) {
+      fizzBuzzArray.push('fizz');
+    } else if (number % 3 != 0 && number % 5 === 0) {
+      fizzBuzzArray.push('buzz');
+    } else {
+      fizzBuzzArray.push(number);
+    }
+  }
+  return fizzBuzzArray;
 }
 
 // Desafio 9
