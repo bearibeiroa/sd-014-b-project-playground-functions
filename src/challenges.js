@@ -17,7 +17,7 @@ const footballPoints = (win, tie) => win * 3 + tie;
 const highestCount = (arr) => {
   let i = 0;
   let max = Math.max(...arr);
-  array.forEach((n) => {
+  arr.forEach((n) => {
     if (max === n) {
       i += 1;
     }
@@ -40,7 +40,7 @@ const catAndMouse = (mouse, cat1, cat2) => {
 const fizzBuzz = (arr) => {
   const arr2 = [];
   for (let test of arr) {
-    if (test % 3 === 0 && x % 5 === 0) arr2.push('fizzbuzz');
+    if (test % 3 === 0 && test % 5 === 0) arr2.push('fizzbuzz');
     if (test % 3 === 0) arr2.psuh('fizz');
     if (test % 5 === 0) arr2.push('buzz');
     else arr2.push('bug!');
