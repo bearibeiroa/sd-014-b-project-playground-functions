@@ -95,7 +95,7 @@ function encode(string) {
       }
     }
   }
-  newString = tempArray.join('');
+  let newString = tempArray.join('');
   return newString;
 }
 
@@ -115,7 +115,7 @@ function decode(string) {
       }
     }
   }
-  newString = tempArray.join('');
+  let newString = tempArray.join('');
   return newString;
 }
 
