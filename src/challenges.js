@@ -19,10 +19,12 @@ function splitSentence(fraseTeste) {
   return fraseTeste.split(' ', 3);
   // seu código aqui
 }
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lista) {
+let primeiroNome = lista[0];
+let ultimoNome = lista[lista.length -1];
+return (ultimoNome + ', ' + primeiroNome);
+
 }
 
 // Desafio 5
