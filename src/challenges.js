@@ -38,6 +38,7 @@ function highestCount(paramArrayNum) {
     quantidade = quantidade + 1;
   }
   return quantidade;
+  
 }
 
 // Desafio 7
