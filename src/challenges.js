@@ -53,8 +53,19 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  // Os três animais estão em uma reta, então o parâmetro que define a posição relativa dos 3 no "plano" é composto apenas por um número, inserido pelo usuário.
+  // Preciso calcular a distância de cada um dos gatos com relação ao rato.
+  let cat1MouseDist = (cat1 - mouse)**2; // Poderia usar o Math.abs() para determinar o módulo, mas
+  let cat2MouseDist = (cat2 - mouse)**2; // como ele não pede o valor, deixei da forma como fora originalmente concebido.
+  // Agora preciso compará-las
+  if (cat1MouseDist > cat2MouseDist) {
+    return 'cat2'
+  } else if (cat1MouseDist < cat2MouseDist) {
+    return 'cat1'
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
