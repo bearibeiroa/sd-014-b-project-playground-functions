@@ -32,9 +32,17 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = 0;
+  for (let index = 0; index < wins; index += 1) {
+    points += 3;
+  }
+  for (let index = 0; index < ties; index += 1) {
+    points += 1;
+  }
+  return points;
 }
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
