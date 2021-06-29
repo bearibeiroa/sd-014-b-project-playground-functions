@@ -12,7 +12,7 @@ function compareTrue(valor1, valor2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return (base * height / 2)
+  return (base * height / 2);
 }
 
 // Desafio 3
@@ -43,8 +43,8 @@ function concatName(frase) {
 
   let ultimoNome = frase[frase.length - 1];
   let primeiroNome = frase[0];
-  let nomesConcatenados = ultimoNome + ", " + primeiroNome
-  return nomesConcatenados
+  let nomesConcatenados = ultimoNome + ", " + primeiroNome;
+  return nomesConcatenados;
 }
 
 // Desafio 5
@@ -62,8 +62,8 @@ function highestCount(arrayDeNumeros) {
 
   }
 
-  let arrayDeNumerosOrdenada = arrayDeNumeros.sort(sortNumber)
-  let maiorNumero = arrayDeNumerosOrdenada[arrayDeNumerosOrdenada.length - 1]
+  let arrayDeNumerosOrdenada = arrayDeNumeros.sort(sortNumber);
+  let maiorNumero = arrayDeNumerosOrdenada[arrayDeNumerosOrdenada.length - 1];
   let numeroDeVezes = 0;
   for (let index = (arrayDeNumeros.length - 1); index >= 0; index -= 1) {
     if (maiorNumero === arrayDeNumerosOrdenada[index]) {
@@ -81,11 +81,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance2 = Math.abs(Math.abs(mouse) - Math.abs(cat2));
 
   if (distance2 < distance1) {
-    return "cat2"
+    return "cat2";
   } else if (distance1 < distance2) {
-    return "cat1"
+    return "cat1";
   } else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 }
   // Desafio 8
@@ -94,16 +94,16 @@ function catAndMouse(mouse, cat1, cat2) {
     let resultado =[];
     for (let index = 0; index < arrayFizzBuzz.length; index += 1) {
       if (arrayFizzBuzz[index] % 3 === 0 && arrayFizzBuzz[index] % 5 === 0){
-        resultado.push("fizzBuzz")     
+        resultado.push("fizzBuzz");     
       } else if (arrayFizzBuzz[index] % 5 === 0) {
-        resultado.push("buzz") 
+        resultado.push("buzz");
       } else if (arrayFizzBuzz[index] % 3 === 0) {
-        resultado.push("fizz") 
+        resultado.push("fizz"); 
       } else {
-        resultado.push("bug!") 
+        resultado.push("bug!"); 
       }
     }
-    return resultado
+    return resultado;
   }
 
   // Desafio 9
