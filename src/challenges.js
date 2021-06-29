@@ -44,7 +44,6 @@ function highestCount(int) {
   return cont;
   // seu código aqui
 }
-console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -88,8 +87,7 @@ function fizzBuzz(str) {
   // seu código aqui
 }
 
-// Desafio 9
-function encode() {    
+function encode(text = '') {
   let newText = '';
   for(let l of text) {
     if(l === "a") {
@@ -106,16 +104,16 @@ function encode() {
       newText += l;
     }
 } 
-return console.log(newText);
+return newText;
   // seu código aqui
 }
-function decode() {
+function decode(text = '') {
   let newText = '';
   for(let l of text) {
     if(l === "1") {
     newText += "a";
   } else if (l === "2") {
-    newText += "3";
+    newText += "e";
   } else if (l==="3") {
     newText += "i";
   } else if (l === "4") {
@@ -126,7 +124,7 @@ function decode() {
     newText += l;
   }
   } 
-  return console.log(newText);
+  return newText;
   // seu código aqui
 }
 
