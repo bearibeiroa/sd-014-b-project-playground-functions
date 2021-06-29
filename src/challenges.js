@@ -60,19 +60,19 @@ function encode(stringE) {
   let stringE2 = [];
 
   for (let ind = 0; ind < stringE.length; ind += 1) {
-    if (stringE[ind] == 'a') {
+    if (stringE[ind] === 'a') {
       stringE2.push('1');
     }
-    if (stringE[ind] == 'e') {
+    if (stringE[ind] === 'e') {
       stringE2.push('2');
     }
-    if (stringE[ind] == 'i') {
+    if (stringE[ind] === 'i') {
       stringE2.push('3');
     }
-    if (stringE[ind] == 'o') {
+    if (stringE[ind] === 'o') {
       stringE2.push('4');
     }
-    if (stringE[ind] == 'u') {
+    if (stringE[ind] === 'u') {
       stringE2.push('5');
     } else {
       stringE2.push(stringE[ind]);
