@@ -38,12 +38,24 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(pMouse, pCat1, pCat2) {
+  let feedback = '';
+  let isPositionCat1Smaller = pCat1 === 0;
+  let isPositionCat2Smaller = pCat2 === 0;
+  let cat1 = isPositionCat1Smaller ? (pMouse - pCat1) : (pCat1 - pMouse);
+  let cat2 = isPositionCat2Smaller ? (pMouse - pCat2) : (pCat2 - pMouse);
+  if (cat1 < cat2) {
+    feedback = 'cat1';
+  } else if (cat1 > cat2) {
+    feedback = 'cat2';
+  } else {
+    feedback = 'os gatos trombam e o rato foge';
+  }
+  return feedback;
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
 }
 
