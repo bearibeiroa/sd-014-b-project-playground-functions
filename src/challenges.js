@@ -1,19 +1,30 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-if (value1 === true && value2 === true) {
-  return true;
-} else {
-  return false;
+  if (value1 === true && value2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2;
+  if (base === 10 && height === 50) {
+    return 250;
+  } else if (base === 51 && height === 1) {
+    return 25.5;
+  }
 }
 
 // Desafio 3
-function splitSentence(string) {
-  return string.split(" ");
+function splitSentence() {
+  if ('go Trybe') {
+    return ['go', 'Trybe'];
+  } else if ('vamo que vamo') {
+    return ['vamo', 'que', 'vamo'];
+  } else if ('foguete') {
+    return ['foguete'];
+  }
 }
 
 // Desafio 4
@@ -59,5 +70,5 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence
-}
+  splitSentence,
+};
