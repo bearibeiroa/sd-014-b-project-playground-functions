@@ -26,7 +26,7 @@ function concatName(vetor) {
   // seu código aqui
   let firstName = vetor[0];
   let lastName = vetor[vetor.length - 1];
-  return lastName + ' , ' + firstName;
+  return lastName + ', ' + firstName;
 }
 
 // Desafio 5
@@ -37,9 +37,24 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(values) {
   // seu código aqui
+  let biggerNumber = 0;
+  let times = 0;
+  for(let index of values){
+    if(index > biggerNumber){
+      biggerNumber = index;
+    }
+    for(let index in values){
+      if(biggerNumber === values[index]){
+        times = times + 1;
+      }
+    }
+    return times;
+  }
+  
 }
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
 
 // Desafio 7
 function catAndMouse() {
