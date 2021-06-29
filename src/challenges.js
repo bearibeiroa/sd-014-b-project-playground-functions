@@ -1,10 +1,10 @@
 /*algumas referencias retiradas do w3 schools, geralmente funções de JS, split, abs, filter etc..*/
-
+/*funçoes em https://developer.mozilla.org/ */
 // Desafio 1
 const compareTrue = (x, y) => {
   if (x === true && y === true) return true;
-  else return false;
 };
+
 // Desafio 2
 const calcArea = (base, height) => (base * height) / 2;
 
@@ -36,8 +36,15 @@ const catAndMouse = (mouse, cat1, cat2) => {
 };
 
 // Desafio 8
-const fizzBuzz = () => {};
-
+const fizzBuzz = (arr) => {
+  const check = arr.map((x) => {
+    if (x % 3 === 0) return 'fizz';
+    if (x % 5 === 0) return 'buzz';
+    if (x % 3 === 0 && x % 5 === 0) return 'fizzBuzz';
+    else return 'bug!';
+  });
+  return check;
+};
 // Desafio 9
 function encode() {
   // seu código aqui
