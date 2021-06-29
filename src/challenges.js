@@ -116,11 +116,44 @@ function fizzBuzz(numeros) {
   }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encode = '';
+  
+  for (let letter of string){
+        if (letter === 'a'){
+          encode += '1'
+        }else if (letter === 'e'){
+          encode += '2'
+        }else if (letter === 'i'){
+          encode += '3'
+        }else if (letter === 'o'){
+          encode += '4'
+        }else if (letter === 'u'){
+          encode += '5'
+        }else {
+          encode += letter
+        }
+  }
+  return encode
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let decode = '';
+  for (let letter of string){
+    if (letter === '1'){
+      decode += 'a'
+    }else if (letter === '2'){
+      decode += 'e'
+    }else if (letter === '3'){
+      decode += 'i'
+    }else if (letter === '4'){
+      decode += 'o'
+    }else if (letter === '5'){
+      decode += 'u'
+    }else {
+      decode += letter;
+    }
+}
+return decode;
 }
 
 module.exports = {
