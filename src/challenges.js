@@ -78,9 +78,32 @@ function fizzBuzz(array) {
   return ArrayNumbers
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encoding = '';
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]){
+      case 'a':
+        encoding += '1'
+        break
+      case 'e':
+        encoding += '2'
+        break
+      case 'i':
+        encoding += '3'
+        break
+      case 'o':
+        encoding += '4'
+        break
+      case 'u':
+        encoding += '5'
+        break
+      default:
+        encoding += string[index]
+    }
+  }
+  return encoding
 }
+console.log(encode('Meu nome é michael'))
 function decode() {
   // seu código aqui
 }
