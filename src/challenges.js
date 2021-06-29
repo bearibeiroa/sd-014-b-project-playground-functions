@@ -90,12 +90,42 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str1ng) {
+  let encodedString = str1ng;
+  for (char in str1ng) {
+      if (str1ng[char] === "a") {encodedString[char] = "1"}
+      else{
+        if (str1ng[char] === "e") {encodedString[char] = "2"}
+        else{
+          if (str1ng[char] === "i") {encodedString[char] = "3"}
+          else{
+            if (str1ng[char] === "o") {encodedString[char] = "4"}
+            else{
+              if (str1ng[char] === "u") {encodedString[char] = "5"}
+              else{
+                encodedString[char] = str1ng[char]}
+              }}}}}
+return encodedString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(encodedString) {
+  let decodedString = encodedString;
+  for (char in encodedString) {
+      if (encodedString[char] === "1") {decodedString[char] = "a"}
+      else{
+        if (encodedString[char] === "2") {decodedString[char] = "e"}
+        else{
+          if (encodedString[char] === "3") {decodedString[char] = "i"}
+          else{
+            if (encodedString[char] === "4") {decodedString[char] = "o"}
+            else{
+              if (encodedString[char] === "5") {decodedString[char] = "u"}
+              else{
+                decodedString[char] = encodedString[char]}
+              }}}}}
+return decodedString;
 }
+
 
 module.exports = {
   calcArea,
