@@ -1,6 +1,14 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+// O operador && sempre vai retornar o 1º valor quando for true.
+function compareTrue(valor1, valor2) {
+  let result = valor1 && valor2;
+  switch(result) {
+    case valor1:
+      console.log('true');
+      break
+    case valor2:
+      console.log('false');
+  }
 }
 
 // Desafio 2
