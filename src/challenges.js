@@ -10,13 +10,14 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(mergedSentence) {
   // seu código aqui
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array=['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
+  concatName = (array[(array.length-1)] + ", " + array[0]);
+  return(concatName);
 }
 
 // Desafio 5
