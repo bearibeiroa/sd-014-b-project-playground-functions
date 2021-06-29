@@ -79,12 +79,46 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringValue) {
+  for (let index = 0; index < stringValue.length; index += 1) {
+    stringValue = stringValue.replace('a', '1');
+    stringValue = stringValue.replace('e', '2');
+    stringValue = stringValue.replace('i', '3');
+    stringValue = stringValue.replace('o', '4');
+    stringValue = stringValue.replace('u', '5');
+  }
+  return stringValue;
 }
-function decode() {
-  // seu código aqui
+function decode(stringValue) {
+  for (let index = 0; index < stringValue.length; index += 1) {
+    stringValue = stringValue.replace('1', 'a');
+    stringValue = stringValue.replace('2', 'e');
+    stringValue = stringValue.replace('3', 'i');
+    stringValue = stringValue.replace('4', 'o');
+    stringValue = stringValue.replace('5', 'u');
+  }
+  return stringValue;
 }
+
+// Usando global e ignore com replace()
+// link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+
+// function encode(stringValue) {
+//   stringValue = stringValue.replace(/a/gi, '1');
+//   stringValue = stringValue.replace(/e/gi, '2');
+//   stringValue = stringValue.replace(/i/gi, '3');
+//   stringValue = stringValue.replace(/o/gi, '4');
+//   stringValue = stringValue.replace(/u/gi, '5');
+//   return stringValue;
+// }
+// function decode(stringValue) {
+//   stringValue = stringValue.replace(/1/gi, 'a');
+//   stringValue = stringValue.replace(/2/gi, 'e');
+//   stringValue = stringValue.replace(/3/gi, 'i');
+//   stringValue = stringValue.replace(/4/gi, 'o');
+//   stringValue = stringValue.replace(/5/gi, 'u');
+//   return stringValue;
+// }
 
 module.exports = {
   calcArea,
