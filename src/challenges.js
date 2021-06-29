@@ -9,7 +9,7 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) /2
+  let area = (base * height)/2;
 
   return area;
 }
@@ -21,11 +21,9 @@ function splitSentence(frase) {
   return arrayFrase;
 }
 
-console.log(splitSentence('foguete'));
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  return arrayStrings[arrayStrings.length -1] + ', ' + arrayStrings[0];
 }
 
 // Desafio 5
