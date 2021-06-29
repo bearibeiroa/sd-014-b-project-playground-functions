@@ -3,6 +3,7 @@
 //Funções no geral encontradas em w3schools.com
 
 // Desafio 1
+//https://stackoverflow.com/questions/9232907/can-i-omit-the-else-in-an-inline-javascript-if-statement
 const compareTrue = (x, y) => x === true && y === true;
 
 // Desafio 2
@@ -54,47 +55,47 @@ const fizzBuzz = (arrs) => {
 };
 
 // Desafio 9
-function encode(stringE) {
-  let stringE2 = [];
-
-  for (let ind = 0; ind < stringE.length; ind += 1) {
-    if (stringE[ind] === 'a') {
-      stringE2.push('1');
-    } else if (stringE[ind] === 'e') {
-      stringE2.push('2');
-    } else if (stringE[ind] === 'i') {
-      stringE2.push('3');
-    } else if (stringE[ind] === 'o') {
-      stringE2.push('4');
-    } else if (stringE[ind] === 'u') {
-      stringE2.push('5');
+const encode = (str) => {
+  let eStr = str.split('');
+  let pushStr = [];
+  for (let j = 0; j < eStr.length; j += 1) {
+    if (eStr[j] === 'a') {
+      pushStr.push(eStr[j].replace('a', 1));
+    } else if (eStr[j] === 'e') {
+      pushStr.push(eStr[j].replace('e', 2));
+    } else if (eStr[j] === 'i') {
+      pushStr.push(eStr[j].replace('i', 3));
+    } else if (eStr[j] === 'o') {
+      pushStr.push(eStr[j].replace('o', 4));
+    } else if (eStr[j] === 'u') {
+      pushStr.push(eStr[j].replace('u', 5));
     } else {
-      stringE2.push(stringE[ind]);
+      pushStr.push(eStr[j]);
     }
   }
-  return stringE2.join('');
-}
+  return pushStr.join('');
+};
 
-function decode(stringD) {
-  let stringD2 = [];
-  for (let ind2 = 0; ind2 < stringD.length; ind2 += 1) {
-    if (stringD[ind2] === '1') {
-      stringD2.push('a');
-    } else if (stringD[ind2] === '2') {
-      stringD2.push('e');
-    } else if (stringD[ind2] === '3') {
-      stringD2.push('i');
-    } else if (stringD[ind2] === '4') {
-      stringD2.push('o');
-    } else if (stringD[ind2] === '5') {
-      stringD2.push('u');
+const decode = (str) => {
+  let dStr = str.split('');
+  let pushStr = [];
+  for (let j = 0; j < dStr.length; j += 1) {
+    if (dStr[j] === '1') {
+      pushStr.push(dStr[j].replace('1', 'a'));
+    } else if (dStr[j] === '2') {
+      pushStr.push(dStr[j].replace('2', 'e'));
+    } else if (dStr[j] === '3') {
+      pushStr.push(dStr[j].replace('3', 'i'));
+    } else if (dStr[j] === '4') {
+      pushStr.push(dStr[j].replace('4', 'o'));
+    } else if (dStr[j] === '5') {
+      pushStr.push(dStr[j].replace('5', 'u'));
     } else {
-      stringD2.push(stringD2[ind2]);
+      pushStr.push(dStr[j]);
     }
   }
-
-  return stringD2.join('');
-}
+  return pushStr.join('');
+};
 
 module.exports = {
   calcArea,
