@@ -34,7 +34,7 @@ function highestCount(numbers) {
   let higherNumber = Math.max.aplly(null, numbers);
   let countHigherNumber = 0;
 
-  for (index = 0; index < numbers.length; index +=1){
+  for (let index = 0; index < numbers.length; index +=1){
     if (numbers[index] === higherNumber) {
       countHigherNumber += 1;
     }
