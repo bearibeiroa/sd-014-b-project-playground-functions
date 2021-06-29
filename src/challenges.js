@@ -1,11 +1,5 @@
-/*algumas referencias retiradas do w3 schools, geralmente funções de JS, split, abs, filter etc..*/
-
-/*funçoes em https://developer.mozilla.org/ */
-
 // Desafio 1
-const compareTrue = (x, y) => {
-  if (x === true && y === true) return true;
-};
+const compareTrue = (x, y) => x === true && y === true;
 
 // Desafio 2
 const calcArea = (base, height) => (base * height) / 2;
@@ -25,7 +19,7 @@ const highestCount = (arr) => {
   let max = Math.max(...arr);
   array.forEach((n) => {
     if (max === n) {
-      i++;
+      i += 1;
     }
   });
   return i;
