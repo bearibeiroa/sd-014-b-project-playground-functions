@@ -1,10 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === b) {
-    return true;
-  } else {
-    return false;
-  }
+  return(a && b)
 }
 
 // Desafio 2
@@ -20,13 +16,13 @@ function splitSentence(stringVariavel) {
 }
 
 // Desafio 4
-function concatName(palavra) {
-  let result = [];
+function concatName(palavra) {      
   let primeiro = palavra[0];
-  let ultimo = palavra[palavra.length - 1];
-  result = [ultimo, primeiro];
-  return result;
+  let ultimo = palavra[palavra.length - 1];  
+  return ultimo +', ' + primeiro
 }
+
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -38,12 +34,13 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(palavra) {
   let maior = palavra[0];
-  for (index = 0; index < palavra.length; index += 1) {
+  for (let index = 0; index < palavra.length; index += 1) {    
     if (palavra[index] > maior) {
-      maior += palavra[index];
-    }
+      maior= palavra[index];
+    }     
+    console.log(maior)       
     let contador = 0;
-    for (index = 0; index < palavra.length; index += 1) {
+    for (let index = 0; index < palavra.length; index += 1) {
       if (palavra[index] === maior) {
         contador += 1;
       }
@@ -51,28 +48,28 @@ function highestCount(palavra) {
     return contador;
   }
 }
-
+console.log(highestCount([-2, -2, -1]))
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let DistanciaCat1 = Math.abs(mouse - cat1);
   let DistanciaCat2 = Math.abs(mouse - cat2);
   if (DistanciaCat1 > DistanciaCat2) {
-    return 'cat1';
-  } else if (DistanciaCat1 < DistanciaCat2) {
     return 'cat2';
+  } else if (DistanciaCat1 < DistanciaCat2) {
+    return 'cat1';
   } else {
     return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(vetor) {
   let vetorDecodificado = vetor;
   let fizz = 'fizz';
   let fizBuz = 'fizzBuzz';
   let buzz = 'Buzz';
   let bug = 'bug!';
-  for (index = 0; index < vetor.length; index += 1) {
+  for (let index = 0; index < vetorDecodificado.length; index += 1) {
     if (
       vetorDecodificado[index] % 3 === 0 &&
       vetorDecodificado[index] % 5 === 0
