@@ -23,12 +23,13 @@ console.log(splitSentence("ola mundo", "tudo bem"))
 
 // Desafio 4
 function concatName(itens) {
-  return (itens[itens.length - 1] + ',' + itens[0])
+  return (itens[itens.length - 1] + ',' + " " + itens[0])
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = (wins * 3) + (ties * 1)
+  return points
 }
 
 // Desafio 6
