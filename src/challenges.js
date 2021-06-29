@@ -98,12 +98,46 @@ function fizzBuzz(arrayNumbers) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringDecryp) {
+  let mensageEncode = '';
+  for (letter of stringDecryp) {
+    if (letter === 'a') {
+      mensageEncode += '1';
+    } else if (letter === 'e') {
+      mensageEncode += '2';
+    } else if (letter === 'i') {
+      mensageEncode += '3';
+    } else if (letter === 'o') {
+      mensageEncode += '4';
+    } else if (letter === 'u') {
+      mensageEncode += '5';
+    } else {
+      mensageEncode += letter;
+    }
+  }
+  return mensageEncode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(stringCryp) {
+  mensageDecode = '';
+  for (letter of stringCryp) {
+    if (letter === '1') {
+      mensageDecode += 'a';
+    } else if (letter === '2') {
+      mensageDecode += 'e';
+    } else if (letter === '3') {
+      mensageDecode += 'i';
+    } else if (letter === '4') {
+      mensageDecode += 'o';
+    } else if (letter === '5') {
+      mensageDecode += 'u';
+    } else {
+      mensageDecode += letter;
+    }
+  }
+  return mensageDecode;
 }
+
 
 module.exports = {
   calcArea,
