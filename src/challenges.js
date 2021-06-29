@@ -1,8 +1,17 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+//
+
+function compareTrue(value1, value2) {
+  // receber 2 par, bolean
+  // temos que usar o operador && para comparar os valores 
+  // tem que retornar true ou false
+  return value1 === true && value2 === true
 }
- 
+console.log(compareTrue(true, false));
+console.log(compareTrue(false, false));
+console.log(compareTrue(true, true));
+console.log(compareTrue(false, true));
+
 // Desafio 2
 function calcArea() {
   // seu código aqui
