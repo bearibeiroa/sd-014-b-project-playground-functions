@@ -21,9 +21,14 @@ const footballPoints = (win, tie) => win * 3 + tie;
 
 // Desafio 6
 const highestCount = (arr) => {
+  let i = 0;
   let max = Math.max(...arr);
-  let countmax = arr.filter(max).length;
-  return countmax;
+  array.forEach((n) => {
+    if (max === n) {
+      i++;
+    }
+  });
+  return i;
 };
 
 // Desafio 7
