@@ -25,7 +25,7 @@ function splitSentence(frase) {
     let letraAdicionada = '';
     if (fraseArray[index] !== ' ' && index < fraseArray.length-1){
       fraseDividida += fraseArray[index]
-    } else if (fraseArray[index] === 0){
+    } else if (fraseArray[index] === ' '){
         resultado.push(fraseDividida);
         fraseDividida = '';
     } else {
