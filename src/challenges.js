@@ -103,7 +103,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(value1) {
   let encoded = "";
-  for (i = 0; i < value1.length; i += 1) {
+  for (let i = 0; i < value1.length; i += 1) {
     switch (value1[i]) {
       case "a":
          encoded = encoded + "1";
@@ -133,7 +133,7 @@ function encode(value1) {
 }
 function decode(value2) {
   let decoded = "";
-  for (i = 0; i < value2.length; i += 1) {
+  for (let i = 0; i < value2.length; i += 1) {
     switch (value2[i]) {
       case "1":
          decoded = decoded + "a";
