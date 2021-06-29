@@ -56,7 +56,7 @@ function highestCount(value) {
   }
   return sameNumber
 }
-let kk = [0, 3, 6, 4, 6, 5, 6, 3, 6]
+let kk = [0, 4, 4, 4, 9, 2, 1]
 console.log(highestCount(kk))
 
 // Desafio 7
