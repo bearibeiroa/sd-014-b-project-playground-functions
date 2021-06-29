@@ -19,10 +19,11 @@ function splitSentence(string) {
   return string.split(' ');
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let lastItem = array[array.length -1];
+  let firstItem = array[0];
+  return lastItem + ', ' + firstItem
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
