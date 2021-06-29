@@ -7,7 +7,6 @@ function compareTrue(a, b) {
     compare = false;
   }
   return compare;
-  // seu código aqui
 }
 console.log(compareTrue(true, true));
 console.log(compareTrue(false, true));
@@ -34,11 +33,10 @@ console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(array) {
-  let sum = [];
-  for (let i = 0; i < array.length; i++) {
-    sum = sum += array[i];
-  }
-  return sum;
+  let primeiroNome = array[0];
+  let ultimoNome = array[array.length - 1];
+  let concatArray = ultimoNome + primeiroNome;
+  return concatArray
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
@@ -81,11 +79,11 @@ console.log(highestCount([0, 0, 0]));
 function catAndMouse(mouse, cat1, cat2) {
   let maisPerto;
   if((cat1 - mouse) < (cat2 - mouse)) {
-    maisPerto = "cat1";
+    maisPerto = 'cat1';
   } else if (cat1 === cat2) {
-    maisPerto = "os gatos trombam e o rato foge";
+    maisPerto = 'os gatos trombam e o rato foge';
   } else {
-    maisPerto = "cat2";
+    maisPerto = 'cat2';
   }
   return maisPerto;
 }
@@ -101,10 +99,10 @@ function fizzBuzz() {
 // Desafio 9
 function encode(string) {
   let vogal = ['a', 'e', 'i', 'o', 'u'];
-  let valor = ['1', '2', '3', '4', '5']
+  let valor = ['1', '2', '3', '4', '5'];
   let letra = string.split('');
   for (let i in letra) {
-    letra[i] === vogal[i]
+    letra[i] === vogal[i];
   }
   return res;
 /*
@@ -115,7 +113,7 @@ o -> 4
 u -> 5
 */
 }
-console.log(encode("hi there!"))
+console.log(encode('hi there!'));
 function decode() {
   // seu código aqui
 }
