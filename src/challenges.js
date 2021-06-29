@@ -6,11 +6,13 @@ function compareTrue(a, b) {
     return false;
   }
 }
+
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
+
 // Desafio 3
 function splitSentence(frase) {
   let fraseArray = frase.split(' ');
@@ -18,8 +20,9 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayC) {
+  let stringC = arrayC[arrayC.length - 1] + ', ' + arrayC[0];
+  return stringC;
 }
 
 // Desafio 5
