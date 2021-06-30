@@ -20,7 +20,7 @@ function splitSentence(menssage) {
 
 // Desafio 4
 function concatName(arrayName) {
-  return (arrayName [arrayName.length-1] + ', ' + arrayName[0]);
+  return (arrayName[arrayName.length -1] + ', ' + arrayName[0]);
 }
 
 // Desafio 5
@@ -29,8 +29,14 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let biggestNumber = Math.max.apply(null, numbers);
+  let total = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] === biggestNumber) {
+      total += 1;
+    }
+  } return total;
 }
 
 // Desafio 7
