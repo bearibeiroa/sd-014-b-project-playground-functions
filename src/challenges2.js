@@ -16,10 +16,15 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let linha1 = Math.abs(lineA);
+  let linha2 = Math.abs(lineB);
+  let linha3 = Math.abs(lineC);
+  if (linha1 + linha2 < linha3 || linha1 + linha3 < linha2 || linha3 + linha2 < linha1) {
+    return false;
+  }
+  return true;
 }
-
 // Desafio 13
 function hydrate() {
   // seu código aqui

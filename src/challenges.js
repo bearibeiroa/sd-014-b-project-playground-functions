@@ -21,7 +21,7 @@ console.log(calcArea(3, 4));
 // Desafio 3
 function splitSentence(string) {
   let words = string.split(' '); // Split a string into an array of substrings * note que se nao tive espaço em " " vai retonar a separação por letra
-  for (let i = 0; i < string.length; i += 1) { // returnArray é array que retorna a substring que vieram da string principal (propriedade )  
+  for (let i = 0; i < string.length; i += 1) { // returnArray é array que retorna a substring que vieram da string principal (propriedade )
     return words;
   }
 }
@@ -76,7 +76,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// eslint-disable-next-line complexity 
+// eslint-disable-next-line complexity
 function fizzBuzz(array) { // * não sei o que é isso de eslint-disable ainda. Foi uma corração sugerida automática
   let arrayFizBuzz = [];
   for (let i = 0; i < array.length; i += 1) {
@@ -97,7 +97,7 @@ function encode(stringEncode) {
   return stringEncode.replace(/a/g, '1') // Specifies the value to be returned to the function caller
     .replace(/e/g, '2') // Perform a global replacement /x/g, o g faz replace global
     .replace(/i/g, '3')
-    .replace(/o/g,'4')
+    .replace(/o/g, '4')
     .replace(/u/g, '5'); // se colocar ";" entre eles vai dar errado -> nao sei porque
 }
 
