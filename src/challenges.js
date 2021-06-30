@@ -70,6 +70,8 @@ function fizzBuzz(numeros) {
     else {
     resultArray.push 
   }
+  }
+}
 
 
 // Desafio 9
