@@ -34,23 +34,20 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(valores) {
-let highestNumber = 0
+  // Função para o highestNumber copiada da documentação
+let highestNumber = valores.reduce(function(a, b) {
+  return Math.max(a, b);
+});
 let count = 0
 
 for (let index6 = 0; index6 < valores.length; index6 += 1) {
-  if (highestNumber < valores[index6]) {
-    highestNumber = valores[index6];
+  let current = valores[index6];
+  if (current == highestNumber) {
+    count += 1;
   } else {
-      }
- 
-for (let indexSum6 = 0; indexSum6 < valores.length; indexSum6 += 1) {
-  if (highestNumber === valores[indexSum6]) {
-    count += 1;    
- } else {
   }
 }
-}
-return count;
+ return count;
 }
   
 
@@ -98,11 +95,46 @@ function fizzBuzz(fizzOuBuzz) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codifique) {
+let codArr = '';
+
+  for (let indexCod = 0; indexCod < codifique.length; indexCod += 1) {
+    if (codifique[indexCod] != 'a' && codifique[indexCod] != 'e' && codifique[indexCod] != 'i' && codifique[indexCod] != 'o' && codifique[indexCod] != 'u') {
+      codArr.push(codifique[indexCod]);
+    } else if (codifique[indexCod] == 'a') {
+      codArr.push('1');
+    } else if (codifique[indexCod] == 'e') {
+      codArr.push('2');
+  } else if (codifique[indexCod] == 'i') {
+    codArr.push('3');
+  } else if (codifique[indexCod] == 'o') {
+    codArr.push('4');
+  } else { 
+    codArr.push('5');
+  }
+ }
+ return codArr;
 }
-function decode() {
-  // seu código aqui
+
+function decode(decodifique) {
+  let decodArr;
+
+  for (let indexdecod = 0; indexdecod < decodifique.length; indexdecod += 1) {
+    if (decodifique[indexdecod] == "a") {
+      decodArr[indexdecod] = "1";
+    } else if (decodifique[indexdecod] == "e") {
+      decodArr[indexdecod] = "2";
+  } else if (decodifique[indexdecod] === "i") {
+    decodArr[indexdecod] = "3";
+  } else if (decodifique[indexdecod] === "o") {
+    decodArr[indexdecod] = "4";
+  } else if (decodifique[indexdecod] === "u") {
+    decodArr[indexdecod] = "5";
+  } else {
+  }
+}
+let mensagemDecodificada = codArr.toString();
+return mensagemDecodificada;
 }
 
 module.exports = {
