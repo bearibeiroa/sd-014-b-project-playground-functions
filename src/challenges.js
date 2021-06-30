@@ -51,17 +51,11 @@ function highestCount(vetor) {
 
   for(let count = 0; count < vetor.length; count += 1) {
     let guardarNumero = vetor[count];
-
-    if(vetor[count] > 0) {
-      if(guardarNumero > maiorNumero) {
-        maiorNumero = guardarNumero;
-      }
-    } else if(vetor[count] < 0){
-      if(guardarNumero < maiorNumero) {
-        maiorNumero = guardarNumero;
-      }
+    
+    if(guardarNumero > maiorNumero) {
+      maiorNumero = guardarNumero;
     }
-
+    
   }
 
   //Verifica quantas vezes o maior numero aparece
@@ -98,11 +92,26 @@ function catAndMouse(mouse, cat1, cat2) {
 
 }
 
-console.log(catAndMouse(1, 3, 3));
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(vetor) {
+
+  //Percorre o array
+  for(let index = 0; index < vetor.length; index += 1) {
+
+    //Verifica se o numero é divisivel por 3, 5, se é pelos dois ou nenhum
+    if(vetor[index] % 3 === 0 && vetor[index] % 5 === 0) {
+      vetor[index] = 'fizzBuzz';
+    } else if(vetor[index] % 5 === 0){
+      vetor[index] = 'buzz';
+    } else if(vetor[index] % 3 === 0) {
+      vetor[index] = 'fizz';
+    } else {
+      vetor[index] = 'bug!';
+    }
+
+  }
+
+  return vetor;
 }
 
 // Desafio 9
