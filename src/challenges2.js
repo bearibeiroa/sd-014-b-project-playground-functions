@@ -51,8 +51,19 @@ function generatePhoneNumber(telephoneNumber) {
   return retorno;
 }
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(a, b, c) {
   // seu código aqui
+  var absolutoA = Math.abs(a);
+  var absolutoB = Math.abs(b);
+  var absolutoC = Math.abs(c);
+  var diferenca = absolutoA - absolutoB - absolutoC;
+  if (a > (b + c) || b > (a + c) || c > (a + b)) {
+    return false;
+  } else if (a < diferenca || b < diferenca || c < diferenca) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 // Desafio 13
