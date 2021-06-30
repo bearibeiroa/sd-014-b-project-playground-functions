@@ -26,8 +26,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   // seu código aqui
+  //let resultado = frase.split(" ");
+  //return resultado;
+
 }
 
 // Desafio 4
@@ -36,8 +39,16 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let resultado;
+  for(let index = (wins + ties); index > wins || ties; index = index - 1){
+     let contWin = wins + 1
+     let contTies = ties + 1;
+  }
+    let contagem = (wins * 3) + (ties * 1);
+    resultado = contagem;
+    return resultado;
 }
 
 // Desafio 6
