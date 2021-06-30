@@ -10,33 +10,24 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 // Desafio 3
+
+// metodo split retirado da documentação, em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split e https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp para expressões regulares
+
 function splitSentence(palavra) {
-  let splittedSentence = palavra.split('\s');
-  palavra.trim();
-  
+  let splittedSentence = palavra.split(' ');
+
   return splittedSentence;
-/* 3 - Crie uma função que divida a frase
-Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
-Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
-O que será verificado:
-
-Retorne o valor ['go', 'Trybe'] se a função receber a string 'go Trybe'
-Retorne o valor ['vamo', 'que', 'vamo']. se a função receber a string 'vamo que vamo'
-Retorne o valor ['foguete'] se a função receber a string 'foguete' */
-// seu código aqui
 }
-console.log(splitSentence("vamo que vamo"));
-
 // Desafio 4
 function concatName(recebeItem) {
-  let primeiroNome = recebeItem[0]; 
-  let ultimoNome = recebeItem[recebeItem.length-1];
+  let primeiroNome = recebeItem[0];
+  let ultimoNome = recebeItem[recebeItem.length - 1];
   let juntaNome = ultimoNome + ', ' + primeiroNome;
 
   return juntaNome;
 }
 // Desafio 5
-/*Escreva uma função com o nome footballPoints que receba o número de vitórias (esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato.
+/* Escreva uma função com o nome footballPoints que receba o número de vitórias (esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato.
 
 Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
 
@@ -47,23 +38,18 @@ O que será verificado:
   Retorne 0 pontos quando o time tenha 0 vitórias e 0 empates */
 
 function footballPoints(wins, ties) {
-/*
-  for (let i of wins) {
+  let winPoint = (wins * 3);
+  let tiePoint = ties;
+  let totalPoint = winPoint + tiePoint;
 
-  }
- wins = wins * 3;
-  ties = ties + 1;
-
-  return ;
+  return totalPoint;
 }
 
-console.log(footballPoints(14,8)); */
 // Desafio 6
 function highestCount(numeros) {
-
-  let bigValue = 0; // comparação de numeros
+  let bigValue = 0; // comparacao de numeros
   let counter = 0; //  variavel que vai contar quantas vezes repetiu o numero
-  let repeats = 0; // 
+  let repeats = 0; //
   for(let i in numeros) {
     if (numeros[bigValue] < numeros[i]) {
       bigValue = i;
@@ -81,18 +67,18 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distMouseCat1 = mouse - cat1 *-1;
-  let distMouseCat2 = mouse - cat2 *-1;
+  let distMouseCat1 = mouse - cat1 * -1;
+  let distMouseCat2 = mouse - cat2 * -1;
 
+  if (distMouseCat1 > distMouseCat2) {
+    return 'cat2';
+  } 
   if (distMouseCat1 === distMouseCat2) {
     return 'os gatos trombam e o rato foge';
-  } else if (distMouseCat1 > distMouseCat2) {
-    return 'cat2';
-  } else {
-    return 'cat1'
   }
-}
-console.log(catAndMouse(1,2,5))
+  return 'cat1';
+}  
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 /* Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
@@ -108,16 +94,14 @@ O que será verificado:
 
     Retorne as strings ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado os parâmetros [2, 15, 7, 9, 45] para a função fizzBuzz
     Retorne as strings ['bug!', 'fizz'] quando é passado os parâmetros [7, 9] para a função fizzBuzz
-    Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para a função fizzBuzz
- */
+    Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para a função fizzBuzz */
 function fizzBuzz(numBuzz) {
-  
   for (let i of numBuzz) {
-    if (numBuzz[i] % 3 == 0) {
+    if (numBuzz[i] % 3 === 0) {
+      numBuzz[i] == 'fizz';
+    } else if (numBuzz[i] % 5 === 0) {
       numBuzz[i] = 'fizz';
-    } else if (numBuzz[i] % 5 == 0) {
-      numBuzz[i] = 'fizz';
-    } else if (numBuzz[i] % 5 == 0 && numBuzz[i] % 3 ==0) {
+    } else if (numBuzz[i] % 5 === 0 && numBuzz[i] % 3 === 0) {
       numBuzz[i] = 'fizzBuzz';
     } else {
       numBuzz[i] = 'bug!';
@@ -126,7 +110,7 @@ function fizzBuzz(numBuzz) {
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
-/*Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+/* Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
 
 a -> 1
 e -> 2
@@ -149,7 +133,6 @@ function encode(word) {
   // seu código aqui
 }
 function decode(word) {
-  
   // seu código aqui
 }
 

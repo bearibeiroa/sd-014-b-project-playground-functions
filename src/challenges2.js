@@ -1,5 +1,3 @@
-// Desafio 10
-
 /* 10 - Crie uma função de Lista de Tecnologias
 Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado name com um nome.
 Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
@@ -48,12 +46,26 @@ Caso o array venha vazio sua função deve retornar 'Vazio!'
 O que será verificado:
 
     Retorne uma lista de objetos ordenados quando é passada uma lista com 5 tecnologias
-
     Retorne a mensagem de erro 'Vazio!' quando a lista não tiver tecnologias */
 
-function techList() {
-  // seu código aqui
+function techList(skills, nameTech) {
+  let trybeSkills = [];
+  trybeSkills.sort(); // Dica do Slack, do Thomas Ferreira - 14B
+
+  for (let i of skills) {
+    trybeSkills.push({
+      tech: skills[i],
+      name: nameTech,
+    });
+  }
+
+  if (trybeSkills.length === 0) {
+    return 'Vazio!';
+  }
+  return trybeSkills;
 }
+
+console.log(techList(['Javascript', 'HTML', 'CSS', 'VB', 'C++'], 'Riba'));
 
 // Desafio 11
 function generatePhoneNumber() {
