@@ -93,11 +93,22 @@ function fizzBuzz(array) { // * não sei o que é isso de eslint-disable ainda. 
 }
 
 // Desafio 9
-function encode() {
+function encode(stringEncode) {
+  return stringEncode.replace(/a/g, '1') // Specifies the value to be returned to the function caller
+    .replace(/e/g, '2') // Perform a global replacement /x/g, o g faz replace global
+    .replace(/i/g, '3')
+    .replace(/o/g,'4')
+    .replace(/u/g, '5'); // se colocar ";" entre eles vai dar errado -> nao sei porque
 }
 
-function decode() {
+function decode(stringDecode) {
+  return stringDecode.replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
 }
+
 
 module.exports = {
   calcArea,
