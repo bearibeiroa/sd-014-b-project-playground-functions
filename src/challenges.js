@@ -21,8 +21,12 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  let transformToString = '';
+
+  transformToString = arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0];
+
+  return transformToString;
 }
 
 // Desafio 5
