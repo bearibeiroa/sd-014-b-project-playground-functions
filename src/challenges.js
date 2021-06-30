@@ -19,8 +19,7 @@ function splitSentence(str) {
 // Desafio 4
 function concatName(array) {
   let comma = ', ';
-  let dot = '.';
-  return array[array.length - 1] + comma + array[0] + dot;
+  return array[array.length - 1] + comma + array[0];
 }
 
 // Desafio 5
@@ -40,28 +39,60 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  const a = Math.abs(cat1 - mouse);
+  const b = Math.abs(cat2 - mouse);
+  if (a < b) return 'cat1';
+  if (a > b) return 'cat2';
+  if (a === b) return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  const check = arr.map((x) => {
-    if (x % 3 === 0 && x % 5 === 0) return 'fizzBuzz';
-    if (x % 3 === 0) return 'fizz';
-    if (x % 5 === 0) return 'buzz';
+function fizzBuzz(arrs) {
+  const r = arrs.map((n) => {
+    if (n % 3 === 0 && n % 5 === 0) return 'fizzBuzz';
+    if (n % 3 === 0) return 'fizz';
+    if (n % 5 === 0) return 'buzz';
     return 'bug!';
   });
-  return check;
+  return r;
 }
-console.log;
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let subList = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  let listEncoded = str.replace(/a|e|i|o|u/gi, function i(item) {
+    let it = subList[item];
+    let listItem = it.replace(/(?:^|\s)\S/g, function (elemento) {
+      return elemento;
+    });
+    return listItem;
+  });
+  return listEncoded;
 }
-function decode() {
-  // seu código aqui
+
+function decode(str2) {
+  let subList = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let listEncoded = str2.replace(/1|2|3|4|5/gi, function (item) {
+    let it = subList[item];
+    let listItem = it.replace(/(?:^|\s)\S/g, function (elemento) {
+      return elemento;
+    });
+    return listItem;
+  });
+  return listEncoded;
 }
 
 module.exports = {
@@ -76,3 +107,6 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+// referêcia desafio 8:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
