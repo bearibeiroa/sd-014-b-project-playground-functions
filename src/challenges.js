@@ -77,16 +77,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function fizzOrBuzz (number) {
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+}
+
 function fizzBuzz(fizzBuzzArray) {
   for (let index = 0; index < fizzBuzzArray.length; index += 1) {
     if (fizzBuzzArray[index] % 3 === 0 && fizzBuzzArray[index] % 5 === 0) {
       fizzBuzzArray[index] = 'fizzBuzz';
-    } else if (fizzBuzzArray[index] % 3 === 0) {
-      fizzBuzzArray[index] = 'fizz';
-    } else if (fizzBuzzArray[index] % 5 === 0) {
-      fizzBuzzArray[index] = 'buzz';
-    } else {
+    } else if (fizzBuzzArray[index] % 3 !== 0 && fizzBuzzArray[index] % 5 !== 0) {
       fizzBuzzArray[index] = 'bug!';
+    } else {
+      fizzBuzzArray[index] = fizzOrBuzz(fizzBuzzArray[index]);
     }
   }
   return fizzBuzzArray;
@@ -98,7 +105,7 @@ let pwdVaultEncode = { a: '1', e: '2', i: '3', o: '4', u: '5' };
 let pwdVaultDecode = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
 
 function wordToArrayEncode(word) {
-  let array = []
+  let array = [];
   for (let index = 0; index < word.length; index += 1) {
     array.push(word[index]);
   }
@@ -122,7 +129,7 @@ function encode(toBeEncoded) {
       }
     }
   }
-  return encodedWord = arrayToWordEncode(encodedWordArray);
+  return arrayToWordEncode(encodedWordArray);
 }
 function decode(toBeDecoded) {
   let decodedWordArray = [];
