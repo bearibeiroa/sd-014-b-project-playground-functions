@@ -109,4 +109,4 @@ module.exports = {
 };
 
 // referêcia desafio 8:
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+// Collab with Sam (https://github.com/samsantosb) who opened up my mind about using map !
