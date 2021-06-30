@@ -88,39 +88,24 @@ O que será verificado:
     Retorne as strings ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado os parâmetros [2, 15, 7, 9, 45] para a função fizzBuzz
     Retorne as strings ['bug!', 'fizz'] quando é passado os parâmetros [7, 9] para a função fizzBuzz
     Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para a função fizzBuzz */
+
 function fizzBuzz(numBuzz) {
-  for (let i of numBuzz) {
-    if (numBuzz[i] % 3 === 0) {
-      numBuzz.push[i] = 'fizz';
-    } else if (numBuzz[i] % 5 === 0) {
-      numBuzz.push[i] = 'buzz';
-    } else if (numBuzz[i] % 5 === 0 && numBuzz[i] % 3 === 0) {
-      numBuzz.push[i] = 'fizzBuzz';
+  for (let i = 0; i < numBuzz.length; i += 1) {
+    if ((numBuzz[i] % 3 == 0 && numBuzz[i] % 5 == 0)) {
+      numBuzz[i] = 'fizzBuzz';
+    } else if (numBuzz[i] % 3 == 0) {
+      numBuzz[i] = 'fizz';
+    } else if (numBuzz[i] % 5 == 0) {
+      numBuzz[i] = 'buzz';
     } else {
       numBuzz[i] = 'bug!';
     }
   }
+  return numBuzz;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 9
-/* Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
 
-a -> 1
-e -> 2
-i -> 3
-o -> 4
-u -> 5
-
-Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
-
-A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
-
-O que será verificado:
-
-    Retorne uma string codificada quando a função encode for utilizada
-
-    Retorne uma string decodificada quando a função decode for utilizada
- */
 //Anna Hamann - 14A me ajudou com um método replace, encontrado na W3CSchools
 function encode(word) {
   let wordEncode = word;

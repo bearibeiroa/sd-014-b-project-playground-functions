@@ -51,17 +51,17 @@ O que será verificado:
 function techList(skills, nameTech) {
   let trybeSkills = []; // Dica do Slack, do Thomas Ferreira - 14B
   let trybeSkillsSort = skills.sort();
-  for (let i of skills) {
+  for (let i of trybeSkillsSort) {
     trybeSkills.push({
       tech: skills[i],
       name: nameTech,
     });
   }
   
-  if (trybeSkills.length === 0) {
+  if (trybeSkillsSort.length === 0) {
     return 'Vazio!';
   }
-  return trybeSkills;
+  return trybeSkillsSort;
 }
 
 console.log(techList(['Javascript', 'HTML', 'CSS', 'VB', 'C++'], 'Riba'));
