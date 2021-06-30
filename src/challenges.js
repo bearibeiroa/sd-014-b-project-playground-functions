@@ -85,8 +85,8 @@ function fizzBuzz(numeros) {
   }
   return fizzbuzzbug;
 }
-// Desafio 9
 
+// Desafio 9
 function encode(str1ng) {
   let encodedString = str1ng.split("");
   for (let aux = 0 ; aux <= str1ng.length -1 ; aux += 1) {
