@@ -71,12 +71,28 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distanceMouseCat1 < distanceMouseCat2) {
     result = 'cat1';
   } else {
-    result = 'cat2'; 
-  } 
+    result = 'cat2';
+  }
   return result;
 }
 
 // Desafio 8
+function fizzBuzz(arrayOfNumbers) {
+  let fizzBuzzArray = [];
+  for (let number of arrayOfNumbers) {
+    if (number % 3 === 0 && number % 5 === 0) {
+      fizzBuzzArray.push('fizzBuzz');
+    } else if (number % 3 === 0) {
+      fizzBuzzArray.push('fizz');
+    } else if (number % 5 === 0) {
+      fizzBuzzArray.push('buzz');
+    } else {
+      fizzBuzzArray.push('bug!');
+    }
+  }
+  return fizzBuzzArray;
+}
+/*
 function fizzBuzz(arrayOfNumbers) {
   let fizzBuzzArray = [];
   for (let number of arrayOfNumbers) {
@@ -94,6 +110,7 @@ function fizzBuzz(arrayOfNumbers) {
   }
   return fizzBuzzArray;
 }
+*/
 
 // Desafio 9
 let pwdVaultEncode = { a: '1', e: '2', i: '3', o: '4', u: '5' };
