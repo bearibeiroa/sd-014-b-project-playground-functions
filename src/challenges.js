@@ -78,7 +78,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzOrBuzzOrBug(number) {
-  let bug = 'bug!'
+  let bug = 'bug!';
   if (number % 3 === 0) {
     bug = 'fizz';
     return bug;
@@ -131,6 +131,15 @@ function encodeWithKey(array, chave) {
   return array;
 }
 
+function decodeWithKey(array, chave) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === chave) {
+      array[index] = pwdVaultDecode[chave];
+    }
+  }
+  return array;
+}
+
 function encode(toBeEncoded) {
   let encodedWordArray = wordToArrayEncode(toBeEncoded);
   for (let key in pwdVaultEncode) {
@@ -139,24 +148,11 @@ function encode(toBeEncoded) {
   return arrayToWordEncode(encodedWordArray);
 }
 function decode(toBeDecoded) {
-  let decodedWordArray = [];
-  for (let index = 0; index < toBeDecoded.length; index += 1) {
-    decodedWordArray.push(toBeDecoded[index]);
-  }
+  let decodedWordArray = wordToArrayEncode(toBeDecoded);
   for (let key in pwdVaultDecode) {
-    if (pwdVaultDecode.hasOwnProperty(key)) {
-      for (let index = 0; index < decodedWordArray.length; index += 1) {
-        if (decodedWordArray[index] === key) {
-          decodedWordArray[index] = pwdVaultDecode[key];
-        }
-      }
-    }
+    decodedWordArray = decodeWithKey(decodedWordArray, key);
   }
-  let decodedWord = '';
-  for (let index = 0; index < decodedWordArray.length; index += 1) {
-    decodedWord += decodedWordArray[index];
-  }
-  return decodedWord;
+  return arrayToWordEncode(decodedWordArray);
 }
 
 module.exports = {
