@@ -51,8 +51,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let arrayOfStrings = drinks.split(" ");
+  // Referência para a linha acima: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+  let drinksCounter = 0;
+  for (let index = 0; index < arrayOfStrings.length; index += 1) {
+    if (!isNaN(arrayOfStrings[index])) {
+      // Referência para a linha acima: https://flaviocopes.com/how-to-check-value-is-number-javascript/
+      drinksCounter += parseInt(arrayOfStrings[index], 10);
+      // Referência para a linha acima: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+    }
+  }
+  if (drinksCounter === 1) {
+    return '1 copo de água'
+  } else {
+    let cupsOfWater = drinksCounter + ' copos de água';
+    return cupsOfWater;
+  }
 }
 
 module.exports = {
