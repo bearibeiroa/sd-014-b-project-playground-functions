@@ -118,7 +118,7 @@ function fizzBuzz(numbers) {
 
 
 
-// Desafio 9
+// Desafio 9 
 function encode(message) {
   let codedMessage = '';
 
@@ -147,31 +147,60 @@ function encode(message) {
 }
 
 function decode(message) {
-  let codedMessage = '';
+  let decodedMessage = '';
 
   for(let i of message){
     switch (i){
       case '1':
-        codedMessage += 'a';
+        decodedMessage += 'a';
       break
       case '2':
-        codedMessage += 'e';
+        decodedMessage += 'e';
       break
       case '3':
-        codedMessage += 'i';
+        decodedMessage += 'i';
       break
       case '4':
-        codedMessage += 'o';
+        decodedMessage += 'o';
       break
       case '5':
-        codedMessage += 'u';
+        decodedMessage += 'u';
       break
       default:
-        codedMessage += i;
+        decodedMessage += i;
     }
   }
-  return codedMessage;
+  return decodedMessage;
 }
+
+//Desafio 10 -- 
+function techList(tech, name) {
+  let techsToLearn =[];
+  tech.sort();
+
+  if(tech.length == 0){
+      return 'Vazio!';
+  }else{
+
+      for (let index of tech) {
+          techsToLearn.push({
+              tech: index,
+              name: name,
+          });
+      }
+  return techsToLearn;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
