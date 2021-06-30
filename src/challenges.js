@@ -52,21 +52,29 @@ function catAndMouse() {
 }
 
 // Desafio 8
+
+function fiz2(numeros){
+   if  ((numeros% 3 == 0) && (numeros% 5 == 0)) {
+  return ("fizzBuzz")
+  } else if (numeros% 3 == 0) {
+    return ("fizz")
+  } else if (numeros% 5 == 0) {
+    return ("buzz")} 
+    else {
+    return ("bug!")
+  }
+}
 function fizzBuzz(numeros) {
   let resultado = [];
-  for (let i = 0; i <= numeros.length; i++) {
-    if (numeros[i] % 3 == 0) {
-      resultado.push("fizz")
-    } else if (numeros[i] % 5 == 0) {
-      resultado.push("buzz")
-    } else if ((numeros[i] % 3 == 0) && (numeros[i] % 5 == 0)) {
-      resultado.push("fizzBuzz")
-    } else {
-      resultado.push("bug!")
-    }
+  for (let i = 0; i < numeros.length; i+=1) {
+    resultado.push(fiz2(numeros[i]))
   }
   return resultado
 }
+
+console.log(fizzBuzz([2,15,7,9,45]))
+
+
 
 // Desafio 9
 function encode() {
