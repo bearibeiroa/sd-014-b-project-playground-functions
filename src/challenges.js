@@ -56,15 +56,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Desafio 8
-function fizzBuzz(values) {
-  n5n3 (values);
-  s3n5 (values);
-  s5n3 (values);
-  s5s3 (values);
-  return values;
-}
-
 function n5n3(values) {
   for (let key in values) {
     if (values[key] % 5 !== 0 && values[key] % 3 !== 0) {
@@ -95,8 +86,14 @@ function s5s3(values) {
       values[key] = 'fizzBuzz';
     }
   }
+}// Desafio 8
+function fizzBuzz(values) {
+  n5n3(values);
+  s3n5(values);
+  s5n3(values);
+  s5s3(values);
+  return values;
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
