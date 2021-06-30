@@ -76,7 +76,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+// eslint-disable-next-line complexity 
+function fizzBuzz(array) { // * não sei o que é isso de eslint-disable ainda. Foi uma corração sugerida automática
+  let arrayFizBuzz = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      arrayFizBuzz.push('fizzBuzz');
+    } else if (array[i] % 3 === 0) {
+      arrayFizBuzz.push('fizz');
+    } else if (array[i] % 5 === 0) {
+      arrayFizBuzz.push('buzz');
+    } else {
+      arrayFizBuzz.push('bug!');
+    }
+  } return arrayFizBuzz;
 }
 
 // Desafio 9
