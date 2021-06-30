@@ -45,35 +45,49 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse < cat1 && mouse < cat2 && cat1=== cat2) {
+ let rangeCat1 = mouse - cat1;
+ let rangeCat2 = mouse - cat2;
+  
+ if ( Math.abs(rangeCat1) === Math.abs(rangeCat2)) {
     return 'os gatos trombam e o rato foge';
-  } if (mouse < cat1 && cat1 < cat2) {
+  } else if (Math.abs(rangeCat1) < Math.abs(rangeCat2)) {
     return 'cat1';
-  } {
-    (mouse < cat1 && cat1 > cat2);
+  } else { (Math.abs(rangeCat2) < Math.abs(rangeCat1));
     return 'cat2';
-  }
-} 
+  };
+}; 
+ 
 
 // Desafio 8
 function fizzBuzz(array) {
-  
-    for (let index = 0; index < array.length; index += 1){
-      if ((array[index] % 3 === 0)) {
-      return 'fizz';
-      } if ((array[index] % 5 === 0)) {
-        return 'buzz';
-      } if ((array[index] % 3 === 0) && (array % 5 === 0)){
-        return 'fizzBuzz';
+  let resultado = [];
+  for (let index of array) {
+    if (index % 3 === 0 && index % 5 === 0){ 
+    resultado.push('fizzBuzz');
+      } else if ((index % 5 === 0)) {
+    resultado.push('buzz');
+      } else if ((index % 3 === 0) ){
+    resultado.push('fizz');
       } else {
-         return 'bug!';
-       }
-      }  
-   
-};
+    resultado.push('bug!');
+      };
+    } return resultado;  
+}; 
+  
+    
+
+
  
-  // Desafio 9
+// Desafio 9
 function encode(palavra) {
+  let vogais = 0;
+  if (vogais >= 1){
+    a == 1
+    e == 2
+    i == 3
+    o == 4
+    u == 5
+  }
  
   
 }
