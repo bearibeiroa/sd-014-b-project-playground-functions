@@ -12,14 +12,17 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+// comando .split(separador, limite) - como não tem limite usei apenas o " " como elemento de eparação, ou seja, toda vez que achar um espço o split separará
+// aprendido através do w3schools: https://www.w3schools.com/jsref/jsref_split.asp
 function splitSentence(phrase) {
   return phrase.split(' ');
 }
 
 // Desafio 4
+// código autocorrigido pelo linter: linha origina " return names[names.length-1]+', '+names[0]"
+// após correção entendi que ${variável} dentro de um texto(" ...") é entendido como uma variável, portanto '${variavel}, ${variável}' imprime: variável, variável
 function concatName(names) {
-  let arrayOfNames = names.concat();
-  return (`${arrayOfNames[arrayOfNames.length - 1]}, ${arrayOfNames[0]}`);
+  return (`${names[names.length - 1]}, ${names[0]}`);
 }
 
 // Desafio 5

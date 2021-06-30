@@ -19,10 +19,29 @@ function techList(tech1, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
 
+function contadorDeNumeros(phone) {
+  for (let index = 0; index < phone.length; index += 1){
+    switch (phone) {
+      case phone[index] === 1:
+        contador
+    }
+  }
+
+}
+function numeroMenorQueZero(phone) {
+
+}
+function generatePhoneNumber(phone) {
+  if (phone.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < phone.length; index += 1) {
+    if (phone[index] > 9 || phone[index] < 0) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let ab = Math.abs(lineA + lineB);
@@ -35,7 +54,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(quantidadesDeBebida) {
   // seu código aqui
 }
 
