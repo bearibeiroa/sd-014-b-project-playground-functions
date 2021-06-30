@@ -49,12 +49,12 @@ function footballPoints(wins,ties) {
 
 // Desafio 6
 function highestCount(aryNumber) {
-  let greatNumber = 0;
+  let greatNumber = aryNumber[0];
   let contNumber = 0;
-  for (index5 = 0; index5 < aryNumber.length; index5 +=1){
+  for (index5 = 1; index5 < aryNumber.length; index5 +=1){
     if (aryNumber[index5] > greatNumber){
       greatNumber = aryNumber[index5];
-    }
+    }  
   }
   for (index6 = 0; index6 < aryNumber.length; index6 +=1){
     if (greatNumber === aryNumber[index6]){
@@ -63,7 +63,7 @@ function highestCount(aryNumber) {
   }
   return contNumber;
 }
-console.log(highestCount([0, 0, 0]));
+console.log(highestCount( [-2, -1, -1]));
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
   mousecat1 = mouse - cat1;
