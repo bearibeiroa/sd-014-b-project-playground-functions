@@ -77,23 +77,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzOrBuzz (number) {
+function fizzOrBuzzOrBug(number) {
+  let bug = 'bug!'
   if (number % 3 === 0) {
-    return 'fizz';
+    bug = 'fizz';
+    return bug;
   }
   if (number % 5 === 0) {
-    return 'buzz';
+    bug = 'buzz';
+    return bug;
   }
+  return bug;
 }
 
 function fizzBuzz(fizzBuzzArray) {
   for (let index = 0; index < fizzBuzzArray.length; index += 1) {
     if (fizzBuzzArray[index] % 3 === 0 && fizzBuzzArray[index] % 5 === 0) {
       fizzBuzzArray[index] = 'fizzBuzz';
-    } else if (fizzBuzzArray[index] % 3 !== 0 && fizzBuzzArray[index] % 5 !== 0) {
-      fizzBuzzArray[index] = 'bug!';
     } else {
-      fizzBuzzArray[index] = fizzOrBuzz(fizzBuzzArray[index]);
+      fizzBuzzArray[index] = fizzOrBuzzOrBug(fizzBuzzArray[index]);
     }
   }
   return fizzBuzzArray;
@@ -120,14 +122,19 @@ function arrayToWordEncode(array) {
   return word;
 }
 
+function encodeWithKey(array, chave) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === chave) {
+      array[index] = pwdVaultEncode[chave];
+    }
+  }
+  return array;
+}
+
 function encode(toBeEncoded) {
   let encodedWordArray = wordToArrayEncode(toBeEncoded);
   for (let key in pwdVaultEncode) {
-    for (let index = 0; index < encodedWordArray.length; index += 1) {
-      if (encodedWordArray[index] === key) {
-        encodedWordArray[index] = pwdVaultEncode[key];
-      }
-    }
+    encodedWordArray = encodeWithKey(encodedWordArray, key);
   }
   return arrayToWordEncode(encodedWordArray);
 }
