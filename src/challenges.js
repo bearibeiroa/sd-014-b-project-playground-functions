@@ -44,8 +44,6 @@ function highestCount(arrayNumeros) {
    }
    return quantidadeDeVezes
  }
-
-
 }
 
 // Desafio 7
@@ -70,7 +68,7 @@ function fizzBuzz(arrayDeNumeros) {
     }else if (arrayDeNumeros[index]%5 === 0){
       novoArray.push('buzz');
     } else {
-      novoArray.push('bug');
+      novoArray.push('bug!');
     }
   }
   return novoArray;
