@@ -52,16 +52,42 @@ function generatePhoneNumber(ary) {
   return phNumber
 }
 console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]))
+
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(linea,lineb,linec) {
+  if( linea > (lineb+linec) || lineb > (linea+linec) || linec > lineb+linea){
+    retorno = false;
+  } else if( linea< Math.abs(lineb-linec) || lineb < Math.abs(linea-linec) || linec < Math.abs(lineb-linea)){
+    retorno = false;
+  } else {
+    retorno = true;
+  }
+  return retorno
 }
+console.log(triangleCheck(10,14,8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+var regex = /\d+/g;
+var matches = string.match(regex);  // creates array from matches
+convertido = 0;
+contconvertido = 0;
+returnconvertido = 0;
+for (index6=0;index6<matches.length;index6+=1){
+  convertido = parseInt(matches[index6])
+  contconvertido = contconvertido + convertido;
 }
+if (contconvertido>1){
+  returnconvertido = contconvertido + " copos de água";
+} else {
+  returnconvertido = contconvertido + " copo de água";
+}
+return returnconvertido
 
+  
+}
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 module.exports = {
   generatePhoneNumber,
   techList,
