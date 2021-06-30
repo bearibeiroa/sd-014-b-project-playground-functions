@@ -45,19 +45,19 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   // seu código aqui
-  numbers.sort((e, f) => f - e);
-  if (numbers.length > 0) {
-    let biggest = 0;
-    let counts = 0;
-    for (let i = 0; i < numbers.length; i += 1) {
-      if (numbers[i] >= biggest) {
-        biggest = numbers[i];
-        counts+= 1;
-      }
+  let maiorNumero = 0;
+  for (i in numbers) {
+    if (numbers[i] > maiorNumero) {
+      maiorNumero = numbers[i];
     }
-    return counts;
   }
-  return 'Favor verifique os dados inseridos'
+  let contador = 0;
+  for (i in numbers) {
+    if (numbers[i] == maiorNumero) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 
@@ -95,11 +95,58 @@ function fizzBuzz(array) {
 
 
 // Desafio 9
-function encode() {
+function encode(palavra) {
   // seu código aqui
+  let arrayChar = [];
+  for (i in palavra) {
+    if (palavra[i] === "a") {
+      arrayChar.push("1");
+    } else if (palavra[i] === "e") {
+      arrayChar.push("2");
+    } else if (palavra[i] === "i") {
+      arrayChar.push("3");
+    } else if (palavra[i] === "o") {
+      arrayChar.push("4");
+    } else if (palavra[i] === "u") {
+      arrayChar.push("5");
+    } else {
+      arrayChar.push(palavra[i]);
+    }
 }
-function decode() {
+let encoded = "";
+
+  for (i in arrayChar) {
+    encoded += arrayChar[i];
+  }
+
+  return encoded;
+}
+function decode(palavra) {
   // seu código aqui
+  let arrayChar = [];
+  for (i in string) {
+    if (palavra[i] === "1") {
+      arrayChar.push("a");
+    } else if (palavra[i] === "2") {
+      arrayChar.push("e");
+    } else if (palavra[i] === "3") {
+      arrayChar.push("i");
+    } else if (palavra[i] === "4") {
+      arrayChar.push("o");
+    } else if (palavra[i] === "5") {
+      arrayChar.push("u");
+    } else {
+      arrayChar.push(palavra[i]);
+    }
+  }
+
+  let decoded = "";
+
+  for (i in arrayChar) {
+    decoded += arrayChar[i];
+  }
+
+  return decoded;
 }
 
 module.exports = {
