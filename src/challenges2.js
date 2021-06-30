@@ -64,17 +64,37 @@ function checkRepetedTimes(numbers){
   return repeted3Times;
 }
 
-generatePhoneNumber([0,1,6]);
-
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  let result;
+  if (a > b + c || b > a + c || c > a + b){
+    result = false;
+  } else if (a < Math.abs(b-c) || b < Math.abs(a-c) || c < Math.abs(a-b)){
+    result = false;
+  }else{
+    result = true;
+  }
+ return result;
 }
 
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(word) {
+  let regex = /\d+/g;
+  let string = word;
+  let matches = string.match(regex);
+  let water = 0;
+  let result = ""
+  for (let i = 0; i < matches.length; i += 1){
+    let int = parseInt(matches[i]);
+    water += int;
+  }
+  if (water > 1){
+    result = water + " copos de água";
+  } else{
+    result = water + " copo de água";
+  }
+  return result;
 }
 
 module.exports = {
