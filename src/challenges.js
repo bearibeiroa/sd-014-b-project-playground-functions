@@ -39,7 +39,7 @@ function footballPoints(vitorias,empates) {
 function highestCount(numeros) {
   // seu código aqui
   let contador = 0;
-  //Referencia https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+  //Referencia https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max reduce e max usado em conjuntos para me dizer qual é o nunmero maior.
   const maior = numeros.reduce(function(a, b) {
     return Math.max(a,b);
   });
@@ -67,10 +67,27 @@ function catAndMouse(mouse,cat1,cat2) {
     return "cat1";
   }
 }
-
+function complementaFizzBuzz(numeral) {
+  if (numeral % 3 === 0) {
+    return 'fizz';
+  }
+  if (numeral % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numeros) {
   // seu código aqui
+  let array = [];
+  for (i=0; i < numeros.length ; i++) {
+   if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
+     array.push('fizzBuzz')
+   } else {
+     array.push(complementaFizzBuzz(numeros[i]))
+   }
+  }
+  return array;
 }
 
 // Desafio 9
