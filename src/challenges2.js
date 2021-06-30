@@ -17,10 +17,37 @@ function techList(list, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phone) {
+  let phone1 = '';
+  let phone2 = '';
+  let phone3 = '';
+  if (phone.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < phone.length; index += 1) {
+    if (index < 2) {
+      phone1 += phone[index];
+      console.log(phone[index]);
+    } else if (index < 7) {
+      phone2 += phone[index];
+    } else {
+      phone3 += phone[index];
+    }
+  }
+  let orderedNumber = phone.sort();
+  for (let index = 0; index < orderedNumber.length; index += 1) {
+    if (orderedNumber[index] < 0 || orderedNumber[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    if (orderedNumber[index] === orderedNumber[index + 1] && orderedNumber[index + 1] === orderedNumber[index + 2]) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return '(' + phone1 + ') ' + phone2 + '-' + phone3;
 }
 
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
