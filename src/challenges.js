@@ -45,7 +45,7 @@ function highestCount(palavra) {
       contador += 1;
     }
   }
-  return contador;  
+  return contador; 
 }
 
 // Desafio 7
