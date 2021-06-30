@@ -1,8 +1,0 @@
-
-function compareTrue (num1, num2) {
-  If (num1 && num2) 
-  {
-    return true;
-  }
-}  
-
