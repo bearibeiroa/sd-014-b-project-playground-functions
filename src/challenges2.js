@@ -12,8 +12,39 @@ function techList(techs, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function hasElevenDigits(numbers) {
+  return numbers.length === 11;
+}
+
+function repetitionCounter(numbers) {
+  let obj = {};
+  let quantity = [];
+  numbers.forEach((element) => {
+    obj[element] = (obj[element] || 0) + 1;
+    quantity.push(obj[element]);
+  });
+  return quantity.some((value) => value >= 3);
+}
+
+function isMoreThanNineOrLessThanZero(numbers) {
+  for (let number of numbers) {
+    if (number < 0 || number > 9) {
+      return true;
+    }
+  }
+}
+
+function generatePhoneNumber(numbers) {
+  if (!hasElevenDigits(numbers)) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (isMoreThanNineOrLessThanZero(numbers) || repetitionCounter(numbers)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  let ddd = `(${numbers[0]}${numbers[1]}) `;
+  let firsPart = `${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-`;
+  let lastPart = `${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+  return `${ddd}${firsPart}${lastPart}`;
 }
 
 // Desafio 12
