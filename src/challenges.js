@@ -124,7 +124,7 @@ let encoded = "";
 function decode(palavra) {
   // seu código aqui
   let arrayChar = [];
-  for (i in string) {
+  for (i in palavra) {
     if (palavra[i] === "1") {
       arrayChar.push("a");
     } else if (palavra[i] === "2") {
