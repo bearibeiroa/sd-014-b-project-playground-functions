@@ -46,9 +46,9 @@ function generatePhoneNumber(numbers) {
   let condicaoRepeticao = repeatedNumber(numbers);
   if (condicaoTamanho !== undefined) {
     return condicaoTamanho;
-  } else if (condicaoRepeticao !== undefined) {
+  } if (condicaoRepeticao !== undefined) {
     return condicaoRepeticao;
-  } else if (condicaoNumeros !== undefined) {
+  } if (condicaoNumeros !== undefined) {
     return condicaoNumeros;
   }
   let phoneNumber = '(';
@@ -76,7 +76,7 @@ function generatePhoneNumber(numbers) {
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
     return false;
-  } else if (lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC) || lineC < Math.abs(lineA - lineB)) {
+  } if (lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC) || lineC < Math.abs(lineA - lineB)) {
     return false;
   }
   return true;
@@ -88,12 +88,12 @@ function hydrate(string) {
   let arrayNumbers = string.match(numbers);
   let soma = Number('0');
   for (let i = 0; i < arrayNumbers.length; i += 1) {
-    soma += Number(arrayNumbers[i]);    
+    soma += Number(arrayNumbers[i]);
   }
   if (soma === 1) {
-    return soma + ' copo de água';
-  } 
-  return soma + ' copos de água';
+    return `${soma} copo de água`;
+  }
+  return `${soma} copos de água`;
   
 }
 
