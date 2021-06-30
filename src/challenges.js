@@ -1,10 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true) {
-    return true;
-  } else {
-    return false;
-  }
+  if (value1 === true && value2 === true) return true;
+  return false;
   // seu código aqui
 }
 
@@ -24,7 +21,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  let concatString = arrayStrings[arrayStrings.length-1] + ", " + arrayStrings[0];
+  let concatString = arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0];
   return concatString;
   // seu código aqui
 }
@@ -39,11 +36,11 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let maxCounter = Math.max.apply(null, numbers); //Math.max.apply foi resultado de uma longa pesquisa nas documentações de "Math"
+  let maxCounter = Math.max.apply(null, numbers);   //Math.max.apply foi resultado de uma longa pesquisa nas documentações de "Math"
   let counter = 0;
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] === maxCounter) {
-    counter += 1;
+      counter += 1;
     }
   } return counter;
   // seu código aqui
@@ -51,14 +48,10 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-
   let cat1Dist = Math.abs(cat1 - mouse);
   let cat2Dist = Math.abs(cat2 - mouse);
-
   if (cat1Dist > cat2Dist) return 'cat2';
-
   if (cat1Dist < cat2Dist) return 'cat1';
-
   return 'os gatos trombam e o rato foge';
   // seu código aqui
 }
@@ -66,13 +59,13 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(value) {
   let fzBzArray = [];
-  for (index = 0; index < value.length; index += 1) {
+  for (let index = 0; index < value.length; index += 1) {
     let fzBz = value[index];
-    if (fzBz % 3 === 0 && fzBz % 5 === 0) {fzBzArray.push("fizzBuzz")};
-    if (fzBz % 3 === 0 && fzBz % 5 !== 0) {fzBzArray.push("fizz")};
-    if (fzBz % 3 !== 0 && fzBz % 5 === 0) {fzBzArray.push("buzz")};
-    if (fzBz % 3 !== 0 && fzBz % 5 !== 0) {fzBzArray.push("bug!")};
-  }
+    if (fzBz % 3 === 0 && fzBz % 5 === 0) { fzBzArray.push('fizzBuzz') };
+    if (fzBz % 3 === 0 && fzBz % 5 !== 0) { fzBzArray.push('fizz') };
+    if (fzBz % 3 !== 0 && fzBz % 5 === 0) { fzBzArray.push('buzz') };
+    if (fzBz % 3 !== 0 && fzBz % 5 !== 0) { fzBzArray.push('bug!') };
+  } 
   return fzBzArray;
   // seu código aqui
 }
