@@ -50,26 +50,15 @@ function highestCount(arrayDeNumeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2,) {
-  if(cat1 > mouse){
-    cat1 = cat1 - mouse
-  }else{
-    cat1 = mouse - cat1
+  if ((cat1 + cat2) / 2 === mouse) {
+    return "os gatos trombam e o rato foge";
   }
-
-  if(cat2 > mouse){
-    cat2 = cat2 - mouse
-  }else{
-    cat2 = mouse - cat2
-  }
-
-  if(cat1 === cat2){
-    return "os gatos trombam e o rato foge"
-  }else if(cat1 < cat2){
-    return "cat1"
+  if (mouse + cat1 < mouse + cat2) {
+    return "cat1";
   }else{
     return "cat2"
   }
-  // nao estou orgulhoso do meu exercicio 7
+  // refatorando codgo, com fererencia ao repositorio de Welton Thomas Ferreira https://github.com/tryber/sd-014-b-project-playground-functions/blob/welton-ferreira-playground-functions/src/challenges.js
 }
 
 
@@ -93,11 +82,23 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string){
+  let vogais = 'aeiou'
+    for(let index = 0; index < string.length; index += 1){
+      for(index2 = 0; index2 < vogais.length; index2 += 1){
+        string = string.replace(vogais[index2],index2+1)
+      }
+    }
+    return string
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let vogais = 'aeiou'
+    for(let index = 0; index < string.length; index += 1){
+      for(index2 = 0; index2 < vogais.length; index2 += 1){
+        string = string.replace(index2+1,vogais[index2])
+      }
+    }
+      return string
 }
 
 module.exports = {
