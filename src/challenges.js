@@ -57,13 +57,13 @@ function fizzBuzz(arrayDeNumeros) {
   let novoArray = [];
   for(let index = 0; index < arrayDeNumeros.length; index += 1){
     if (arrayDeNumeros[index]%3 === 0 && arrayDeNumeros[index]%5 === 0){
-      novoArray = novoArray + 'fizzBuzz';
+      novoArray.push('fizzBuzz')
     }else if(arrayDeNumeros[index]%3 === 0){
-      novoArray = novoArray + 'fizz';
+      novoArray.push('fizz');
     }else if (arrayDeNumeros[index]%5 === 0){
-      novoArray = novoArray + 'buzz';
+      novoArray.push('buzz');
     } else {
-      novoArray = novoArray + 'bug';
+      novoArray.push('bug');
     }
   }
   return novoArray;
