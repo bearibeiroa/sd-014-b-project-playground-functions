@@ -43,8 +43,10 @@ function generatePhoneNumber(t) {
       }
       r = 0;
   }
-  if (erro === false) {
+  if (erro === false && t.length === 11) {
       return (number = number + "(" + t[0] + t[1] + ")" + ' ' + t[2] + t[3] + t[4] + t[5] + t[6] + '-' + t[7] + t[8] + t[9] + t[10]);
+  } else {
+    return ('Array com tamanho incorreto.');
   }
 }
 
