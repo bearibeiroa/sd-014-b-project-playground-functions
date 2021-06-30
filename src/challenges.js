@@ -61,7 +61,9 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (ratoXgato1 === ratoXgato2) {
     return 'os gatos trombam e o rato foge';
-  } else 'cat2';
+  } else {
+    return 'cat2';
+  } 
 }
 
 // Desafio 8
@@ -94,7 +96,7 @@ function encode(mensagem) {
     } else if (mensagem[index] === 'u') {
       mensagemNova[index] = 5;
     } else {
-      mensagemNova[index] = mensagem[index]; 
+      mensagemNova[index] = mensagem[index];
     }
   }
   return mensagemNova.join('');
@@ -113,8 +115,8 @@ function decode(mensagemDecode) {
       mensagemNovaDecode[index] = 'o';
     } else if (mensagemDecode[index] === '5') {
       mensagemNovaDecode[index] = 'u';
-    }  else {
-      mensagemNovaDecode[index] = mensagemDecode[index]; 
+    } else {
+      mensagemNovaDecode[index] = mensagemDecode[index];
     }
   }
   return mensagemNovaDecode.join('');
