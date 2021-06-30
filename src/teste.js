@@ -1,24 +1,46 @@
-/* Desafio 8
-divisível apenas por 3, apresente uma string "fizz";
-divisível apenas por 5, apresente uma string "buzz";
-divisível por 3 e 5, retorne a string "fizzBuzz";
-não dividido por 3 nem por 5, retorne a string "bug!"
-*/
-let arrayy = [2, 15, 7, 9, 45];
+//Desafio 9
+let textoo = 'hi there!';
 
-function fizzBuzz(array) {
-  for (let index in array) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      array[index] = 'fizzBuzz';
+function encode(texto) {
+  let novoTexto = '';
+  for (let index = 0; index < texto.length; index += 1) {
+    switch (texto[index]) {
+      case 'a':
+        novoTexto += '1';
+        break;
+      case 'e':
+        novoTexto += '2';
+        break;
+      case 'i':
+        novoTexto += '3';
+        break;
+      case 'o':
+        novoTexto += '4';
+        break;
+      case 'u':
+        novoTexto += '5';
+        break;
+      default:
+        novoTexto += texto[index];
     }
-    else if (array[index] % 3 === 0) {
-      array[index] = 'fizz';
-    }
-    else if (array[index] % 5 === 0) {
-      array[index] = 'buzz';
-    } else { array[index] = 'bug!'; }
   }
-  return array;
+  return novoTexto;
 }
 
-console.log(fizzBuzz(arrayy));
+textoo = encode(textoo);
+console.log(textoo);
+
+function decode(texto) {
+  let novoTexto = texto;
+  for (i = 0; i < texto.length; i += 1) {
+    novoTexto = novoTexto.replace('1', 'a');
+    novoTexto = novoTexto.replace('2', 'e');
+    novoTexto = novoTexto.replace('3', 'i');
+    novoTexto = novoTexto.replace('4', 'o');
+    novoTexto = novoTexto.replace('5', 'u');
+  }
+  return novoTexto;
+}
+
+
+console.log(decode(textoo));
