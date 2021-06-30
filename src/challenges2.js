@@ -4,7 +4,7 @@ function techList(tech, nome) {
     return 'Vazio!';
   }
   tech = tech.sort();
-  for (let index = ; index < tech.length; index -= 1) {
+  for (let index = 0; index < tech.length; index += 1) {
     let technology = {
       tech: tech[index],
       name: nome,
