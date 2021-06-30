@@ -1,11 +1,29 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(tecnologia,name) {
+  
+  let tecnologiaAndNames = [];
+    tecnologia.sort();
+    if (tecnologia.length === 0) {
+      return 'Vazio!'
+    }
+    for (let cont = 0; cont < tecnologia.length; cont +=1){
+          
+        tecnologiaAndNames.push({
+        tech: tecnologia[cont],
+        name: name,
+          })
+          
+        }
+        
+        return tecnologiaAndNames;
+    }
+
+
+
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  
 }
 
 // Desafio 12

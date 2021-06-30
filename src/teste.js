@@ -1,21 +1,23 @@
-let frase = 'Esse e um teste'
-
-function splitSentence(string) {
-  let array = [];
-  let words = '';
+function catAndMouse(mouse,cat1,cat2) {
   
-  for (let cont = 0; cont < string.length; cont+=1){
-    if(string[cont] != " "){
-       words += string[cont];
-    }else{
-      array.push(words);
-       words = '';
-    }
+  let distancia1 = cat1 - mouse;
+  let distancia2 = cat2 - mouse;
+  
+  if (distancia1 < 0){
+    distancia1 = distancia1 *-1;
+
+  }if  (distancia2 < 0){
+    distancia2 = distancia2 *-1;
+  }
+  
+  if(distancia1 === distancia2){
     
-  } 
-  array.push(words)
-  return array;
+    return 'os gatos trombam e o rato foge';
+  }else if (distancia1 > distancia2){
+    return 'cat2';
+  }else{
+     return 'cat1';
+  }
+  ;
 }
-
-
-console.log(splitSentence(frase));
+console.log(catAndMouse(5,7,6))
