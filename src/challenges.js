@@ -31,8 +31,14 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// aprendido o comando sort() através da documentação disponível em: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort e do vídeo: https://www.youtube.com/watch?v=SkDZY7N0Ox8
+// como se trata a função .sort ordena baseado na tabela unicode, é necessário de outra função para se realizar o ajuste, dessa forma foi usada a função a seguir
+function ajusteUnicode(a, b) {
+  return (a - b);
+}
 function highestCount(sequence) {
-  let max = Math.max.apply(null, sequence);
+  sequence = sequence.sort(ajusteUnicode);
+  let max = sequence[sequence.length - 1];
   let counter = 0;
   for (let index = 0; index < sequence.length; index += 1) {
     if (sequence[index] === max) {
