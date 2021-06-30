@@ -117,13 +117,63 @@ function fizzBuzz(numbers) {
 }
 
 
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(message) {
+  let codedMessage = '';
+
+  for(let i of message){
+    switch (i){
+      case 'a':
+        codedMessage += '1';
+      break
+      case 'e':
+        codedMessage += '2';
+      break
+      case 'i':
+        codedMessage += '3';
+      break
+      case 'o':
+        codedMessage += '4';
+      break
+      case 'u':
+        codedMessage += '5';
+      break
+      default:
+        codedMessage += i;
+    }
+  }
+  return codedMessage;
 }
-function decode() {
-  // seu código aqui
+
+function decode(message) {
+  let codedMessage = '';
+
+  for(let i of message){
+    switch (i){
+      case '1':
+        codedMessage += 'a';
+      break
+      case '2':
+        codedMessage += 'e';
+      break
+      case '3':
+        codedMessage += 'i';
+      break
+      case '4':
+        codedMessage += 'o';
+      break
+      case '5':
+        codedMessage += 'u';
+      break
+      default:
+        codedMessage += i;
+    }
+  }
+  return codedMessage;
 }
+
+
 
 module.exports = {
   calcArea,
@@ -136,4 +186,5 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+
+}
