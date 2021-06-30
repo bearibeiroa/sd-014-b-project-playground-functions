@@ -43,14 +43,15 @@ function concatName() {
 function footballPoints(wins, ties) {
   // seu código aqui
   let resultado;
-  for(let index = (wins + ties); index > wins || ties; index = index - 1){
-     let contWin = wins + 1
-     let contTies = ties + 1;
-  }
-    let contagem = (wins * 3) + (ties * 1);
-    resultado = contagem;
+  if(wins || ties > 0){
+    let contWin = wins * 3;
+    let contTies = ties * 1;
+    let resultado = contWin + contTies;
     return resultado;
+  }
 }
+
+
 
 // Desafio 6
 function highestCount() {
