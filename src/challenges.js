@@ -21,13 +21,37 @@ function splitSentence(splitString) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(nomesVariados) {
   // seu código aqui
+  let firstValue = "";
+  let lastValue = "";
+
+  for(let index = 0; index < nomesVariados.length; index += 1) {
+    firstValue = nomesVariados[0]
+    lastValue = nomesVariados[index]
+  };
+
+  let inverseConcat = `${lastValue}, ${firstValue}`
+  
+  return inverseConcat
+
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let winsPoints = 3
+  let tiesPoints = 1
+
+  let calculateWinsPoints = winsPoints * wins
+  let calculateTiesPoints = tiesPoints * ties
+
+  if (calculateWinsPoints > 0 || calculateTiesPoints > 0) {
+    return calculateWinsPoints + calculateTiesPoints
+  } else {
+    return 0
+  }
+
 }
 
 // Desafio 6
