@@ -13,7 +13,7 @@ function techList(techArray, name) {
   // Referência para a linha acima: https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/
 }
 
-// Desafio 11
+// Desafio 11 - t
 function generatePhoneNumber(elevenNumbers) {
   let elevenNumbersLength = elevenNumbers.length;
   if (elevenNumbersLength !== 11) {
