@@ -16,7 +16,7 @@ function techList(techs, names) {
   }
   return techList;
 }
-function count11(numeros){    
+/*function count11(numeros){    
   let resultado= 0;
   for(let index =0; index<numeros.length; index +=1){
     let contador=0;
@@ -35,12 +35,11 @@ function count11(numeros){
   }
   return resultado;
 }
-console.log(count11([1, 11, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
+*/
 // Desafio 11
 function generatePhoneNumber(number) {
-  let numberTel = '';
-  let ocorrencia = ;
+  let numberTel = '';  
   if (number.length != 11) {
     return 'Array com tamanho incorreto.';
   } else {
@@ -58,7 +57,7 @@ function generatePhoneNumber(number) {
     return numeroFormatado;
   }
 }
-console.log(generatePhoneNumber([1, 11, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
@@ -66,10 +65,10 @@ function triangleCheck(lineA,lineB,lineC) {
   if(lineA<lineB+lineC && lineA>Math.abs(lineB-lineC)){
     return true;
   }
-  else if(lineb<lineA+lineC && linea>Math.abs(lineA-lineC)){
+  else if(lineB<lineA+lineC && lineB>Math.abs(lineA-lineC)){
     return true;
   }
-  else if(lineC<lineA+lineC && linea>Math.abs(lineA-lineB)){
+  else if(lineC<lineA+lineC && lineC>Math.abs(lineA-lineB)){
     return true;
   }
   else{
@@ -78,10 +77,21 @@ function triangleCheck(lineA,lineB,lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drink) {
+  //para retirar um numero de uma string usamos o replace com a expressao /\d+/g
+  //pesquisa feita no site: https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
+  let glassOfWater = drink.replace(/[^0-9]/g,[]);   
+  console.log(glassOfWater)
+  let inteiro= []; 
+  for(i=0;i<glassOfWater.length;i+=1) {
+    let numero = parseInt(glassOfWater[i],10);
+    inteiro[i]+= numero;
+  }  
+  console.log(inteiro)
+  let soma= 0; 
+  return soma + 'copos de água';
 }
-
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
 module.exports = {
   generatePhoneNumber,
   techList,
