@@ -85,40 +85,60 @@ function fizzBuzz(vetor) {
   }
   return vetorDecodificado;
 }
-console.log(fizzBuzz([9, 25]))
+
 // Desafio 9
 function encode(palavra) {
-  let contador= palavra.length;  
-  let palavraDecodificada= palavra.charAt(0);  
-  let resultadoFinal=[];
-  let cases="";
-  for(index=0, index<contador; index +=1){ 
-    switch(palavraDecodificada){
-      case "a":
-        cases=1 
-        break;     
-      case "e":
-        cases=2;  
-        break;   
-      case "i":
-        cases=3; 
-        break;     
-      case "o":
-        cases=4; 
-        break;     
-      case "u":
-        cases=5;
-      default:
-        cases=palavraDecodificada;               
-    }
-    resultadoFinal= cases
+  let code = '';
+  for (let index of palavra) {
+    switch (index) {
+    case 'a':
+    code += '1';
+    break
+    case 'e':
+    code += '2';
+    break
+    case 'i':
+    code += '3';
+    break
+    case 'o':
+    code += '4';
+    break
+    case 'u':
+    code += '5';
+    break
+    default:
+    code += index;
+    }  
   }
-  return resultadoFinal;
+  return code;
 }
-console.log(encode('hi there!'))
-function decode() {
-  // seu código aqui
+
+function decode(palavra) {
+  let code = '';
+  for (let index of palavra) {
+    switch (index) {
+    case '1':
+    code += 'a';
+    break
+    case '2':
+    code += 'e';
+    break
+    case '3':
+    code += 'i';
+    break
+    case '4':
+    code += 'o';
+    break
+    case '5':
+    code += 'u';
+    break
+    default:
+    code += index;
+    }  
+  }
+  return code;
 }
+console.log(decode('h3 th2r2!'))
 
 module.exports = {
   calcArea,
