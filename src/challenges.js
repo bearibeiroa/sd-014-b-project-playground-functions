@@ -26,11 +26,11 @@ function splitSentence(String) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
+
   let primeiroItem = array[0];
   let ultimoItem = array[array.length -1];
-  let fullString = ultimoItem + primeiroItem;
-  return fullString;
-
+  let fullString = `${ultimoItem}, ${primeiroItem}`;
+    return fullString;
 }
 
 // Desafio 5
