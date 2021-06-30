@@ -38,10 +38,22 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(10,14,8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let soma = 0;
+  for (letter of string) {
+    for (index = 1; index < 10; index += 1) {
+      if (letter == index) {
+        soma += index;
+      }
+    }
+  }
+  if (soma === 1) {
+    return soma + ' copo de água'
+  } else {
+    return soma + ' copos de água'
+  }
 }
-
+console.log(hydrate("1 cerveja, 3 vinhos"));
 module.exports = {
   generatePhoneNumber,
   techList,
