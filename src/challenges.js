@@ -96,7 +96,6 @@ function encode(string) {
   }
   return newEncode;
 }
-console.log(encode('hello be tete titi toto tata tutu!'));
 // eslint-disable-next-line complexity
 function decode(string) {
   let newDecode = '';
