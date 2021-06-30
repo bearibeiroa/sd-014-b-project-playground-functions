@@ -1,9 +1,9 @@
 // Desafio 1
-function compareTrue(arg1, arg2){
-   if(arg1 && arg2)
-     return true;
+function compareTrue(arg1, arg2) {
+  if (arg1 && arg2)
+    return true;
 
-   return false;
+  return false;
 }
 
 // Desafio 2
@@ -12,8 +12,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  return str.split(' ')
 }
 
 // Desafio 4
