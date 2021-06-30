@@ -17,15 +17,10 @@ function calcArea(base,height) {
 
 // Desafio 3
 function splitSentence(str) {
-  let armazenaStr = "";
-  let espaco = " ";
-  for (index=0;index<str.length;index+=1){
-    if (str[index] != espaco){
-      
-    }
-  }
-
+  let arraystr = str.split(" ");  
+return arraystr;
 }
+console.log(splitSentence("be trybe"));
 
 
 
