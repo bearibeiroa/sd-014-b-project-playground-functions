@@ -58,21 +58,43 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(values) {
-  for (let index = 0; index < values.length; index += 1) {
-    if (values[index] % 5 !== 0 && values[index] % 3 !== 0) {
-      values[index] = 'bug!';
-    }
-    if (values[index] % 3 === 0 && values[index] % 5 !== 0) {
-      values[index] = 'fizz';
-    }
-    if (values[index] % 5 === 0 && values[index] % 3 !== 0) {
-      values[index] = 'buzz';
-    }
-    if (values[index] % 3 === 0 && values[index] % 5 === 0) {
-      values[index] = 'fizzBuzz';
+  n5n3 (values);
+  s3n5 (values);
+  s5n3 (values);
+  s5s3 (values);
+  return values;
+}
+
+function n5n3(values) {
+  for (let key in values) {
+    if (values[key] % 5 !== 0 && values[key] % 3 !== 0) {
+      values[key] = 'bug!';
     }
   }
-  return values;
+}
+
+function s3n5(values) {
+  for (let key in values) {
+    if (values[key] % 3 === 0 && values[key] % 5 !== 0) {
+      values[key] = 'fizz';
+    }
+  }
+}
+
+function s5n3(values) {
+  for (let key in values) {
+    if (values[key] % 5 === 0 && values[key] % 3 !== 0) {
+      values[key] = 'buzz';
+    }
+  }
+}
+
+function s5s3(values) {
+  for (let key in values) {
+    if (values[key] % 3 === 0 && values[key] % 5 === 0) {
+      values[key] = 'fizzBuzz';
+    }
+  }
 }
 
 // Desafio 9
