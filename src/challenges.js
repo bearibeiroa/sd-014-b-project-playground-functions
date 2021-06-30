@@ -55,7 +55,7 @@ function catAndMouse(pMouse, pCat1, pCat2) {
 }
 
 // Desafio 8
-// I copied this beautfull code from Glauco Lomenha and changed it a little bit
+// I copied this beautiful code from Glauco Lomenha and changed it a little bit
 function fizzBuzz(array) {
   return array.map((number) => {
     if (number % 3 === 0 && number % 5 === 0) return 'fizzBuzz';
@@ -66,7 +66,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-// I copied this beautfull code from Glauco Lomenha and changed it a little bit
+// I copied this beautiful code from Glauco Lomenha and changed it a little bit
 function encode(str) {
   let encodeObj = {
     a: '1',
@@ -81,7 +81,7 @@ function encode(str) {
     }));
 }
 
-// I copied this beautfull code from Glauco Lomenha and changed it a little bit
+// I copied this beautiful code from Glauco Lomenha and changed it a little bit
 function decode(str) {
   let encodeObj = {
     1: 'a',
