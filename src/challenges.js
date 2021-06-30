@@ -104,7 +104,9 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 /**
- * Consultei o blog da Trybe para resolver este desafio 
+ * Consultei o blog da Trybe para resolver este desafio afim de entender melhor como funciona
+ * o metodo replace() e como eu poderia utiliza-lo para substituir uma determinada caractere
+ * de uma string
  * Link: https://blog.betrybe.com/javascript/javascript-replace/
  */
 function encode(str) {
