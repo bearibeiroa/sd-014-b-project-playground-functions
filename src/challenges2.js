@@ -62,8 +62,8 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(text) {
   let regex = /\d+/g;
-  let sum = text.match(regex);
-  const total = sum.reduce((currentTotal, item) => parseInt(item, 10) + currentTotal, 0);
+  let numbers = text.match(regex);
+  const total = numbers.reduce((currentTotal, item) => parseInt(item, 10) + currentTotal, 0);
   return (total > 1) ? `${total} copos de água` : `${total} copo de água`;
 }
 
