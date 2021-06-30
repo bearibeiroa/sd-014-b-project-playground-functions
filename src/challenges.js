@@ -61,9 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (ratoXgato1 === ratoXgato2) {
     return 'os gatos trombam e o rato foge';
-  } else {
-    return 'cat2';
-  }
+  } else 'cat2';
 }
 
 // Desafio 8
@@ -87,18 +85,18 @@ function encode(mensagem) {
   for (let index = 0; index < mensagem.length; index += 1) {
     if (mensagem[index] === 'a') {
       mensagemNova[index] = 1;
-  } else if (mensagem[index] === 'e') {
+    } else if (mensagem[index] === 'e') {
       mensagemNova[index] = 2;
-  } else if (mensagem[index] === 'i') {
+    } else if (mensagem[index] === 'i') {
       mensagemNova[index] = 3;
-  } else if (mensagem[index] === 'o') {
+    } else if (mensagem[index] === 'o') {
       mensagemNova[index] = 4;
-  } else if (mensagem[index] === 'u') {
+    } else if (mensagem[index] === 'u') {
       mensagemNova[index] = 5;
-  }  else {
+    } else {
       mensagemNova[index] = mensagem[index]; 
+    }
   }
-  }  
   return mensagemNova.join('');
 }
 
@@ -107,18 +105,18 @@ function decode(mensagemDecode) {
   for (let index = 0; index < mensagemDecode.length; index += 1) {
     if (mensagemDecode[index] === '1') {
       mensagemNovaDecode[index] = 'a';
-  } else if (mensagemDecode[index] === '2') {
+    } else if (mensagemDecode[index] === '2') {
       mensagemNovaDecode[index] = 'e';
-  } else if (mensagemDecode[index] === '3') {
+    } else if (mensagemDecode[index] === '3') {
       mensagemNovaDecode[index] = 'i';
-  } else if (mensagemDecode[index] === '4') {
+    } else if (mensagemDecode[index] === '4') {
       mensagemNovaDecode[index] = 'o';
-  } else if (mensagemDecode[index] === '5') {
+    } else if (mensagemDecode[index] === '5') {
       mensagemNovaDecode[index] = 'u';
-  }  else {
+    }  else {
       mensagemNovaDecode[index] = mensagemDecode[index]; 
+    }
   }
-  }  
   return mensagemNovaDecode.join('');
 }
 
