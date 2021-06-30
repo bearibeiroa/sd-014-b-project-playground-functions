@@ -81,8 +81,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(fizzOuBuzz) {
 
+  for (let index8 = 0; index8 < fizzOuBuzz.length; index8 += 1) {
+    if (fizzOuBuzz[index8] % 3 === 0 && fizzOuBuzz[index8] % 5 === 0) {
+      fizzOuBuzz[index8] = 'fizzBuzz';
+    } else if (fizzOuBuzz[index8] % 3 === 0 && fizzOuBuzz[index8] % 5 != 0) {
+      fizzOuBuzz[index8] = 'fizz';
+    } else if (fizzOuBuzz[index8] % 3 != 0 && fizzOuBuzz[index8] % 5 === 0) {
+      fizzOuBuzz[index8] = 'buzz';
+    } else {
+      fizzOuBuzz[index8] = 'bug!';
+    }
+  }
+  return fizzOuBuzz;
 }
 
 // Desafio 9
