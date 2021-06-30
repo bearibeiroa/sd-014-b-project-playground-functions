@@ -21,16 +21,18 @@ arrayIn.splice(2,arrayIn.length-2);
 return arrayIn.join(', ');
 }
 
-
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+ return ((3 * wins) + ties);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(parameter) {
+  let cont = 0; 
+ for (let index = 0; index < parameter.length; index ++)
+  if (parameter[index] === 9){
+  cont = cont + 1
+  }
 }
 
 // Desafio 7
