@@ -23,9 +23,11 @@ function splitSentence(palavra) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(names) {
   // seu código aqui
-}
+  let lastItem = names[names.length - 1];
+  return lastItem+", "+names[0];
+  }
 
 // Desafio 5
 function footballPoints() {
