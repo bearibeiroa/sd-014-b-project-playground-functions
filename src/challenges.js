@@ -39,7 +39,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let maxCounter = Math.max.apply(null, numbers);
+  let maxCounter = Math.max.apply(null, numbers); //Math.max.apply foi resultado de uma longa pesquisa nas documentações de "Math"
   let counter = 0;
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] === maxCounter) {
@@ -78,10 +78,23 @@ function fizzBuzz(value) {
 }
 
 // Desafio 9
-function encode() {
+function encode(code) {
+  // Código pesquisado e aprendido parcialmente em "MDN Web Docs" rsrs
+  let encoded1 = code.replace(/a/g, '1');
+  let encoded2 = encoded1.replace(/e/g, '2');
+  let encoded3 = encoded2.replace(/i/g, '3');
+  let encoded4 = encoded3.replace(/o/g, '4');
+  let encoded5 = encoded4.replace(/u/g, '5');
+  return encoded5;
   // seu código aqui
 }
-function decode() {
+function decode(code) {
+  let encoded1 = code.replace(/1/g, 'a');
+  let encoded2 = encoded1.replace(/2/g, 'e');
+  let encoded3 = encoded2.replace(/3/g, 'i');
+  let encoded4 = encoded3.replace(/4/g, 'o');
+  let encoded5 = encoded4.replace(/5/g, 'u');
+  return encoded5;
   // seu código aqui
 }
 
@@ -90,8 +103,8 @@ module.exports = {
   catAndMouse,
   compareTrue,
   concatName,
-  decode,
   encode,
+  decode,
   fizzBuzz,
   footballPoints,
   highestCount,
