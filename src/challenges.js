@@ -88,8 +88,7 @@ function fizzBuzz(numeros) {
   }
   return result;
 }
-fizzBuzz([2, 15, 7, 9, 45])
-console.log(result);
+
 
 // Desafio 9
 function encode() {
