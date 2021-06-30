@@ -3,13 +3,13 @@ function compareTrue(val1, val2) {
   // seu código aqui
   let resultss;
   if(val1 === true && val2 === true){
-    results = true;   
+    resultss = true;   
   } else if(val1 === false && val2 === true){
     resultss = false;
   } else if(val1 === true && val2 === false){
     resultss = false;
   } else if(val1 === false && val2 === false){
-    results = false;
+    resultss = false;
   } else {
     resultss = false;
   }
