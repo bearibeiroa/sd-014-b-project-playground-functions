@@ -8,14 +8,14 @@ function compareTrue(value1, value2) {
 // Desafio 2
 function calcArea(base, height) {
   let trianguArea = (base * height) / 2;
-   return trianguArea;
+  return trianguArea;
   // seu código aqui
 }
 
 // Desafio 3
 function splitSentence(string) {
-   let splitedString = string.split(' ');
-   return splitedString;
+  let splitedString = string.split(' ');
+  return splitedString;
   // seu código aqui
 }
 
@@ -34,9 +34,9 @@ function footballPoints(wins, ties) {
   // seu código aqui
 }
 
-// Desafio 6
+// Desafio 6 //Math.max.apply foi resultado de uma longa pesquisa nas documentações de "Math"
 function highestCount(numbers) {
-  let maxCounter = Math.max.apply(null, numbers);   //Math.max.apply foi resultado de uma longa pesquisa nas documentações de "Math"
+  let maxCounter = Math.max.apply(null, numbers);
   let counter = 0;
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] === maxCounter) {
