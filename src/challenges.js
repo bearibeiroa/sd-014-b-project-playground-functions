@@ -24,7 +24,7 @@ function splitSentence(String) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
   let primeiroItem = array[0];
   let ultimoItem = array[array.length -1];
