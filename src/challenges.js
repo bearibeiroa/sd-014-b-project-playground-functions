@@ -38,25 +38,15 @@ function footballPoints(wins, ties) {
 // Desafio 6
 // Utilizei a concatenação de dois exercícios do bloco 4
 function highestCount(numeros) {
-  let bigValue = 0; // comparacao de numeros
-  let counter = 0; //  variavel que vai contar quantas vezes repetiu o numero
-  let repeats = 0; //
-  for(let i in numeros) {
-    if (numeros[bigValue] < numeros[i]) {
-      bigValue = i;
+  let counter = 0;
+  let bigValue = Math.max.apply(null, numeros); // comparacao de numeros
+  for (let i = 0; i < numeros.length; i+= 1) {
+    if (numeros[i] === bigValue){
+      counter +=1;
     }
-
-    for(let i2 of numeros) {
-      if (numeros[i2] == numeros[bigValue]) {
-        compare = numeros[i2];
-        counter += 1;
-      }
-    }
-    return bigValue;
-  }
+  }    
+  return counter;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-
 // Desafio 7
 /* Após entrar na monitoria, e sala de estudos, tive alguns insights e resolvi alterar a forma de expressar o resultado, pois não passava em todos os testes. A Fernanda falou algo sobre uma propriedade caso algum dos numeros seja negativo. A propriedade é a Math.abs, eu vi a documentação aqui https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs */
 function catAndMouse(mouse, cat1, cat2) {
