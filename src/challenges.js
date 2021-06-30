@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  return(a && b)
+  return a && b;
 }
 
 // Desafio 2
@@ -16,13 +16,11 @@ function splitSentence(stringVariavel) {
 }
 
 // Desafio 4
-function concatName(palavra) {      
+function concatName(palavra) {
   let primeiro = palavra[0];
-  let ultimo = palavra[palavra.length - 1];  
-  return ultimo +', ' + primeiro
+  let ultimo = palavra[palavra.length - 1];
+  return ultimo + ', ' + primeiro;
 }
-
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -35,17 +33,17 @@ function footballPoints(wins, ties) {
 function highestCount(palavra) {
   let maior = palavra[0];
   let contador = 0;
-  for (let index = 0; index < palavra.length; index += 1) {    
+  for (let index = 0; index < palavra.length; index += 1) {
     if (palavra[index] > maior) {
-      maior= palavra[index];
-    }         
-  } 
+      maior = palavra[index];
+    }
+  }
   for (let index = 0; index < palavra.length; index += 1) {
     if (palavra[index] === maior) {
       contador += 1;
     }
   }
-  return contador; 
+  return contador;
 }
 
 // Desafio 7
@@ -90,24 +88,24 @@ function encode(palavra) {
   let code = '';
   for (let index of palavra) {
     switch (index) {
-    case 'a':
-    code += '1';
-    break
-    case 'e':
-    code += '2';
-    break
-    case 'i':
-    code += '3';
-    break
-    case 'o':
-    code += '4';
-    break
-    case 'u':
-    code += '5';
-    break
-    default:
-    code += index;
-    }  
+      case 'a':
+        code += '1';
+        break;
+      case 'e':
+        code += '2';
+        break;
+      case 'i':
+        code += '3';
+        break;
+      case 'o':
+        code += '4';
+        break;
+      case 'u':
+        code += '5';
+        break;
+      default:
+        code += index;
+    }
   }
   return code;
 }
@@ -116,28 +114,27 @@ function decode(palavra) {
   let code = '';
   for (let index of palavra) {
     switch (index) {
-    case '1':
-    code += 'a';
-    break
-    case '2':
-    code += 'e';
-    break
-    case '3':
-    code += 'i';
-    break
-    case '4':
-    code += 'o';
-    break
-    case '5':
-    code += 'u';
-    break
-    default:
-    code += index;
-    }  
+      case '1':
+        code += 'a';
+        break;
+      case '2':
+        code += 'e';
+        break;
+      case '3':
+        code += 'i';
+        break;
+      case '4':
+        code += 'o';
+        break;
+      case '5':
+        code += 'u';
+        break;
+      default:
+        code += index;
+    }
   }
   return code;
 }
-
 
 module.exports = {
   calcArea,
@@ -151,6 +148,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-
-
