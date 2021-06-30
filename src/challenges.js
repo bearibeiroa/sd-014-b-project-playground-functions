@@ -5,6 +5,7 @@ function compareTrue(a1,a2) {
   } else {
     return false;
   }
+
 // Desafio 2
   function calcArea(base,height) {
   let triangulo = (base * height) /2;
@@ -14,9 +15,10 @@ function compareTrue(a1,a2) {
 
 // Desafio 3
 function splitSentence(frase) {
-  frase = "Go Trybe";
-  let palavra = [ ];
-  return [palavra.push(frase)];
+  frase = ['Go Trybe'];
+  let palavra = [,];
+  
+  console.log(splitSentence);
 }
 
 // Desafio 4
@@ -63,4 +65,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}}
