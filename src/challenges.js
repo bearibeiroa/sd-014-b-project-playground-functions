@@ -29,11 +29,15 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(parameter) {
   let cont = 0; 
- for (let index = 0; index < parameter.length; index ++)
-  if (parameter[index] === 9){
-  cont = cont + 1
-  }
+  let max = Math.max.apply(null,parameter);
+    for (let index = 0; index < parameter.length; index += 1){
+      if (parameter[index] === max){
+       cont = cont + 1; 
+      }
+    }
+    return(cont)
 }
+  
 
 // Desafio 7
 function catAndMouse() {
