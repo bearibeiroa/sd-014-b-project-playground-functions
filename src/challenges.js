@@ -34,18 +34,19 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(palavra) {
   let maior = palavra[0];
+  let contador = 0;
   for (let index = 0; index < palavra.length; index += 1) {    
     if (palavra[index] > maior) {
       maior= palavra[index];
-    }            
-    let contador = 0;
-    for (let index = 0; index < palavra.length; index += 1) {
-      if (palavra[index] === maior) {
-        contador += 1;
-      }
+    }         
+  } 
+  for (let index = 0; index < palavra.length; index += 1) {
+    if (palavra[index] === maior) {
+      contador += 1;
     }
-    return contador;
   }
+  return contador;
+  
 }
 
 // Desafio 7
@@ -86,9 +87,35 @@ function fizzBuzz(vetor) {
 }
 console.log(fizzBuzz([9, 25]))
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavra) {
+  let contador= palavra.length;  
+  let palavraDecodificada= palavra.charAt(0);  
+  let resultadoFinal=[];
+  let cases="";
+  for(index=0, index<contador; index +=1){ 
+    switch(palavraDecodificada){
+      case "a":
+        cases=1 
+        break;     
+      case "e":
+        cases=2;  
+        break;   
+      case "i":
+        cases=3; 
+        break;     
+      case "o":
+        cases=4; 
+        break;     
+      case "u":
+        cases=5;
+      default:
+        cases=palavraDecodificada;               
+    }
+    resultadoFinal= cases
+  }
+  return resultadoFinal;
 }
+console.log(encode('hi there!'))
 function decode() {
   // seu código aqui
 }
@@ -105,3 +132,6 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+
+
