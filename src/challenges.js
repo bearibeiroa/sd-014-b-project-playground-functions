@@ -53,7 +53,28 @@ function highestCount(paraArrayNum){
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  let rato1 = (cat1-mouse)
+  let rato2 = (cat2-mouse)
+  if (rato1<0){
+    rato1=(rato1*-1)
+  }
+  if (rato2<0){
+    rato2 = (rato2*-1)
+  }
+  if (rato1>rato2){
+    return "cat2"
+  } 
+  else if(rato2>rato1){
+    return "cat1"
+  }
+  else if(rato1==rato2){
+   return "os gatos trombam e o rato foge"
+  }
+
+  else{
+    return "undefined"
+  }
   // seu código aqui
 }
 
