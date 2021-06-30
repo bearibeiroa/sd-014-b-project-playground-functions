@@ -45,8 +45,7 @@ function highestCount(palavra) {
       contador += 1;
     }
   }
-  return contador;
-  
+  return contador;  
 }
 
 // Desafio 7
@@ -61,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-console.log(catAndMouse([2, 15, 7, 9, 45]))
+
 // Desafio 8
 function fizzBuzz(vetor) {
   let vetorDecodificado = vetor;
@@ -138,7 +137,7 @@ function decode(palavra) {
   }
   return code;
 }
-console.log(decode('h3 th2r2!'))
+
 
 module.exports = {
   calcArea,
