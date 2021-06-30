@@ -43,6 +43,7 @@ function generatePhoneNumber(phone) {
   }
 }
 // Desafio 12
+// comando Math.abs explicado no arquivo challenges, desafio 7. 
 function triangleCheck(lineA, lineB, lineC) {
   let ab = Math.abs(lineA + lineB);
   let ac = Math.abs(lineA + lineC);
