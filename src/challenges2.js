@@ -1,5 +1,5 @@
 // Desafio 10
-function techList() {
+function techList(array, name) {
   // seu código aqui
   let novaArray = array.sort();
   let objectArray = [];
