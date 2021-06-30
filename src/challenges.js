@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
       return ("cat2");
     }
     else { return ("os gatos trombam e o rato foge")}
-  }// seu código aqui
+  }
 }
 
 // Desafio 8
@@ -85,7 +85,13 @@ function fizzBuzz(numeros) {
   }
   return fizzbuzzbug;
 }
+// Desafio 9
+function encode() {};
 
+// Desafio 10
+function decode() {
+
+/*
 // Desafio 9
 function encode(str1ng) {
   let encodedString = [];
@@ -131,6 +137,11 @@ function decode(encodedString) {
                 decodedString[char] = encodedString[char]}
               } } } } }
 return decodedString;
+}*/
+
+// Desafio 10
+function techList() {
+  // seu código aqui
 }
 
 module.exports = {

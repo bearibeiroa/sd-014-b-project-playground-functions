@@ -28,7 +28,7 @@ function generatePhoneNumber(numbers) {
         }
         ///contador de repetidos
         if (contNumero <3) {
-          .
+          // return 0; //////////////////////////////////////////////////
         }
         else {return("não é possível gerar um número de telefone com esses valores");}
       }
