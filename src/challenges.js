@@ -63,19 +63,17 @@ function highestCount(arrayOfNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceMouseCat1 = mouse - cat1;
-  let distanceMouseCat2 = mouse - cat2;
+  let distanceMouseCat1 = Math.abs(mouse - cat1);
+  let distanceMouseCat2 = Math.abs(mouse - cat2);
   let result = '';
-  if (mouse <= cat1) {
-    distanceMouseCat1 = cat1 - mouse;
-  } else { distanceMouseCat1 = mouse - cat1; }
-  if (mouse <= cat2) { distanceMouseCat2 = cat2 - mouse; } 
-    else { distanceMouseCat2 = mouse - cat2; }
   if (distanceMouseCat1 === distanceMouseCat2) {
     result = 'os gatos trombam e o rato foge';
   } else if (distanceMouseCat1 < distanceMouseCat2) {
     result = 'cat1';
-  } else { result = 'cat2'; } return result;
+  } else {
+    result = 'cat2'; 
+  } 
+  return result;
 }
 
 // Desafio 8
