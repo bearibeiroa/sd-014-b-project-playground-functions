@@ -53,8 +53,19 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
+  //Math abs para retornar sempre numeros positivos
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+  if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse) ) {
+    return "os gatos trombam e o rato foge";
+  }
+  if ((cat1 - mouse) > (cat2 - mouse)) {
+    return "cat2";
+  }
+   if ((cat1 - mouse) < (cat2 - mouse)) {
+    return "cat1";
+  }
 }
 
 // Desafio 8
