@@ -36,6 +36,7 @@ function highestCount(arrayNumeros) {
   for (let index = 0; index < arrayNumeros.length; index +=1){
   if (arrayNumeros[indeceDoNumeroMaior] < arrayNumeros[index]){
     indeceDoNumeroMaior = index;
+
  }}
  for(index = 0; index < arrayNumeros.length; index += 1){
    if (arrayNumeros[indeceDoNumeroMaior] === arrayNumeros[index]){
@@ -43,12 +44,6 @@ function highestCount(arrayNumeros) {
    }}
    return quantidadeDeVezes;
  }
-
-
-
-
-
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
    if (cat1 === cat2 || (cat1 + cat2)/2 === mouse) {
@@ -78,12 +73,67 @@ function fizzBuzz(arrayDeNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringEncode) {
+  let fraseNova = ''
+for (let letraAtual of stringEncode){
+  if (letraAtual === 'a'){
+    letraAtual = '1';
+    fraseNova += letraAtual
+  } else if (letraAtual === 'e'){
+    letraAtual = '2';
+    fraseNova += letraAtual;
+  } else if (letraAtual === 'i'){
+    letraAtual ='3';
+    fraseNova += letraAtual;
+  } else if (letraAtual === 'o'){
+    letraAtual = '4';
+    fraseNova += letraAtual;
+  } else if (letraAtual === 'u'){
+    letraAtual = '5';
+    fraseNova += letraAtual;
+  }
+  else{
+    fraseNova += letraAtual
+  }
 }
-function decode() {
-  // seu código aqui
+  console.log(fraseNova);
+
 }
+
+
+
+
+function decode(stringDecode) {
+  let fraseNova2 = ''
+  for (let letraAtual2 of stringDecode){
+    if (letraAtual2 === '1'){
+      letraAtual2 = 'a';
+      fraseNova2 += letraAtual2
+    } else if (letraAtual2 === '2'){
+      letraAtual2 = 'e';
+      fraseNova2 += letraAtual2;
+    } else if (letraAtual2 === '3'){
+      letraAtual2 ='i';
+      fraseNova2 += letraAtual2;
+    } else if (letraAtual2 === '4'){
+      letraAtual2 = 'o';
+      fraseNova2 += letraAtual2;
+    } else if (letraAtual2 === '5'){
+      letraAtual2 = 'u';
+      fraseNova2 += letraAtual2;
+    }
+    else{
+      fraseNova2 += letraAtual2
+    }
+  }
+    console.log(fraseNova2);
+  
+  }
+
+
+
+
+
 
 module.exports = {
   calcArea,
