@@ -33,18 +33,21 @@ function footballPoints(wins, ties) {
 function highestCount(arrayNumeros) {
   let indeceDoNumeroMaior = 0; 
   let quantidadeDeVezes = 0;
-  for (let index in arrayNumeros){
+  for (let index = 0; index < arrayNumeros.length; index +=1){
   if (arrayNumeros[indeceDoNumeroMaior] < arrayNumeros[index]){
     indeceDoNumeroMaior = index;
-  }
- }
+ }}
  for(index = 0; index < arrayNumeros.length; index += 1){
    if (arrayNumeros[indeceDoNumeroMaior] === arrayNumeros[index]){
      quantidadeDeVezes = quantidadeDeVezes +1;
-   }
-   return quantidadeDeVezes
+   }}
+   return quantidadeDeVezes;
  }
-}
+
+
+
+
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
