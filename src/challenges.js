@@ -51,7 +51,15 @@ function highestCount(numeros) {
       numero = numeros[i]
     }
   }
+  let contador = 0;
+  for (i in numeros) {
+    if (numeros[i] == numero) {
+      contador++;
+    }
+  }
+  return contador;
 }
+
 
 // Desafio 7
 function catAndMouse() {
