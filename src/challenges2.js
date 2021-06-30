@@ -1,7 +1,17 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  
+  let listaTecs = {
+  javascriptArray: { tech: 'Javascript', name: 'Natalia' },
+  cssArray: { tech: 'CSS', name: 'Natalia' },
+  htmlArray: { tech: 'HTML', name: 'Natalia' },
+  pythonArray: { tech: 'Python', name: 'Natalia' },
+  reactArray: { tech: 'React', name: 'Natalia' },
 }
+return listaTecs;
+console.log(listaTecs);
+}
+
 
 // Desafio 11
 function generatePhoneNumber() {
