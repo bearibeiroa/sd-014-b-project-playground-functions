@@ -116,10 +116,13 @@ function fizzBuzz(vetor) {
 
 // Desafio 9
 function encode(value1) {
-  //Dividindo a string
+  //Divide a string em array
   let splitValue = value1.split('');
 
+  //Percorre a string que foi dividida e agora é um array
   for(let index = 0; index < splitValue.length; index += 1) {
+
+    //Verifica se o item do array é uma vogal e retorna um numero de 1 a 5
     if(splitValue[index] === 'a' && splitValue[index] === splitValue[index].toLowerCase()) {
       splitValue[index] = 1;
     } else if(splitValue[index] === 'e' && splitValue[index] === splitValue[index].toLowerCase()) {
@@ -134,16 +137,34 @@ function encode(value1) {
 
   };
 
+  //Faz a junção de todos os itens do array 
   let value1Join = splitValue.join(''); 
 
   return value1Join;
 }
 
-console.log(encode('Ola!'));
 
 
-function decode() {
-  // seu código aqui
+function decode(value) {
+  let splitValue = value.split('');
+
+  for(let indice = 0; indice < splitValue.length; indice += 1) {
+    if(splitValue[indice] === '1' && splitValue[indice] === splitValue[indice].toLowerCase()) {
+      splitValue[indice] = 'a';
+    } else if(splitValue[indice] === '2' && splitValue[indice] === splitValue[indice].toLowerCase()) {
+      splitValue[indice] = 'e';
+    } else if(splitValue[indice] === '3' && splitValue[indice] === splitValue[indice].toLowerCase()) {
+      splitValue[indice] = 'i';
+    } else if(splitValue[indice] === '4' && splitValue[indice] === splitValue[indice].toLowerCase()) {
+      splitValue[indice] = 'o';
+    } else if(splitValue[indice] === '5' && splitValue[indice] === splitValue[indice].toLowerCase()) {
+      splitValue[indice] = 'u';
+    };
+
+  }
+
+  let joinValue = splitValue.join('');
+  return joinValue;
 }
 
 module.exports = {
