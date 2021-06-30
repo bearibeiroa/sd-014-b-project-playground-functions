@@ -27,16 +27,6 @@ function concatName(recebeItem) {
   return juntaNome;
 }
 // Desafio 5
-/* Escreva uma função com o nome footballPoints que receba o número de vitórias (esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato.
-
-Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
-
-O que será verificado:
-
-  Retorne 50 pontos quando o time tenha 14 vitórias e 8 empates
-  Retorne 5 pontos quando o time tenha 1 vitória e 2 empates
-  Retorne 0 pontos quando o time tenha 0 vitórias e 0 empates */
-
 function footballPoints(wins, ties) {
   let winPoint = (wins * 3);
   let tiePoint = ties;
@@ -46,6 +36,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// Utilizei a concatenação de dois exercícios do bloco 4
 function highestCount(numeros) {
   let bigValue = 0; // comparacao de numeros
   let counter = 0; //  variavel que vai contar quantas vezes repetiu o numero
@@ -54,6 +45,7 @@ function highestCount(numeros) {
     if (numeros[bigValue] < numeros[i]) {
       bigValue = i;
     }
+
   for(let i2 of numeros) {
     if (numeros[i2] == numeros[bigValue]) {
       compare = numeros[i2];
@@ -66,19 +58,20 @@ function highestCount(numeros) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
+/* Após entrar na monitoria, e sala de estudos, tive alguns insights e resolvi alterar a forma de expressar o resultado, pois não passava em todos os testes. A Fernanda falou algo sobre uma propriedade caso algum dos numeros seja negativo. A propriedade é a Math.abs, eu vi a documentação aqui https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs */
 function catAndMouse(mouse, cat1, cat2) {
-  let distMouseCat1 = mouse - cat1 * -1;
-  let distMouseCat2 = mouse - cat2 * -1;
+  let distMouseCat1 = (mouse - cat1);
+  let distMouseCat2 = (mouse - cat2);
 
-  if (distMouseCat1 > distMouseCat2) {
+  if (distMouseCat1 < distMouseCat2) {
+    return 'cat1';
+  } else if (distMouseCat2 < distMouseCat1) {
     return 'cat2';
-  } 
-  if (distMouseCat1 === distMouseCat2) {
+  } else {
     return 'os gatos trombam e o rato foge';
   }
-  return 'cat1';
 }  
-console.log(catAndMouse(1, 0, 2));
+// console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 /* Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
@@ -98,11 +91,11 @@ O que será verificado:
 function fizzBuzz(numBuzz) {
   for (let i of numBuzz) {
     if (numBuzz[i] % 3 === 0) {
-      numBuzz[i] == 'fizz';
+      numBuzz.push[i] = 'fizz';
     } else if (numBuzz[i] % 5 === 0) {
-      numBuzz[i] = 'fizz';
+      numBuzz.push[i] = 'buzz';
     } else if (numBuzz[i] % 5 === 0 && numBuzz[i] % 3 === 0) {
-      numBuzz[i] = 'fizzBuzz';
+      numBuzz.push[i] = 'fizzBuzz';
     } else {
       numBuzz[i] = 'bug!';
     }
