@@ -3,25 +3,25 @@ function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
   } return false;
-}
+} 
 
 // Desafio 2
 function calcArea(base, altura) {
   let areaTriangulo = (base * altura) / 2;
   return areaTriangulo;
-}
+};
 
 // Desafio 3
 function splitSentence(string) {
   let resultado = string.split(' ');
   return resultado;
-}
+};
 
 // Desafio 4
 function concatName(array) {
-  let concate = array[array.length - 1] + ',' + ' ' + array[0];
+  let concate = array[array.length - 1] + ', ' + array[0];
   return concate;
-}
+};
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -29,7 +29,7 @@ function footballPoints(wins, ties) {
   let tiePoints = ties;
   let totalPoints = winPoints + tiePoints;
   return totalPoints;
-}
+};
 
 // Desafio 6
 function highestCount(array) {
@@ -41,7 +41,7 @@ function highestCount(array) {
     }
   }
   return numberCount;
-}
+};
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -57,7 +57,6 @@ function catAndMouse(mouse, cat1, cat2) {
   };
 }; 
  
-
 // Desafio 8
 function fizzBuzz(array) {
   let resultado = [];
@@ -72,28 +71,49 @@ function fizzBuzz(array) {
     resultado.push('bug!');
       };
     } return resultado;  
-}; 
+};
   
-    
-
-
- 
 // Desafio 9
 function encode(palavra) {
-  let vogais = 0;
-  if (vogais >= 1){
-    a == 1
-    e == 2
-    i == 3
-    o == 4
-    u == 5
+  let letras = [];
+  for (let letra of palavra){
+    letras.push(letra);
   }
- 
-  
-}
-function decode() {
-  // seu código aqui
-}
+  for (let index = 0; index < letras.length; index += 1) {
+      if (letras[index] === 'a') {
+        letras[index] = '1';
+      } else if (letras[index] === 'e') {
+        letras[index] = '2';
+      } else if (letras[index] === 'i') {
+        letras[index] = '3';
+      } else if (letras[index] === 'o') {
+        letras[index] = '4';
+      } else if (letras[index] === 'u') 
+        letras[index] = '5';
+    }
+    return letras.join('');
+  }; console.log(encode('boa noite pessoal'))
+      
+function decode(palavra) {
+  let numbers = [];
+  for (let number of palavra){
+    numbers.push(number);
+  }
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] === '1') {
+      numbers[index] = 'a';
+    } else if (numbers[index] === '2'){
+      numbers[index] = 'e';
+    } else if (numbers[index] === '3'){
+        numbers[index] = 'i';
+    } else if (numbers[index] === '4'){
+        numbers[index] = 'o';
+    } else if (numbers[index] === '5'){
+        numbers[index] = 'u';
+    };
+   };
+   return numbers.join('');
+}; console.log(decode('b41 n43t2 p2ss41l'))
 
 module.exports = {
   calcArea,
