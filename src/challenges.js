@@ -23,6 +23,7 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(arrayString) {
   // seu código aqui
+  return arrayString[arrayString.length-1] + ", " + arrayString[0];
 }
 
 // Desafio 5
