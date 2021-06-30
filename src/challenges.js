@@ -23,7 +23,6 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(vetor) {
-  // seu código aqui
   let firstName = vetor[0];
   let lastName = vetor[vetor.length - 1];
   return lastName + ', ' + firstName;
@@ -31,19 +30,15 @@ function concatName(vetor) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
   let points = ((wins * 3) + ties);
   return points;
 }
 
 
-
 // Desafio 6
 function highestCount(values) {
-  // seu código aqui
   let biggerNumber = values[0];
   let times = 0;
-
   for (let index of values) {
     if (index > biggerNumber) {
       biggerNumber = index;
@@ -56,15 +51,22 @@ function highestCount(values) {
   }
   return times;
 }
-console.log(highestCount([-2, -2, -1]))
-
-
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
+    return 'cat1';
+  } else if(Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)){
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
+console.log(catAndMouse(4,2,3))
+
 
 // Desafio 8
 function fizzBuzz() {
