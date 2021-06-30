@@ -54,9 +54,26 @@ function highestCount(numbers) {
 }
 
 
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
+  // criar armazenamento para a posicao dos bixos
+  let resultado;
+  // calcular as distancias entre o rato e cada gato
+  // pra estar mais perto do rato o gato precisa diminuir a distancia entre ele e o rato e comparar com a distancia do segundo gato para o rato
+    if(Math.abs(mouse-cat1) > Math.abs(mouse-cat2)){
+      resultado = "cat2"
+    } else if (Math.abs(mouse-cat1) < Math.abs(mouse-cat2)){
+      resultado = "cat1"
+    } else {
+      resultado = "os gatos trombam e o rato foge"
+    }
+
+  return resultado;
+  // retornar qual dos gatos está mais próximo do rato
+
+  // Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua função deverá retornar "cat2".
 }
 
 // Desafio 8
