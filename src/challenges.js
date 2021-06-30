@@ -1,24 +1,22 @@
 // Desafio 1
-function compareTrue(a1 , a2) {
+function compareTrue(a1,a2) {
   if (a1 === true && a2 === true) {
     return true;
-
-  } else
-
+  } else {
     return false;
   }
-
 // Desafio 2
-function calcArea(base , height) {
-    let triangulo = (base*height)/2;
+  function calcArea(base,height) {
+  let triangulo = (base * height) /2;
   return triangulo;
 }
-console.log(calcArea(51 , 1));
-
+//console.log(calcArea(10,50));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  frase = "Go Trybe";
+  let palavra = [ ];
+  return [palavra.push(frase)];
 }
 
 // Desafio 4
