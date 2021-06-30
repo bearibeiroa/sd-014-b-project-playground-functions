@@ -83,7 +83,7 @@ function encode(str) {
 
 // I copied this beautiful code from Glauco Lomenha and changed it a little bit
 function decode(str) {
-  let encodeObj = {
+  let encodeObj2 = {
     1: 'a',
     2: 'e',
     3: 'i',
@@ -91,7 +91,7 @@ function decode(str) {
     5: 'u',
   };
   return str.replace(/1|2|3|4|5/gi, (item) =>
-    encodeObj[item].replace(/(?:^|\s)\S/g, function (elemento) {
+    encodeObj2[item].replace(/(?:^|\s)\S/g, function (elemento) {
       return elemento;
     }));
 }
