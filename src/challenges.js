@@ -46,12 +46,12 @@ function highestCount(numeros) {
       bigValue = i;
     }
 
-  for(let i2 of numeros) {
-    if (numeros[i2] == numeros[bigValue]) {
-      compare = numeros[i2];
-      counter += 1;
+    for(let i2 of numeros) {
+      if (numeros[i2] == numeros[bigValue]) {
+        compare = numeros[i2];
+        counter += 1;
+      }
     }
-  }
     return bigValue;
   }
 }
@@ -70,7 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     return 'os gatos trombam e o rato foge';
   }
-}  
+}
 // console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
@@ -121,12 +121,27 @@ O que será verificado:
 
     Retorne uma string decodificada quando a função decode for utilizada
  */
+//Anna Hamann - 14A me ajudou com um método replace, encontrado na W3CSchools
 function encode(word) {
+  word = word.replace(/a/g, '1');
+  word = word.replace(/e/g, '2');
+  word = word.replace(/i/g, '3');
+  word = word.replace(/o/g, '4');
+  word = word.replace(/u/g, '5');
 
-  // seu código aqui
+  return word;
 }
+
+console.log(encode('hi there!'));
+
 function decode(word) {
-  // seu código aqui
+  word = word.replace(/1/g, 'a');
+  word = word.replace(/2/g, 'e');
+  word = word.replace(/3/g, 'i');
+  word = word.replace(/4/g, 'o');
+  word = word.replace(/5/g, 'u');
+
+  return word;
 }
 
 module.exports = {

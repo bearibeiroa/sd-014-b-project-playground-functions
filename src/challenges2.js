@@ -49,16 +49,15 @@ O que será verificado:
     Retorne a mensagem de erro 'Vazio!' quando a lista não tiver tecnologias */
 
 function techList(skills, nameTech) {
-  let trybeSkills = [];
-  trybeSkills.sort(); // Dica do Slack, do Thomas Ferreira - 14B
-
+  let trybeSkills = []; // Dica do Slack, do Thomas Ferreira - 14B
+  let trybeSkillsSort = skills.sort();
   for (let i of skills) {
     trybeSkills.push({
       tech: skills[i],
       name: nameTech,
     });
   }
-
+  
   if (trybeSkills.length === 0) {
     return 'Vazio!';
   }
