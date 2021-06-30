@@ -30,14 +30,24 @@ function generatePhoneNumber(elevenNumbers) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  return '(' + elevenNumbers[0] + elevenNumbers[1] + ') ' + elevenNumbers[2] + elevenNumbers[3] + elevenNumbers[4] 
-  + elevenNumbers[5] + elevenNumbers[6] + '-' + elevenNumbers[7] + elevenNumbers[8] + elevenNumbers[9] 
-  + elevenNumbers[10];
+  let phoneNumber = '(' + elevenNumbers[0] + elevenNumbers[1] + ') ' + elevenNumbers[2] + elevenNumbers[3] +
+  elevenNumbers[4] + elevenNumbers[5] + elevenNumbers[6] + '-' + elevenNumbers[7] + elevenNumbers[8]
+  + elevenNumbers[9] + elevenNumbers[10];
+  return phoneNumber;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (Math.abs(lineB - lineC) > lineA || (lineB + lineC) < lineA) {
+    return false;
+  }
+  if (Math.abs(lineA - lineC) > lineB || (lineA + lineC) < lineB) {
+    return false;
+  }
+  if (Math.abs(lineB - lineA) > lineC || (lineB + lineA) < lineC) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
