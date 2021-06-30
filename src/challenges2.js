@@ -67,8 +67,19 @@ function triangleCheck(a, b, c) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let numbers = string.match(/\d+/g).map(Number);
+  //fórmula pesquisada no site (https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994)
+  let soma = 0;
+  for (let index of numbers) {
+    soma += index;
+  }
+  if (soma === 1) {
+    return `${soma} copo de água`;
+  } else {
+    return `${soma} copos de água`;
+  }
 }
 
 module.exports = {
