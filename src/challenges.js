@@ -38,10 +38,39 @@ function highestCount(parameter) {
     return(cont)
 }
   
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  cont1 = 0;
+  cont2 = 0;
+
+   while (mouse != cat1){
+   if (mouse > cat1 ){
+   cat1 = cat1 + 1  
+   cont1 = cont1 +1
+   } else {
+     cat1 = cat1 - 1
+     cont1 = cont1 + 1
+   }
+  }
+
+    while (mouse != cat2){
+      if (mouse > cat2 ){
+        cat2 = cat2 + 1  
+       cont2 = cont2 +1
+        } else {
+          cat2 = cat2 - 1
+         cont2 = cont2 + 1
+         }  
+   }
+   let string = 0;
+   if (cont1 === cont2){
+       string = 'os gatos trombam e o rato foge';
+   } else if (cont1 > cont2){
+       string = 'cat2'
+   } else {
+     string = 'cat1'
+   }
+     return string; 
 }
 
 // Desafio 8
