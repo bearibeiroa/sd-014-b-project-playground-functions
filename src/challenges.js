@@ -14,7 +14,7 @@ function splitSentence(string) {
   let reservaPalavras = '';
   string += ' ';
   for (let i = 0; i < string.length; i += 1) {
-    if (string[i] != ' ') {
+    if (string[i] !== ' ') {
       reservaPalavras += string[i];
     } else {
       listaPalavras.push(reservaPalavras);
@@ -29,9 +29,9 @@ function concatName(nomes) {
   let primeiroItem;
   let ultimoItem;
   for (let i = 0; i < nomes.length; i += 1) {
-    if (i == 0) {
+    if (i === 0) {
       primeiroItem = nomes[i];
-    } else if (i == (nomes.length - 1)) {
+    } else if (i === (nomes.length - 1)) {
       ultimoItem = nomes[i] + ', ';
     }
   }
@@ -39,8 +39,9 @@ function concatName(nomes) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = (wins * 3) + ties;
+  return pontos;
 }
 
 // Desafio 6
