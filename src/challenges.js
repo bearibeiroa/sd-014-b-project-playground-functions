@@ -49,6 +49,7 @@ function highestCount(sequence) {
 }
 
 // Desafio 7
+// Math.abs(x) é uma função que retorna o valor absoluto (módulo) do X, nesse caso. O conhecimento eu jpa tinha do C++ e phyton que tem funções parecidas, então só precisei verificar a sintaxe, através de: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = cat1 - mouse;
   dist1 = Math.abs(dist1);
@@ -65,6 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
+// Desafio 8
 function n5n3(values) {
   for (let key in values) {
     if (values[key] % 5 !== 0 && values[key] % 3 !== 0) {
@@ -95,7 +97,7 @@ function s5s3(values) {
       values[key] = 'fizzBuzz';
     }
   }
-}// Desafio 8
+}
 function fizzBuzz(values) {
   n5n3(values);
   s3n5(values);
@@ -105,6 +107,9 @@ function fizzBuzz(values) {
 }
 
 // Desafio 9
+// função .replace aprendida em: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+// junto com esse outro endereço que foi usado para entender a sintaxe parâmetro RegExp: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
+// dessa forma tem-se a sintaxe / .../ para indicar que é uma expressão regular, o 'g' para indicar que se repere globalmente e não é apenas uma vez e o outro parâmetro é o valor a qual se quer substituir.
 function encode(word) {
   word = word.replace(/a/g, '1');
   word = word.replace(/e/g, '2');
