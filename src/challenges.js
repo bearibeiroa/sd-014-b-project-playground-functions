@@ -46,17 +46,20 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   // seu código aqui
   numbers.sort((e, f) => f - e);
-  if (numbers.length > 1) {
-    let biggest = 0;
-    let counts = 0;
-    for (let i = 0; i < numbers.length; i += 1) {
-      if (numbers[i] >= biggest) {
-        biggest = numbers[i];
-        counts++;
-      }
+  let highestNumber = 0;
+  let countNumber = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (highestNumber < numbers[i]) {
+      highestNumber = numbers[i];
     }
-    return counts;
   }
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (highestNumber === numbers[i]) {
+      countNumber++;
+    }
+  }
+  return countNumber;
+
 }
 
 
