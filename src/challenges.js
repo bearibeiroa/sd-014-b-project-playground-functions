@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
       return ("cat2");
     }
     else { return ("os gatos trombam e o rato foge")}
-  }
+  }// seu código aqui
 }
 
 // Desafio 8
