@@ -69,7 +69,8 @@ function catAndMouse(mouse, cat1, cat2) {
   if (mouse <= cat1) {
     distanceMouseCat1 = cat1 - mouse;
   } else { distanceMouseCat1 = mouse - cat1; }
-  if (mouse <= cat2) { distanceMouseCat2 = cat2 - mouse; } else { distanceMouseCat2 = mouse - cat2; }
+  if (mouse <= cat2) { distanceMouseCat2 = cat2 - mouse; } 
+    else { distanceMouseCat2 = mouse - cat2; }
   if (distanceMouseCat1 === distanceMouseCat2) {
     result = 'os gatos trombam e o rato foge';
   } else if (distanceMouseCat1 < distanceMouseCat2) {
@@ -97,16 +98,21 @@ function fizzBuzz(arrayOfNumbers) {
 }
 
 // Desafio 9
+let pwdVaultEncode = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+
+let pwdVaultDecode = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+
 function encode(toBeEncoded) {
-  let pwdVault = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   let encodedWordArray = [];
   for (let index = 0; index < toBeEncoded.length; index += 1) {
     encodedWordArray.push(toBeEncoded[index]);
   }
-  for (let key in pwdVault) {
-    for (let index = 0; index < encodedWordArray.length; index += 1) {
-      if (encodedWordArray[index] === key) {
-        encodedWordArray[index] = pwdVault[key];
+  for (let key in pwdVaultEncode) {
+    if (pwdVaultEncode.hasOwnProperty(key)) {
+      for (let index = 0; index < encodedWordArray.length; index += 1) {
+        if (encodedWordArray[index] === key) {
+          encodedWordArray[index] = pwdVaultEncode[key];
+        }
       }
     }
   }
@@ -117,15 +123,16 @@ function encode(toBeEncoded) {
   return encodedWord;
 }
 function decode(toBeDecoded) {
-  let pwdVault = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   let decodedWordArray = [];
   for (let index = 0; index < toBeDecoded.length; index += 1) {
     decodedWordArray.push(toBeDecoded[index]);
   }
-  for (let key in pwdVault) {
-    for (let index = 0; index < decodedWordArray.length; index += 1) {
-      if (decodedWordArray[index] === key) {
-        decodedWordArray[index] = pwdVault[key];
+  for (let key in pwdVaultDecode) {
+    if (pwdVaultDecode.hasOwnProperty(key)) {
+      for (let index = 0; index < decodedWordArray.length; index += 1) {
+        if (decodedWordArray[index] === key) {
+          decodedWordArray[index] = pwdVaultDecode[key];
+        }
       }
     }
   }
