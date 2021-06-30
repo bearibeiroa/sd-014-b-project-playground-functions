@@ -53,8 +53,8 @@ function highestCount(numbers) {
   }
   let contador = 0;
   for (i in numbers) {
-    if (numbers[i] == maiorNumero) {
-      contador += 1;
+    if (numbers[i] === maiorNumero) {
+      contador++;
     }
   }
   return contador;
@@ -83,11 +83,11 @@ function fizzBuzz(array) {
     if (((array[i] % 3) == 0) && ((array[i] % 5) == 0)) {
       resultado.push("fizzBuzz");
     } else if ((array[i] % 3) == 0) {
-      resultado.push("fizz");
+      result.push("fizz");
     } else if ((array[i] % 5) == 0) {
-      resultado.push("buzz");
+      result.push("buzz");
     } else {
-      resultado.push("bug!");
+      result.push("bug!");
     }
   }
   return result
