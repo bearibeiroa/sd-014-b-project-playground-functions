@@ -123,25 +123,27 @@ O que será verificado:
  */
 //Anna Hamann - 14A me ajudou com um método replace, encontrado na W3CSchools
 function encode(word) {
-  word = word.replace(/a/g, '1');
-  word = word.replace(/e/g, '2');
-  word = word.replace(/i/g, '3');
-  word = word.replace(/o/g, '4');
-  word = word.replace(/u/g, '5');
+  let wordEncode = word;
 
-  return word;
+  wordEncode = wordEncode.replace(/a/g, '1');
+  wordEncode = wordEncode.replace(/e/g, '2');
+  wordEncode = wordEncode.replace(/i/g, '3');
+  wordEncode = wordEncode.replace(/o/g, '4');
+  wordEncode = wordEncode.replace(/u/g, '5');
+
+  return wordEncode;
 }
 
-console.log(encode('hi there!'));
-
 function decode(word) {
-  word = word.replace(/1/g, 'a');
-  word = word.replace(/2/g, 'e');
-  word = word.replace(/3/g, 'i');
-  word = word.replace(/4/g, 'o');
-  word = word.replace(/5/g, 'u');
+  let wordSwitch = word;
+  
+  wordSwitch = wordSwitch.replace(/1/g, 'a');
+  wordSwitch = wordSwitch.replace(/2/g, 'e');
+  wordSwitch = wordSwitch.replace(/3/g, 'i');
+  wordSwitch = wordSwitch.replace(/4/g, 'o');
+  wordSwitch = wordSwitch.replace(/5/g, 'u');
 
-  return word;
+  return wordSwitch;
 }
 
 module.exports = {
