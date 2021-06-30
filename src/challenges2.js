@@ -1,21 +1,20 @@
 // Desafio 10
-function techList(tech, name) {
-  if (tech.length === 0) {
+function techList(tech1, nome) {
+  if (tech1.length === 0) {
     return 'Vazio!';
   }
-
-  for (let key = 0; key < tech.length; key += 1) {
-    tech = tech.sort;
-  }
+  tech1 = tech1.sort();
 
   let technology = {
-    tech,
-    name,
+    tech: '',
+    name: '',
   };
 
-  for (let index = 0; index < ; index += 1) {
-    return technology;
-  }
+  for (let key = 0; key < tech1.length; key += 1) {
+    technology.tech = tech1[key];
+    technology.name = nome;
+  return technology;
+}
 }
 
 // Desafio 11
