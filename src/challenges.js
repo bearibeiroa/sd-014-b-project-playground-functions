@@ -91,11 +91,50 @@ function fizzBuzz(array) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let result = "";
+  for(let key in string){
+    if(string[key] === "a"){
+      result = result + "1";
+    }else if(string[key] === "e"){
+      result = result + "2";
+    }else if(string[key] === "i"){
+      result = result + "3";
+    }else if(string[key] === "o"){
+      result = result + "4";
+    }else if(string[key] === "u"){
+      result = result + "5";
+    }else{
+      result = result + string[key];
+    }
+  }
+  return result;
+  // for para passar pela string  
+  // if para comparar e substituir letrar por numeros
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode("heyakkellllilllolllu"));
+
+
+function decode(string) {
+  let result = "";
+  for(let key in string){
+    if(string[key] === "1"){
+      result = result + "a";
+    }else if(string[key] === "2"){
+      result = result + "e";
+    }else if(string[key] === "3"){
+      result = result + "i";
+    }else if(string[key] === "4"){
+      result = result + "o";
+    }else if(string[key] === "5"){
+      result = result + "u";
+    }else{
+      result = result + string[key];
+    }
+  }
+  return result;
+
 }
 
 module.exports = {
