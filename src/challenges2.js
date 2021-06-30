@@ -1,17 +1,4 @@
-/*10 - Crie uma função de Lista de Tecnologias
-Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado name com um nome.
-Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
-{
-  tech: "NomeTech",
-  name: name
-}
-Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo tech no objeto.
-A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima. 
-Caso o array venha vazio sua função deve retornar 'Vazio!'
-
-O que será verificado:
-Retorne uma lista de objetos ordenados quando é passada uma lista com 5 tecnologias
-Retorne a mensagem de erro 'Vazio!' quando a lista não tiver tecnologias*/
+// Desafio 10
 
 function techList(techs,nome){
   let info = [];
@@ -26,19 +13,13 @@ function techList(techs,nome){
       }
     }
     return info;
-    //console.log(info);
 }
 }
-
-//techs = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-//nome = "Lucas";
-
-//techList(techs,nome)
 
 // Desafio 11
 
 function generatePhoneNumber(numbers) {
-  if (numbers.length === 11) { ///////////////// 
+  if (numbers.length === 11) { 
     for (let indice in numbers) {
       if (numbers[indice]> 0) {
         ///contador de repetidos
@@ -58,9 +39,8 @@ function generatePhoneNumber(numbers) {
           }
           contNumero = 0;
         }
-        ///contador de repetidos
         if (contNumero <3) {
-          // return 0; //////////////////////////////////////////////////
+          // return 0; 
         }
         else {return("não é possível gerar um número de telefone com esses valores");}
       }
@@ -89,13 +69,9 @@ function triangleCheck(lineA, lineB, lineC) {
   if ((lineA > sumBC) || (lineB > sumAC) || (lineC > sumAB)) {
     return false;
   }
-
   else if ((lineA < difBC) || (lineB < difAC) || (lineC < difAB)) {
       return false;
   }
-  //Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
-  //e maior que o valor absoluto da diferença entre essas medidas.
-
   else if ((checkA === true) || (checkB === true) || (checkC === true)) {
     return true;
   }
