@@ -19,36 +19,40 @@ function techList(tecnologies, name) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let telephoneNumber = "";
-  let repetManyTimes = checkRepetedTimes(numbers);
-  let canMakeNumber = false;
-  let result = "";
-  for (let i = 2; i < numbers.length; i += 1){
-    let number = numbers[i];
-    if (numbers.length > 11 || numbers.length < 11){
-      canMakeNumber = false;
-      result = "Array com tamanho incorreto.";
-      break;
-    } else if (number < 0 || number > 9 || repetManyTimes === true){
-      canMakeNumber = false
-      result = "não é possível gerar um número de telefone com esses valores";
-      break;
-    } else if (i === 7){
-      canMakeNumber = true;
-      telephoneNumber += "-" + number.toString();
-    } else{
-      canMakeNumber = true;
-      telephoneNumber += number.toString();
+  let repetManyTimes = checkRepetedTimes(numbers, 3);
+  let highNumber = 0;
+  let lessNumber = 0;
+  for (index of numbers){
+    if (highNumber < index){
+      highNumber = index;
+    }
+    if (lessNumber > index){
+      lessNumber = index;
     }
   }
-  if (canMakeNumber){
-    let ddd = numbers[0].toString() + numbers[1].toString();
-    result = "("+ddd+")"+" " + telephoneNumber;
-  } 
-  console.log(result);
-  return result;
+
+  if (numbers.length !== 11){
+    return 'Array com tamanho incorreto.'
+  }else if (highNumber > 9 || lessNumber < 0 || repetManyTimes){
+    return 'não é possível gerar um número de telefone com esses valores'
+  }else{
+    for (let i = 2; i < numbers.length; i += 1){
+      telephoneNumber += numbers[i].toString();
+      if (i == 6){
+        telephoneNumber += "-";
+      }
+    }
+  }
+
+  let ddd = numbers[0].toString() + numbers[1].toString();
+  let finalNumber = "("+ddd+")" + " " + telephoneNumber;
+  return finalNumber;
 }
 
-function checkRepetedTimes(numbers){
+generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+
+
+function checkRepetedTimes(numbers, times){
   let checkedNumbers = {};
   let repeted3Times = false;
   for (i of numbers){
@@ -57,7 +61,7 @@ function checkRepetedTimes(numbers){
     } else{
       checkedNumbers[i] = 1;
     }
-    if (checkedNumbers[i] >= 3){
+    if (checkedNumbers[i] >= times){
       repeted3Times = true;
     }
   }
@@ -103,3 +107,27 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
+/*  if (numbers.length === 11){
+      if (i >= 2){
+        telephoneNumber += numbers[i].toString();
+        if (i == 6){
+          telephoneNumber += "-";
+        }
+      }
+    } else if (number < 0 || number > 9 || repetManyTimes){
+      let b = 'não é possível gerar um número de telefone com esses valores'
+      console.log(b);
+      return b;
+    }else{
+      let a = 'Array com tamanho incorreto.'
+      console.log(a);
+      return a;
+    }
+  }
+  if (numbers.length >= 1){
+    ddd = numbers[0].toString() + numbers[1].toString();
+  }
+  let finalNumber = "("+ddd+")" + " " + telephoneNumber;
+  console.log(finalNumber);
+  return finalNumber; */
