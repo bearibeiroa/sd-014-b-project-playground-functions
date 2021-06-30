@@ -91,9 +91,10 @@ function hydrate(string) {
     soma += Number(arrayNumbers[i]);    
   }
   if (soma === 1) {
-    return soma + ' copo de água'
-  } else
-    return soma + ' copos de água'
+    return soma + ' copo de água';
+  } 
+  return soma + ' copos de água';
+  
 }
 
 module.exports = {
