@@ -76,13 +76,47 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// eslint-disable-next-line complexity
+function encode(string) {
+  let newEncode = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'a') {
+      newEncode += 1;
+    } else if (string[index] === 'e') {
+      newEncode += 2;
+    } else if (string[index] === 'i') {
+      newEncode += 3;
+    } else if (string[index] === 'o') {
+      newEncode += 4;
+    } else if (string[index] === 'u') {
+      newEncode += 5;
+    } else {
+      newEncode += string[index];
+    }
+  }
+  return newEncode;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hello be tete titi toto tata tutu!'));
+// eslint-disable-next-line complexity
+function decode(string) {
+  let newDecode = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === '1') {
+      newDecode += 'a';
+    } else if (string[index] === '2') {
+      newDecode += 'e';
+    } else if (string[index] === '3') {
+      newDecode += 'i';
+    } else if (string[index] === '4') {
+      newDecode += 'o';
+    } else if (string[index] === '5') {
+      newDecode += 'u';
+    } else {
+      newDecode += string[index];
+    }
+  }
+  return newDecode;
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
