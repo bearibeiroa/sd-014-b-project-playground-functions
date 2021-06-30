@@ -96,12 +96,8 @@ for (let letraAtual of stringEncode){
     fraseNova += letraAtual
   }
 }
-  console.log(fraseNova);
-
+  return fraseNova;
 }
-
-
-
 
 function decode(stringDecode) {
   let fraseNova2 = ''
@@ -123,18 +119,13 @@ function decode(stringDecode) {
       fraseNova2 += letraAtual2;
     }
     else{
-      fraseNova2 += letraAtual2
+      fraseNova2 += letraAtual2;
     }
   }
-    console.log(fraseNova2);
-  
+    return fraseNova2;
   }
 
-
-
-
-
-
+  
 module.exports = {
   calcArea,
   catAndMouse,
