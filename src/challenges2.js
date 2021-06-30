@@ -16,35 +16,33 @@ function techList(techs, names) {
   }
   return techList;
 }
-/*function count11(numeros){    
-  let resultado= 0;
-  for(let index =0; index<numeros.length; index +=1){
-    let contador=0;
-    for(let index2=0; index2<numeros.length;index2+=10){
-      if(numeros[index]===numeros[index2]){
+function repeteMais3(numeros){    
+  let resultado =true;  
+  for(let index =0; index<numeros.length; index +=1){  
+    let contador=0;      
+    for(let index2=0; index2<numeros.length;index2+=1){
+      if(numeros[index2]===numeros[index]){
         contador+=1;
-      }     
+      }    
+    } 
     //parte feita com ajuda do @Esdras Oliveira-turma 14-B pelo slack
     if(contador>2){      
-      return 'não é possível gerar um número de telefone com esses valores';
-      erro = true
-      break;
-    } 
-    resultado=contador;
-    contador=0;         
+      return resultado;      
+    }     
+    contador=0;        
   }
-  return resultado;
+  return false;   
 }
-
-*/
+console.log(repeteMais3([1,2,3,5,8,8,8,1]))
 // Desafio 11
 function generatePhoneNumber(number) {
-  let numberTel = '';  
-  if (number.length != 11) {
+  let numberTel = '';    
+  if (number.length != 11)  {
     return 'Array com tamanho incorreto.';
   } else {
+    let erro= repeteMais3(number);  
     for (let index of number) {
-      if (index < 0 || index > 9) {
+      if (index < 0 || index > 9 || erro=== true) {
         return 'não é possível gerar um número de telefone com esses valores';
       } else {
         numberTel += index;
@@ -52,12 +50,12 @@ function generatePhoneNumber(number) {
     }
     const numeroFormatado = numberTel.replace(
       /(\d{2})?(\d{5})?(\d{4})/,
-      '($1)$2-$3'
+      '($1) $2-$3'
     );
     return numeroFormatado;
   }
 }
-
+console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]))
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
@@ -78,7 +76,6 @@ function triangleCheck(lineA,lineB,lineC) {
 
 // Desafio 13
 function hydrate(drink) {
-  //para retirar um numero de uma string usamos o replace com a expressao /\d+/g
   //pesquisa feita no site: https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
   let glassOfWater = drink.replace(/[^0-9]/g,[]);   
   console.log(glassOfWater)
