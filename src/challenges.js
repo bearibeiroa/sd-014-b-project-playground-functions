@@ -78,13 +78,11 @@ function fizzBuzz(vetor) {
     } else {
       resposta[index] = 'bug!';
     }
-  }
-  return resposta;
+  } return resposta;
 }
 
 // Desafio 9
 function encode(word) {
-  // seu código aqui
   let newphrase = '';
   for (let index of word) {
     switch (index) {
@@ -106,14 +104,10 @@ function encode(word) {
     default:
       newphrase += index;
     }
-  }
-  return newphrase;
+  } return newphrase;
 }
 
-console.log(encode("ola"))
-
 function decode(word) {
-  // seu código aqui
   let phrase = '';
   for (let index of word) {
     switch (index) {
@@ -135,10 +129,8 @@ function decode(word) {
     default:
       phrase += index;
     }
-  }
-  return phrase;
+  } return phrase;
 }
-console.log(decode('4l1'))
 
 module.exports = {
   calcArea,
