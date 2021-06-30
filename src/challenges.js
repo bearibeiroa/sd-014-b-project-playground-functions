@@ -19,8 +19,8 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let concat = array[array.length - 1] + ',' + ' ' + array[0];
-  return concat;
+  let concate = array[array.length - 1] + ',' + ' ' + array[0];
+  return concate;
 }
 
 // Desafio 5
@@ -57,24 +57,23 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  for (let index = 0; index < array.length; index += 1){
-    for (let index of array){
+  
+    for (let index = 0; index < array.length; index += 1){
       if ((array[index] % 3 === 0)) {
       return 'fizz';
       } if ((array[index] % 5 === 0)) {
-          return 'buzz';
-      } if ((array[index] % 3 === 0) && (array[index] % 5 === 0)){
-          return 'fizzBuzz';
+        return 'buzz';
+      } if ((array[index] % 3 === 0) && (array % 5 === 0)){
+        return 'fizzBuzz';
       } else {
-          return 'bug!';
-      }    
-    } 
- }
-  
-}console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
-// Desafio 9
-function encode() {
+         return 'bug!';
+       }
+      }  
+   
+};
+ 
+  // Desafio 9
+function encode(palavra) {
  
   
 }
