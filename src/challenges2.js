@@ -17,7 +17,7 @@ function conditions(numbers) {
     if (numbers[i] < 0 || numbers[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-  }   
+  }
 }
 function repeatedNumber(numbers) {
   let currentNumber = 0;
@@ -83,8 +83,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbers = /\d+/g;
+  let arrayNumbers = string.match(numbers);
+  let soma = Number('0');
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    soma += Number(arrayNumbers[i]);    
+  }
+  if (soma === 1) {
+    return soma + ' copo de água'
+  } else
+    return soma + ' copos de água'
 }
 
 module.exports = {
