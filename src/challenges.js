@@ -54,7 +54,7 @@ function highestCount(numbers) {
   }
 
   for (let index = 0; index < numbers.length; index += 1) {
-    if(numbers[index] === maiorNumero){
+    if (numbers[index] === maiorNumero) {
       cont += 1;
     }
   }
@@ -62,7 +62,6 @@ function highestCount(numbers) {
   return cont;
 }
 
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
