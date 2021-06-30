@@ -1,7 +1,39 @@
-// Desafio 10
-function techList() {
-  // seu código aqui
+/*10 - Crie uma função de Lista de Tecnologias
+Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado name com um nome.
+Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
+{
+  tech: "NomeTech",
+  name: name
 }
+Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo tech no objeto.
+A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima. 
+Caso o array venha vazio sua função deve retornar 'Vazio!'
+
+O que será verificado:
+Retorne uma lista de objetos ordenados quando é passada uma lista com 5 tecnologias
+Retorne a mensagem de erro 'Vazio!' quando a lista não tiver tecnologias*/
+
+function techList(techs,nome){
+  let info = [];
+  if (techs.length === 0) {return ("Vazio!");}
+  else {
+    techs = techs.sort();
+    console.log(techs)
+    for (let index = 0 ; index < techs.length ; index += 1 ) {
+      info[index] = {
+        tech: techs[index],
+        name: nome,
+      }
+    }
+    return info;
+    //console.log(info);
+}
+}
+
+//techs = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+//nome = "Lucas";
+
+//techList(techs,nome)
 
 // Desafio 11
 
