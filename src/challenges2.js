@@ -9,18 +9,6 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-/*
-12 - Crie uma função de Condição de existência de um triângulo
-Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha.
-
-Para tanto, tenha em mente algumas considerações:
-Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas. Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs. O retorno da sua função deverá ser um booleano.
-
-Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
-O que será verificado:
-Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois.
-Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas.
-Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.*/
 
 function triangleCheck(lineA, lineB, lineC) {
   let difAB = Math.abs(lineA-lineB);
@@ -36,14 +24,10 @@ function triangleCheck(lineA, lineB, lineC) {
   let checkC = ((lineC < sumAB) && (lineC > difAB));
   let resultado = false;
 
-// (lineA > sumBC) || (lineB > sumAC) || (lineC > sumAB)
-// (lineA < difBC) || (lineB < difAC) || (lineC < difAB)
-
-  ////Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois.
   if ((lineA > sumBC) || (lineB > sumAC) || (lineC > sumAB)) {
     return false;
   }
-  //Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas.
+
   else if ((lineA < difBC) || (lineB < difAC) || (lineC < difAB)) {
       return false;
   }
@@ -54,8 +38,6 @@ function triangleCheck(lineA, lineB, lineC) {
     return true;
   }
 }
-
-//triangleCheck(10,14,8);
 
 // Desafio 13
 function hydrate() {
