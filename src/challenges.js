@@ -83,12 +83,51 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let mensagem = "";
+  for (key of frase){
+    if (key === "a"){
+       key = "1"
+    }
+    else if(key === "e"){
+       key = "2"
+    }
+    else if (key === "i"){
+       key = "3"
+    }
+    else if (key === "o"){
+       key = "4"
+    }
+    else if (key === "u"){
+       key = "5"
+    }
+   mensagem = mensagem + key
+ }
+ return mensagem
 }
-function decode() {
-  // seu código aqui
+function decode(frase) {
+  let mensagem = "";
+  for (key of frase){
+    if (key === "1"){
+       key = "a"
+    }
+    else if(key === "2"){
+       key = "e"
+    }
+    else if (key === "3"){
+       key = "i"
+    }
+    else if (key === "4"){
+       key = "o"
+    }
+    else if (key === "5"){
+       key = "u"
+    }
+   mensagem = mensagem + key
+ }
+ return mensagem
 }
+
 
 module.exports = {
   calcArea,
