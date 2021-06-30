@@ -34,8 +34,12 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(ties,wins) {
   // seu código aqui
+  let vitorias = wins * 3;
+  let empates = ties;
+  let total = vitorias + empates;
+  return total;
 }
 
 // Desafio 6
