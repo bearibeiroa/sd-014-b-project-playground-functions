@@ -36,8 +36,20 @@ function footballPoints(vitorias,empates) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numeros) {
   // seu código aqui
+  let contador = 0;
+  //Referencia https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+  const maior = numeros.reduce(function(a, b) {
+    return Math.max(a,b);
+  });
+  for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] === maior) {
+      contador++;
+    }
+  }
+  console.log(maior);
+  return contador;
 }
 
 // Desafio 7
