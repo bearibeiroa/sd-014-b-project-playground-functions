@@ -87,9 +87,12 @@ function fizzBuzz(numeros) {
 }
 // Desafio 9
 function encode() {};
-
-// Desafio 10
-function decode() {
+function decode() {};
+/*
+ Desafio 10
+function techList() {
+  // seu código aqui
+}*/
 
 /*
 // Desafio 9
@@ -139,10 +142,7 @@ function decode(encodedString) {
 return decodedString;
 }*/
 
-// Desafio 10
-function techList() {
-  // seu código aqui
-}
+
 
 module.exports = {
   calcArea,
