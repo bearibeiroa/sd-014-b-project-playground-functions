@@ -11,12 +11,10 @@ function calcArea(base, heigth) {
   return (base * heigth) / 2;
 }
 
-
 // Desafio 3
 function splitSentence(frase) {
   return frase.split(" ")
 }
-
 
 // Desafio 4
 function concatName(array) {
@@ -24,12 +22,10 @@ function concatName(array) {
   return array[array.length - 1] + ", " + array[0];
 }
 
-
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
 }
-
 
 // Desafio 6
 function highestCount(maiorrepetido) {
@@ -72,7 +68,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-
 // Desafio 8
 function fizzBuzz(valor) {
   let numeros = [];
@@ -89,7 +84,6 @@ function fizzBuzz(valor) {
   };
   return numeros;
 }
-
 
 // Desafio 9
 function encode(frase) {

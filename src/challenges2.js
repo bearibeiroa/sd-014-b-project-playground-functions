@@ -2,12 +2,13 @@
 function techList(lista, name) {
   let sort = lista.sort();
   let nicolasLista = [];
-  if (lista.length !== 0) {
+  if (lista.length === 0) {
+    return 'Vazio!';    
+  } else {
     for (let index in sort) {
       nicolasLista.push({ 'tech': sort[index], 'name': name });
     }
-    return 'Vazio';
-  }  
+  }
   return nicolasLista;
 }
 console.log(techList([], "Nicolas"));
