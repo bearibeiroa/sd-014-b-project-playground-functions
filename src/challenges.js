@@ -54,7 +54,7 @@ function highestCount(numeros) {
   let contador = 0;
   for (i in numeros) {
     if (numeros[i] == numero) {
-      contador++;
+      contador+=1;
     }
   }
   return contador;
