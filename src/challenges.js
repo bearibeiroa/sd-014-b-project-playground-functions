@@ -32,10 +32,10 @@ function concatName(nomes) {
     if (i === 0) {
       primeiroItem = nomes[i];
     } else if (i === (nomes.length - 1)) {
-      ultimoItem = nomes[i] + ', ';
+      ultimoItem = nomes[i];
     }
   }
-  return ultimoItem + primeiroItem;
+  return ultimoItem + ', ' + primeiroItem;
 }
 
 // Desafio 5
@@ -45,8 +45,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let maiorNumero = numbers[0];
+  let quantidadeVezes = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (maiorNumero < numbers[i]) {
+      maiorNumero = numbers[i];
+    }
+  }
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (maiorNumero === numbers[i]) {
+      quantidadeVezes += 1;
+    }
+  }
+  return quantidadeVezes;
 }
 
 // Desafio 7
