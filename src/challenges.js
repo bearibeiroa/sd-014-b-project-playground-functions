@@ -109,7 +109,6 @@ function decode(stringDecode) {
     .replace(/5/g, 'u');
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
