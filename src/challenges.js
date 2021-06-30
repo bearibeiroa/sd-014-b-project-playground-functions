@@ -93,6 +93,7 @@ function fizzBuzz(numeros) {
 // Desafio 9
 function encode(text) {
   // seu código aqui
+  //Referencia //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
   let newString = "";
   newString = text.replace(/a/g,"1");
   newString = newString.replace(/e/g,"2");
