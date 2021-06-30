@@ -6,7 +6,7 @@ function techList() {
 // Desafio 11
 
 function generatePhoneNumber(numbers) {
-  if (numbers.length = 11) { ///////////////// 
+  if (numbers.length === 11) { ///////////////// 
     for (let indice in numbers) {
       if (numbers[indice]> 0) {
         ///contador de repetidos
