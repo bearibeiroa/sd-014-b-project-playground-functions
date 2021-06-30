@@ -3,6 +3,7 @@ function techList(tech1, nome) {
   if (tech1.length === 0) {
     return 'Vazio!';
   }
+  let aux = tech1.length;
   tech1 = tech1.sort();
 
   let technology = {
@@ -10,11 +11,11 @@ function techList(tech1, nome) {
     name: '',
   };
 
-  for (let key = 0; key < tech1.length; key += 1) {
+  for (let key = 0; key < aux; key += 1) {
     technology.tech = tech1[key];
     technology.name = nome;
-  return technology;
-}
+    return technology;
+  }
 }
 
 // Desafio 11
@@ -23,8 +24,14 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let ab = Math.abs(lineA + lineB);
+  let ac = Math.abs(lineA + lineC);
+  let bc = Math.abs(lineB + lineC);
+  if (lineA < bc && lineB < ac && lineC < ab) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
