@@ -86,8 +86,8 @@ function decode(str2) {
     5: 'u',
   };
   let listEncoded = str2.replace(/1|2|3|4|5/gi, (item) => {
-    let it = subList[item];
-    let listItem = it.replace(/(?:^|\s)\S/g, function (elemento) {
+    let itt = subList[item];
+    let listItem = itt.replace(/(?:^|\s)\S/g, function (elemento) {
       return elemento;
     });
     return listItem;
