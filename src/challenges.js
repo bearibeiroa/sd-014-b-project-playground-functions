@@ -15,9 +15,13 @@ function splitSentence(Value) {
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayIn) {
+arrayIn.splice(0,0, arrayIn[arrayIn.length-1]);
+arrayIn.splice(2,arrayIn.length-2);
+return arrayIn.join(', ');
 }
+
+
 
 // Desafio 5
 function footballPoints() {
