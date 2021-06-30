@@ -69,9 +69,31 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let regex = /[1-9]/g;
+  /** Regular Expression:
+   * [1-9] => dígitos de 1 à 9
+   * g => pesquisa por toda a string
+   */
+  let allDrinks = string.match(regex);
+  /** Atribui à variável allDrinks um array com as
+   * correspondências entre a string e a regex
+   */
+  let sumOfDrinks = 0;
+  for (let index = 0; index < allDrinks.length; index += 1) {
+    sumOfDrinks += Number(allDrinks[index]);
+  }
+  if (sumOfDrinks > 1) {
+    return `${sumOfDrinks} copos de água`;
+  }
+  return `${sumOfDrinks} copo de água`;
 }
+
+/**
+ * Para este desafio, pesquisei sobre Regular Expressions e String.match()
+ * Link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+ * Link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match
+ */
 
 module.exports = {
   generatePhoneNumber,
