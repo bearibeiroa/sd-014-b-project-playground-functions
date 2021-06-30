@@ -52,7 +52,7 @@ function highestCount(numbers) {
     for (let i = 0; i < numbers.length; i += 1) {
       if (numbers[i] >= biggest) {
         biggest = numbers[i];
-        counts++;
+        counts+= 1;
       }
     }
     return counts;
