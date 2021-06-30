@@ -1,27 +1,31 @@
 // Desafio 1
 function compareTrue(a1,a2) {
+  // seu código aqui
   if (a1 === true && a2 === true) {
   return true;
   } else {
   return false;
-}
+}}
   
 // Desafio 2
 function calcArea(base,height) {
-let triangulo = (base * height) /2;
-return triangulo;
+  // seu código aqui
+  let triangulo = (base * height) /2;
+  return triangulo;
 }
-
 
 // Desafio 3
 function splitSentence(frase) {
-frase = ['Go Trybe'] ;
-let palavra = [,] ;
+  // seu código aqui
+  frase = ['Go Trybe'];
+  let palavra = [,];
 }
 
 // Desafio 4
-function concatName() {
+function concatName(nomes) {
   // seu código aqui
+  nomes['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+  sort
 }
 
 // Desafio 5
