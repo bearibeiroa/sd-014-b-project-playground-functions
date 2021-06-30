@@ -77,65 +77,52 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayOfNumbers) {
-  let fizzBuzzArray = [];
-  for (let number of arrayOfNumbers) {
-    if (number % 3 === 0 && number % 5 === 0) {
-      fizzBuzzArray.push('fizzBuzz');
-    } else if (number % 3 === 0) {
-      fizzBuzzArray.push('fizz');
-    } else if (number % 5 === 0) {
-      fizzBuzzArray.push('buzz');
+function fizzBuzz(fizzBuzzArray) {
+  for (let index = 0; index < fizzBuzzArray.length; index += 1) {
+    if (fizzBuzzArray[index] % 3 === 0 && fizzBuzzArray[index] % 5 === 0) {
+      fizzBuzzArray[index] = 'fizzBuzz';
+    } else if (fizzBuzzArray[index] % 3 === 0) {
+      fizzBuzzArray[index] = 'fizz';
+    } else if (fizzBuzzArray[index] % 5 === 0) {
+      fizzBuzzArray[index] = 'buzz';
     } else {
-      fizzBuzzArray.push('bug!');
+      fizzBuzzArray[index] = 'bug!';
     }
   }
   return fizzBuzzArray;
 }
-/*
-function fizzBuzz(arrayOfNumbers) {
-  let fizzBuzzArray = [];
-  for (let number of arrayOfNumbers) {
-    if (number % 3 !== 0 && number % 5 !== 0) {
-      fizzBuzzArray.push('bug!');
-    } else if (number % 3 === 0 && number % 5 === 0) {
-      fizzBuzzArray.push('fizzBuzz');
-    } else if (number % 3 === 0 && number % 5 !== 0) {
-      fizzBuzzArray.push('fizz');
-    } else if (number % 3 !== 0 && number % 5 === 0) {
-      fizzBuzzArray.push('buzz');
-    } else {
-      fizzBuzzArray.push(number);
-    }
-  }
-  return fizzBuzzArray;
-}
-*/
 
 // Desafio 9
 let pwdVaultEncode = { a: '1', e: '2', i: '3', o: '4', u: '5' };
 
 let pwdVaultDecode = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
 
-function encode(toBeEncoded) {
-  let encodedWordArray = [];
-  for (let index = 0; index < toBeEncoded.length; index += 1) {
-    encodedWordArray.push(toBeEncoded[index]);
+function wordToArrayEncode(word) {
+  let array = []
+  for (let index = 0; index < word.length; index += 1) {
+    array.push(word[index]);
   }
+  return array;
+}
+
+function arrayToWordEncode(array) {
+  let word = '';
+  for (let index = 0; index < array.length; index += 1) {
+    word += array[index];
+  }
+  return word;
+}
+
+function encode(toBeEncoded) {
+  let encodedWordArray = wordToArrayEncode(toBeEncoded);
   for (let key in pwdVaultEncode) {
-    if (pwdVaultEncode.hasOwnProperty(key)) {
-      for (let index = 0; index < encodedWordArray.length; index += 1) {
-        if (encodedWordArray[index] === key) {
-          encodedWordArray[index] = pwdVaultEncode[key];
-        }
+    for (let index = 0; index < encodedWordArray.length; index += 1) {
+      if (encodedWordArray[index] === key) {
+        encodedWordArray[index] = pwdVaultEncode[key];
       }
     }
   }
-  let encodedWord = '';
-  for (let index = 0; index < encodedWordArray.length; index += 1) {
-    encodedWord += encodedWordArray[index];
-  }
-  return encodedWord;
+  return encodedWord = arrayToWordEncode(encodedWordArray);
 }
 function decode(toBeDecoded) {
   let decodedWordArray = [];
