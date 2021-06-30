@@ -58,8 +58,20 @@ function footballPoints(wins, ties) {
 
 
 // Desafio 6
-function highestCount() {
+function highestCount(numeros) {
   // seu código aqui
+let contador = 0;
+let max = Math.max(...numeros); //encontrei esse método na internet pra auxliar o meu código
+                                //pego o maior n° e marco quantas vezes ele irá repetir :)
+for (let index in numeros) {
+if(max === numeros[index]){
+    contador = contador + 1;
+} else {
+    contador = contador;
+}
+
+}
+  return contador;
 }
 
 // Desafio 7
@@ -75,6 +87,7 @@ function fizzBuzz() {
 // Desafio 9
 function encode() {
   // seu código aqui
+
 }
 function decode() {
   // seu código aqui
