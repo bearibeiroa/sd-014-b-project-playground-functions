@@ -10,18 +10,29 @@ function techList(techArray, name) {
     return 'Vazio!';
   }
   return listaTechName.sort((a, b) => (a.tech > b.tech) ? 1 : -1);
-    // Referência para a linha acima: https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/
+  // Referência para a linha acima: https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/
 }
 
-let testArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-let testArray2 = [];
-let nomeArray = "Lucas";
-console.log(techList(testArray2, nomeArray));
-console.log(techList(testArray, nomeArray));
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(elevenNumbers) {
+  let elevenNumbersLength = elevenNumbers.length;
+  if (elevenNumbersLength !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < elevenNumbersLength; index += 1) {
+    let repetitionCounter = 0;
+    for (let jdex = 0; jdex < elevenNumbersLength; jdex += 1) {
+      if (elevenNumbers[index] === elevenNumbers[jdex]) {
+        repetitionCounter += 1;
+      }
+    }
+    if (repetitionCounter >= 3 || elevenNumbers[index] < 0 || elevenNumbers[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return '(' + elevenNumbers[0] + elevenNumbers[1] + ') ' + elevenNumbers[2] + elevenNumbers[3] + elevenNumbers[4] 
+  + elevenNumbers[5] + elevenNumbers[6] + '-' + elevenNumbers[7] + elevenNumbers[8] + elevenNumbers[9] 
+  + elevenNumbers[10];
 }
 
 // Desafio 12
