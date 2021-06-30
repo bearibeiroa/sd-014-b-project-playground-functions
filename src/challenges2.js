@@ -46,11 +46,12 @@ function generatePhoneNumber(phone) {
   return '(' + phone1 + ') ' + phone2 + '-' + phone3;
 }
 
-
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  let checkA = a < b + c && a > Math.abs(b - c);
+  let checkB = b < a + c && b > Math.abs(a - c);
+  let checkC = c < b + a && c > Math.abs(b - a);
+  return checkA && checkB && checkC;
 }
 
 // Desafio 13
