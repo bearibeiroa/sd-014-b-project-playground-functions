@@ -76,48 +76,48 @@ function encode(encodeString) {
   let newString = '';
   for (let vogal of encodeString) {
     if (vogal === 'a') {
-    vogal = '1';
+      vogal = '1';
+      newString += vogal;
+    } else if (vogal === 'e') {
+      vogal = '2';
+      newString += vogal;
+    } else if (vogal === 'i') {
+      vogal = '3';
+      newString += vogal;
+    } else if (vogal === 'o') {
+      vogal = '4';
+      newString += vogal;
+    } else if (vogal === 'u') {
+      vogal = '5';
+      newString += vogal;
+    } else {
     newString += vogal;
-  } else if (vogal === 'e') {
-    vogal = '2';
-    newString += vogal;
-  } else if (vogal === 'i') {
-    vogal = '3';
-    newString += vogal;
-  } else if (vogal === 'o') {
-    vogal = '4';
-    newString += vogal;
-  } else if (vogal === 'u') {
-    vogal = '5';
-    newString += vogal;
-  } else {
-    newString += vogal;
-  }
-} return newString; 
+    }
+  } return newString; 
 }
 
 function decode(decodeString) {
   let newWord = '';
   for (let number of decodeString) {
     if (number === '1') {
-    number = 'a';
-    newWord += number;
-  } else if (number === '2') {
-    number = 'e';
-    newWord += number;
-  } else if (number === '3') {
-    number = 'i';
-    newWord += number;
-  } else if (number === '4') {
-    number = 'o';
-    newWord += number;
-  } else if (number === '5') {
-    number = 'u';
-    newWord += number;
-  } else {
-    newWord += number;
-  }
-} return newWord; 
+      number = 'a';
+      newWord += number;
+    } else if (number === '2') {
+      number = 'e';
+      newWord += number;
+    } else if (number === '3') {
+      number = 'i';
+      newWord += number;
+    } else if (number === '4') {
+      number = 'o';
+      newWord += number;
+    } else if (number === '5') {
+      number = 'u';
+      newWord += number;
+    } else {
+      newWord += number;
+    }
+  } return newWord; 
 }
 
 module.exports = {
