@@ -19,7 +19,7 @@ function splitSentence(stringVariavel) {
 function concatName(palavra) {
   let primeiro = palavra[0];
   let ultimo = palavra[palavra.length - 1];
-  return ultimo + ', ' + primeiro;
+  return (ultimo + ', ' + primeiro);
 }
 
 // Desafio 5
@@ -54,9 +54,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else if (DistanciaCat1 < DistanciaCat2) {
     return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -68,8 +67,8 @@ function fizzBuzz(vetor) {
   let bug = 'bug!';
   for (let index = 0; index < vetorDecodificado.length; index += 1) {
     if (
-      vetorDecodificado[index] % 3 === 0 &&
-      vetorDecodificado[index] % 5 === 0
+      vetorDecodificado[index] % 3 === 0
+      && vetorDecodificado[index] % 5 === 0
     ) {
       vetorDecodificado[index] = fizBuz;
     } else if (vetorDecodificado[index] % 3 === 0) {

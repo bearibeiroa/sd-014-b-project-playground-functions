@@ -1,8 +1,6 @@
-const { highestCount } = require('./challenges');
-
 // Desafio 10
 function techList(techs, names) {
-  let techList = [];
+  let techLists = [];
   techs.sort();
   if (techs.length > 0) {
     for (let index in techs) {
@@ -14,7 +12,7 @@ function techList(techs, names) {
   } else {
     return 'Vazio!';
   }
-  return techList;
+  return techLists;
 }
 function repeteMais3(numeros) {
   let resultado = true;
@@ -37,7 +35,7 @@ console.log(repeteMais3([1, 2, 3, 5, 8, 8, 8, 1]));
 // Desafio 11
 function generatePhoneNumber(number) {
   let numberTel = '';
-  if (number.length != 11) {
+  if (number.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else {
     let erro = repeteMais3(number);
@@ -59,24 +57,22 @@ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let soma = 0;
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     return true;
   } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
     return true;
   } else if (lineC < lineA + lineC && lineC > Math.abs(lineA - lineB)) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 13
+//pesquisa sobre replace feita no site: https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
 function hydrate(drink) {
-  //pesquisa sobre replace feita no site: https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
   let glassOfWater = drink.replace(/[^0-9]/g, []);
   let inteiro = [];
-  for (i = 0; i < glassOfWater.length; i += 1) {
+  for (let i = 0; i < glassOfWater.length; i += 1) {
     let numero = parseInt(glassOfWater[i], 10);
     inteiro[i] = numero;
   }
