@@ -55,6 +55,7 @@ function catAndMouse(pMouse, pCat1, pCat2) {
 }
 
 // Desafio 8
+// I copied this beautfull code from Glauco Lomenha and changed it a little bit
 function fizzBuzz(array) {
   return array.map((number) => {
     if (number % 3 === 0 && number % 5 === 0) return 'fizzBuzz';
@@ -65,43 +66,34 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(text) {
-  let newText = '';
-  for (let l of text) {
-    if (l === 'a') {
-      newText += '1';
-    } else if (l === 'e') {
-      newText += '2';
-    } else if (l === 'i') {
-      newText += '3';
-    } else if (l === 'o') {
-      newText += '4';
-    } else if (l === 'u') {
-      newText += '5';
-    } else {
-      newText += l;
-    }
-  }
-  return newText;
+// I copied this beautfull code from Glauco Lomenha and changed it a little bit
+function encode(str) {
+  let encodeObj = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  return str.replace(/a|e|i|o|u/gi, (item) =>
+    encodeObj[item].replace(/(?:^|\s)\S/g, function (elemento) {
+      return elemento;
+    }));
 }
-function decode(text) {
-  let newText = '';
-  for (let l of text) {
-    if (l === '1') {
-      newText += 'a';
-    } else if (l === '2') {
-      newText += 'e';
-    } else if (l === '3') {
-      newText += 'i';
-    } else if (l === '4') {
-      newText += 'o';
-    } else if (l === '5') {
-      newText += 'u';
-    } else {
-      newText += l;
-    }
-  }
-  return newText;
+
+// I copied this beautfull code from Glauco Lomenha and changed it a little bit
+function decode(str) {
+  let encodeObj = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  return str.replace(/1|2|3|4|5/gi, (item) =>
+    encodeObj[item].replace(/(?:^|\s)\S/g, function (elemento) {
+      return elemento;
+    }));
 }
 
 module.exports = {
