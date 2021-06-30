@@ -51,7 +51,7 @@ function highestCount(numbers) {
       higherNumber = numbers[index];
     }
   }
-  let numberVerify = higherNumber
+  let numberVerify = higherNumber;
   let timesHigherRepeat = 0;
   for (let index in numbers) {
     if (numberVerify === numbers[index]) {
@@ -69,9 +69,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (cat2Distance < cat1Distance) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -95,7 +94,7 @@ function fizzBuzz(numbers) {
 function encode(string) {
   let result = '';
   for (let index of string) {
-    if(index === 'a') {
+    if (index === 'a') {
       result += '1';
     } else if (index === 'e') {
       result += '2';
@@ -106,7 +105,7 @@ function encode(string) {
     } else if (index === 'u') {
       result += '5';
     } else {
-      result += index
+      result += index;
     }
   }
   return result;
@@ -115,7 +114,7 @@ function encode(string) {
 function decode(string) {
   let result = '';
   for (let index of string) {
-    if(index === '1') {
+    if (index === '1') {
       result += 'a';
     } else if (index === '2') {
       result += 'e';
@@ -126,7 +125,7 @@ function decode(string) {
     } else if (index === '5') {
       result += 'u';
     } else {
-      result += index
+      result += index;
     }
   }
   return result;
