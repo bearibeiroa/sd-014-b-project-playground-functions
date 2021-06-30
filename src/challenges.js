@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 && value2 ){
+  if (value1 && value2) {
     return true;
   } else {
     return false;
@@ -15,12 +15,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(menssage) {
-  return menssage.split(" ");
+  return menssage.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayName) {
+  return (arrayName [arrayName.length-1] + ', ' + arrayName[0]);
 }
 
 // Desafio 5
