@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
       return ("cat2");
     }
     else { return ("os gatos trombam e o rato foge")}
-  }// seu código aqui
+  }
 }
 
 // Desafio 8
@@ -91,7 +91,6 @@ function encode(str1ng) {
   let encodedString = str1ng.split("");
   for (let aux = 0 ; aux <= str1ng.length -1 ; aux += 1) {
     //console.log(str1ng[aux]);
-    if (str1ng[aux] == "a") {encodedString[aux] = "1"}
       if (str1ng[aux] === "a") {encodedString[aux] = "1"}
       else{
         if (str1ng[aux] === "e") {encodedString[aux] = "2"}
@@ -104,11 +103,7 @@ function encode(str1ng) {
               else{
                 encodedString[aux] = str1ng[aux]}
               } } } } }
-//return encodedString;
 
-//for (let aux2 = 0 ; aux2 <= encodedString.length ; aux2 += 1) {
-//  encodedString = [encodedString[aux2] +]
-//}
 encodedString = encodedString.join("");
 return(encodedString);
 }
@@ -116,85 +111,21 @@ return(encodedString);
 function decode(encodedString) {
   let decodedString = encodedString.split("");
   for (let aux = 0 ; aux <= decodedString.length -1 ; aux += 1) {
-    //console.log(str1ng[aux]);
-    if (encodedString[aux] == "a") {decodedString[aux] = "1"}
-      if (encodedString[aux] === "a") {decodedString[aux] = "1"}
+      if (encodedString[aux] === "1") {decodedString[aux] = "a"}
       else{
-        if (encodedString[aux] === "e") {decodedString[aux] = "2"}
+        if (encodedString[aux] === "2") {decodedString[aux] = "e"}
         else{
-          if (encodedString[aux] === "i") {decodedString[aux] = "3"}
+          if (encodedString[aux] === "3") {decodedString[aux] = "i"}
           else{
-            if (encodedString[aux] === "o") {decodedString[aux] = "4"}
+            if (encodedString[aux] === "4") {decodedString[aux] = "o"}
             else{
-              if (encodedString[aux] === "u") {decodedString[aux] = "5"}
+              if (encodedString[aux] === "5") {decodedString[aux] = "u"}
               else{
                 decodedString[aux] = encodedString[aux]}
               } } } } }
-//return encodedString;
-
-//for (let aux2 = 0 ; aux2 <= encodedString.length ; aux2 += 1) {
-//  encodedString = [encodedString[aux2] +]
-//}
 decodedString = decodedString.join("");
 return(decodedString);
 }
-
-//function decode() {};
-/*
- Desafio 10
-function techList() {
-  // seu código aqui
-}*/
-
-/*
-// Desafio 9
-function encode(str1ng) {
-  let encodedString = [];
-  for (let aux = 0 ; aux <= str1ng.length ; aux += 1) {
-    //console.log(str1ng[aux]);
-    if (str1ng[aux] == "a") {encodedString[aux] = "1"}
-      if (str1ng[aux] === "a") {encodedString[aux] = "1"}
-      else{
-        if (str1ng[aux] === "e") {encodedString[aux] = "2"}
-        else{
-          if (str1ng[aux] === "i") {encodedString[aux] = "3"}
-          else{
-            if (str1ng[aux] === "o") {encodedString[aux] = "4"}
-            else{
-              if (str1ng[aux] === "u") {encodedString[aux] = "5"}
-              else{
-                encodedString[aux] = str1ng[aux]}
-              } } } } }
-//return encodedString;
-
-for (let aux2 = 0 ; aux2 <= encodedString.length ; aux2 += 1) {
-  encodedString = [encodedString[aux2] +]
-}
-
-console.log(encodedString)
-}
-
-encode("aba");
-
-function decode(encodedString) {
-  let decodedString = encodedString;
-  for (char in encodedString) {
-      if (encodedString[char] === "1") {decodedString[char] = "a"}
-      else{
-        if (encodedString[char] === "2") {decodedString[char] = "e"}
-        else{
-          if (encodedString[char] === "3") {decodedString[char] = "i"}
-          else{
-            if (encodedString[char] === "4") {decodedString[char] = "o"}
-            else{
-              if (encodedString[char] === "5") {decodedString[char] = "u"}
-              else{
-                decodedString[char] = encodedString[char]}
-              } } } } }
-return decodedString;
-}*/
-
-
 
 module.exports = {
   calcArea,
