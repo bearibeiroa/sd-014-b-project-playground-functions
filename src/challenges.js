@@ -1,8 +1,18 @@
 // Desafio 1
 function compareTrue(val1, vale2) {
   // seu código aqui
+  if(val1 === true && val2 === true){
+    return true;
+  } else if(val1 === false && val2 === true){
+    return false;
+  } else if(val1 === true && val2 === false){
+    return false;
+  } else if(val1 === false && val2 === false){
+    return false;
+  } else {
+    return false;
+  }
 
-  
 
 }
 
