@@ -25,8 +25,17 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  let primeiroItem;
+  let ultimoItem;
+  for (let i = 0; i < nomes.length; i += 1) {
+    if (i == 0) {
+      primeiroItem = nomes[i];
+    } else if (i == (nomes.length - 1)) {
+      ultimoItem = nomes[i] + ', ';
+    }
+  }
+  return ultimoItem + primeiroItem;
 }
 
 // Desafio 5
