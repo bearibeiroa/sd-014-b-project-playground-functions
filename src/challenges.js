@@ -115,9 +115,33 @@ function fizzBuzz(vetor) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(value1) {
+  //Dividindo a string
+  let splitValue = value1.split('');
+
+  for(let index = 0; index < splitValue.length; index += 1) {
+    if(splitValue[index] === 'a' && splitValue[index] === splitValue[index].toLowerCase()) {
+      splitValue[index] = 1;
+    } else if(splitValue[index] === 'e' && splitValue[index] === splitValue[index].toLowerCase()) {
+      splitValue[index] = 2;
+    } else if(splitValue[index] === 'i' && splitValue[index] === splitValue[index].toLowerCase()) {
+      splitValue[index] = 3;
+    } else if(splitValue[index] === 'o' && splitValue[index] === splitValue[index].toLowerCase()) {
+      splitValue[index] = 4;
+    } else if(splitValue[index] === 'u' && splitValue[index] === splitValue[index].toLowerCase()) {
+      splitValue[index] = 5;
+    };
+
+  };
+
+  let value1Join = splitValue.join(''); 
+
+  return value1Join;
 }
+
+console.log(encode('Ola!'));
+
+
 function decode() {
   // seu código aqui
 }
