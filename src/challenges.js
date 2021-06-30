@@ -15,8 +15,11 @@ function calcArea(base,altura) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(palavra) {
   // seu código aqui
+  // Referencia usada https://www.w3schools.com/jsref/jsref_split.asp
+  let textoDividido = palavra.split(" ");
+  return textoDividido;
 }
 
 // Desafio 4
