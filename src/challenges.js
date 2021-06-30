@@ -60,35 +60,20 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 /* Após entrar na monitoria, e sala de estudos, tive alguns insights e resolvi alterar a forma de expressar o resultado, pois não passava em todos os testes. A Fernanda falou algo sobre uma propriedade caso algum dos numeros seja negativo. A propriedade é a Math.abs, eu vi a documentação aqui https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs */
 function catAndMouse(mouse, cat1, cat2) {
-  let distMouseCat1 = (mouse - cat1);
-  let distMouseCat2 = (mouse - cat2);
+  let distMouseCat1 = Math.abs(mouse - cat1);
+  let distMouseCat2 = Math.abs(mouse - cat2);
+  let result;
 
   if (distMouseCat1 < distMouseCat2) {
-    return 'cat1';
+    result = 'cat1';
   } else if (distMouseCat2 < distMouseCat1) {
-    return 'cat2';
+    result = 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   }
+  return result;
 }
-// console.log(catAndMouse(1, 0, 2));
-
 // Desafio 8
-/* Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
-
-    Para cada número do Array que seja divisível apenas por 3, apresente uma string "fizz";
-    Para cada número do Array que seja divisível apenas por 5, apresente uma string "buzz";
-    Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
-    Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
-
-Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
-
-O que será verificado:
-
-    Retorne as strings ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado os parâmetros [2, 15, 7, 9, 45] para a função fizzBuzz
-    Retorne as strings ['bug!', 'fizz'] quando é passado os parâmetros [7, 9] para a função fizzBuzz
-    Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para a função fizzBuzz */
-
 function fizzBuzz(numBuzz) {
   for (let i = 0; i < numBuzz.length; i += 1) {
     if ((numBuzz[i] % 3 == 0 && numBuzz[i] % 5 == 0)) {
