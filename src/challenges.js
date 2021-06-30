@@ -96,50 +96,67 @@ function fizzBuzz(numbers) {
 function encode(e) {
   let coded = '';
   for (let index of e) {
-      switch (index) {
-          case 'a':
-              coded += '1';
-              break
-          case 'e':
-              coded += '2';
-              break
-          case 'i':
-              coded += '3';
-              break
-          case 'o':
-              coded += '4';
-              break
-          case 'u':
-              coded += '5';
-              break
-          default:
-          coded += index;
-      }
+    switch (index) {
+      case 'a':
+          coded += '1';
+          break
+      case 'e':
+          coded += '2';
+          break
+      case 'i':
+          coded += '3';
+          break
+      case 'o':
+          coded += '4';
+          break
+      case 'u':
+          coded += '5';
+          break
+      default:
+      coded += index;
+    }
   }
   return coded;
 }
+// ***Solução alternativa bolada com o Leonardo E.***
+// function encode(e) {
+//   let e = 'Estamos na sala de estudos';
+//   let variavel = [];
+//   let fraseCodificada = '';
+//   for (let index = 0; index < e.length; index++) {
+//       variavel.push(e[index]);    
+//   }
+//   for (let index = 0; index < variavel.length; index++) {
+//       if (variavel[index] === 'a') {
+//           fraseCodificada += '1';
+//       } else {
+//           fraseCodificada += variavel[index];
+//       }
+//   }
+// return fraseCodificada;
+// }
 function decode(d) {
   let decoded = '';
   for (let index of d) {
-      switch (index) {
-          case '1':
-              decoded += 'a';
-              break
-          case '2':
-              decoded += 'e';
-              break
-          case '3':
-              decoded += 'i';
-              break
-          case '4':
-              decoded += 'o';
-              break
-          case '5':
-              decoded += 'u';
-              break
-          default:
-          decoded += index;
-      }
+    switch (index) {
+      case '1':
+          decoded += 'a';
+          break
+      case '2':
+          decoded += 'e';
+          break
+      case '3':
+          decoded += 'i';
+          break
+      case '4':
+          decoded += 'o';
+          break
+      case '5':
+          decoded += 'u';
+          break
+      default:
+      decoded += index;
+    }
   }
   return decoded;
 }
