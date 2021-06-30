@@ -69,9 +69,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let mouseMessage = 'os gatos trombam e o rato foge';
   if (distanceCat1 === distanceCat2) {
     return mouseMessage;
-  } else if (distanceCat1 < distanceCat2) {
+  }
+  if (distanceCat1 < distanceCat2) {
     return cat1Message;
-  } else if (distanceCat2 < distanceCat1) {
+  }
+  if (distanceCat2 < distanceCat1) {
     return cat2Message;
   }
 }
