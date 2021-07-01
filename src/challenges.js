@@ -1,39 +1,42 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-  if(num1 === true && num2 === true) {
-    return true
+  if (num1 === true && num2 === true) {
+    return true;
   }else{
-    return false
+   return false
   }
 }
-
 // Desafio 2
 function calcArea(base, height) {
-  area = (base * height)/2;
+  let area = (base * height) /2;
 
-  return area
+  return area;
 }
 calcArea(10, 50);
 calcArea(5, 2);
 calcArea(51, 1);
 // Desafio 3
 function splitSentence(frase) {
- if(frase === 'go Trybe' || frase === 'vamo que vamo' || frase === 'foguete') {
-  resultado = frase.split(" ")
+  if (frase === 'go Trybe' || frase === 'vamo que vamo' || frase === 'foguete') {
+   resultado = frase.split(" ");
  }
- return resultado
+return resultado;
 }
-splitSentence('go Trybe')
-splitSentence('vamo que vamo')
+splitSentence('go Trybe');
+splitSentence('vamo que vamo');
 splitSentence('foguete');
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(array) {
+  let resultado = array[array.length -1] + ', ' + array[0]
 
+  return resultado;
+}
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+concatName(['foguete', 'não', 'tem', 'ré']);
+concatName(['captain', 'my', 'captain']);
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+
 }
 
 // Desafio 6
