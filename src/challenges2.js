@@ -19,16 +19,63 @@ function techList(tech1, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber(phone) {
+function lengthVerificator(phone) {
   if (phone.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
+}
+function biggerAndSmaller(phone) {
   for (let index = 0; index < phone.length; index += 1) {
     if (phone[index] > 9 || phone[index] < 0) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 }
+
+function phoneNumber(phone) {
+  let num = '(';
+  for (let index = 0; index < phone.length; index += 1) {
+    if (index === 2) {
+      num = `${num}) ${phone[index]}`;
+      index += 1;
+    }
+    if (index === 7) {
+      num = `${num}-${phone[index]}`;
+      index += 1;
+    }
+    num += phone[index];
+  }
+  return num;
+}
+function conterNumbers(phone) {
+  for (let index = 0; index < 9; index += 1) {
+    let contador = 0;
+    for (let aux = 0; aux < phone.length; aux += 1) {
+      if (phone[aux] === index) {
+        contador += 1;
+      }
+      if (contador >= 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+  }
+}
+
+function generatePhoneNumber(phone) {
+  if (lengthVerificator(phone) !== undefined) {
+    return lengthVerificator(phone);
+  }
+  if (biggerAndSmaller(phone) !== undefined) {
+    return biggerAndSmaller(phone);
+  }
+  if (conterNumbers(phone) !== undefined) {
+    return conterNumbers(phone);
+  }
+  if (phoneNumber(phone) !== undefined) {
+    return phoneNumber(phone);
+  }
+}
+
 // Desafio 12
 // comando Math.abs explicado no arquivo challenges, desafio 7.
 function triangleCheck(lineA, lineB, lineC) {
