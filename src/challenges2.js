@@ -4,7 +4,7 @@ function techList(techs, name) {
   let ordTechs = techs.sort();
   if (techs.length < 1) return 'Vazio!';
   for (let index in ordTechs) {
-    techList.push({
+    listedTechs.push({
       tech: ordTechs[index],
       name: name,
     });
