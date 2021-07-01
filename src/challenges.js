@@ -55,9 +55,11 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (distCat1 < distCat2) {
     resultado = 'cat1';
-  } else if (distCat2 < distCat1) {
+  }
+  else if (distCat2 < distCat1) {
     resultado = 'cat2';
-  } else {
+  }
+  else {
     resultado = 'os gatos trombam e o rato foge';
   }
   return resultado;
@@ -70,11 +72,14 @@ function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       fizzBuzzArray.push('fizzBuzz');
-    }else if (array[index] % 3 === 0) {
+    }
+    else if (array[index] % 3 === 0) {
       fizzBuzzArray.push('fizz');
-    }else if (array[index] % 5 === 0) {
+    }
+    else if (array[index] % 5 === 0) {
       fizzBuzzArray.push('buzz');
-    }else if (array[index] % 3 > 0 && array[index] % 5 > 0) {
+    }
+    else if (array[index] % 3 > 0 && array[index] % 5 > 0) {
       fizzBuzzArray.push('bug!');
     }
   }
@@ -83,11 +88,55 @@ function fizzBuzz(array) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodedString = '';
+
+  for (index = 0; index < string.length; index += 1) {
+    if (string[index] === 'a') {
+      encodedString += '1';
+    }
+    else if (string[index] === 'e') {
+      encodedString += '2';
+    }
+    else if (string[index] === 'i') {
+      encodedString += '3';
+    }
+    else if (string[index] === 'o') {
+      encodedString += '4';
+    }
+    else if (string[index] === 'u') {
+      encodedString += '5';
+    }
+    else {
+      encodedString += string[index];
+    }
+  }
+  return encodedString;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let decodedString = '';
+
+  for (index = 0; index < string.length; index += 1) {
+    if (string[index] === '1') {
+      decodedString += 'a';
+    }
+    else if (string[index] === '2') {
+      decodedString += 'e';
+    }
+    else if (string[index] === '3') {
+      decodedString += 'i';
+    }
+    else if (string[index] === '4') {
+      decodedString += 'o';
+    }
+    else if (string[index] === '5') {
+      decodedString += 'u';
+    }
+    else {
+      decodedString += string[index];
+    }
+  }
+  return decodedString;
 }
 
 module.exports = {
@@ -101,4 +150,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
