@@ -19,36 +19,54 @@ function techList(techs,nome){
 // Desafio 11
 
 function generatePhoneNumber(numbers) {
-  if (numbers.length === 11) { 
-    for (let indice in numbers) {
-      if (numbers[indice]> 0) {
-        ///contador de repetidos
-        let contRepetido = 0;
-        let contNumero = 0;
-        let indexNumeroRepetido = 0;
-        for (let index in numbers) {
-          let verificaNumero = numeros[index];
-          for (let index2 in numbers) {
-            if (verificaNumero === numbers[index2]) {
-              contNumero += 1;
-            }
-          }
-          if (contNumero > contRepetido) {
-            contRepetido = contNumero;
-            indexNumeroRepetido = index;
-          }
-          contNumero = 0;
-        }
-        if (contNumero <3) {
-          // return 0; 
-        }
-        else {return("não é possível gerar um número de telefone com esses valores");}
-      }
-      else {return("não é possível gerar um número de telefone com esses valores");}
+  //------------------------------------------------------------------------------------
+  //Função abaixo foi baseada em solution do bloco - Gabarito JavaScript / Parte 4 / Parte I - Objetos e For/In - Exercício 5
+  function mostRepeated(numbers) {
+  let count = {};
+  for (let index = 0; index < numbers.length; index += 1) {
+    let number = numbers[index]; // atribuição de number de verificação com número de entr
+    if (count[number] === undefined) { // se objeto de contagem para 'number' está vazio
+      count[number] = 1; // atribui 1 contagem para o valor number = numbers[index]
+    } else { // senão ...
+      count[number] = count[number] + 1; // soma no contador 1 a mais do valor anterior
     }
   }
-  else {return ("Array com tamanho incorreto.");}
+  // verificar repetições
+  let countRepeated = 0; // contador de repetições inicia zerado
+  let countedNumber = 0; // variável auxiliar, para coletar número repetido, inicia zerada
+
+  for (let x in count) { // loop para cada valor "x" no objeto "count" com as repetições
+    if (countRepeated < count[x]) { // se o contador countRepeated, inicializado em 0, é menor que a contagem do valor "x" ...
+      countRepeated = count[x]; // então é atribuída a contagem de "x" no contador countRepeated
+      countedNumber = x; // valor repetido countedNumber é atribuído com o valor "x"
+    }
+  }
+  return countRepeated; //maior valor de repetições
+  //return count;
+  }
+  //--function acima verifica repetições
+  //------------------------------------------------------------------------------------
+  
+  let verifyZeroNine = 0;
+for (n in numbers){
+  if (numbers[n] < 0 || numbers[n] > 9) {verifyZeroNine = verifyZeroNine +1}
 }
+
+  if (numbers.length !== 11) {
+    return ("Array com tamanho incorreto.");}
+  else {
+    if (verifyZeroNine > 0) {
+      return ("não é possível gerar um número de telefone com esses valores")}
+    else {
+      if (mostRepeated(numbers) > 2) {return ("não é possível gerar um número de telefone com esses valores")}
+    else {
+          let phoneNumber = ("(" + numbers[0] + numbers[1] +") " + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + "-"+ numbers[7] + numbers[8] + numbers[9] + numbers[10])
+          return phoneNumber
+        }
+    }
+  }
+}
+
 
 // Desafio 12
 
