@@ -11,20 +11,20 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(mergedSentence) {
-  let split_sentence = mergedSentence.split(' ');
-  return split_sentence;
+  let sentenceSplit = mergedSentence.split(' ');
+  return sentenceSplit;
 }
 
 // Desafio 4
 function concatName(array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
-  concat_name = (array[(array.length - 1)] + ', ' + array[0]);
-  return (concat_name);
+  nameConcat = (array[(array.length - 1)] + ', ' + array[0]);
+  return (nameConcat);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let football_points = 3 * wins + ties;
-  return football_points;
+  let pointsFootball = 3 * wins + ties;
+  return pointsFootball;
 }
 
 // Desafio 6
