@@ -84,6 +84,21 @@ function hydrate(string) {
   }
   return qntAgua + ' copos de água'
 }
+// function hydrate(string) {
+//   let qntAgua = 0;
+//   let result = num(string);
+//   for (let index of result) {
+//     qntAgua += parseInt(index);
+//   }
+//   if (qntAgua === 1) {
+//     return qntAgua + ' copo de água';
+//   }
+//   return qntAgua + ' copos de água';
+// }
+// function num(a) {
+//   let numbers = a.replace(/[^0-9]/g, '');
+//   return numbers;
+// } ***Forma alternativa utilizando uma maneira de separar os números da string, que continuam como string concatenados, e depois desmembrando e transformando em número individualmente.
 
 module.exports = {
   generatePhoneNumber,
