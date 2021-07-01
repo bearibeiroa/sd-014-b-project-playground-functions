@@ -17,7 +17,7 @@ function splitSentence(mergedSentence) {
 
 // Desafio 4
 function concatName(array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
-  nameConcat = (array[(array.length - 1)] + ', ' + array[0]);
+  let nameConcat = (array[(array.length - 1)] + ', ' + array[0]);
   return (nameConcat);
 }
 
