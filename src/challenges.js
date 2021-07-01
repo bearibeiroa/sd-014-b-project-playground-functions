@@ -107,6 +107,7 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(text) {
+  
   // seu código aqui 
   //referencia .replace https://www.w3schools.com/jsref/jsref_replace.asp
   // referencia .join https://metring.com.br/javascript-converter-array-em-string
@@ -135,7 +136,7 @@ return textModfy.join('');
 }
 console.log(encode("hello"))
 //---------------------------------//
-function decode() {
+function decode(text) {
   // seu código aqui
   let textModfy = [];
   for(let indice = 0; indice <text.length; indice +=1){
