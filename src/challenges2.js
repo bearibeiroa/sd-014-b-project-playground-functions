@@ -70,8 +70,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let number = 0;
+  let umNove = [1, 2, 3, 4, 5, 6, 7, 8, 9]; // Coded by Victor Martins
+  for (let key of string) {
+    for (let index = 0; index <= umNove.length; index += 1) {
+      if (umNove[index] == key) {
+        number += umNove[index];
+      }
+    }
+  }
+  if (number == 1){
+    return number + " copo de água"
+  }
+  return number + " copos de água"
 }
 
 module.exports = {
