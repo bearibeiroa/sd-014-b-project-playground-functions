@@ -1,5 +1,4 @@
 // Desafio 10
-let test = [];
 function techList(array, name) {
   let objectList = [];
   if (array.length > 0) {
@@ -21,11 +20,25 @@ function techList(array, name) {
   return 'Vazio!';
 }
 
-console.log(techList(test, 'Lucas'));
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numberArray) {
+  if (numberArray.length > 11 || numberArray.length < 11) {
+    return 'Array com tamanho incorreto.';
+  } 
+  for (index = 0; index < numberArray.length; index += 1) {
+    let contator = 0;
+    for (index2 = 0; index2 < numberArray.length; index2 += 1) {
+      if (numberArray[index2] === numberArray[index]) {
+        contator += 1;
+      }
+    }
+    if (contator > 2 || numberArray[index] > 9 || numberArray[index] < 0) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    contator = 0;
+  }
+  let telephoneNumber = '(' + numberArray[0] + numberArray[1] + ') ' + numberArray[2] + numberArray[3] + numberArray[4] + numberArray[5] + numberArray[6] + '-' + numberArray[7] + numberArray[8] + numberArray[9] + numberArray[10];
+  return telephoneNumber;
 }
 
 // Desafio 12
