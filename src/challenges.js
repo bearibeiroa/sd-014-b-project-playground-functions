@@ -13,10 +13,10 @@ function calcArea(base, height) {
   return zone
 }
 
-
 // Desafio 3
-function splitSentence() {
-
+function splitSentence(string) {
+  array = string.split(" ")
+  return array
 }
 
 // Desafio 4
@@ -25,7 +25,6 @@ function concatName(array) {
   let phrase = (array[calcu] + ", " + array[0])
   return phrase
 }
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -36,7 +35,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-
 function highestCount(value) {
 
   let highNumber = 0;
@@ -62,24 +60,24 @@ function highestCount(value) {
 function catAndMouse(mouse, cat1, cat2) {
   let calcuCatOne = cat1 - mouse;
   let calcuCatTwo = cat2 - mouse;
-   if (Math.abs(calcuCatOne) === Math.abs(calcuCatTwo)){
-     return "os gatos trombam e o rato foge"
-   } else if (cat1 - mouse < cat2 - mouse){
-     return 'cat1'
-   } else if (cat2 - mouse < cat1 - mouse) {
-     return 'cat2'
-   }
+  if (Math.abs(calcuCatOne) === Math.abs(calcuCatTwo)) {
+    return "os gatos trombam e o rato foge"
+  } else if (cat1 - mouse < cat2 - mouse) {
+    return 'cat1'
+  } else if (cat2 - mouse < cat1 - mouse) {
+    return 'cat2'
   }
+}
 
 // Desafio 8
 function fizzBuzz(array) {
   let arrayReturn = []
-  for (let index = 0; index < array.length; index += 1){
-    if (array[index] % 3 === 0 && array[index] % 5 === 0){
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       arrayReturn.push('fizzBuzz')
-    } else if (array[index] % 5 === 0){
+    } else if (array[index] % 5 === 0) {
       arrayReturn.push('buzz')
-    } else if (array[index] % 3 === 0){
+    } else if (array[index] % 3 === 0) {
       arrayReturn.push('fizz')
     } else {
       arrayReturn.push('bug!')
