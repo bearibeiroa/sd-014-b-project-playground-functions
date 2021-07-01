@@ -17,15 +17,18 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  for(let word of sentence) {
-} 
-return word
-//exemplo a seguir no 3
-//for (let vogal of stringToencode) {
-//  if (vogal === 'a') {
- //   vogal = '1';
-  //  encodedPhrase += vogal
-  // seu código aqui
+  let splittedSentence = [];
+  let words = '';
+  for (let i = 0; i < sentence.length; i += 1) {
+    if (sentence[i] !== ' ') {
+      words += sentence[i];
+    } else {
+      splittedSentence.push(words);
+      words = '';
+    }
+ }
+ splittedSentence.push(words);
+ return splittedSentence;
 }
 
 // Desafio 4
