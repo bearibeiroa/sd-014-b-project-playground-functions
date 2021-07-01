@@ -18,7 +18,7 @@ function maxReption(lista) {
 
 //Função verifica se existem números menores que 0 e maior que 9
 function verificaArrayNumber(arrayNumber) {
-  for (const value of arrayNumber) {
+  for (let value of arrayNumber) {
     if (value < 0 || value > 9) {
       return true;
     }
@@ -73,8 +73,22 @@ function generatePhoneNumber(arrayNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let sumA = lineA + lineB;
+  let sumB = lineA + lineC;
+  let sumC = lineB + lineC;
+  let subA = Math.abs(lineA - lineB);
+  let subB = Math.abs(lineA - lineC);
+  let subC = Math.abs(lineB - lineC);
+  if (lineA > sumC && lineA > subC) {
+    return false;
+  } else if(lineB > sumB && lineB > subB) {
+    return false;
+  } else if (lineC > sumA && lineC > subA) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
