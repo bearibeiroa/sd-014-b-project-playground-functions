@@ -74,7 +74,7 @@ function generatePhoneNumber(phone) {
   if (phoneNumber(phone) !== undefined) {
     return phoneNumber(phone);
   }
-}
+ }
 
 // Desafio 12
 // comando Math.abs explicado no arquivo challenges, desafio 7.
