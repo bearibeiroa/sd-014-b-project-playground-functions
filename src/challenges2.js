@@ -26,10 +26,9 @@ function generatePhoneNumber(number) {
       if (numberX > 3) return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  var phoneNumber = ['(nn) nnnnn-nnnn']
-  for (let index = 0; index < phoneNumber.length; index += 1) {
-    phoneNumber = phoneNumber.replace('n', number[index]);
-  } return phoneNumber;
+  let a = number[0]; let b = number[1]; let c = number[2]; let d = number[3]; let e = number[4]; let f = number[5]; let g = number[6]; let h = number[7]; let i = number[8]; let j = number[9]; let k = number[10];
+  let phoneNumber = '(' + a + b + ')' + ' ' + c + d + e + f + g + '-' + h + i + j + k;
+  return phoneNumber;
   // seu código aqui
 }
 
