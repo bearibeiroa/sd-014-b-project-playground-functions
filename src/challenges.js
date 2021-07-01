@@ -75,9 +75,6 @@ function fizzBuzz(Array, result) {
 function encode(string) {
  var replaceChars={ "a":"1" , "e":"2" , "i":"3" , "o":"4" , "u":"5"};
 const m = function(mat) {
-  console.log("Essa letra ("+ mat +") será substuída por (" + 
-  replaceChars[mat] + ") que representa o valor (Value) da letra" +   
-  " (Key) dentro do objeto replaceChars ") 
 return replaceChars[mat];
 /** const m retorna os values das keys no obj replaceChar  */
 }
