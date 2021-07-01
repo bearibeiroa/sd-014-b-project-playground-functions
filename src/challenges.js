@@ -97,23 +97,17 @@ function encode(e) {
   let coded = '';
   for (let index of e) {
     switch (index) {
-      case 'a':
-          coded += '1';
+      case 'a': coded += '1';
           break
-      case 'e':
-          coded += '2';
+      case 'e': coded += '2';
           break
-      case 'i':
-          coded += '3';
+      case 'i': coded += '3';
           break
-      case 'o':
-          coded += '4';
+      case 'o': coded += '4';
           break
-      case 'u':
-          coded += '5';
+      case 'u': coded += '5';
           break
-      default:
-      coded += index;
+      default: coded += index;
     }
   }
   return coded;
@@ -139,23 +133,17 @@ function decode(d) {
   let decoded = '';
   for (let index of d) {
     switch (index) {
-      case '1':
-          decoded += 'a';
+      case '1': decoded += 'a';
           break
-      case '2':
-          decoded += 'e';
+      case '2': decoded += 'e';
           break
-      case '3':
-          decoded += 'i';
+      case '3': decoded += 'i';
           break
-      case '4':
-          decoded += 'o';
+      case '4': decoded += 'o';
           break
-      case '5':
-          decoded += 'u';
+      case '5': decoded += 'u';
           break
-      default:
-      decoded += index;
+      default: decoded += index;
     }
   }
   return decoded;

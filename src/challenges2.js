@@ -16,12 +16,38 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbers) {
   let resultado = '';
-  
-  return
+  let contadorRepetidos = 0;
+  let parte1 = '';
+  let parte2 = '';
+  let parte3 = '';
+  if (numbers.length != 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < numbers.length; index += 1) {
+    contadorRepetidos = 0;
+    for (let posicao = 0; posicao < numbers.length; posicao += 1) {
+        if (numbers[posicao] < 0 || numbers[posicao] > 9) {
+            return "não é possível gerar um número de telefone com esses valores";
+        }
+        if (numbers[index] === numbers[posicao]) {
+            contadorRepetidos += 1;
+        }
+    }
+    if (contadorRepetidos > 2) {
+        return "não é possível gerar um número de telefone com esses valores";
+    }
+    if (index < 2) {
+        parte1 += numbers[index];
+    } else if (index > 1 && index < 7) {
+        parte2 += numbers[index];
+    } else {
+        parte3 += numbers[index];
+    }
+  }
+    return '(' + parte1 + ')' + ' ' + parte2 + '-' + parte3;
 }
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 
 // Desafio 12
 function triangleCheck() {
