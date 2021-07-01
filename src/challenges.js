@@ -98,7 +98,7 @@ function decode(string) {
         string = string.replace(index2+1,vogais[index2])
       }
     }
-      return string
+    return string
 }
 
 module.exports = {
