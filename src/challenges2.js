@@ -107,7 +107,7 @@ function hydrate(bebidas) {
     return ('1 copo de água');
   } else if (copoAgua > 1) {
     return (copoAgua + ' copos de água')
-  };
+  }
 }
 
 module.exports = {
