@@ -51,12 +51,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let distMouseCat2 = (mouse - cat2) ** 2;
   if (distMouseCat1 < distMouseCat2) {
     return ('cat1');
-  }
-  else {
+  } else {
     if (distMouseCat2 < distMouseCat1) {
       return ('cat2');
-    }
-    else {
+    } else {
       return ('os gatos trombam e o rato foge');
     }
   }
@@ -77,7 +75,7 @@ function fizzBuzz(numeros) {
         if (numeros[numero] % 5 === 0 && numeros[numero] % 3 === 0) {
           fizzbuzzbug.push('fizzBuzz');
         }
-        else { fizzbuzzbug.push('bug!');}
+        else { fizzbuzzbug.push('bug!'); }
       }
     }
   }
