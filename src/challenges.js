@@ -54,8 +54,15 @@ function catAndMouse(mouse, cat1, cat2)
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) 
+{
+  for (i in array)
+  {
+    (Number.isInteger(array[i]/15))?(array[i] = "fizzBuzz"):
+    (array[i] % 5 == 0)?(array[i] = "buzz"):
+    (array[i] % 3 == 0)?(array[i] = "fizz"):array[i] = "bug!";
+  }
+  return array;
 }
 
 // Desafio 9
