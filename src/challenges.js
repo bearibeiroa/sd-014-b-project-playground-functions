@@ -51,19 +51,37 @@ function highestCount(numbers) {
     if (hightnumber === numbers[index]) {
       countNumber += 1;
     }
-  } 
+  }
   return countNumber;
 }
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance = Math.abs()
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayOfnumbers) {
+  let array = [];
+  for (let index = 0; index < arrayOfnumbers.length; index += 1) {
+    if (arrayOfnumbers[index] % 3 === 0 && arrayOfnumbers[index] % 5 === 0) {
+      array.push("fizzBuzz");
+    }
+    else if (arrayOfnumbers[index] % 3 === 0) {
+      array.push("fizz");
+    }
+    else if (arrayOfnumbers[index] % 5 === 0) {
+      array.push("buzz");
+    }
+    else if (arrayOfnumbers[index] % 3 !== 0) {
+      array.push("bug!");
+    }
+    else if (arrayOfnumbers[index] % 5 !== 0) {
+      array.push("bug!");
+    }
+  }
+  return array;
 }
 
 // Desafio 9
