@@ -16,6 +16,8 @@ console.log(calcArea(51, 1));
 // Desafio 3
 function splitSentence(string) {
   let removedor = string.split(' ');
+  // string split vista no site da W3 Schools
+  // Fonte: https://www.w3schools.com/jsref/jsref_split.asp
   return removedor;
 }
 console.log(splitSentence('go Trybe'));
@@ -40,6 +42,8 @@ function highestCount(numeros) {
   let contNumero = 0;
   let indexNumeroRepetido = 0;
   let maiorNumero = Math.max(...numeros);
+  // Math.max() visto no site da W3 Schools
+  // Fonte: https://www.w3schools.com/jsref/jsref_max.asp
   for (let index in numeros) {
     if (maiorNumero === numeros[index]) {
       contNumero += 1;
@@ -69,19 +73,19 @@ console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(array) {
-  let count = 0;
-  for (let index in array) {
-    if (array[index] % 3 === 0) {
-     
+  let fizz = [];
+  for (index in array) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      fizz.push("fizzBuzz")
+    } else if (array[index] % 3 === 0) {
+      fizz.push("fizz")
     } else if (array[index] % 5 === 0) {
-
-    } else if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
-
-    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-
+      fizz.push("buzz")
+    } else {
+      fizz.push("bug!")
     }
   }
-  return array;
+  return fizz;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
