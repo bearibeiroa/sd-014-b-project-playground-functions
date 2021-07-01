@@ -1,8 +1,8 @@
 // Desafio 10
 
-function techList(techs,nome){
+function techList (techs, nome){
   let info = [];
-  if (techs.length === 0) {return ("Vazio!");}
+  if (techs.length === 0) { return ('Vazio!');}
   else {
     techs = techs.sort();
     console.log(techs)
@@ -53,14 +53,14 @@ for (n in numbers){
 }
 
   if (numbers.length !== 11) {
-    return ("Array com tamanho incorreto.");}
+    return ('Array com tamanho incorreto.');}
   else {
     if (verifyZeroNine > 0) {
-      return ("não é possível gerar um número de telefone com esses valores")}
+      return ('não é possível gerar um número de telefone com esses valores')}
     else {
-      if (mostRepeated(numbers) > 2) {return ("não é possível gerar um número de telefone com esses valores")}
+      if (mostRepeated(numbers) > 2) {return ('não é possível gerar um número de telefone com esses valores')}
     else {
-          let phoneNumber = ("(" + numbers[0] + numbers[1] +") " + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + "-"+ numbers[7] + numbers[8] + numbers[9] + numbers[10])
+          let phoneNumber = ('(' + numbers[0] + numbers[1] +') ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10])
           return phoneNumber
         }
     }
