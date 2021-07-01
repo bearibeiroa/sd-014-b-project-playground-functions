@@ -1,14 +1,16 @@
-function highestCount(array) {
-  let highestNumber = 0;
-  let countNumbers = 0;
-  for(let index = 0; index < array.length; index += 1) {
-    if(array[index] > highestNumber) {
-      highestNumber = array[index];
-      countNumbers = 1;
-    }else if(highestNumber === array[index]) {
-      countNumbers += 1;
+function fizzBuzz(array) {
+  let newArray = [];
+  for (let num of array) {
+    if (num % 15 === 0) {
+      newArray.push('fizzbuz');
+    } else if (num % 5 === 0) {
+      newArray.push('fizz');
+    } else if (num % 3 === 0) {
+      newArray.push('buzz');
+    } else {
+      newArray.push('bug!');
     }
   }
-  return countNumbers;
+  return newArray;
 }
-console.log(highestCount(1, 7, 9, 5));
+console.log(fizzBuzz([9, 25]));
