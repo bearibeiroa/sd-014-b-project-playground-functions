@@ -1,7 +1,16 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let result = [];
+for(let key in array.sort()){
+    result[key] = {tech: array[key], name: name};
 }
+  if ((array.length === 0)){
+    result = 'Vazio!';
+  }
+  return result;
+  
+}
+console.log(techList(["CSS"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -10,7 +19,9 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  // arrey em ordem alfabetica
+  // preencher o array com objeto.
+  //um fi para, SE VAZIO, retronar "VAZIO!"
 }
 
 // Desafio 13
