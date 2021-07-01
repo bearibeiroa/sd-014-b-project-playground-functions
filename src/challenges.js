@@ -94,11 +94,64 @@ function fizzBuzz(numbersArray) {
 }
 
 // Desafio 9
-function encode() {
+function encode(phrase) {
   // seu código aqui
+  let arrayOfLetters = phrase.split('');
+
+  for (let index = 0; index < arrayOfLetters.length; index += 1) {
+    let letters = arrayOfLetters[index];
+    switch (letters) {
+      case 'a':
+        arrayOfLetters.splice(index, 1, '1');
+        break;
+    case 'e':
+      arrayOfLetters.splice(index, 1, '2');
+      break;
+    case 'i':
+      arrayOfLetters.splice(index, 1, '3');
+      break;
+    case 'o':
+      arrayOfLetters.splice(index, 1, '4');
+      break;
+    case 'u':
+      arrayOfLetters.splice(index, 1, '5');
+      break;
+    default:
+      arrayOfLetters;
+    }
+  }
+  let newPhrase = arrayOfLetters.join('');
+  return newPhrase;
 }
-function decode() {
+
+function decode(phrase) {
   // seu código aqui
+  let arrayOfLetters = phrase.split('');
+
+  for (let index = 0; index < arrayOfLetters.length; index += 1) {
+    let letters = arrayOfLetters[index];
+    switch (letters) {
+      case '1':
+        arrayOfLetters.splice(index, 1, 'a');
+      break;
+    case '2':
+      arrayOfLetters.splice(index, 1, 'e');
+      break;
+    case '3':
+      arrayOfLetters.splice(index, 1, 'i');
+      break;
+    case '4':
+      arrayOfLetters.splice(index, 1, 'o');
+      break;
+    case '5':
+      arrayOfLetters.splice(index, 1, 'u');
+      break;
+    default:
+      arrayOfLetters;
+    }
+  }
+  let newPhrase = arrayOfLetters.join('');
+  return newPhrase;
 }
 
 module.exports = {
