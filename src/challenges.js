@@ -52,14 +52,14 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } if (cat2Distance > cat1Distance) {
     return 'cat1';
-} return 'os gatos trombam e o rato foge'; 
+  } return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let resultado = [];
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {        
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
       resultado.push('fizzBuzz');
     } else if (arrayNumbers[index] % 5 === 0) {
       resultado.push('buzz');
@@ -69,7 +69,7 @@ function fizzBuzz(arrayNumbers) {
       resultado.push('bug!');
     }
   } return resultado;
-} 
+}
 
 // Desafio 9
 function encode(encodeString) {
@@ -91,9 +91,9 @@ function encode(encodeString) {
       vogal = '5';
       newString += vogal;
     } else {
-    newString += vogal;
+      newString += vogal;
     }
-  } return newString; 
+  } return newString;
 }
 
 function decode(decodeString) {
@@ -117,7 +117,7 @@ function decode(decodeString) {
     } else {
       newWord += number;
     }
-  } return newWord; 
+  } return newWord;
 }
 
 module.exports = {
