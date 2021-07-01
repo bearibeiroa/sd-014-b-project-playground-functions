@@ -50,9 +50,21 @@ function generatePhoneNumber(phone) {
 generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]);
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let result = true;
+
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+    return result;
+  } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+    return result;
+  } else if (lineC < (lineA + lineC) && lineC > Math.abs(lineA - lineB)) {
+    return result;
+  }else{
+    result = false;
+    return result;
+  }
 }
+triangleCheck(2, 3, 4);
 
 // Desafio 13
 function hydrate() {
