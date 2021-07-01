@@ -59,9 +59,27 @@ function generatePhoneNumber(cel) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sumAB = lineA + lineB
+  let sumAC = lineA + lineC
+  let sumBC = lineB + lineC
+  let difAB = Math.abs(lineA + lineB)
+  let difAC = Math.abs(lineA + lineC)
+  let difBC = Math.abs(lineB + lineC)
+
+  if ( lineC > sumAB && lineC > difAB) {
+    return false
+  }
+  if ( lineB > sumAC && lineB > difAC) {
+    return false
+  }
+  if ( lineA > sumBC && lineA > difBC) {
+    return false
+  }
+
+return true
 }
+
 
 // Desafio 13
 function hydrate() {
