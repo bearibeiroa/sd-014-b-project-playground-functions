@@ -17,22 +17,26 @@ function calcArea(base,height) {
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-  frase = 'Go Trybe';
-  let space = [];
-  console.log(space.splitSentence(','));
+return frase.split(" ");
 }
+console.log(splitSentence('Go trybe'));
 
 // Desafio 4
 function concatName(listnames) {
-  // seu código aqui
-  listnames['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-  
-  //console.log(listnames[0,3]);
-}
+  // seu código aqui (devo usar for?)
+  let index = [listnames[0],listnames[listnames.length -1]];
+  console.log(listnames);
+  return index;
+ }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins , ties) {
+  // seu código aqui (devo usar for/of?)
+wins = (3);
+ties = (1);
+let pontos = (wins + ties);
+return pontos
 }
 
 // Desafio 6
