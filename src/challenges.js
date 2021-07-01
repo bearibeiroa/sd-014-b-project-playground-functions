@@ -85,11 +85,64 @@ function fizzBuzz(arrayOfnumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+//use for of
+function encode(encodeString) {
+  let stringWithNumber = "";
+  for (let newString of encodeString) {
+    if (newString === "a") {
+      newString = "1";
+      stringWithNumber += newString;
+    }
+    else if (newString === "e") {
+      newString = "2";
+      stringWithNumber += newString;
+    }
+    else if (newString === "i") {
+      newString = "3";
+      stringWithNumber += newString;
+    }
+    else if (newString === "o") {
+      newString = "4";
+      stringWithNumber += newString;
+    }
+    else if (newString === "u") {
+      newString = "5";
+      stringWithNumber += newString;
+    }
+    else {
+      stringWithNumber += newString;
+    }
+  }
+  return stringWithNumber;
 }
-function decode() {
-  // seu código aqui
+function decode(decodeString) {
+  let string = "";
+  for (let newString1 of decodeString) {
+    if (newString1 === "1") {
+      newString1 = "a";
+      string += newString1;
+    }
+    else if (newString1 === "2") {
+      newString1 = "e";
+      string += newString1;
+    }
+    else if (newString1 === "3") {
+      newString1 = "i";
+      string += newString1;
+    }
+    else if (newString1 === "4") {
+      newString1 = "o";
+      string += newString1;
+    }
+    else if (newString1 === "5") {
+      newString1 = "u";
+      string += newString1;
+    }
+    else {
+      string += newString1;
+    }
+  }
+  return string;
 }
 
 module.exports = {
