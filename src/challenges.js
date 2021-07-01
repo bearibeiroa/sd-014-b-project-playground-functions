@@ -109,18 +109,18 @@ return (encodedString);
 
 function decode(encodedString) {
   let decodedString = encodedString.split('');
-  for (let aux = 0 ; aux <= decodedString.length -1 ; aux += 1) {
-      if (encodedString[aux] === '1') { decodedString[aux] = 'a' }
+  for (let aux = 0; aux <= decodedString.length - 1; aux += 1) {
+    if (encodedString[aux] === '1') { decodedString[aux] = 'a' }
+    else { 
+      if (encodedString[aux] === '2') { decodedString[aux] = 'e' }
       else { 
-        if (encodedString[aux] === '2') { decodedString[aux] = 'e' }
+        if (encodedString[aux] === '3') { decodedString[aux] = 'i' }
         else { 
-          if (encodedString[aux] === '3') { decodedString[aux] = 'i' }
+          if (encodedString[aux] === '4') { decodedString[aux] = 'o' }
           else { 
-            if (encodedString[aux] === '4') { decodedString[aux] = 'o' }
+            if (encodedString[aux] === '5') { decodedString[aux] = 'u' }
             else { 
-              if (encodedString[aux] === '5') { decodedString[aux] = 'u' }
-              else { 
-                decodedString[aux] = encodedString[aux]}
+              decodedString[aux] = encodedString[aux]}
           }
         }
       }
