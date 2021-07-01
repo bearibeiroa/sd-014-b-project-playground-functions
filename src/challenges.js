@@ -1,6 +1,6 @@
 // Desafio 1
 
-function compareTrue(value1,value2) {
+function compareTrue(value1, value2) {
  
   if (value1 === true && value2 === true) {
     return true;
@@ -16,7 +16,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(sentence) {
+  for(let word of sentence) {
+} 
+return word
   // seu código aqui
 }
 
@@ -48,11 +51,55 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringToencode) {
+  let encodedPhrase = ''
+  for (let vogal of stringToencode) {
+    if (vogal === 'a') {
+      vogal = '1';
+      encodedPhrase += vogal
+    } else if (vogal === 'e') {
+      vogal = '2';
+      encodedPhrase += vogal;
+    } else if (vogal === 'i') {
+      vogal = '3';
+      encodedPhrase += vogal;
+    } else if (vogal === 'o') {
+      vogal = '4';
+      encodedPhrase += vogal;
+    } else if (vogal === 'u') {
+      vogal = '5';
+      encodedPhrase += vogal;
+    } else{
+      encodedPhrase  += vogal
+    }
+} 
+  return encodedPhrase
 }
-function decode() {
   // seu código aqui
+
+function decode(stringTodecode) {
+  let decodedPhrase = ''
+  for (let vogal of stringTodecode) {
+    if (vogal === '1') {
+      vogal = 'a';
+      decodedPhrase += vogal
+    } else if (vogal === '2') {
+      vogal = 'e';
+      decodedPhrase += vogal;
+    } else if (vogal === '3') {
+      vogal = 'i';
+      decodedPhrase += vogal;
+    } else if (vogal === '4') {
+      vogal = 'o';
+      decodedPhrase += vogal;
+    } else if (vogal === '5') {
+      vogal = 'u';
+      decodedPhrase += vogal;
+    } else{
+      decodedPhrase  += vogal;
+  }
+} 
+  return decodedPhrase
 }
 
 module.exports = {
