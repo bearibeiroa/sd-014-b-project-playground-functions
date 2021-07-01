@@ -30,7 +30,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(maiorRepetido) {
   let todos = [...maiorRepetido]
-  let maiorNumber = 0;
+  let maiorNumber = -1;
   let numberOfHits = 0;
 
   for (index in todos){
