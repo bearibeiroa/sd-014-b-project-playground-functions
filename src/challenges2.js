@@ -103,12 +103,11 @@ function hydrate(bebidas) {
     copoAgua = copoAgua + numbers[x]
   }
   
-  if (copoAgua == 1) {
-    return ('1 copo de água')
-  }
-  else if (copoAgua > 1) {
+  if (copoAgua === 1) {
+    return ('1 copo de água');
+  } else if (copoAgua > 1) {
     return (copoAgua + ' copos de água')
-  }
+  };
 }
 
 module.exports = {
