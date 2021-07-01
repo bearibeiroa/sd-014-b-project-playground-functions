@@ -25,9 +25,9 @@ function generatePhoneNumber(numberArray) {
   if (numberArray.length > 11 || numberArray.length < 11) {
     return 'Array com tamanho incorreto.';
   } 
-  for (index = 0; index < numberArray.length; index += 1) {
+  for (let index = 0; index < numberArray.length; index += 1) {
     let contator = 0;
-    for (index2 = 0; index2 < numberArray.length; index2 += 1) {
+    for (let index2 = 0; index2 < numberArray.length; index2 += 1) {
       if (numberArray[index2] === numberArray[index]) {
         contator += 1;
       }
@@ -42,8 +42,11 @@ function generatePhoneNumber(numberArray) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB || lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC)) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
