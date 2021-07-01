@@ -136,8 +136,8 @@ function techList(tech, name) {
   }
   for (let value of tech) {
     techsToLearn.push({
-      name: name,
       tech: value,
+      name: name,
     });
   }
   return techsToLearn;
