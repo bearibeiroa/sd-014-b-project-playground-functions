@@ -71,14 +71,24 @@ function catAndMouse(mouse, cat1, cat2) {
     }
 
   return resultado;
-  // retornar qual dos gatos está mais próximo do rato
-
-  // Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua função deverá retornar "cat2".
+ 
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let iSawYou = []
+  for(let index = 0; index < numbers.length; index += 1) {
+    if(((numbers[index] % 3) === 0) && ((numbers[index] % 5) === 0)) {
+      iSawYou.push("fizzBuzz");
+    }else if ((numbers[index]) % 5 === 0){
+      iSawYou.push("buzz");
+    }else if ((numbers[index] % 3) === 0){
+      iSawYou.push("fizz");
+    }else{
+      iSawYou.push("bug!");
+    }
+  }
+return iSawYou
 }
 
 // Desafio 9
