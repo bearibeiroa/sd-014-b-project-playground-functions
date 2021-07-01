@@ -17,15 +17,17 @@ function calcArea(base,height) {
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-  frase = ['Go Trybe'];
-  let palavra = [,];
+  frase = 'Go Trybe';
+  let space = [];
+  console.log(space.splitSentence(','));
 }
 
 // Desafio 4
-function concatName(nomes) {
+function concatName(listnames) {
   // seu código aqui
-  nomes['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-  sort
+  listnames['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+  
+  //console.log(listnames[0,3]);
 }
 
 // Desafio 5
