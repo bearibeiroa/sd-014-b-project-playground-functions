@@ -106,11 +106,59 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  // seu código aqui 
+  //referencia .replace https://www.w3schools.com/jsref/jsref_replace.asp
+  // referencia .join https://metring.com.br/javascript-converter-array-em-string
+  let textModfy = [];
+  for(let indice = 0; indice < text.length; indice +=1){
+    if (text[indice] == "a"){
+      textModfy[indice] = text[indice].replace("a", "1");
+    }
+    else if(text[indice] == "e"){
+      textModfy[indice] = text[indice].replace("e", "2");
+    }
+    else if(text[indice] == "i"){
+      textModfy[indice] = text[indice].replace("i", "3");
+    }
+    else if(text[indice] == "o"){
+      textModfy[indice] = text[indice].replace("o", "4");
+    }
+    else if(text[indice] == "u"){
+      textModfy[indice] = text[indice].replace("u", "5");
+    }
+    else{
+      textModfy[indice] = text[indice];
+    }
+  }
+return textModfy.join('');
 }
+console.log(encode("hello"))
+//---------------------------------//
 function decode() {
   // seu código aqui
+  let textModfy = [];
+  for(let indice = 0; indice <text.length; indice +=1){
+    if (text[indice] == "1"){
+      textModfy[indice] = text[indice].replace("1", "a");
+    }
+    else if(text[indice] == "2"){
+      textModfy[indice] = text[indice].replace("2", "e");
+    }
+    else if(text[indice] == "3"){
+      textModfy[indice] = text[indice].replace("3", "i");
+    }
+    else if(text[indice] == "4"){
+      textModfy[indice] = text[indice].replace("4", "o");
+    }
+    else if(text[indice] == "5"){
+      textModfy[indice] = text[indice].replace("5", "u");
+    }
+    else{
+      textModfy[indice] = text[indice];
+    }
+  }
+return textModfy.join('');
 }
 
 module.exports = {
