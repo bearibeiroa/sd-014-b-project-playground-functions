@@ -127,6 +127,24 @@ function decode(text = '') {
   // seu código aqui
 }
 
+// Desafio 10
+function techList(tech, name) {
+  let techsToLearn = [];
+  tech.sort();
+  if (tech.length === 0) {
+    return 'Vazio!';
+  }
+  for (let value of tech) {
+    techsToLearn.push({
+      name: name,
+      tech: value,
+    });
+  }
+  return techsToLearn;
+} 
+
+
+
 module.exports = {
   calcArea,
   catAndMouse,
