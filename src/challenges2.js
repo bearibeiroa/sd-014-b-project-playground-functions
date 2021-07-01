@@ -1,5 +1,5 @@
-//Função verifica a quantidade de repetições de um número:
-function intMaxReption(lista) {
+//Função verifica a quantidade de repetiçõesde um número:
+function maxReption(lista) {
   let maxOccurrences = 0;
   for (let index = 0; index < lista.length; index += 1) {
     let contOccurrences = 0;
@@ -11,7 +11,6 @@ function intMaxReption(lista) {
     }
     if (maxOccurrences < contOccurrences) {
       maxOccurrences = contOccurrences;
-      value = item;
     }
   }
   return maxOccurrences;
@@ -50,7 +49,7 @@ function generatePhoneNumber(arrayNumber) {
   let arraySizeInvalidMessage = 'Array com tamanho incorreto.';
   let arrayNumberInvalidMessage = 'não é possível gerar um número de telefone com esses valores';
   let arrayNumberZeroAndNove = verificaArrayNumber(arrayNumber);
-  let arrayNumberReptetion = intMaxReption(arrayNumber);
+  let arrayNumberReptetion = maxReption(arrayNumber);
   let tel = '';
   if (arrayNumber.length !== 11) {
     return arraySizeInvalidMessage;
