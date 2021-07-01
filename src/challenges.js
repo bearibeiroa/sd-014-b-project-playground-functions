@@ -56,7 +56,9 @@ function catAndMouse(mouse, cat1, cat2) {
     if (distMouseCat2 < distMouseCat1) {
       return ('cat2');
     }
-    else { return ('os gatos trombam e o rato foge')}
+    else {
+      return ('os gatos trombam e o rato foge');
+    }
   }
 }
 
@@ -64,18 +66,18 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   let fizzbuzzbug = [];
   for (let numero in numeros) {
-    if (numeros[numero]%3 === 0 && numeros[numero]%5 !== 0) {
-      fizzbuzzbug.push("fizz");
+    if (numeros[numero] % 3 === 0 && numeros[numero] % 5 !== 0) {
+      fizzbuzzbug.push('fizz');
     }
     else {
       if (numeros[numero]%5 === 0 && numeros[numero]%3 !== 0) {
-        fizzbuzzbug.push("buzz");
+        fizzbuzzbug.push('buzz');
       }
       else {
         if (numeros[numero]%5 === 0 && numeros[numero]%3 === 0) {
-          fizzbuzzbug.push("fizzBuzz");
+          fizzbuzzbug.push('fizzBuzz');
         }
-        else { fizzbuzzbug.push("bug!");}
+        else { fizzbuzzbug.push('bug!');}
       }
     }
   }
@@ -84,42 +86,42 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(str1ng) {
-  let encodedString = str1ng.split("");
+  let encodedString = str1ng.split('');
   for (let aux = 0 ; aux <= str1ng.length -1 ; aux += 1) {
     //console.log(str1ng[aux]);
-      if (str1ng[aux] === "a") {encodedString[aux] = "1"}
+      if (str1ng[aux] === 'a') {encodedString[aux] = '1'}
       else{
-        if (str1ng[aux] === "e") {encodedString[aux] = "2"}
+        if (str1ng[aux] === 'e') {encodedString[aux] = '2'}
         else{
-          if (str1ng[aux] === "i") {encodedString[aux] = "3"}
+          if (str1ng[aux] === 'i') {encodedString[aux] = '3'}
           else{
-            if (str1ng[aux] === "o") {encodedString[aux] = "4"}
+            if (str1ng[aux] === 'o') {encodedString[aux] = '4'}
             else{
-              if (str1ng[aux] === "u") {encodedString[aux] = "5"}
+              if (str1ng[aux] === 'u') {encodedString[aux] = '5'}
               else{
                 encodedString[aux] = str1ng[aux]}
               } } } } }
 
-encodedString = encodedString.join("");
+encodedString = encodedString.join('');
 return(encodedString);
 }
 
 function decode(encodedString) {
-  let decodedString = encodedString.split("");
+  let decodedString = encodedString.split('');
   for (let aux = 0 ; aux <= decodedString.length -1 ; aux += 1) {
-      if (encodedString[aux] === "1") {decodedString[aux] = "a"}
+      if (encodedString[aux] === '1') {decodedString[aux] = 'a'}
       else{
-        if (encodedString[aux] === "2") {decodedString[aux] = "e"}
+        if (encodedString[aux] === '2') {decodedString[aux] = 'e'}
         else{
-          if (encodedString[aux] === "3") {decodedString[aux] = "i"}
+          if (encodedString[aux] === '3') {decodedString[aux] = 'i'}
           else{
-            if (encodedString[aux] === "4") {decodedString[aux] = "o"}
+            if (encodedString[aux] === '4') {decodedString[aux] = 'o'}
             else{
-              if (encodedString[aux] === "5") {decodedString[aux] = "u"}
+              if (encodedString[aux] === '5') {decodedString[aux] = 'u'}
               else{
                 decodedString[aux] = encodedString[aux]}
               } } } } }
-decodedString = decodedString.join("");
+decodedString = decodedString.join('');
 return(decodedString);
 }
 
