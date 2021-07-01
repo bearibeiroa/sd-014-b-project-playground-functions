@@ -19,19 +19,6 @@ function techList(tech1, nome) {
 }
 
 // Desafio 11
-
-function contadorDeNumeros(phone) {
-  for (let index = 0; index < phone.length; index += 1){
-    switch (phone) {
-      case phone[index] === 1:
-        contador
-    }
-  }
-
-}
-function numeroMenorQueZero(phone) {
-
-}
 function generatePhoneNumber(phone) {
   if (phone.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -41,6 +28,7 @@ function generatePhoneNumber(phone) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
+  
 }
 // Desafio 12
 // comando Math.abs explicado no arquivo challenges, desafio 7. 
