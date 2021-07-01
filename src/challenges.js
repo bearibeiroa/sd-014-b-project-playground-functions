@@ -165,7 +165,7 @@ function decode(message) {
 }
 
 //Desafio 10 --
-function techList(tech, name) {
+function techList() {
   let techsToLearn = [];
   tech.sort();
 
