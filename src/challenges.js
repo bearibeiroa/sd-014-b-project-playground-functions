@@ -128,8 +128,8 @@ function decode(encodedString) {
       }
     }
   }
-decodedString = decodedString.join('');
-return (decodedString);
+  decodedString = decodedString.join('');
+  return (decodedString);
 }
 
 module.exports = {
