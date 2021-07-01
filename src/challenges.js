@@ -62,16 +62,32 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanciaGato1Rato < distanciaGato2Rato) {
     return 'cat1';
-  } 
+  }
   if (distanciaGato2Rato < distanciaGato1Rato) {
     return 'cat2';
-  } 
+  }
   return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(1, 0, 2));
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayDeNumeros) {
+  let recebePum = [];
+  for (let numeroAtual of arrayDeNumeros) {
+    if (numeroAtual % 3 === 0 && numeroAtual % 5 === 0) {
+      recebePum.push('fizzBuzz');
+    }
+    else if (numeroAtual % 3 === 0) {
+      recebePum.push('fizz');
+    }
+    else if (numeroAtual % 5 === 0) {
+      recebePum.push('buzz');
+    }
+    else {
+      recebePum.push('bug!');
+    }
+  }
+  return recebePum;
+
 }
 
 // Desafio 9
