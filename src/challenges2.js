@@ -70,13 +70,13 @@ for (n in numbers){
 // Desafio 12
 
 function triangleCheck(lineA, lineB, lineC) {
-  let difAB = Math.abs(lineA-lineB);
-  let difBC = Math.abs(lineB-lineC);
-  let difAC = Math.abs(lineA-lineC);
+  let difAB = Math.abs(lineA - lineB);
+  let difBC = Math.abs(lineB - lineC);
+  let difAC = Math.abs(lineA - lineC);
 
-  let sumAB = (lineA+lineB);
-  let sumBC = (lineB+lineC);
-  let sumAC = (lineA+lineC);
+  let sumAB = (lineA + lineB);
+  let sumBC = (lineB + lineC);
+  let sumAC = (lineA + lineC);
 
   let checkA = ((lineA < sumBC) && (lineA > difBC));
   let checkB = ((lineB < sumAC) && (lineB > difAC));
@@ -104,10 +104,10 @@ function hydrate(bebidas) {
   }
   
   if (copoAgua == 1) {
-    return ("1 copo de água")
+    return ('1 copo de água')
   }
   else if (copoAgua > 1) {
-    return (copoAgua + " copos de água")
+    return (copoAgua + ' copos de água')
   }
 }
 
