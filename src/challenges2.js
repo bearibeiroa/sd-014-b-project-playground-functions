@@ -95,8 +95,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
+  let copoAgua = 0;
+  // linha de código abaixo foi adaptada de: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript - Acessado em: 01/07/2021
+  let numbers = bebidas.match(/\d+/g).map(Number); // regex - regular expressions -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+  for (let x = 0 ; x < numbers.length ; x += 1) {
+    copoAgua = copoAgua + numbers[x]
+  }
+  
+  if (copoAgua == 1) {
+    return ("1 copo de água")
+  }
+  else if (copoAgua > 1) {
+    return (copoAgua + " copos de água")
+  }
 }
 
 module.exports = {
