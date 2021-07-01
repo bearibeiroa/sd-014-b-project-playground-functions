@@ -47,7 +47,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(vetor) {
   //Verifica qual é o maior número
-  let maiorNumero = 0;
+  let maiorNumero = vetor[0];
 
   for(let count = 0; count < vetor.length; count += 1) {
     let guardarNumero = vetor[count];
@@ -70,7 +70,6 @@ function highestCount(vetor) {
 
   //Retorna a quantidade de vezes que o maior numero aparece
   return countNumber;
-
 }
 
 console.log(highestCount([-2, -2, -1]));

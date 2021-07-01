@@ -33,12 +33,53 @@ function techList(techLearn, name) {
   return newTechList;
 }
 
-console.log(techList([], "Lucas"));
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(vetorNumberPhone) {
+  let numberPhone = [];
+  let countNumberAppers = 0;
+  let numAppers = 0;
+  //Verifica se o array tem exatamente 11 digitos
+  if(vetorNumberPhone.length != 11) {
+    return 'Array com tamanho incorreto.';
+  } else {
+
+    //Percorre o array um por um
+    for(let index = 0; index < vetorNumberPhone.length; index += 1) {
+
+      //Verifica quantas vezes aparece os números
+      countNumberAppers = 0;
+      for(let indice = 0; indice < vetorNumberPhone.length; indice += 1) {
+        if(vetorNumberPhone[indice] === vetorNumberPhone[index]) {
+          countNumberAppers += 1;
+          numAppers = vetorNumberPhone[indice];
+        };
+      }
+
+      //Verifica e valida cada um dos números do array
+      if(vetorNumberPhone[index] < 0 || vetorNumberPhone[index] > 9 || countNumberAppers >= 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      } else {
+        //Valida e formata os números
+        if(index === 0 ) {
+          numberPhone += '(' + vetorNumberPhone[index];  
+        } else if(index === 1) {
+          numberPhone += vetorNumberPhone[index] + ') ';
+        }else if(index === 6){
+          numberPhone +=  vetorNumberPhone[index] + '-' ;
+        }else{
+          numberPhone += vetorNumberPhone[index];
+        };
+
+      };
+
+    };
+
+  };
+
+  return numberPhone;
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
