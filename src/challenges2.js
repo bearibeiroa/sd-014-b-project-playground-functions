@@ -6,16 +6,17 @@ function techList(tech, name) {
     name: '' };
   tech.sort();
 
-  if (tech.length === 0) {
+  {
     return 'Vazio!';
-  } for (key of tech) {
-    listTech.push(tech = {
-      tech: key,
-      name });
+    if (tech.length === 0) {
+    } for (key of tech) {
+      listTech.push(tech = {
+        tech: key,
+        name });
+    }
+    return listTech;
   }
-  return listTech;
 }
-
 // Desafio 11
 
 function generatePhoneNumber(phoneNumber) {
@@ -51,8 +52,21 @@ function generatePhoneNumber(phoneNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sumAB = lineA + lineB;
+  let sumAC = lineA + lineC;
+  let sumBC = lineB + lineC;
+
+  if (lineC > sumAB) {
+    return false;
+  }
+  if (lineB > sumAC) {
+    return false;
+  }
+  if (lineA > sumBC) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
