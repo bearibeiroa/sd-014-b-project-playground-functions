@@ -50,10 +50,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebumCheck) {
+  let integer = 0;
+  let re = new RegExp('[0-9]', 'g');
+  let numbersOfString = bebumCheck.match(re);
+  for (let index = 0; index < numbersOfString.length; index += 1) {
+    integer += parseInt(numbersOfString[index]);
+  }
+  let hydratationWarning;
+  if (integer === 1) {
+    hydratationWarning = integer + ' copo de água';
+  } else {
+    hydratationWarning = integer + ' copos de água';
+  }
+  return hydratationWarning;
 }
-
 module.exports = {
   generatePhoneNumber,
   techList,
