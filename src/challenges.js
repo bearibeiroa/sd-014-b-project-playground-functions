@@ -128,21 +128,21 @@ function decode(text = '') {
 }
 
 // Desafio 10
-function techList (tech, name) {
+function techList(tech, name) {
   let techsToLearn = [];
   tech.sort();
+  
   if (tech.length === 0) {
-    return 'Vazio!';
+  return 'Vazio!';
   }
   for (let value of tech) {
-    techsToLearn.push({
-      tech: value,
-      nome: name,
-    });
+  techsToLearn.push({
+  tech: value,
+  name: name,
+  });
   }
   return techsToLearn;
-};
-
+  } 
 
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
 
