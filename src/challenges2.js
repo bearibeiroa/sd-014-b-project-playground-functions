@@ -11,7 +11,7 @@ function techList(array, name) {
     };
     objectArray.push(object);
   }
-  return objectArray;  
+  return objectArray;
 }
 
 // Desafio 11
@@ -34,7 +34,7 @@ function generatePhoneNumber(array) {
         }
       }
     }
-    let number = '(' + array[0] + array [1] + ') ' + + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
+    let number = '(' + array[0] + array [1] + ') ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
     return number;
   }
 }
@@ -54,7 +54,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let regExp = /\d/g; // Feito com auxílio do tutorial encontrado em https://www.youtube.com/watch?v=pfkkdzeyx6U
+  let regExp = /\d/g; /* Feito com auxílio do tutorial encontrado em https://www.youtube.com/watch?v=pfkkdzeyx6U */
   let array = string.match(regExp); /* O tutorial citado também ajuda nessa etapa, mas encontrei uma explicação mais detalhada em https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match */
   let number = 0;
   let sum = 0;

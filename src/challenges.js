@@ -69,7 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-  // É necessário pegar cada valor do array e fazer 4 verificações: se (1) é divísil por 3, (2) por 5, (3) por 3 e 5 ou (4) por nennhum dos dois.
+  // É necessário pegar cada valor do array e fazer 4 verificações: se (1) é divisível por 3, (2) por 5, (3) por 3 e 5 ou (4) por nennhum dos dois.
   // Para pegar cada valor do array:
   for (let index = 0; index < array.length; index += 1) {
     let division3 = array[index] % 3;
