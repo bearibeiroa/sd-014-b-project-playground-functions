@@ -67,7 +67,6 @@ for (n in numbers){
   }
 }
 
-
 // Desafio 12
 
 function triangleCheck(lineA, lineB, lineC) {

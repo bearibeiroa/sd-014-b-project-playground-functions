@@ -5,26 +5,26 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = base*height/2;
+  let area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
 function splitSentence(mergedSentence) {
-  let splitSentence = mergedSentence.split(" ");
-  return splitSentence;
+  let split_sentence = mergedSentence.split(' ');
+  return split_sentence;
 }
 
 // Desafio 4
-function concatName(array=['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
-  concatName = (array[(array.length-1)] + ", " + array[0]);
-  return(concatName);
+function concatName(array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
+  concat_name = (array[(array.length - 1)] + ', ' + array[0]);
+  return (concat_name);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let footballPoints = 3*wins + ties;
-  return footballPoints;
+  let football_points = 3 * wins + ties;
+  return football_points;
 }
 
 // Desafio 6
@@ -38,26 +38,25 @@ function highestCount(numeros) {
   let verificaNumero = numeros[indiceMaior];
   let contNumero = 0;
   for (let index2 in numeros) {
-      if (verificaNumero === numeros[index2]) {
-        contNumero += 1;
-      }
+    if (verificaNumero === numeros[index2]) {
+      contNumero += 1;
     }
-  return contNumero
+  }
+  return contNumero;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distMouseCat1 = (mouse - cat1)**2;
-  let distMouseCat2 = (mouse - cat2)**2;
-  
+  let distMouseCat1 = (mouse - cat1) ** 2;
+  let distMouseCat2 = (mouse - cat2) ** 2;
   if (distMouseCat1 < distMouseCat2) {
-    return ("cat1");
+    return ('cat1');
   }
   else {
     if (distMouseCat2 < distMouseCat1) {
-      return ("cat2");
+      return ('cat2');
     }
-    else { return ("os gatos trombam e o rato foge")}
+    else { return ('os gatos trombam e o rato foge')}
   }
 }
 
