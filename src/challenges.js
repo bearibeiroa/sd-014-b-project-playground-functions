@@ -90,14 +90,46 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+    parametros = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+  let stringFrase = "";
+  for (let index in string){
+    if (string[index] = parametros[string[index]]) {
+      stringFrase += parametros[string[index]]
+    } else {
+      stringFrase += string[index];
+    }
+  }
+  return stringFrase;
 }
+console.log(encode("hello word!"))
 
 // Desafio 10
-function decode() {
-  // seu código aqui
+function decode(text) {
+  parameters = {
+    "1": "a",
+    "2": "e",
+    "3": "i",
+    "4": "o",
+    "5": "u",
+  }
+  let textFrase = "";
+  for (let indice in text){
+    if (text[indice] = parameters[text[indice]]) {
+      textFrase += parameters[text[indice]]
+    } else {
+      textFrase += text[indice];
+    }
+  }
+  return textFrase;
 }
+console.log(decode("h2ll4 w4rd!"))
 
 module.exports = {
   calcArea,
