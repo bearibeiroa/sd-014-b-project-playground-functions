@@ -100,7 +100,7 @@ function decode(stringTodecode) {
   for (let vogal of stringTodecode) {
     if (vogal === '1') {
       vogal = 'a';
-      decodedPhrase += vogal
+      decodedPhrase += vogal;
     } else if (vogal === '2') {
       vogal = 'e';
       decodedPhrase += vogal;
@@ -115,11 +115,9 @@ function decode(stringTodecode) {
       decodedPhrase += vogal;
     } else{
       decodedPhrase  += vogal;
-    } return decodedPhrase
-  }
+    } 
+  } return decodedPhrase
 } 
-
-  
 
 module.exports = {
   calcArea,
