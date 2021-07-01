@@ -74,8 +74,24 @@ function triangleCheck(a, b, c) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+// fonte: https://bit.ly/2Uifl4I
+// [+-]?: Optional + or - sign before number
+// \d+: Match one or more numbers
+//  (?:\.\d+)?: Optional decimal point. ?: denotes non-capturing group.
+//g flag: To get all matches
+
+  let cont = 0;
+  let strNumbers = str.match(/[+-]?\d+(?:\.\d+)?/g).map(Number);
+  for (i=0; i < strNumbers.length; i++){
+    cont+=strNumbers[i];
+  }
+  if (cont <= 1){
+    return `${cont} copo de água`;
+  } else {
+    return `${cont} copos de água`;
+  }
+
 }
 
 module.exports = {
