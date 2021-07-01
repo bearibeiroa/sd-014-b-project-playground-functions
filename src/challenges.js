@@ -2,9 +2,8 @@
 function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -13,16 +12,16 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence (a) {
+function splitSentence(a) {
   let array1 = [];
   let words = '';
   for (let index of a) {
-      if (index != ' ') {
-          words += index;
-      } else {
-          array1.push(words);
-          words = '';
-      }
+    if (index != ' ') {
+      words += index;
+    } else {
+      array1.push(words);
+      words = '';
+    }
   }
   array1.push(words);
   return array1;
@@ -30,7 +29,7 @@ function splitSentence (a) {
 
 // Desafio 4
 function concatName(names) {
-  return (names[names.length - 1] + ', ' + names[0]);
+  return (`${names[names.length - 1]}, ${names[0]}`);
 }
 
 // Desafio 5
@@ -43,14 +42,14 @@ function highestCount(numbers) {
   let highestNumber = numbers[0];
   let highestNumberCount = 0;
   for (let iMaior = 0; iMaior < numbers.length; iMaior += 1) {
-      if (numbers[iMaior] > highestNumber) {
-          highestNumber = numbers[iMaior];
-      }    
+    if (numbers[iMaior] > highestNumber) {
+      highestNumber = numbers[iMaior];
+    }
   }
   for (let index = 0; index < numbers.length; index += 1) {
-      if (numbers[index] === highestNumber) {
-          highestNumberCount += 1;
-      }
+    if (numbers[index] === highestNumber) {
+      highestNumberCount += 1;
+    }
   }
   return highestNumberCount;
 }
@@ -60,33 +59,31 @@ function catAndMouse(mouse, cat1, cat2) {
   let distancia1 = cat1 - mouse;
   let distancia2 = cat2 - mouse;
   if (distancia1 < 0) {
-    distancia1 = distancia1 * -1;
+    distancia1 *= -1;
   }
   if (distancia2 < 0) {
-    distancia2 = distancia2 * -1;
+    distancia2 *= -1;
   }
   if (distancia1 === distancia2) {
-    return "os gatos trombam e o rato foge";
-  } else if (distancia1 > distancia2) {
+    return 'os gatos trombam e o rato foge';
+  } if (distancia1 > distancia2) {
     return 'cat2';
-  } else {
-    return 'cat1';
   }
+  return 'cat1';
 }
-
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let myArray = [];
   for (let index = 0; index < numbers.length; index += 1) {
     if ((numbers[index] % 3) === 0 && (numbers[index] % 5) === 0) {
-      myArray.push("fizzBuzz");
+      myArray.push('fizzBuzz');
     } else if ((numbers[index] % 3) === 0) {
-      myArray.push("fizz");
+      myArray.push('fizz');
     } else if ((numbers[index] % 5) === 0) {
-      myArray.push("buzz");
+      myArray.push('buzz');
     } else {
-      myArray.push("bug!");
+      myArray.push('bug!');
     }
   }
   return myArray;
@@ -97,17 +94,17 @@ function encode(e) {
   let coded = '';
   for (let index of e) {
     switch (index) {
-      case 'a': coded += '1';
-          break
-      case 'e': coded += '2';
-          break
-      case 'i': coded += '3';
-          break
-      case 'o': coded += '4';
-          break
-      case 'u': coded += '5';
-          break
-      default: coded += index;
+    case 'a': coded += '1';
+      break;
+    case 'e': coded += '2';
+      break;
+    case 'i': coded += '3';
+      break;
+    case 'o': coded += '4';
+      break;
+    case 'u': coded += '5';
+      break;
+    default: coded += index;
     }
   }
   return coded;
@@ -118,7 +115,7 @@ function encode(e) {
 //   let variavel = [];
 //   let fraseCodificada = '';
 //   for (let index = 0; index < e.length; index++) {
-//       variavel.push(e[index]);    
+//       variavel.push(e[index]);
 //   }
 //   for (let index = 0; index < variavel.length; index++) {
 //       if (variavel[index] === 'a') {
@@ -133,17 +130,17 @@ function decode(d) {
   let decoded = '';
   for (let index of d) {
     switch (index) {
-      case '1': decoded += 'a';
-          break
-      case '2': decoded += 'e';
-          break
-      case '3': decoded += 'i';
-          break
-      case '4': decoded += 'o';
-          break
-      case '5': decoded += 'u';
-          break
-      default: decoded += index;
+    case '1': decoded += 'a';
+      break;
+    case '2': decoded += 'e';
+      break;
+    case '3': decoded += 'i';
+      break;
+    case '4': decoded += 'o';
+      break;
+    case '5': decoded += 'u';
+      break;
+    default: decoded += index;
     }
   }
   return decoded;

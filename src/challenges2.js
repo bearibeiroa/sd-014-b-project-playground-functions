@@ -45,7 +45,7 @@ function generatePhoneNumber(numbers) {
       parte3 += numbers[index];
     }
   }
-  return `(${parte1}) ${parte2}-${parte3}`;
+  return '(' + parte1 + ') ' + parte2 + '-' + parte3;
 }
 
 // Desafio 12
@@ -69,8 +69,20 @@ function difAbsMaior(a, b, c) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let compareNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  let qntAgua = 0;  
+  for (let caracters of string) {
+    for (let index = 0; index < compareNumber.length; index += 1) {
+      if (caracters == compareNumber[index]) {
+        qntAgua += compareNumber[index];
+      }
+    }
+  }
+  if (qntAgua === 1) {
+    return qntAgua + ' copo de água'
+  }
+  return qntAgua + ' copos de água'
 }
 
 module.exports = {
