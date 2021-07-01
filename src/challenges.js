@@ -74,11 +74,25 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let newFrase = frase;
+    newFrase = newFrase.replace(/a/g, '1'); // Nas pesquisas que fiz, eu vi que poderia utilizar o replace e
+    newFrase = newFrase.replace(/e/g, '2'); // passar /elemento/g onde esse 'g' é considerado como global.
+    newFrase = newFrase.replace(/i/g, '3');
+    newFrase = newFrase.replace(/o/g, '4');
+    newFrase = newFrase.replace(/u/g, '5');
+    return newFrase;
 }
-function decode() {
-  // seu código aqui
+//https://stackoverflow.com/questions/1144783/how-to-replace-all-occurrences-of-a-string-in-javascript
+//http://www.tizag.com/javascriptT/javascript-string-replace.php
+function decode(frase) {
+  let newFrase = frase;
+  newFrase = newFrase.replace(/1/g, 'a');
+  newFrase = newFrase.replace(/2/g, 'e');
+  newFrase = newFrase.replace(/3/g, 'i');
+  newFrase = newFrase.replace(/4/g, 'o');
+  newFrase = newFrase.replace(/5/g, 'u');
+  return newFrase;
 }
 
 module.exports = {
