@@ -17,7 +17,6 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  let resultado = '';
   let contadorRepetidos = 0;
   let parte1 = '';
   let parte2 = '';
@@ -46,7 +45,7 @@ function generatePhoneNumber(numbers) {
         parte3 += numbers[index];
     }
   }
-    return '(' + parte1 + ')' + ' ' + parte2 + '-' + parte3;
+    return '(' + parte1 + ') ' + parte2 + '-' + parte3;
 }
 
 // Desafio 12
