@@ -35,8 +35,10 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(valores) {
 
+// Função para o highestNumber encontrada na documentação, em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max e https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce onde
+// math.max seleciona o maior valor entre 2 elementos do array e
+//reduce executa esta função para todos os elementos do array.
 
-  // Função para o highestNumber copiada da documentação
 let highestNumber = valores.reduce(function(a, b) {
   return Math.max(a, b);
 });
@@ -100,7 +102,7 @@ function fizzBuzz(fizzOuBuzz) {
 function encode(codifique) {
 
 // recurso Replace encontrado no site https://blog.betrybe.com/javascript/javascript-replace/
-//nomeDaString('valor a ser substituído', 'novo valor')
+//nomeDaString.replace('valor a ser substituído', 'novo valor')
 //inclusão de / antes e depois do valor a ser substituído para incluir a especificação global g, para substituir todos valores requeridos e a tag i, para ignorar o case sensitive.
 
 let mensagemCodA = codifique.replace(/a/gi, '1');
