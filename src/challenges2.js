@@ -1,6 +1,6 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tec, name) {
+  
 }
 
 // Desafio 11
@@ -32,11 +32,11 @@ function generatePhoneNumber(cel) {
         break
 
       case 1:
-        celular = celular + cel[i] + ") "
+        celular += + cel[i] + ") "
         break
       
       case 6:
-        celular = celular + cel[i] + "-"
+        celular += + cel[i] + "-"
         break
 
       default:
