@@ -55,10 +55,20 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+  // calcular distancia entre rato e gato 1
+  let distanciaGato1Rato = Math.abs(cat1 - mouse);
+  let distanciaGato2Rato = Math.abs(cat2 - mouse);
 
+  if (distanciaGato1Rato < distanciaGato2Rato) {
+    return 'cat1';
+  } 
+  if (distanciaGato2Rato < distanciaGato1Rato) {
+    return 'cat2';
+  } 
+  return 'os gatos trombam e o rato foge';
+}
+console.log(catAndMouse(1, 0, 2));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
