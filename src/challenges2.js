@@ -59,7 +59,6 @@ function generatePhoneNumber(number) {
 // Desafio 12
 
 function triangleCheck(lineA, lineB, lineC) {
-  
   if ( lineC > (lineA + lineB) || lineC < Math.abs(lineA - lineB)) {
     return false
   }
@@ -73,8 +72,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(phrase) {
   // seu código aqui
+  let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  let newNumber = 0;
+  for(let index of number){
+    for (let index1 of phrase) {
+      if(index == index1){
+        newNumber += index;
+      }
+    }
+  }
+  if(newNumber === 1){
+    return newNumber + " copo de água"
+  }else{
+    return newNumber + " copos de água"
+  }
 }
 
 module.exports = {
