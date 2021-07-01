@@ -89,17 +89,21 @@ function encode(str1ng) {
   let encodedString = str1ng.split('');
   for (let aux = 0; aux <= str1ng.length - 1; aux += 1) {
     if (str1ng[aux] === 'a') {encodedString[aux] = '1'}
-      else{ 
-        if (str1ng[aux] === 'e') {encodedString[aux] = '2'}
+    else{ 
+      if (str1ng[aux] === 'e') {encodedString[aux] = '2'}
+      else{
+        if (str1ng[aux] === 'i') {encodedString[aux] = '3'}
         else{
-          if (str1ng[aux] === 'i') {encodedString[aux] = '3'}
-          else{
-            if (str1ng[aux] === 'o') {encodedString[aux] = '4'}
+          if (str1ng[aux] === 'o') {encodedString[aux] = '4'}
+          else {
+            if (str1ng[aux] === 'u') {encodedString[aux] = '5'}
             else {
-              if (str1ng[aux] === 'u') {encodedString[aux] = '5'}
-              else {
-                encodedString[aux] = str1ng[aux]}
-              } } } } }
+              encodedString[aux] = str1ng[aux]}
+            }
+          }
+        }
+      }
+    }
 
 encodedString = encodedString.join('');
 return(encodedString);
@@ -119,7 +123,11 @@ function decode(encodedString) {
               if (encodedString[aux] === '5') {decodedString[aux] = 'u'}
               else{ 
                 decodedString[aux] = encodedString[aux]}
-              } } } } }
+              }
+            }
+          }
+        }
+      }
 decodedString = decodedString.join('');
 return(decodedString);
 }
