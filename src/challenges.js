@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(a, b) {
+  let bool = false;
   if (a === true && b === true) {
-    return true;
-  } else {
-    return false;
-  }
+    bool = true;
+  } 
+  return bool;
 }
 
 // Desafio 2
@@ -29,22 +29,22 @@ function concatName(vetor) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = 3 * wins + ties;
+  let points = 3*wins+ties;
   return points;  
 }
 
 // Desafio 6
 function highestCount(numeros) {
   let maior = -3;
-  for (i of numeros){
+  for (let i of numeros) {
     if (i >= maior){
       maior = i;
     }
   }
   let cont = 0;
-  for (j of numeros){
+  for (let j of numeros) {
     if (j === maior){
-      cont++;
+      cont+=1;
     }
   }
   return cont;
@@ -66,12 +66,12 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let vetor = [];
-  for (i of array){
+  for (let i of array){
     if (i%3 === 0 && i%5 === 0){
       vetor.push('fizzBuzz');
-    } else if (i%3 === 0 && i%5 !== 0){
+    } else if (i % 3 === 0 && i % 5 !== 0){
       vetor.push('fizz');
-    } else if (i%3 !== 0 && i%5 === 0){
+    } else if (i % 3 !== 0 && i % 5 === 0){
       vetor.push('buzz');
     } else {
       vetor.push('bug!');
