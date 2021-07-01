@@ -34,16 +34,33 @@ function highestCount(numbers) {
   let count = 0;
 
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] === highestNumber) [
+    if (numbers[index] === highestNumber) {
       count += 1
-    ]
+    }
   }
   return count;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1 = cat1 - (mouse);
+  let distCat2 = cat2 - (mouse);
+  let resultado = ''
+
+  if (mouse > cat1) {
+    distCat1 = mouse - (cat1);
+  }
+  if (mouse > cat2) {
+    distCat2 = mouse - (cat2);
+  }
+  if (distCat1 < distCat2) {
+    resultado = 'cat1';
+  }else if (distCat2 < distCat1) {
+    resultado = 'cat2';
+  }else {
+    resultado = 'os gatos trombam e o rato foge';
+  }
+  return resultado;
 }
 
 // Desafio 8
