@@ -25,25 +25,25 @@ function generatePhoneNumber(number) {
   // Criado array para armazenar as contagens de cada elemento (forEach)
   let counter = []; 
   // Foi criada uma função para percorrer o array number e verificar se algum número se repetia 3x ou + - armazenando na variável counter
-  number.forEach(myFunction);
   function myFunction(num) {
     counter[num] = (counter[num] || 0) + 1;
   }
+  number.forEach(myFunction);
   if (number.length !== 11) {
-    return ("Array com tamanho incorreto.");
+    return ('Array com tamanho incorreto.');
   }
   for (let index = 0; index < number.length; index += 1) {
-    if (number[index] < 0 || number[index] > 9){
-      return ("não é possível gerar um número de telefone com esses valores");
+    if (number[index] < 0 || number[index] > 9) {
+      return ('não é possível gerar um número de telefone com esses valores');
     }
   }
   for (let index = 0; index < counter.length; index += 1) {
     if (counter[index] >= 3) {
-      return ("não é possível gerar um número de telefone com esses valores");
+      return ('não é possível gerar um número de telefone com esses valores');
     }
   } return (`(${number[0]}${number[1]}) ${number[2]}${number[3]}${number[4]}${number[5]}${number[6]}-${number[7]}${number[8]}${number[9]}${number[10]}`);
 }
-  
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
