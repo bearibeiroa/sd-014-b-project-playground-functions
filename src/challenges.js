@@ -34,6 +34,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(valores) {
+
+
   // Função para o highestNumber copiada da documentação
 let highestNumber = valores.reduce(function(a, b) {
   return Math.max(a, b);
@@ -96,45 +98,29 @@ function fizzBuzz(fizzOuBuzz) {
 
 // Desafio 9
 function encode(codifique) {
-let codArr = '';
 
-  for (let indexCod = 0; indexCod < codifique.length; indexCod += 1) {
-    if (codifique[indexCod] != 'a' && codifique[indexCod] != 'e' && codifique[indexCod] != 'i' && codifique[indexCod] != 'o' && codifique[indexCod] != 'u') {
-      codArr.push(codifique[indexCod]);
-    } else if (codifique[indexCod] == 'a') {
-      codArr.push('1');
-    } else if (codifique[indexCod] == 'e') {
-      codArr.push('2');
-  } else if (codifique[indexCod] == 'i') {
-    codArr.push('3');
-  } else if (codifique[indexCod] == 'o') {
-    codArr.push('4');
-  } else { 
-    codArr.push('5');
-  }
- }
- return codArr;
+// recurso Replace encontrado no site https://blog.betrybe.com/javascript/javascript-replace/
+//nomeDaString('valor a ser substituído', 'novo valor')
+//inclusão de / antes e depois do valor a ser substituído para incluir a especificação global g, para substituir todos valores requeridos e a tag i, para ignorar o case sensitive.
+
+let mensagemCodA = codifique.replace(/a/gi, '1');
+let mensagemCodE = mensagemCodA.replace(/e/gi, '2');
+let mensagemCodI = mensagemCodE.replace(/i/gi, '3');
+let mensagemCodO = mensagemCodI.replace(/o/gi, '4');
+let mensagemCodU = mensagemCodO.replace(/u/gi, '5');
+  
+  return mensagemCodU;
 }
-
+  
 function decode(decodifique) {
-  let decodArr;
+  
+  let mensagemDecA = decodifique.replace(/1/gi, 'a');
+  let mensagemDecE = mensagemDecA.replace(/2/gi, 'e');
+  let mensagemDecI = mensagemDecE.replace(/3/gi, 'i');
+  let mensagemDecO = mensagemDecI.replace(/4/gi, 'o');
+  let mensagemDecU = mensagemDecO.replace(/5/gi, 'u');
 
-  for (let indexdecod = 0; indexdecod < decodifique.length; indexdecod += 1) {
-    if (decodifique[indexdecod] == "a") {
-      decodArr[indexdecod] = "1";
-    } else if (decodifique[indexdecod] == "e") {
-      decodArr[indexdecod] = "2";
-  } else if (decodifique[indexdecod] === "i") {
-    decodArr[indexdecod] = "3";
-  } else if (decodifique[indexdecod] === "o") {
-    decodArr[indexdecod] = "4";
-  } else if (decodifique[indexdecod] === "u") {
-    decodArr[indexdecod] = "5";
-  } else {
-  }
-}
-let mensagemDecodificada = codArr.toString();
-return mensagemDecodificada;
+  return mensagemDecU;
 }
 
 module.exports = {
