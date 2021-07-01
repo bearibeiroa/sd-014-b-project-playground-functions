@@ -164,23 +164,6 @@ function decode(message) {
   return decodedMessage;
 }
 
-//Desafio 10 --
-function techList() {
-  let techsToLearn = [];
-  tech.sort();
-
-  if (tech.length === 0) {
-    return 'Vazio!';
-  } else {
-    for (let index of tech) {
-      techsToLearn.push({
-        tech: index,
-        name: name,
-      });
-    }
-  }
-  return techsToLearn;
-}
 
 
 module.exports = {
