@@ -63,17 +63,17 @@ function triangleCheck(lineA, lineB, lineC) {
   let sumAB = lineA + lineB
   let sumAC = lineA + lineC
   let sumBC = lineB + lineC
-  let difAB = Math.abs(lineA + lineB)
-  let difAC = Math.abs(lineA + lineC)
-  let difBC = Math.abs(lineB + lineC)
+  let difAB = Math.abs(lineA - lineB)
+  let difAC = Math.abs(lineA - lineC)
+  let difBC = Math.abs(lineB - lineC)
 
-  if ( lineC > sumAB && lineC > difAB) {
+  if ( lineC > sumAB || lineC < difAB) {
     return false
   }
-  if ( lineB > sumAC && lineB > difAC) {
+  if ( lineB > sumAC || lineB < difAC) {
     return false
   }
-  if ( lineA > sumBC && lineA > difBC) {
+  if (lineA > sumBC || lineA < difBC) {
     return false
   }
 return true
@@ -82,8 +82,17 @@ return true
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebida) {
+  let numBebida = bebida.replace(/\D/gim, '')
+  let soma = 0
+  for (let i = 0; i < numBebida.length; i +=1)
+
+  if (numBebida === 1){
+  return numBebida + " copo de água"
+  } else {
+    return numBebida + " copos de água"
+  }
+
 }
 
 module.exports = {
