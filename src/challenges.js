@@ -39,12 +39,7 @@ function highestCount(numeros) {
   let contRepetido = 0;
   let contNumero = 0;
   let indexNumeroRepetido = 0;
-  let maiorNumero = 0;
-  for (let indice in numeros) {
-    if (maiorNumero < numeros[indice]) {
-      maiorNumero = numeros[indice];
-    }
-  }
+  let maiorNumero = Math.max(...numeros);
   for (let index in numeros) {
     if (maiorNumero === numeros[index]) {
       contNumero += 1;
@@ -56,7 +51,7 @@ function highestCount(numeros) {
   }
   return indexNumeroRepetido;
 }
-console.log(highestCount([2, 10, 6, 10, 10, 6, 6, 10, 10]));
+console.log(highestCount([-2, -2, -1, -1, -10, -5, -1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
