@@ -128,31 +128,31 @@ function encode(string) {
 
 function decode(string) {
   // seu código aqui
-  let newString = '';
-  for (let index = 0; index < string.length; index += 1) {
-    let valorAtual = string[index];
-    switch (valorAtual) {
-      case '1':
-        newString += 'a';
-        break;
-      case '2':
-        newString += 'e';
-        break;
-      case '3':
-        newString += 'i';
-        break;
-      case '4':
-        newString += 'o';
-        break;
-      case '5':
-        newString += 'u';
-        break;
-      default:
-        newString += valorAtual;
-        break;
-    }
+let newString = '';
+for (let index = 0; index < string.length; index += 1) {
+  let valorAtual = string[index];
+  switch (valorAtual) {
+    case '1':
+      newString += 'a';
+      break;
+    case '2':
+      newString += 'e';
+      break;
+    case '3':
+      newString += 'i';
+      break;
+    case '4':
+      newString += 'o';
+      break;
+    case '5':
+      newString += 'u';
+      break;
+    default:
+      newString += valorAtual;
+      break;
   }
-  return newString;
+}
+return newString;
 }
 
 module.exports = {
