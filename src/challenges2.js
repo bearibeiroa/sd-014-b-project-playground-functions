@@ -76,8 +76,8 @@ function triangleCheck(lineA, lineB, lineC) {
   if ( lineA > sumBC && lineA > difBC) {
     return false
   }
-
 return true
+
 }
 
 
