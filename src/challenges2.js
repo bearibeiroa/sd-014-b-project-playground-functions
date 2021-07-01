@@ -15,11 +15,32 @@ function techList(techList, name) {
 }
 
 // Desafio 11
+let phone = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]
 function generatePhoneNumber(phone) {
-  let phoneNumber =  '00000000000';
-  for (let index; index < phone.length; index += 1){
-   phoneNumber[index] = phone[index]
+  /* Retorna um erro se o tamanho do array estiver incorreto */
+  if (phone.length != 11) {
+    return "Array com tamanho incorreto."
   }
+  /* Verifica se o número é menor que 0 ou maior que 9 */
+  for (let index = 0; index < phone.length; index += 1) {
+    if (phone[index] < 0 || phone[index] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+
+  }
+  /* Verifica se algum número se repete 3 vezes */
+  for (let index = 0; index < phone.length; index += 1) {
+  let counter = 0;
+  for (let contIndex = 0; contIndex < phone.length; contIndex += 1) {
+    if (phone[index] == phone[contIndex]) {
+      counter += 1;
+      if (counter >= 3) {
+        return "não é possível gerar um número de telefone com esses valores";
+      }
+    }
+  }
+}
+  return '(' + phone[0] + phone[1] + ') ' + phone[2] + phone[3] + phone[4] + phone[5] + phone[6] + '-' + phone[7] + phone[8] + phone[9] + phone[10]
 }
 
 // Desafio 12
