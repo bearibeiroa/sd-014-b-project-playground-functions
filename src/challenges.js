@@ -19,25 +19,27 @@ function splitSentence(frase) {
   // seu código aqui
 return frase.split(" ");
 }
-console.log(splitSentence('Go trybe'));
+//console.log(splitSentence('Go trybe'));
 
 // Desafio 4
 function concatName(listnames) {
-  // seu código aqui (devo usar for?)
+  // seu código aqui
   let index = [listnames[0],listnames[listnames.length -1]];
-  console.log(listnames);
   return index;
- }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+}
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins , ties) {
-  // seu código aqui (devo usar for/of?)
-wins = (3);
-ties = (1);
+  // seu código aqui 
+  //recebe número de vitórias e empates // retorne quantidade de pontos
 let pontos = (wins + ties);
+for (index = 0; index > 1; index +=3)
+  for (index = 1; index +=1;){
 return pontos
-}
+}}
+console.log(footballPoints[3 , 1])
+
 
 // Desafio 6
 function highestCount() {
