@@ -106,7 +106,7 @@ function encode(str1ng) {
     }
 
 encodedString = encodedString.join('');
-return(encodedString);
+return (encodedString);
 }
 
 function decode(encodedString) {
@@ -123,13 +123,13 @@ function decode(encodedString) {
               if (encodedString[aux] === '5') {decodedString[aux] = 'u'}
               else { 
                 decodedString[aux] = encodedString[aux]}
-              }
-            }
           }
         }
       }
+    }
+  }
 decodedString = decodedString.join('');
-return(decodedString);
+return (decodedString);
 }
 
 module.exports = {
