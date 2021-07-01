@@ -11,7 +11,6 @@ function techList(lista, name) {
   }
   return nicolasLista;
 }
-console.log(techList([], "Nicolas"));
 
 //Desafio 11
 function generatePhoneNumber(string) {
@@ -60,14 +59,14 @@ function generatePhoneNumber(string) {
   
   return phoneNumber;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 2, 5, 3, 7, 8, 9, 0, 1]));
 
-/* // Desafio 12
+// Desafio 12
 function triangleCheck() {
   // seu código aqui
 }
 
-// Desafio 13
+/* // Desafio 13
 function hydrate() {
   // seu código aqui
 } */
