@@ -1,5 +1,6 @@
 // Desafio 1
 function compareTrue(valueOne, valueTwo) {
+  // Verifica se dois valores são verdadeiros.
   if (valueOne && valueTwo === true) {
     return true;
   }
@@ -8,27 +9,46 @@ function compareTrue(valueOne, valueTwo) {
 
 // Desafio 2
 function calcArea(base, heigth) {
+  // Calcula a area de um triangulo.
   return (base * heigth) / 2;
 }
 
 // Desafio 3
 function splitSentence(string) {
+  // Divide uma string retornando um array usando a função split()
+  // ref: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
   return string.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
+  // Concatena o ultimo item de um array com o seu primeiro item retornando numa única string.
   return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
+  // Multiplica o número de vitórias e soma com o número de empates.
   return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let higherNumber = numbers[0];
+  let count = 0;
+  // Encontra o maior número.
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > higherNumber) {
+      higherNumber = numbers[index];
+    }
+  }
+  // Conta quantas vezes o número se repete no array.
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] === higherNumber) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
