@@ -5,10 +5,8 @@ function techList(tech, name) {
     tech: '',
     name: '' };
   tech.sort();
-
-  {
-    return 'Vazio!';
-    if (tech.length === 0) {
+  if (tech.length === 0) {
+      return 'Vazio!';
     } for (key of tech) {
       listTech.push(tech = {
         tech: key,
@@ -16,7 +14,7 @@ function techList(tech, name) {
     }
     return listTech;
   }
-}
+
 // Desafio 11
 
 function generatePhoneNumber(phoneNumber) {
