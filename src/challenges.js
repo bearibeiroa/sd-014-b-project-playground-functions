@@ -65,8 +65,6 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 // eslint-disable-next-line complexity
 function fizzBuzz(vetor) {
-  // seu código aqui
-  // eslint-disable-next-line guard-for-in
   let resposta = [];
   for (let index in vetor) {
     if (vetor[index] % 3 === 0 && vetor[index] % 5 === 0) {
@@ -82,27 +80,22 @@ function fizzBuzz(vetor) {
 }
 
 // Desafio 9
+// eslint-disable-next-line complexity
 function encode(word) {
   let newphrase = '';
   for (let index of word) {
     switch (index) {
-    case ('a'):
-      newphrase += 1;
+    case ('a'): newphrase += 1;
       break;
-    case ('e'):
-      newphrase += 2;
+    case ('e'): newphrase += 2;
       break;
-    case ('i'):
-      newphrase += 3;
+    case ('i'): newphrase += 3;
       break;
-    case ('o'):
-      newphrase += 4;
+    case ('o'): newphrase += 4;
       break;
-    case ('u'):
-      newphrase += 5;
+    case ('u'): newphrase += 5;
       break;
-    default:
-      newphrase += index;
+    default: newphrase += index;
     }
   } return newphrase;
 }
