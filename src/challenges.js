@@ -20,6 +20,11 @@ function splitSentence(sentence) {
   for(let word of sentence) {
 } 
 return word
+//exemplo a seguir no 3
+//for (let vogal of stringToencode) {
+//  if (vogal === 'a') {
+ //   vogal = '1';
+  //  encodedPhrase += vogal
   // seu código aqui
 }
 
@@ -46,10 +51,23 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numberToBuzz) {
+  let BuzzArray = []
+  for (let numberOfArray of numberToBuzz) {
+   if (numberOfArray % 3 === 0 && numberOfArray % 5 === 0) {
+    BuzzArray.push("fizzBuzz");
+   } else if (numberOfArray % 3 === 0)  { 
+      numberOfArray = "fizz";
+      BuzzArray.push(numberOfArray)
+  } else if (numberOfArray % 5 === 0) {
+      numberOfArray = "buzz";
+      BuzzArray.push(numberOfArray);
+} else {
+      numberOfArray = 'bug!';
+      BuzzArray.push(numberOfArray);
+    } 
+  } return BuzzArray
 }
-
 // Desafio 9
 function encode(stringToencode) {
   let encodedPhrase = ''
@@ -75,7 +93,7 @@ function encode(stringToencode) {
 } 
   return encodedPhrase
 }
-  // seu código aqui
+ // seu código aqui
 
 function decode(stringTodecode) {
   let decodedPhrase = ''
@@ -97,10 +115,11 @@ function decode(stringTodecode) {
       decodedPhrase += vogal;
     } else{
       decodedPhrase  += vogal;
+    } return decodedPhrase
   }
 } 
-  return decodedPhrase
-}
+
+  
 
 module.exports = {
   calcArea,
@@ -113,4 +132,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
