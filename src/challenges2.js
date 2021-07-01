@@ -85,12 +85,16 @@ return true
 function hydrate(bebida) {
   let numBebida = bebida.replace(/\D/gim, '')
   let soma = 0
-  for (let i = 0; i < numBebida.length; i +=1)
-
-  if (numBebida === 1){
-  return numBebida + " copo de água"
+  for (let i = 0; i < numBebida.length; i +=1) {
+    let num = parseInt(numBebida[i])
+    if (num !== 0){
+      soma += num
+    }
+  }
+  if (soma === 1){
+  return soma + " copo de água"
   } else {
-    return numBebida + " copos de água"
+    return soma + " copos de água"
   }
 
 }
