@@ -45,8 +45,16 @@ function generatePhoneNumber(number) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+// A função Math.abs foi pesquisada no seguinte site:
+// Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+function triangleCheck(lineA, lineB, lineC) {
+  let triangleSideCheck_1 = lineA < (lineB + lineC);
+  let triangleSideCheck_2 = lineA > Math.abs(lineB - lineC);
+  if (triangleSideCheck_1 === true && triangleSideCheck_2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
