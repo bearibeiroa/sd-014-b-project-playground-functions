@@ -29,7 +29,7 @@ function techList(arrayTech, name) {
 
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
-  // seu código aqui [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]
+  // seu código aqui
   let stringNumber = '(';
   if (arrayNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -82,8 +82,25 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate( string =  "1 cachaça, 5 cervejas e 1 copo de vinho") {
   // seu código aqui
+  /**
+   * Source: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+   * Usei a function replace() para procurar os numeros na string.
+   * Source: https://www.alura.com.br/artigos/convertendo-string-para-numero-em-javascript
+   * Usei a function parseInt() para converter a string em um tipo inteiro.
+   */
+  let number = string.replace(/[^0-9]/g, "");
+  let result = 0;
+  for (let n of number) {
+    result += parseInt(n);
+  }
+  
+  if (result > 1){
+    return result + ' copos de água';
+  }
+
+  return result + ' copo de água';
 }
 
 module.exports = {
