@@ -75,7 +75,7 @@ console.log(catAndMouse(10, 40, 100));
 // Desafio 8
 function fizzBuzz(array) {
   let saida = [];
-  let elemento = ""
+  let elemento = "";
   for(let index = 0; index <array.length; index +=1){
     if((array[index] % 3 === 0) && (array[index] % 5 != 0)){
       elemento = "fizz";
@@ -86,19 +86,54 @@ function fizzBuzz(array) {
     } else {
       elemento = "bug!";
     }
-    saida.push(elemento)
+    saida.push(elemento);
   }
-  return saida
+  return saida;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newString = '';
+  for(let index of string){
+    if (index === 'a'){
+      newString += 1;
+    } else if (index === 'e'){
+      newString += 2;
+    } else if (index === 'i'){
+      newString += 3;
+    } else if (index === 'o'){
+      newString += 4;
+    } else if (index === 'u'){
+      newString += 5;
+    } else {
+      newString += index;
+    }
+  }
+  return newString;
 }
-function decode() {
-  // seu código aqui
+console.log(encode("hi there!"))
+
+function decode(reverseVogal) {
+  let newStringReverse = '';
+  for(let index of reverseVogal){
+    if (index === '1'){
+      newStringReverse += 'a';
+    } else if (index === '2'){
+      newStringReverse += 'e';
+    } else if (index === '3'){
+      newStringReverse += 'i';
+    } else if (index === '4'){
+      newStringReverse += 'o';
+    } else if (index === '5'){
+      newStringReverse += 'u';
+    } else {
+      newStringReverse += index;
+    }
+  }
+  return newStringReverse;
 }
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
