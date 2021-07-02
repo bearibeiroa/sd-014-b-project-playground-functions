@@ -1,7 +1,6 @@
 // Desafio 1
 
 function compareTrue(value1, value2) {
- 
   if (value1 === true && value2 === true) {
     return true;
   } else {
@@ -51,10 +50,10 @@ function highestCount() {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let result = '';
-  if ((Math.abs(cat1 - cat2)) < Math.abs(cat2 - mouse)) {
-    result = 'cat2';
-  } else if ((Math.abs(cat1 - cat2)) > Math.abs(cat2 - mouse)) {
+  if ((Math.abs(cat1 - mouse)) < Math.abs(cat2 - mouse)) {
     result = 'cat1';
+  } else if ((Math.abs(cat1 - mouse)) > Math.abs(cat2 - mouse)) {
+    result = 'cat2';
   } else {
     result = 'os gatos trombam e o rato foge';
   } return result;
@@ -62,29 +61,29 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numberToBuzz) {
-  let BuzzArray = []
+  let BuzzArray = [];
   for (let numberOfArray of numberToBuzz) {
-   if (numberOfArray % 3 === 0 && numberOfArray % 5 === 0) {
-    BuzzArray.push("fizzBuzz");
-   } else if (numberOfArray % 3 === 0)  { 
-      numberOfArray = "fizz";
-      BuzzArray.push(numberOfArray)
-  } else if (numberOfArray % 5 === 0) {
-      numberOfArray = "buzz";
+    if (numberOfArray % 3 === 0 && numberOfArray % 5 === 0) {
+      BuzzArray.push('fizzBuzz');
+    } else if (numberOfArray % 3 === 0) {
+      numberOfArray = 'fizz';
       BuzzArray.push(numberOfArray);
-} else {
+    } else if (numberOfArray % 5 === 0) {
+      numberOfArray = 'buzz';
+      BuzzArray.push(numberOfArray);
+    } else {
       numberOfArray = 'bug!';
       BuzzArray.push(numberOfArray);
-    } 
-  } return BuzzArray
+    }
+  } return BuzzArray;
 }
 // Desafio 9
 function encode(stringToencode) {
-  let encodedPhrase = ''
+  let encodedPhrase = '';
   for (let vogal of stringToencode) {
     if (vogal === 'a') {
       vogal = '1';
-      encodedPhrase += vogal
+      encodedPhrase += vogal;
     } else if (vogal === 'e') {
       vogal = '2';
       encodedPhrase += vogal;
@@ -97,16 +96,16 @@ function encode(stringToencode) {
     } else if (vogal === 'u') {
       vogal = '5';
       encodedPhrase += vogal;
-    } else{
-      encodedPhrase  += vogal
+    } else {
+      encodedPhrase += vogal;
     }
-} 
-  return encodedPhrase
+  }
+  return encodedPhrase;
 }
- // seu código aqui
+// seu código aqui
 
 function decode(stringTodecode) {
-  let decodedPhrase = ''
+  let decodedPhrase = '';
   for (let vogal of stringTodecode) {
     if (vogal === '1') {
       vogal = 'a';
@@ -123,11 +122,11 @@ function decode(stringTodecode) {
     } else if (vogal === '5') {
       vogal = 'u';
       decodedPhrase += vogal;
-    } else{
-      decodedPhrase  += vogal;
-    } 
-  } return decodedPhrase
-} 
+    } else {
+      decodedPhrase += vogal;
+    }
+  } return decodedPhrase;
+}
 
 module.exports = {
   calcArea,
@@ -140,4 +139,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
