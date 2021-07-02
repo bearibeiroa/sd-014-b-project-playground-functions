@@ -45,12 +45,11 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   // seu código aqui
   //Verifica maior número
+  
   let maiorNumero = 0;
   let contador = 0;
   for (let index = 0; index < numbers.length; index += 1) {
-    if (maiorNumero < numbers[index]) {
-      maiorNumero = numbers[index];
-    } else if (numbers[index] < 0) {
+    if (maiorNumero < numbers[index] || numbers[index] < 0) {
       maiorNumero = numbers[index];
     }
   }
