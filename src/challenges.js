@@ -14,9 +14,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(' ')
 }
+//referencias .split: https://www.w3schools.com/jsref/jsref_split.asp e https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
 // Desafio 4
 function concatName() {
