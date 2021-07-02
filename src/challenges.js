@@ -25,7 +25,7 @@ function splitSentence(string) {
 function concatName(array) {
   let primeiroNome = array[0];
   let ultimoNome = array[array.length - 1];
-  let concatArray = ultimoNome + ", " + primeiroNome;
+  let concatArray = ultimoNome + ', ' + primeiroNome;
   return concatArray;
 }
 
@@ -40,20 +40,20 @@ function highestCount(array) {
   let contNumero = 0;
   let contRepetido = 0;
   let indexNumeroRepetido = 0;
-    for (let i in array) {
-        let verificaNumero = array[i];
-        for (let j in array) {
-            if (verificaNumero === array[j]) {
-                contNumero += 1;
-            }
-        }
-        if (contNumero > contRepetido) {
-            contRepetido = contNumero;
-            indexNumeroRepetido = i;
-        }
-        contNumero = 0;
+  for (let i in array) {
+    let verificaNumero = array[i];
+    for (let j in array) {
+      if (verificaNumero === array[j]) {
+        contNumero += 1;
+      }
     }
-    return array[indexNumeroRepetido];
+    if (contNumero > contRepetido) {
+      contRepetido = contNumero;
+      indexNumeroRepetido = i;
+    }
+      contNumero = 0;
+  }
+  return array[indexNumeroRepetido];
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
@@ -75,9 +75,9 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let i in array) {
-    if (array[i] % 3 === 0 && array [i] % 5 === 0) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
         array[i] = "fizzBuzz";
-    } else if (array[i] % 3 !== 0 && array [i] % 5 !== 0) {
+    } else if (array[i] % 3 !== 0 && array[i] % 5 !== 0) {
         array[i] = "bug!";
     } else if (array[i] % 3 === 0) {
         array[i] = "fizz";
@@ -90,19 +90,18 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let vogais = ['a', 'e', 'i', 'o' ,'u'];
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
   let valor = ['1', '2', '3', '4', '5'];
   let letra = string.split('');
   for (let i = 0; i < letra.length; i += 1) {
-      for (let j = 0; j < vogais.length; j += 1) {
-          if (letra[i] === vogais[j]) {
-              letra[i] = valor[j];
-          }
+    for (let j = 0; j < vogais.length; j += 1) {
+      if (letra[i] === vogais[j]) {
+        letra[i] = valor[j];
       }
+    }
   }
   return letra;
 }
-
 function decode(string) {
   let vogais = ['a', 'e', 'i', 'o', 'u'];
   let valor = ['1', '2', '3', '4', '5'];
