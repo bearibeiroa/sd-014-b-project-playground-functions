@@ -17,8 +17,7 @@ function splitSentence(sentence) {
   let splitedSentence = sentence.split(' ');
   return splitedSentence;
 }
-let c = splitSentence('vamo que vamo');
-console.log(c);
+
 // Desafio 4
 function concatName() {
   // seu código aqui
