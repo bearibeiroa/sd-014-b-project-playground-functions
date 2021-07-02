@@ -115,7 +115,7 @@ function fizzBuzz(vetor) {
 function encode(value1) {
   let newValue = '';
 
-  //Percorre a string que foi dividida e agora é um array
+  //Percorre a string passada por parametro
   for(let index = 0; index < value1.length; index += 1) {
 
     switch(value1[index].toLowerCase()){
@@ -148,37 +148,35 @@ function encode(value1) {
   return newValue;
 }
 
-console.log(encode('Abc'));
-
-
 
 function decode(value) {
-  /*let splitValue = value.split(''); */
+  let newValue = '';
 
-  for(let indice = 0; indice < splitValue.length; indice += 1) {
-    for(let key of split) {
+  for(let key of value) {
+    switch(key) {
+      case '1':
+        newValue += 'a';
+        break;
+      case '2':
+        newValue += 'e';
+        break;
+      case '3':
+        newValue += 'i';
+        break;
+      case '4':
+        newValue += 'o';
+        break;
+      case '5':
+        newValue += 'u';
+        break;
+      default:
+        newValue += key;
+        break;
+    };
+  };
 
-    }
-
-    /* if(splitValue[indice] === '1' && splitValue[indice] === splitValue[indice].toLowerCase()) {
-      splitValue[indice] = 'a';
-    } else if(splitValue[indice] === '2' && splitValue[indice] === splitValue[indice].toLowerCase()) {
-      splitValue[indice] = 'e';
-    } else if(splitValue[indice] === '3' && splitValue[indice] === splitValue[indice].toLowerCase()) {
-      splitValue[indice] = 'i';
-    } else if(splitValue[indice] === '4' && splitValue[indice] === splitValue[indice].toLowerCase()) {
-      splitValue[indice] = 'o';
-    } else if(splitValue[indice] === '5' && splitValue[indice] === splitValue[indice].toLowerCase()) {
-      splitValue[indice] = 'u';
-    }; */
-
-  }
-
-  let joinValue = splitValue.join('');
-  return joinValue;
-}
-
-
+  return newValue;
+};
 
 module.exports = {
   calcArea,
