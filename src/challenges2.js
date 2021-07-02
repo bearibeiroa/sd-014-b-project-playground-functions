@@ -1,7 +1,19 @@
 // Desafio 10
-function techList(tec, name) {
-  
+function techList(tech, name) {
+  let list = [];
+  if (tech.length === 0) {
+    return 'Vazio!';
+  }
+  for (let index of tech.sort()) {
+    list.push (
+    {
+      tech: index,
+      name: name,
+    });
+    }
+    return list;
 }
+// Resolvido em sala de estudo mais essa documentação (http://leandrolisura.com.br/verificando-empty-em-javascript/)
 
 // Desafio 11
 function generatePhoneNumber() {

@@ -98,7 +98,6 @@ function decode(numeros) {
 }
 // Para substituir as letras e numeros (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 
-
 module.exports = {
   calcArea,
   catAndMouse,
