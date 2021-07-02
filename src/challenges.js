@@ -57,9 +57,9 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let resposta = [];
-  for (index = 0; index < arrayNumbers.length; index += 1) {
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
-      resposta.push ('fizzBuzz');
+      resposta.push('fizzBuzz');
     } else if (arrayNumbers[index] % 3 === 0) {
       resposta.push('fizz');
     } else if (arrayNumbers[index] % 5 === 0) {
@@ -72,11 +72,21 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(letras) {
+  letras = letras.replace(/a/g, '1');
+  letras = letras.replace(/e/g, '2');
+  letras = letras.replace(/i/g, '3');
+  letras = letras.replace(/o/g, '4');
+  letras = letras.replace(/u/g, '5');
+  return letras;
 }
-function decode() {
-  // seu código aqui
+function decode(numeros) {
+  numeros = numeros.replace(/1/g, 'a');
+  numeros = numeros.replace(/2/g, 'e');
+  numeros = numeros.replace(/3/g, 'i');
+  numeros = numeros.replace(/4/g, 'o');
+  numeros = numeros.replace(/5/g, 'u');
+  return numeros;
 }
 
 module.exports = {
