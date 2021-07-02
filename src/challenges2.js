@@ -83,7 +83,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let subC = Math.abs(lineB - lineC);
   if (lineA > sumC && lineA > subC) {
     return false;
-  } else if(lineB > sumB && lineB > subB) {
+  } else if (lineB > sumB && lineB > subB) {
     return false;
   } else if (lineC > sumA && lineC > subA) {
     return false;
@@ -92,8 +92,27 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(text) {
   // seu código aqui
+  /*Função match(/\d+/g) é utilizada para
+  pegar todos os números na string.
+  Referências: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994 */
+  let numbers = text.match(/\d+/g);
+  let messageText1 = " copo de água";
+  let messageText2 = " copos de água";
+  let result = 0;
+  for (let value of numbers) {
+    /*Função parseInt() é utilizada para
+    transformar os números da função match(/\d+/g) que ainda são string,
+    em números inteiros. */
+    let convertNumber = parseInt(value);
+    result += convertNumber;
+  }
+  if (result < 2) {
+    return result + messageText1;
+  } else {
+    return result + messageText2;
+  }
 }
 
 module.exports = {
