@@ -59,27 +59,24 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let result;
-
   if (cat1 > mouse) {
-    cat1 = cat1 - mouse;
+    cat1 -= mouse;
   } else {
     cat1 = mouse - cat1;
   }
 
   if (cat2 > mouse) {
-    cat2 = cat2 - mouse;
+    cat2 -= mouse;
   } else {
     cat2 = mouse - cat2;
   }
   if (cat1 > cat2) {
-    result = 'cat2';
+    return 'cat2';
   } else if (cat1 < cat2) {
-    result = 'cat1';
+    return 'cat1';
   } else {
-    result = 'os gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   }
-  return result;
 }
 
 // Desafio 8
@@ -103,7 +100,7 @@ function fizzBuzz(arrayNumber) {
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  for (let vogal of string){
+  for (let vogal of string) {
     switch (vogal) {
       case 'a':
         string = string.replace('a', '1');
@@ -120,7 +117,9 @@ function encode(string) {
       case 'u':
         string = string.replace('u', '5');
         break;
-      }
+      default:
+        break;
+    }
   }
 
   return string;
@@ -128,9 +127,9 @@ function encode(string) {
 
 function decode(string) {
   // seu código aqui
-  for (let number of string){
+  for (let number of string) {
     switch (number) {
-      case '1':
+     case '1': 
         string = string.replace('1', 'a');
         break;
       case '2':
@@ -145,7 +144,7 @@ function decode(string) {
       case '5':
         string = string.replace('5', 'u');
         break;
-      }
+    }
   }
 
   return string;
