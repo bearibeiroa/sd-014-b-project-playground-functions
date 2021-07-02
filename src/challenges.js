@@ -42,12 +42,12 @@ function highestCount(numeros) {
   }
   let contador = 0
   for (let i = 0; i < numeros.length; i += 1) {
-    //pega o numero da array
+    // pega o numero da array
     let numeroAtual = numeros[i];
     // comparar todos os numeros da array com o maior número, pra ver quantos maior números tem
     // se o numero for maior
     if (numeroAtual === maiorNumero) {
-      //Adicionar 1 no contador cada vez que o numero maior aparece
+      // Adicionar 1 no contador cada vez que o numero maior aparece
       contador += 1
     }
   }
@@ -87,16 +87,31 @@ function fizzBuzz(arrayDeNumeros) {
     }
   }
   return recebePum;
-
 }
 
 // Desafio 9
-function encode() {
+function encode(stringRecebida) {
+  // trocar todas as vogais minusculas por numeros
+  // criar variavel pra modificar a frase 
+  let stringModificada = '';
+  // criar array com letras
+  let listaVogais = ['a','e','i','o','u']; 
+  // percorrer letras da string
+  for (let letraAtual of stringRecebida) {
+    // comparar letra atual com vogais
+    if (listaVogais.indexOf(letraAtual) === -1) {
+
+
+      // se for igual a 'a' guarda 1 na string modificada
+      
+    } // senão ele continua...
+      }
+  // retornar frase modificada
+}
+function decode(stringEcode) {
   // seu código aqui
 }
-function decode() {
-  // seu código aqui
-}
+
 
 module.exports = {
   calcArea,
