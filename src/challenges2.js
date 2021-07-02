@@ -54,14 +54,6 @@ function checkNumber(array, number) {
   return number < 0 || number > 9;
 }
 
-function arrayToNumber(numbers) {
-  let phoneNumbers = [];
-  for (let index = 0; index < numbers.length; index += 1) {
-    phoneNumbers[index] = +numbers[index];
-  }
-  return phoneNumbers;
-}
-
 function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -71,8 +63,7 @@ function generatePhoneNumber(numbers) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  let phoneNum = arrayToNumber(numbers);
-  let phone = phoneNum.join('');
+  let phone = numbers.join('');
   let formatPhone = phone.replace(/(\d{2})?(\d{5})?(\d{4})/g, '($1) $2-$3');
   return formatPhone;
 }
