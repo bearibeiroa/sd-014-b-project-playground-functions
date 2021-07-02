@@ -51,23 +51,35 @@ function triangleCheck(lineA, lineB, lineC) {
   if(lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) && lineC < lineA + lineB && lineC > Math.abs(lineA - lineC)){
     return true;
   }
-  // if(lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)){
-  //   return true;
-  // }
-  // if(lineC < lineA + lineB && lineC > Math.abs(lineA - lineC)){
-  //   return true;
-  // }
   else{
     return false;
   }
-
 }
 console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+
+
+function hydrate(drink) {
+// https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript
+// dica do .parseInt dada no slack na duvida daNatalia Martins - Turma 14 - Tribo B 
+  let numbers = [];
+  let sum = 0;
+  numbers = drink.replace(/\D/gim, '');
+  for(let index = 0; index < numbers.length; index +=1){
+    sum += parseInt(numbers[index]);
+  }
+if(sum == 1){
+  return sum + " copo de água";
 }
+else if(sum > 1){
+  return sum + " copos de água";
+}
+}
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
+
+
+
 
 module.exports = {
   generatePhoneNumber,
