@@ -1,3 +1,5 @@
+const { techList } = require("./challenges2");
+
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
@@ -46,9 +48,20 @@ function highestCount(listNumber) {
 // referencia Math.max.apply: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
+  let cat1Dist= Math.abs(cat1 - mouse); 
+  let cat2Dist= Math.abs(cat2 - mouse);
+
+  if (cat2Dist > cat1Dist) {
+    return 'cat1';
+  } else if (cat2Dist < cat1Dist) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
+//Referência Math.abs : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 8
 function fizzBuzz() {
