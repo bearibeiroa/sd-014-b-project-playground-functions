@@ -64,8 +64,19 @@ function catAndMouse(mouse, cat1, cat2) {
 //Referência Math.abs : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(list) {
+
+  for (let index in list) {
+    if (list[index] % 3 === 0 && list[index] % 5 === 0) {
+    return "fizzBuzz";
+  } else if (list[index] % 3 === 0) {
+    return "fizz";
+  } else if (list[index] % 5 === 0) {
+    return "buzz";
+  } else if (list[index] % 3 !== 0 && list[index] % 5 !== 0) {
+    return "bug!";
+  }
+  return list;
 }
 
 // Desafio 9
