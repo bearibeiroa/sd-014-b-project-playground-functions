@@ -58,7 +58,6 @@ function generatePhoneNumber(numeros) {
   let newNumber = `(${part1}) ${part2}-${part3}`;
   return (newNumber);
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 90, 0, 1]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
