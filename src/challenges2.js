@@ -1,6 +1,20 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  // aplicar for in
+  let techList = [];
+  for (let index in tech.sort()) {
+    let objetos = {
+      tech: tech[index],
+      name: name,
+    }
+    techList.push(objetos);
+  }
+  if (techList.length === 0) {
+    return "Vazio!";
+  }
+    return techList;
+  //.push() para acrescentar os novos objetos na lista.
+  //.sort() para ordenar os elementos da lista.
 }
 
 // Desafio 11
