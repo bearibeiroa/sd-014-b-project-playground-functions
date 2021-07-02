@@ -90,11 +90,25 @@ function fizzBuzz(numbersArray) {
 }
 
 // Desafio 9
-function encode() {
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace#
+// Usei como referência o String.prototype.replace() da documentação.
+function encode(stringText) {
   // seu código aqui
+  stringText = stringText.replace(/a/gi, '1');
+  stringText = stringText.replace(/e/gi, '2');
+  stringText = stringText.replace(/i/gi, '3');
+  stringText = stringText.replace(/o/gi, '4');
+  stringText = stringText.replace(/u/gi, '5');
+  return stringText;
 }
-function decode() {
+function decode(stringText) {
   // seu código aqui
+  stringText = stringText.replace(/1/gi, 'a');
+  stringText = stringText.replace(/2/gi, 'e');
+  stringText = stringText.replace(/3/gi, 'i');
+  stringText = stringText.replace(/4/gi, 'o');
+  stringText = stringText.replace(/5/gi, 'u');
+  return stringText;
 }
 
 module.exports = {
