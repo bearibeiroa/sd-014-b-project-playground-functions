@@ -52,8 +52,19 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  // Calcula a distancia entre os gatos e o rato.
+  // Math.abs() retorna o valor absoluto de um número.
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
+  let string = 'os gatos trombam e o rato foge';
+  // Compara a distancia entre os gatos e o rato.
+  if (distanceCat1 < distanceCat2) {
+    string = 'cat1';
+  } else if (distanceCat2 < distanceCat1) {
+    string = 'cat2';
+  }
+  return string;
 }
 
 // Desafio 8
