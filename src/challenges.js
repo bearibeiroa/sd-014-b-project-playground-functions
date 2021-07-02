@@ -5,9 +5,13 @@ function compareTrue(value1, value2) {
 console.log(compareTrue(false,true))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(triangleBase, triangleHeigth) {
+  let base = triangleBase;
+  let heigth = triangleHeigth;
+  let triangleArea = base * heigth / 2
+  return triangleArea;
 }
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
