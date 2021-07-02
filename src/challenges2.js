@@ -40,7 +40,7 @@ function generatePhoneNumber(numbers) {
   }
 
   numbers.unshift('('); //
-  numbers.splice(3, 0, ') '); // coded by Victor Veloso, 14 B
+  numbers.splice(3, 0, ') '); // coded with Victor Veloso, 14 B
   numbers.splice(9, 0, '-'); // with: https://developer.mozilla.org/pt-BR/docs/Web/ JavaScript/Reference/Global_Objects/Array/splice
 
   for (let value of numbers) {
@@ -54,9 +54,18 @@ function triangleCheck() {
   // seu código aqui
 }
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+// Desafio 13 - 
+function hydrate(drinks) {
+  let cupsOfWater = drinks.match(/\d+/g); //fonte: https://www.youtube.com/watch?v=pfkkdzeyx6U
+  let sugestion = 0;
+
+  for (let value of cupsOfWater) {
+    sugestion += parseInt(value);
+  }
+  if (sugestion === 1) {
+    return sugestion + ' copo de água';
+  }
+  return sugestion + ' copos de água';
 }
 
 module.exports = {
