@@ -14,6 +14,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentece) {
+
   if (sentece === 'go Trybe') {
     return ['go', 'Trybe'];
   }
@@ -40,7 +41,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let countNumber = 0
+  let countNumber = 0;
   let hightnumber = numbers[0];
   for (let index = 1; index < numbers.length; index += 1) {
     if (numbers[index] > hightnumber) {
@@ -58,7 +59,17 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distance = Math.abs()
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs(cat2 - mouse);
+  if (distanceCat2 <  distanceCat1) {
+    return "cat2";
+  }
+  else if (distanceCat1 < distanceCat2) {
+    return "cat1";
+  }
+  else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
@@ -116,33 +127,33 @@ function encode(encodeString) {
   return stringWithNumber;
 }
 function decode(decodeString) {
-  let string = "";
+  let string1 = "";
   for (let newString1 of decodeString) {
     if (newString1 === "1") {
       newString1 = "a";
-      string += newString1;
+      string1 += newString1;
     }
     else if (newString1 === "2") {
       newString1 = "e";
-      string += newString1;
+      string1 += newString1;
     }
     else if (newString1 === "3") {
       newString1 = "i";
-      string += newString1;
+      string1 += newString1;
     }
     else if (newString1 === "4") {
       newString1 = "o";
-      string += newString1;
+      string1 += newString1;
     }
     else if (newString1 === "5") {
       newString1 = "u";
-      string += newString1;
+      string1 += newString1;
     }
     else {
-      string += newString1;
+      string1 += newString1;
     }
   }
-  return string;
+  return string1;
 }
 
 module.exports = {
