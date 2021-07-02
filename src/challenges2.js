@@ -47,7 +47,7 @@ function phoneNumber(phone) {
   }
   return num;
 }
-function conterNumbers(phone) {
+function counterNumbers(phone) {
   for (let index = 0; index < 9; index += 1) {
     let contador = 0;
     for (let aux = 0; aux < phone.length; aux += 1) {
@@ -68,8 +68,8 @@ function generatePhoneNumber(phone) {
   if (biggerAndSmaller(phone) !== undefined) {
     return biggerAndSmaller(phone);
   }
-  if (conterNumbers(phone) !== undefined) {
-    return conterNumbers(phone);
+  if (counterNumbers(phone) !== undefined) {
+    return counterNumbers(phone);
   }
   if (phoneNumber(phone) !== undefined) {
     return phoneNumber(phone);
