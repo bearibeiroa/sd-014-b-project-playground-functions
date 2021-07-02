@@ -15,7 +15,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' ')
+  return string.split(' ');
 }
 //referencias .split: https://www.w3schools.com/jsref/jsref_split.asp e https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
@@ -31,9 +31,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(listNumber) {
+
+  let number = Math.max(listNumber);
+  let contador = 0;
+
+  for (let index = 0; index < listNumber.length; index += 1) {
+      if (number === listNumber[index]) {
+        contador += 1;
+    }
+  }
+  return contador;
 }
+// referencia Math.max: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
 // Desafio 7
 function catAndMouse() {
