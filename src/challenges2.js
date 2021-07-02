@@ -57,10 +57,28 @@ function triangleCheck(lineA, lineB, lineC) {
 
 }
 
-// Desafio 13
-function hydrate() {
+// Desafio 13 - ATENCAO, REUTILIZEI PARTE DO CODIGO DO VIDEO: https://www.youtube.com/watch?v=pfkkdzeyx6U // APRENDI SOBRE O USO DE EXPRESSOES REGULARES!
+function hydrate(drinks) {
   // seu código aqui
+  let reg = /\d+/g;
+  let sumWaterCups = 0;
+
+  let result = drinks.match(reg);
+
+  for (let i = 0 ; i < result.length ; i += 1) {
+      result[i] = parseInt([result[i]]);
+      sumWaterCups += result[i];
+  }
+
+  if (sumWaterCups === 1) {
+    return sumWaterCups+' copo de água'
+  } else {
+  let str = sumWaterCups+' copos de água'
+  return str;
+  }
 }
+
+
 
 module.exports = {
   generatePhoneNumber,
