@@ -49,7 +49,7 @@ function highestCount(vetor) {
   //Verifica qual é o maior número
   let maiorNumero = vetor[0];
 
-  for(let count = 0; count < vetor.length; count += 1) {
+  for (let count = 0; count < vetor.length; count += 1) {
     let guardarNumero = vetor[count];
     
     if(guardarNumero > maiorNumero) {
@@ -71,8 +71,6 @@ function highestCount(vetor) {
   //Retorna a quantidade de vezes que o maior numero aparece
   return countNumber;
 }
-
-console.log(highestCount([-2, -2, -1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -115,40 +113,54 @@ function fizzBuzz(vetor) {
 
 // Desafio 9
 function encode(value1) {
-  //Divide a string em array
-  let splitValue = value1.split('');
+  let newValue = '';
 
   //Percorre a string que foi dividida e agora é um array
-  for(let index = 0; index < splitValue.length; index += 1) {
+  for(let index = 0; index < value1.length; index += 1) {
 
-    //Verifica se o item do array é uma vogal e retorna um numero de 1 a 5
-    if(splitValue[index] === 'a' && splitValue[index] === splitValue[index].toLowerCase()) {
-      splitValue[index] = 1;
-    } else if(splitValue[index] === 'e' && splitValue[index] === splitValue[index].toLowerCase()) {
-      splitValue[index] = 2;
-    } else if(splitValue[index] === 'i' && splitValue[index] === splitValue[index].toLowerCase()) {
-      splitValue[index] = 3;
-    } else if(splitValue[index] === 'o' && splitValue[index] === splitValue[index].toLowerCase()) {
-      splitValue[index] = 4;
-    } else if(splitValue[index] === 'u' && splitValue[index] === splitValue[index].toLowerCase()) {
-      splitValue[index] = 5;
+    switch(value1[index].toLowerCase()){
+      case 'a': 
+        newValue += '1';
+        break;
+      case 'e':
+        newValue += '2';
+        break;
+      case 'i':
+        newValue += '3';
+        break;
+      case 'o':
+        newValue += '4';
+        break;
+      case 'u':
+        newValue += '5';
+        break;
+
+      default:
+        newValue += value1[index];
+        break;
     };
 
-  };
+  }
 
   //Faz a junção de todos os itens do array 
-  let value1Join = splitValue.join(''); 
+  //let value1Join = splitValue.join(''); 
 
-  return value1Join;
+  return newValue;
 }
+
+console.log(encode('Abc'));
 
 
 
 function decode(value) {
-  let splitValue = value.split('');
+  /*let splitValue = value.split(''); */
 
   for(let indice = 0; indice < splitValue.length; indice += 1) {
-    if(splitValue[indice] === '1' && splitValue[indice] === splitValue[indice].toLowerCase()) {
+    for(let key of split) {
+
+    }
+
+    /* if(splitValue[indice] === '1' && splitValue[indice] === splitValue[indice].toLowerCase()) {
       splitValue[indice] = 'a';
     } else if(splitValue[indice] === '2' && splitValue[indice] === splitValue[indice].toLowerCase()) {
       splitValue[indice] = 'e';
@@ -158,13 +170,15 @@ function decode(value) {
       splitValue[indice] = 'o';
     } else if(splitValue[indice] === '5' && splitValue[indice] === splitValue[indice].toLowerCase()) {
       splitValue[indice] = 'u';
-    };
+    }; */
 
   }
 
   let joinValue = splitValue.join('');
   return joinValue;
 }
+
+
 
 module.exports = {
   calcArea,

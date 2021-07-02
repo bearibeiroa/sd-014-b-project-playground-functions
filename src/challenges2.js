@@ -37,7 +37,6 @@ function techList(techLearn, name) {
 function generatePhoneNumber(vetorNumberPhone) {
   let numberPhone = [];
   let countNumberAppers = 0;
-  let numAppers = 0;
   //Verifica se o array tem exatamente 11 digitos
   if(vetorNumberPhone.length != 11) {
     return 'Array com tamanho incorreto.';
@@ -49,9 +48,8 @@ function generatePhoneNumber(vetorNumberPhone) {
       //Verifica quantas vezes aparece os números
       countNumberAppers = 0;
       for(let indice = 0; indice < vetorNumberPhone.length; indice += 1) {
-        if(vetorNumberPhone[indice] === vetorNumberPhone[index]) {
+        if (vetorNumberPhone[indice] === vetorNumberPhone[index]) {
           countNumberAppers += 1;
-          numAppers = vetorNumberPhone[indice];
         };
       }
 
@@ -78,8 +76,6 @@ function generatePhoneNumber(vetorNumberPhone) {
 
   return numberPhone;
 }
-
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
