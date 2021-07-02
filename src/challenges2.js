@@ -55,11 +55,22 @@ console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 
 // Desafio 12
-function triangleCheck() {
-  // arrey em ordem alfabetica
-  // preencher o array com objeto.
-  //um fi para, SE VAZIO, retronar "VAZIO!"
+function triangleCheck(lineA, lineB, lineC) {
+
+  if((lineA > (lineB + lineC)) || (lineB > (lineA + lineC)) || (lineC > (lineA + lineB))){
+    return false;
+  }
+  if((lineA < (lineB - lineC)) || (lineB < (lineA - lineC)) || (lineC < (lineA - lineB))){
+    return false;
+  }else{
+    return true;
+  }
+
+  // A medida d um lado deve ser menor que a soma dos outros dois.
+  // 
+  //
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
