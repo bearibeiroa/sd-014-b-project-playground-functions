@@ -52,7 +52,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(drinks) {
-  let arrayOfStrings = drinks.split(" ");
+  let arrayOfStrings = drinks.split(' ');
   // Referência para a linha acima: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
   let drinksCounter = 0;
   for (let index = 0; index < arrayOfStrings.length; index += 1) {
@@ -63,9 +63,9 @@ function hydrate(drinks) {
     }
   }
   if (drinksCounter === 1) {
-    return '1 copo de água'
+    return '1 copo de água';
   } else {
-    let cupsOfWater = drinksCounter + ' copos de água';
+    let cupsOfWater = drinksCounter.concat(' copos de água');
     return cupsOfWater;
   }
 }
