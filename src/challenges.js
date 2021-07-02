@@ -77,13 +77,13 @@ function fizzBuzz(numbersArray) {
   // seu código aqui
   for (let index = 0; index < numbersArray.length; index += 1) {
     if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 === 0) {
-      numbersArray[index] = "fizzBuzz";
+      numbersArray[index] = 'fizzBuzz';
     } else if (numbersArray[index] % 3 === 0) {
-      numbersArray[index] = "fizz";
+      numbersArray[index] = 'fizz';
     } else if (numbersArray[index] % 5 === 0) {
-      numbersArray[index] = "buzz";
+      numbersArray[index] = 'buzz';
     } else {
-      numbersArray[index] = "bug!";
+      numbersArray[index] = 'bug!';
     }
   }
   return numbersArray;
