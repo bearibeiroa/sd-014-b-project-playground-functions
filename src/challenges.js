@@ -100,8 +100,9 @@ function encode(string) {
       }
     }
   }
-  return letra;
+  return letra.join('');
 }
+
 function decode(string) {
   let vogais = ['a', 'e', 'i', 'o', 'u'];
   let valor = ['1', '2', '3', '4', '5'];
@@ -113,7 +114,7 @@ function decode(string) {
       }
     }
   }
-  return letra;
+  return letra.join('');
 }
 
 module.exports = {
