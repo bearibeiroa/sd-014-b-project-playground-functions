@@ -11,13 +11,14 @@ function compareTrue(item1, item2) {
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-let x = calcArea(10, 50);
-console.log(x);
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
 
+// Desafio 3
+function splitSentence(sentence) {
+  let splitedSentence = sentence.split(' ');
+  return splitedSentence;
+}
+let c = splitSentence('vamo que vamo');
+console.log(c);
 // Desafio 4
 function concatName() {
   // seu código aqui
