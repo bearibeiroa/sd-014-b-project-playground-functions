@@ -1,6 +1,5 @@
 // Desafio 1
 function compareTrue(a, b) {
-  console.log('oi');
   return a && b;
 }
 // Desafio 2
@@ -65,8 +64,19 @@ function highestCount(arrayNumeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  const distanciaMouseParaCat1 = Math.abs(mouse - cat1);
+  const distanciaMouseParaCat2 = Math.abs(mouse - cat2);
+
+  if (distanciaMouseParaCat1 < distanciaMouseParaCat2) {
+    return 'cat1';
+  }
+
+  if (distanciaMouseParaCat2 < distanciaMouseParaCat1) {
+    return 'cat2';
+  }
+
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
