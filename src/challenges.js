@@ -18,6 +18,10 @@ function calcArea(base, altura) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
+  /**
+   * Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+   * Utilizei a function split() passando o parâmetro ' ' para separa a string e a própria split() separa em array. 
+   */
   let arrayString = string.split(' ');
 
   return arrayString;
@@ -27,7 +31,7 @@ function splitSentence(string) {
 function concatName(arrayString) {
   // seu código aqui
   let index = arrayString.length - 1;
-  let resultString = `${arrayString[index]}, ${arrayString[0]}`;
+  let resultString = arrayString[index] +', '+arrayString[0];
 
   return resultString;
 }
@@ -43,7 +47,11 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  // seu código aqui [9, 1, 2, 3, 9, 5, 7]
+  // seu código aqui
+  /**
+   * Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+   * A função Math.max() retorna o maior de um ou mais números.
+   */
   let maiorNumero = Math.max(...numbers);
   let cont = 0;
 
