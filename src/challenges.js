@@ -46,7 +46,7 @@ function highestCount(numbers) {
   // seu código aqui
   //Verifica maior número
   let maiorNumero = 0;
-
+  let contador = 0;
   for (let index = 0; index < numbers.length; index += 1) {
     if (maiorNumero < numbers[index]) {
       maiorNumero = numbers[index];
@@ -54,10 +54,6 @@ function highestCount(numbers) {
       maiorNumero = numbers[index];
     }
   }
-  
-  //Verifica quantas vezes maior numero aparece
-  let contador = 0;
-
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] === maiorNumero) {
       contador += 1;
