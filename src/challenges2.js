@@ -1,23 +1,5 @@
 // Desafio 10
 function techList(tech, name) {
-  
-  function techList(techs, nome) {
-    let listaTech = [];
-    techs.sort();
-    if (techs.length < 0) {
-      return "Vazio!";
-    } else {
-      for(let indice in techs){
-        listaTech.push({
-          tech: techs[indice],
-          name: nome,
-        })
-      }
-      return listaTech;
-    }
-  }
-  console.log(techList(["Javascript", "HTML", "CSS", "React", "C++"], "Thiago"));
-
 
   let listaTecs = {
   javascriptArray: { tech: 'Javascript', name: 'Natalia' },
@@ -29,7 +11,7 @@ function techList(tech, name) {
 let listaFinal;
 
 for (let techKey in listaTecs) {
-  if (listaTecs == ({})) {
+  if (listaTecs.length === 0) {
   listaFinal = 'Vazio!';
   } else {
   listaFinal = [console.log(listaTecs[techKey])];
@@ -41,27 +23,7 @@ return listaFinal;
 
 // Desafio 11
 function generatePhoneNumber(numero) {
-let mensagem11 = 0;
-let repete3x = 0;
 
-for (let i = 0; i < t.length; i += 1) {
-  let r = 0;
-        for (let i2 = 0; i2 < t.length; i2 += 1) {
-            if (t[i2] === t[i]) {
-                r += 1;
-            }
-        }
-        if (r > 2) {
-            return ("não é possível gerar um número de telefone com esses valores");
-            erro = true;
-            break;
-        }
-        r = 0;
-    }
-
-for (let index11 = 0; index11 < numero.length; index11 += 1) {
-  
-}
 
 for (let index11 = 0; index11 < numero.length; index11 += 1) {
   if (numero[index11] < 0) {
@@ -102,8 +64,28 @@ return ehTriang;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
+let quantBebidas = 0; // agora essa variavel já te retorna a soma
+let somaBebidas = 0;
+
+for (let indexBev = 0; indexBev < bebidas.length; indexBev += 1) {
+  let currentBev = bebidas[indexBev];
+  if ((bebidas[indexBev] > 0) && (bebidas[indexBev] <= 9)) {
+    quantBebidas += parseInt(currentBev); // parseint pra somar como numero
+  } else {
+  }
+}
+// for (let indexSumBev = 0; indexSumBev < quantBebidas.length; indexSumBev += 1) { 
+//   somaBebidas += quantBebidas[indexSumBev];
+//   console.log(somaBebidas);
+// }
+
+if (quantBebidas == 1) {
+  return quantBebidas + ' copo de água';
+} else {
+  return quantBebidas + ' copos de água'
+}
+
 }
 
 module.exports = {
