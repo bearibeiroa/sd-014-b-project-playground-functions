@@ -8,48 +8,32 @@ function compareTrue(a, b) {
   }
   return compare;
 }
-console.log(compareTrue(true, true));
-console.log(compareTrue(false, true));
-console.log(compareTrue(true, false));
-console.log(compareTrue(false, false));
 
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height)/2;
   return area;
 }
-console.log(calcArea(10, 50));
-console.log(calcArea(5, 2));
-console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(string) {
   let palavra = string.split(' ');
   return palavra;
 }
-console.log(splitSentence('go Trybe'));
-console.log(splitSentence('vamo que vamo'));
-console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(array) {
   let primeiroNome = array[0];
   let ultimoNome = array[array.length - 1];
   let concatArray = ultimoNome + primeiroNome;
-  return concatArray
+  return concatArray;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
-console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = (wins * 3) + ties;  
   return pontos;
 }
-console.log(footballPoints(14, 8));
-console.log(footballPoints(1, 2));
-console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(array) {
@@ -87,36 +71,52 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return maisPerto;
 }
-console.log(catAndMouse(0, 3, 2));
-console.log(catAndMouse(0, 6, 12));
-console.log(catAndMouse(0, 2, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  for (let i in array) {
+      if (array[i] % 3 === 0 && array [i] % 5 === 0) {
+          array[i] = "fizzBuzz";
+      } else if (array[i] % 3 !== 0 && array [i] % 5 !== 0) {
+          array[i] = "bug!";
+      } else if (array[i] % 3 === 0) {
+          array[i] = "fizz";
+      } else if (array[i] % 5 === 0) {
+          array[i] = "buzz";
+      }
+  }
+  return array
 }
 
 // Desafio 9
 function encode(string) {
-  let vogal = ['a', 'e', 'i', 'o', 'u'];
+  let vogais = ['a', 'e', 'i', 'o' ,'u'];
   let valor = ['1', '2', '3', '4', '5'];
   let letra = string.split('');
-  for (let i in letra) {
-    letra[i] === vogal[i];
+  for (let i = 0; i < letra.length; i += 1) {
+      for (let j = 0; j < vogais.length; j += 1) {
+          if (letra[i] === vogais[j]) {
+              letra[i] = valor[j];
+          }
+      }
   }
-  return res;
-/*
-a -> 1
-e -> 2
-i -> 3
-o -> 4
-u -> 5
-*/
+  return letra;
 }
-console.log(encode('hi there!'));
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let vogais = ['a', 'e', 'i', 'o' ,'u'];
+  let valor = ['1', '2', '3', '4', '5'];
+  let letra = string.split('');
+  for (let i = 0; i < letra.length; i += 1) {
+      for (let j = 0; j < vogais.length; j += 1) {
+          if (letra[i] === valor[j]) {
+              letra[i] = vogais[j];
+          }
+      }
+  }
+  return letra;
 }
+
 
 module.exports = {
   calcArea,
