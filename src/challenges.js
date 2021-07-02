@@ -99,11 +99,64 @@ function fizzBuzz(array1) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(frase) {
+  let fraseNova = "";
+  for (let letraAtual of frase){
+    if (letraAtual==="a"){
+      letraAtual = '1';
+      fraseNova += letraAtual
+    }
+    else if (letraAtual==="e"){
+      letraAtual = '2';
+      fraseNova += letraAtual
+    }
+    else if (letraAtual==="i"){
+      letraAtual = '3';
+      fraseNova += letraAtual
+    }
+    else if (letraAtual==="o"){
+      letraAtual = '4';
+      fraseNova += letraAtual
+    }
+    else if (letraAtual==="u"){
+      letraAtual = '5';
+      fraseNova += letraAtual
+    }
+    else{
+      fraseNova += letraAtual
+    }
+  }
+    return fraseNova
+  }
+
+function decode(frase2) {
+  let fraseNova2 = "";
+  for (let letraAtual2 of frase2){
+    if (letraAtual2 ==="1"){
+      letraAtual2 = 'a';
+      fraseNova2 += letraAtual2 
+    }
+    else if (letraAtual2 ==="2"){
+      letraAtual2 = 'e';
+      fraseNova2 += letraAtual2
+    }
+    else if (letraAtual2 ==="3"){
+      letraAtual2  = 'i';
+      fraseNova2 += letraAtual2 
+    }
+    else if (letraAtual2==="4"){
+      letraAtual2 = 'o';
+      fraseNova2 += letraAtual2
+    }
+    else if (letraAtual2==="5"){
+      letraAtual2 = 'u';
+      fraseNova2 += letraAtual2
+    }
+    else{
+      fraseNova2 += letraAtual2
+    }
+  }
+    return fraseNova2
 }
 
 module.exports = {
