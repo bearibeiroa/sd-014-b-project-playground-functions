@@ -1,8 +1,4 @@
 // Desafio 10
-function CreateObjects(tech, name) {
-  this.tech = tech;
-  this.name = name;
-}
 function techList(technologies, personalName) {
   let technologieList = [];
   let myList = [];
@@ -10,7 +6,7 @@ function techList(technologies, personalName) {
     technologieList.push(technologie);
   }
   for (let index = 0; index < technologieList.length; index += 1) {
-    myList[index] = new CreateObjects(technologieList[index], personalName);
+    myList.push({ tech: technologieList[index], name: personalName });
   }
   if (technologieList.length === 0) {
     return 'Vazio!';
