@@ -71,31 +71,35 @@ function generatePhoneNumber(numbers) {
 console.log(generatePhoneNumber([8, 2, 8, 0, 5, 3, 7, 3, 9, 6, 5]));
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  let checkA = [lineB + lineC, Math.abs(lineB - lineC)];
+function testB(lineA, lineB, lineC) {
   let checkB = [lineA + lineC, Math.abs(lineA - lineC)];
-  let checkC = [lineB + lineA, Math.abs(lineB - lineA)];
-  let boolC = false;
   let boolB = false;
-  let boolA = false;
-  if (checkC[0] > lineC && checkC[1] < lineC) {
-    boolC = true;
-  } else {
-    return false;
-  }
   if (checkB[0] > lineB && checkB[1] < lineB) {
     boolB = true;
-  } else {
-    return false;
   }
+  return boolB;
+}
+
+function testC(lineA, lineB, lineC) {
+  let checkC = [lineA + lineB, Math.abs(lineA - lineB)];
+  let boolC = false;
+  if (checkC[0] > lineC && checkC[1] < lineC) {
+    boolC = true;
+  }
+  return boolC;
+}
+
+function testA(lineA, lineB, lineC) {
+  let checkA = [lineB + lineC, Math.abs(lineB - lineC)];
+  let boolA = false;
   if (checkA[0] > lineA && checkA[1] < lineA) {
     boolA = true;
-  } else {
-    return false;
   }
-  if (boolA === true && boolC === true && boolB === true) {
-    return true;
-  }
+  return boolA;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  return testA(lineA, lineB, lineC) || testB(lineA, lineB, lineC) || testC(lineA, lineB, lineC);
 }
 
 console.log(triangleCheck(2, 14, 8));
