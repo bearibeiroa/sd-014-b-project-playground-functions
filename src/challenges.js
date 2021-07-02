@@ -11,7 +11,7 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height)/2;
+  let area = (base * height) / 2;
   return area;
 }
 
@@ -25,13 +25,13 @@ function splitSentence(string) {
 function concatName(array) {
   let primeiroNome = array[0];
   let ultimoNome = array[array.length - 1];
-  let concatArray = ultimoNome + primeiroNome;
+  let concatArray = ultimoNome + ", " + primeiroNome;
   return concatArray;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = (wins * 3) + ties;  
+  let pontos = (wins * 3) + ties;
   return pontos;
 }
 
@@ -62,7 +62,7 @@ console.log(highestCount([0, 0, 0]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let maisPerto;
-  if((cat1 - mouse) < (cat2 - mouse)) {
+  if ((cat1 - mouse) < (cat2 - mouse)) {
     maisPerto = 'cat1';
   } else if (cat1 === cat2) {
     maisPerto = 'os gatos trombam e o rato foge';
@@ -75,17 +75,17 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let i in array) {
-      if (array[i] % 3 === 0 && array [i] % 5 === 0) {
-          array[i] = "fizzBuzz";
-      } else if (array[i] % 3 !== 0 && array [i] % 5 !== 0) {
-          array[i] = "bug!";
-      } else if (array[i] % 3 === 0) {
-          array[i] = "fizz";
-      } else if (array[i] % 5 === 0) {
-          array[i] = "buzz";
-      }
+    if (array[i] % 3 === 0 && array [i] % 5 === 0) {
+        array[i] = "fizzBuzz";
+    } else if (array[i] % 3 !== 0 && array [i] % 5 !== 0) {
+        array[i] = "bug!";
+    } else if (array[i] % 3 === 0) {
+        array[i] = "fizz";
+    } else if (array[i] % 5 === 0) {
+        array[i] = "buzz";
+    }
   }
-  return array
+  return array;
 }
 
 // Desafio 9
@@ -104,19 +104,18 @@ function encode(string) {
 }
 
 function decode(string) {
-  let vogais = ['a', 'e', 'i', 'o' ,'u'];
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
   let valor = ['1', '2', '3', '4', '5'];
   let letra = string.split('');
   for (let i = 0; i < letra.length; i += 1) {
-      for (let j = 0; j < vogais.length; j += 1) {
-          if (letra[i] === valor[j]) {
-              letra[i] = vogais[j];
-          }
+    for (let j = 0; j < vogais.length; j += 1) {
+      if (letra[i] === valor[j]) {
+        letra[i] = vogais[j];
       }
+    }
   }
   return letra;
 }
-
 
 module.exports = {
   calcArea,
