@@ -3,21 +3,15 @@ function compareTrue(boolean1, boolean2) {
   return boolean1 && boolean2;
 }
 
-console.log(compareTrue(true, false));
-
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-console.log(calcArea(51, 1));
-
 // Desafio 3
 function splitSentence(frase) {
   return frase.split(' ');
 }
-
-console.log(splitSentence('Vamo que Vamo'));
 
 // Desafio 4
 function concatName(arrayStrings) {
@@ -32,31 +26,25 @@ function concatName(arrayStrings) {
   return arrayFinal.join(', ');
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties);
 }
 
-console.log(footballPoints(1, 2));
-
 // Desafio 6
 function highestCount(arrayNumbers) {
   let count = 0;
-  let highestNumber = Math.max.apply(null, arrayNumbers);
+  let arraySorted = arrayNumbers.sort(function (a, b) {
+    return a - b;
+  });
+  let highestNumber = arraySorted[arraySorted.length - 1];
   for (let number of arrayNumbers) {
     if (number >= highestNumber) {
-      highestNumber = number;
-    } else {
       count += 1;
     }
   }
-  console.log(highestNumber);
-  return arrayNumbers.length - count;
+  return count;
 }
-
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -71,26 +59,30 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(0, 6, 12));
-
 // Desafio 8
-function fizzBuzz(arrayNumber) {
-  let arrayResult = [];
-  for (let numbers of arrayNumber) {
-    if (numbers % 3 === 0 && numbers % 5 === 0) {
-      arrayResult.push('fizzBuzz');
-    } else if ((numbers % 5 === 0)) {
-      arrayResult.push('buzz');
-    } else if ((numbers % 3 === 0)) {
-      arrayResult.push('fizz');
-    } else {
-      arrayResult.push('bug!');
-    }
-  }
-  return arrayResult;
+function checkInt(divisor, dividendo) {
+  return dividendo % divisor === 0;
 }
-
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+function fizzBuzz(arrayNumber) {
+  let result = [];
+  let boolean = true;
+  for (let number of arrayNumber) {
+    switch (boolean) {
+      case checkInt(5, number) && checkInt(3, number):
+        result.push('fizzBuzz');
+        break;
+      case checkInt(5, number):
+        result.push('buzz');
+        break;
+      case checkInt(3, number):
+        result.push('fizz');
+        break;
+      default:
+        result.push('bug!')
+      break;
+    }
+  } return result;
+}
 
 // Desafio 9
 function encode(string) {
@@ -114,8 +106,6 @@ function encode(string) {
   return letters.join('');
 }
 
-console.log(encode('hi there!'));
-
 function decode(string) {
   let letters = [];
   for (let letter of string) {
@@ -136,8 +126,6 @@ function decode(string) {
   }
   return letters.join('');
 }
-
-console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,

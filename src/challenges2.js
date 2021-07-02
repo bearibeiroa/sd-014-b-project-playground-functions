@@ -1,16 +1,16 @@
 // Desafio 10
-function createObjects(tech, name) {
+function CreateObjects(tech, name) {
   this.tech = tech;
   this.name = name;
 }
 function techList(technologies, personalName) {
   let technologieList = [];
   let myList = [];
-  for (technologie of technologies.sort()) {
+  for (let technologie of technologies.sort()) {
     technologieList.push(technologie);
   }
   for (let index = 0; index < technologieList.length; index += 1) {
-    myList[index] = new createObjects(technologieList[index], personalName);
+    myList[index] = new CreateObjects(technologieList[index], personalName);
   }
   if (technologieList.length === 0) {
     return 'Vazio!';
@@ -21,50 +21,63 @@ function techList(technologies, personalName) {
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
-function generatePhoneNumber(numbers) {
-  let numbersIdx = numbers;
-  let newNumbers = findDuplicates(numbersIdx);
-
-  for (let index = 0; index < 10; index += 1) {
-    if (newNumbers[index] > 1) {
-      return 'não é possível gerar um número de telefone com esses valores';
+function splitDuplicates(array, number) {
+  let numbers = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 };
+  for (let index = 0; index < array.length; index += 1) {
+    if (number === array[index]) {
+      numbers[number] += 1;
     }
   }
-  if (numbers.length != 11) {
+  return numbers[number];
+}
+
+function countDuplicates(array) {
+  let number = 0;
+  let count = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 };
+  while (number < 10) {
+    count[number] += splitDuplicates(array, number);
+    number += 1;
+  }
+  return count;
+}
+
+function checkDuplicates(array) {
+  let count = countDuplicates(array);
+  for (let index = 0; index < 10; index += 1) {
+    if (count[index] >= 3) {
+      return true;
+    }
+  }
+}
+
+function checkNumber(array, number) {
+  return number < 0 || number > 9;
+}
+
+function arrayToNumber(numbers) {
+  let phoneNumbers = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    phoneNumbers[index] = +numbers[index];
+  }
+  return phoneNumbers;
+}
+
+function generatePhoneNumber(numbers) {
+  if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let number of numbers) {
-    if (number < 0 || number > 9) {
+    if (checkNumber(numbers, number) || checkDuplicates(numbers)) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-
-  return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+  let phoneNum = arrayToNumber(numbers);
+  let phone = phoneNum.join('');
+  let formatPhone = phone.replace(/(\d{2})?(\d{5})?(\d{4})/g, '($1) $2-$3');
+  return formatPhone;
 }
 
 console.log(generatePhoneNumber([8, 2, 8, 0, 5, 3, 7, 3, 9, 6, 5]));
-
-function findDuplicates(arr) {
-  let sorted_arr = arr.slice().sort();
-  let results = [];
-  let newNumbers = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 };
-  for (let i = 0; i < sorted_arr.length - 1; i++) {
-    if (sorted_arr[i + 1] === sorted_arr[i]) {
-      results.push(sorted_arr[i]);
-    }
-  }
-  let index = 0;
-  while (index < 10) {
-    for (let result of results) {
-      if (result === results[index]) {
-        newNumbers[result] += 1;
-      }
-    }
-    index += 1;
-  }
-
-  return newNumbers;
-}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
