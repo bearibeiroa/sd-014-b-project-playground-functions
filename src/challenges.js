@@ -33,17 +33,17 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(listNumber) {
 
-  let number = Math.max(listNumber);
+  let number = Math.max.apply(null, listNumber);
   let contador = 0;
 
   for (let index = 0; index < listNumber.length; index += 1) {
-      if (number === listNumber[index]) {
-        contador += 1;
+    if (number === listNumber[index]) {
+      contador += 1;
     }
   }
   return contador;
 }
-// referencia Math.max: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+// referencia Math.max.apply: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
 // Desafio 7
 function catAndMouse() {
