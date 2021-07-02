@@ -23,7 +23,7 @@ function techList(techName, name) {
 // Source: https://www.w3schools.com/jsref/jsref_foreach.asp
 function generatePhoneNumber(number) {
   // Criado array para armazenar as contagens de cada elemento (forEach)
-  let counter = []; 
+  let counter = [];
   // Foi criada uma função para percorrer o array number e verificar se algum número se repetia 3x ou + - armazenando na variável counter
   function myFunction(num) {
     counter[num] = (counter[num] || 0) + 1;
@@ -48,18 +48,23 @@ function generatePhoneNumber(number) {
 // A função Math.abs foi pesquisada no seguinte site:
 // Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function triangleCheck(lineA, lineB, lineC) {
-  let triangleSideCheck_1 = lineA < (lineB + lineC);
-  let triangleSideCheck_2 = lineA > Math.abs(lineB - lineC);
-  if (triangleSideCheck_1 === true && triangleSideCheck_2 === true) {
+  let triangleCheck1 = lineA < (lineB + lineC);
+  let triangleCheck2 = lineA > Math.abs(lineB - lineC);
+  if (triangleCheck1 === true && triangleCheck2 === true) {
     return true;
-  } else {
-    return false;
-  }
+  } return false;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// Source: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+function hydrate(string) {
+  let water = 0;
+  let numbers = string.match(/\d+/g).map(Number);
+  for (let index = 0; index < numbers.length; index += 1) {
+    water += numbers[index];
+  } if (water === 1) {
+    return (`${water} copo de água`);
+  } return (`${water} copos de água`);
 }
 
 module.exports = {
