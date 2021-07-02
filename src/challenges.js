@@ -1,10 +1,12 @@
 // Desafio 1
 function compareTrue(value1, value2) {
+  let answer;
   if (value1 && value2) {
-    return true;
+    answer = true;
   } else {
-    return false;
+    answer = false;
   }
+  return answer;
 }
 
 // Desafio 2
@@ -17,16 +19,19 @@ function calcArea(base, height) {
 function splitSentence(menssage) {
   return menssage.split(' ');
 }
+// Usei a funcao split visto aqui: https://www.w3schools.com/jsref/jsref_split.asp
 
 // Desafio 4
 function concatName(arrayName) {
   return (arrayName[arrayName.length - 1] + ', ' + arrayName[0]);
 }
+// Ajuda de colegas em sala de estudo
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return ((wins * 3) + (ties * 1));
 }
+// Usei a logica de operadores para resolver
 
 // Desafio 6
 function highestCount(numbers) {
@@ -38,6 +43,7 @@ function highestCount(numbers) {
     }
   } return total;
 }
+// Para achar o maior numero usei Math.mas.apply (https://www.w3schools.com/jsref/jsref_max.asp), depois rodei o laço for para achar e somar 1.
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -53,6 +59,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return resultado;
 }
+// Para calcular apenas a distancia usei o Math.abs (https://www.w3schools.com/jsref/jsref_max.asp)
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
@@ -70,6 +77,7 @@ function fizzBuzz(arrayNumbers) {
   }
   return resposta;
 }
+// Logica de operadores
 
 // Desafio 9
 function encode(letras) {
@@ -88,6 +96,8 @@ function decode(numeros) {
   numeros = numeros.replace(/5/g, 'u');
   return numeros;
 }
+// Para substituir as letras e numeros (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+
 
 module.exports = {
   calcArea,
