@@ -20,7 +20,7 @@ function splitSentence(menssage) {
 
 // Desafio 4
 function concatName(arrayName) {
-  return (arrayName[arrayName.length -1] + ', ' + arrayName[0]);
+  return (arrayName[arrayName.length - 1] + ', ' + arrayName[0]);
 }
 
 // Desafio 5
@@ -55,8 +55,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let resposta = [];
+  for (index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
+      resposta.push ('fizzBuzz');
+    } else if (arrayNumbers[index] % 3 === 0) {
+      resposta.push('fizz');
+    } else if (arrayNumbers[index] % 5 === 0) {
+      resposta.push('buzz');
+    } else {
+      resposta.push('bug!');
+    }
+  }
+  return resposta;
 }
 
 // Desafio 9
