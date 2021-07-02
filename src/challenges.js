@@ -36,13 +36,13 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// Utilizei a concatenação de dois exercícios do bloco 4
+// Refiz com Math.max, de acordo com o W3Schools
 function highestCount(numeros) {
   let counter = 0;
   let bigValue = Math.max.apply(null, numeros); // comparacao de numeros
   for (let i = 0; i < numeros.length; i+= 1) {
     if (numeros[i] === bigValue){
-      counter +=1;
+      counter += 1;
     }
   }    
   return counter;
@@ -64,19 +64,24 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
 }
 // Desafio 8
-function fizzBuzz(numBuzz) {
-  for (let i = 0; i < numBuzz.length; i += 1) {
-    if ((numBuzz[i] % 3 == 0 && numBuzz[i] % 5 == 0)) {
-      numBuzz[i] = 'fizzBuzz';
-    } else if (numBuzz[i] % 3 == 0) {
-      numBuzz[i] = 'fizz';
-    } else if (numBuzz[i] % 5 == 0) {
-      numBuzz[i] = 'buzz';
-    } else {
-      numBuzz[i] = 'bug!';
-    }
+function tresporcinco(numBuzz, i) {
+  if ((numBuzz[i] % 3 == 0 && numBuzz[i] % 5 == 0)) {
+    return 'fizzBuzz';
+  } else if (numBuzz[i] % 3 == 0) {
+    return 'fizz';
+  } else if (numBuzz[i] % 5 == 0) {
+    return 'buzz';
+  } else {
+    return 'bug!';
   }
-  return numBuzz;
+}
+
+function fizzBuzz(numBuzz) {
+  let resultNumbuzz = [];
+  for (let i = 0; i < numBuzz.length; i += 1) {
+    resultNumbuzz.push(tresporcinco(numBuzz, i));
+  }
+  return resultNumbuzz;
 }
 
 // Desafio 9
