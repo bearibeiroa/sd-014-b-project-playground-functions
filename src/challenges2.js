@@ -93,28 +93,24 @@ function triangleCheck(lineA, lineB, lineC) {
   }; 
 }
 // Desafio 13
-function hydrate(bebida) {
-  let countGlassWater = 0;
+function hydrate(stringBebida) {
+ 
+  let regex = /\d+/g; //Referencia - Bobo da Corte - StackOverflow / 11 de maio de 2015
+  let matches = stringBebida.match(regex);
+  let waterCup = 0;
 
-  //Percorre a string recebida
-  for(let key of bebida) {
+  for(let index of matches) {
+    let transformInt = parseInt(index);
+    waterCup += transformInt;
+  }
 
-    //Verifica se o caractere key é maior que 0 e menor que 9
-    if(key > 0 && key <= 9 ){
-      //Adiciona 1 ao contador de copos de água
-      countGlassWater += parseInt(key);
-    };
-  };
-
-  if(countGlassWater === 1) {
-    return countGlassWater + ' copo de água';
+  if(waterCup === 1) {
+    return waterCup + ' copo de água';
   } else {
-    return countGlassWater + ' copos de água';
+    return waterCup + ' copos de água';
   };
 
-}
-
-console.log(hydrate('1 cerveja, 3 whisky'));
+};
 
 module.exports = {
   generatePhoneNumber,
