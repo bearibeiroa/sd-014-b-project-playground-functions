@@ -79,9 +79,26 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+// Conteudo retirado de : https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+// Foi utilizado o regex para extrair os numeros da string, e o replace para imprimir uma nova string com os numeros.
+// match(/\d+/g, '') - Procura todos os numeros de 0 a 9, /g procura em toda recorrência da string.
+// .map(Number) transforma o array em numeros.
+  let numberOfDrinks = string.match(/\d+/g, '').map(Number);
+  let returnOfDrinks = 0;
+  for (let index = 0; index < numberOfDrinks.length; index += 1) {
+    returnOfDrinks += numberOfDrinks[index];
+  }
+  let howManyWaters = '';
+  if (returnOfDrinks === 1) {
+    howManyWaters = `${returnOfDrinks} copo de água`;
+  } else {
+    howManyWaters = `${returnOfDrinks} copos de água`;
+  }
+
+  return howManyWaters;
 }
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
