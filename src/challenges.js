@@ -1,7 +1,8 @@
 // Desafio 1
 function compareTrue(arg1, arg2) {
-  if (arg1 && arg2)
+  if (arg1 && arg2) {
     return true;
+  }
 
   return false;
 }
@@ -18,7 +19,7 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length -1] + ", " + array[0];
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
@@ -34,17 +35,20 @@ function highestCount(narray) {
   narray.sort();
   let highest = narray[narray.length - 1];
   let counter = 0;
-  for(i in narray)
-  {
-     if (narray[i] === highest)
-      counter++;
+  for (let i in narray) {
+    if (narray[i] === highest) counter += 1;
   }
   return counter;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let position1 = cat1 - mouse;
+  let position2 = cat2 - mouse;
+
+  if (position1 < position2) return 'cat1';
+  if (position1 > position2) return 'cat2';
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
