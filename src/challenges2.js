@@ -1,44 +1,45 @@
 // Desafio 10
 function techList(tech, name) {
+  
+  tech.sort();
+  let lista = [];
 
-  let listaTecs = {
-  javascriptArray: { tech: 'Javascript', name: 'Natalia' },
-  cssArray: { tech: 'CSS', name: 'Natalia' },
-  htmlArray: { tech: 'HTML', name: 'Natalia' },
-  pythonArray: { tech: 'Python', name: 'Natalia' },
-  reactArray: { tech: 'React', name: 'Natalia' },
-}
-let listaFinal;
-
-for (let techKey in listaTecs) {
-  if (listaTecs.length === 0) {
-  listaFinal = 'Vazio!';
+  if (tech.length === 0) {
+    return "Vazio!";
   } else {
-  listaFinal = [console.log(listaTecs[techKey])];
-}
-}
-return listaFinal;
-}
+    for(let index10 = 0; index10 < tech.length; index10 +=1){
 
+      //função para criar um array com objetos comentada pelo Thomas Ferreira no Slack, usei como método.
+      lista.push({
+        tech: tech[index10],
+        name: name,
+      })
+    }   
+  }
+  return lista;
+}
 
 // Desafio 11
 function generatePhoneNumber(numero) {
 
-
-for (let index11 = 0; index11 < numero.length; index11 += 1) {
-  if (numero[index11] < 0) {
-    mensagem11 = 'não é possível gerar um número de telefone com esses valores';
-  } else if (numero[index11] > 9) {
-    mensagem11 = 'não é possível gerar um número de telefone com esses valores'; 
-  } else if (repete3x === true) {
-    mensagem11 = 'não é possível gerar um número de telefone com esses valores';
-  } else if (numero.length != 11) {
-    mensagem11 = 'Array com tamanho incorreto.'
-  } else {
-    mensagem11 = '(' + numero[0] + numero[1] + ') ' + numero[2] + numero[3] + numero[4] + numero[5] + numero[6] + '-' + numero[7] + numero[8] + numero[9] + numero[10];
-  }
+if (numero.length !== 11) {
+  return 'Array com tamanho incorreto.'
 }
-return mensagem11;
+
+// for (let index11 = 0; index11 < numero.length; index11 += 1) {
+//   if (numero[index11] < 0) {
+//     mensagem11 = 'não é possível gerar um número de telefone com esses valores';
+//   } else if (numero[index11] > 9) {
+//     mensagem11 = 'não é possível gerar um número de telefone com esses valores'; 
+//   } else if (repete3x === true) {
+//     mensagem11 = 'não é possível gerar um número de telefone com esses valores';
+//   } else if (numero.length != 11) {
+//     mensagem11 = 'Array com tamanho incorreto.'
+//   } else {
+//     mensagem11 = '(' + numero[0] + numero[1] + ') ' + numero[2] + numero[3] + numero[4] + numero[5] + numero[6] + '-' + numero[7] + numero[8] + numero[9] + numero[10];
+//   }
+// }
+// return mensagem11;
 }
 
 // Desafio 12
@@ -65,20 +66,16 @@ return ehTriang;
 
 // Desafio 13
 function hydrate(bebidas) {
-let quantBebidas = 0; // agora essa variavel já te retorna a soma
+let quantBebidas = 0;
 let somaBebidas = 0;
 
 for (let indexBev = 0; indexBev < bebidas.length; indexBev += 1) {
   let currentBev = bebidas[indexBev];
   if ((bebidas[indexBev] > 0) && (bebidas[indexBev] <= 9)) {
-    quantBebidas += parseInt(currentBev); // parseint pra somar como numero
+    quantBebidas += parseInt(currentBev); 
   } else {
   }
 }
-// for (let indexSumBev = 0; indexSumBev < quantBebidas.length; indexSumBev += 1) { 
-//   somaBebidas += quantBebidas[indexSumBev];
-//   console.log(somaBebidas);
-// }
 
 if (quantBebidas == 1) {
   return quantBebidas + ' copo de água';
