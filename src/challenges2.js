@@ -8,13 +8,28 @@ function techList(array, pname) {
     };
     narray.push(obj);
   }
-
   return narray.length === 0 ? 'Vazio!' : narray;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(n) {
+  if (n.length !== 11) return 'Array com tamanho incorreto.';
+  let integritycheck = false;
+  for (let i of n) {
+    if (i > 9 || i < 0) {
+      integritycheck = true;
+      break;
+    }
+    let repeated = 0;
+    for (let o of n) {
+      if (i === o) repeated += 1;
+    }
+    if (repeated >= 3) integritycheck = true;
+  }
+
+  if (integritycheck) return 'não é possível gerar um número de telefone com esses valores';
+
+  return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
 
 // Desafio 12
