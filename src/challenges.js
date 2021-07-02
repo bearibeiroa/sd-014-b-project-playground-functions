@@ -20,7 +20,7 @@ function splitSentence(string) {
 // Desafio 4
 
 function concatName(frase) {
-  let a = frase[frase.length -1]; 
+  let a = frase[frase.length - 1]; 
   let b = frase[0];
   return (a + ', ' + b);
 }
@@ -28,13 +28,27 @@ function concatName(frase) {
 // Desafio 5
 
 function footballPoints(wins, ties) {
-  return ((wins *3) + (ties))
+  return ((wins * 3) + (ties));
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount(num) {
+  let maior = -1;
+  let count = 0;
+  for (let index = 0; index < num.length; index += 1) {
+    if (num[index] > maior) {
+      maior = num[index];
+    }
+  }
+  for (let index = 0; index < num.length; index += 1) {
+    if (maior === num[index]) {
+      count += 1;
+    }
+  }
+  return count;
 }
+
 
 // Desafio 7
 function catAndMouse() {
