@@ -92,13 +92,29 @@ function triangleCheck(lineA, lineB, lineC) {
     return isPossible;
   }; 
 }
-
-console.log(triangleCheck(10, 14, 8));
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebida) {
+  let countGlassWater = 0;
+
+  //Percorre a string recebida
+  for(let key of bebida) {
+
+    //Verifica se o caractere key é maior que 0 e menor que 9
+    if(key > 0 && key <= 9 ){
+      //Adiciona 1 ao contador de copos de água
+      countGlassWater += parseInt(key);
+    };
+  };
+
+  if(countGlassWater === 1) {
+    return countGlassWater + ' copo de água';
+  } else {
+    return countGlassWater + ' copos de água';
+  };
+
 }
+
+console.log(hydrate('1 cerveja, 3 whisky'));
 
 module.exports = {
   generatePhoneNumber,
