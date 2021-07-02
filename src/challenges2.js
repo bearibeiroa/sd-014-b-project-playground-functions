@@ -81,7 +81,7 @@ return mensagem11;
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
+
 let ehTriang = false;
 let difA = lineB - lineC;
 let difB = lineC - lineA;
@@ -93,34 +93,12 @@ let absC = Math.abs(difC);
 
 if ((lineA > lineB + lineC) || (lineB > lineA + lineC) || (lineC > lineA + lineB)) {
 ehTriang = false;
-// maior que o valor absoluto da diferença entre essas medidas
 } else if ((lineA < absA) || (lineB < absB) || (lineC < absC)) {
   ehTriang = false;
 } else {
   ehTriang = true;
 }
 return ehTriang;
-
-// let linhaA = 0;
-// let linhaB = 0;
-// let linhaC = 0;
-
-// if (lineA >= 0 ) {
-//   linhaA = lineA;
-// } else {
-//   linhaA = lineA * -1;
-// }
-
-// if (lineB >= 0 ) {
-//   linhaB = lineB;
-// } else {
-//   linhaB = lineB * -1;
-
-// if (lineC >= 0 ) {
-//   linhaC = lineC;
-// } else {
-//   linhaC = lineC * -1;
-
 }
 
 // Desafio 13
