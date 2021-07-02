@@ -152,8 +152,8 @@ function encode(value1) {
 function decode(value) {
   let newValue = '';
 
-  for(let key of value) {
-    switch(key) {
+  for (let key of value) {
+    switch (key) {
       case '1':
         newValue += 'a';
         break;
