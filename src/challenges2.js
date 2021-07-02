@@ -10,7 +10,11 @@ function techList(arrayTech, name) {
       'name': name
     };
   }
-  
+  /**
+   * Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+   * Ordenados de acordo com o valor de uma de suas propriedades.
+   * Comparando uma propriedade com outra.
+   */
   return arrayTech.sort(function (a, b) {
     if (a.tech > b.tech) {
       return 1;
@@ -59,9 +63,22 @@ function generatePhoneNumber(arrayNumber) {
   return stringNumber;
 }
 
-// Desafio 12
-function triangleCheck() {
+// Desafio 12            5      10     9
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  /**
+   * Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+   * Para obter o valor absoluto de um número usando a function Math.abs
+   */
+  if (Math.abs(lineB - lineC) < lineA && lineA < lineB + lineC) {
+    if (Math.abs(lineC - lineA) < lineB && lineB < lineA + lineC) {
+      if (Math.abs(lineA -lineB) < lineC && lineC < lineB + lineA) {
+        return true;
+      }
+    }
+  }
+
+  return false;
 }
 
 // Desafio 13
