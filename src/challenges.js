@@ -68,8 +68,28 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  // Ler cada item do array de numeros
+  let arrayFizzBuzz = [];
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    let divisibleBy3 = arrayNumbers[index] % 3;
+    let divisibleBy5 = arrayNumbers[index] % 5;
+    // Verifica se é divisível ou nãoq por 3 e 5.
+    if ((divisibleBy3 !== 0) && (divisibleBy5 !== 0)) {
+      arrayFizzBuzz.push('bug!');
+    } else if ((divisibleBy3 === 0) && (divisibleBy5 === 0)) {
+      arrayFizzBuzz.push('fizzBuzz');
+    }
+    // Verifica se é divisivel por 3 ou 5.
+    if (arrayFizzBuzz[index] !== 'fizzBuzz') {
+      if (divisibleBy3 === 0) {
+        arrayFizzBuzz.push('fizz');
+      } else if (divisibleBy5 === 0) {
+        arrayFizzBuzz.push('buzz');
+      }
+    }
+  }
+  return arrayFizzBuzz;
 }
 
 // Desafio 9
