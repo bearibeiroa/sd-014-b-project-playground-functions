@@ -60,27 +60,24 @@ let count = 0;
 highestCount([4,8,9,9,9,0]);;
 
 // Desafio 7
-function catAndMouse(mouse, cat1 , cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let calcDistance1 = (mouse - cat1);
-  let calcDistance2 = (mouse - cat2);
-
+      let calcDistance1 = (mouse - cat1);
+      let calcDistance2 = (mouse - cat2);
   if(calcDistance1 > calcDistance2) {
-  // console.log("o gato mais próximo é: cat 1")
-     return('cat1 está mais próximo')
+   //console.log("o gato mais próximo é: cat 1")
+     return('cat1 está mais próximo');
     }
-
   if(calcDistance1 < calcDistance2) {
-  // console.log("o gato mais próximo é: cat 2")
-    return('cat2 está mais próximo')
+   //console.log("o gato mais próximo é: cat 2")
+    return('cat2 está mais próximo');
     }
- 
- if (mouse === cat1 && mouse === cat2) {
-  // console.log("os gatos trombam e o rato foge")
-    return('os gatos trombam e o rato foge');
+  if (mouse === cat1 && mouse === cat2) {
+   //console.log("os gatos trombam e o rato foge")
+    return ('os gatos trombam e o rato foge');
     }
   }
-  catAndMouse(10 , 8 , 3);
+  catAndMouse(10, 8, 3);
 
 // Desafio 8
 function fizzBuzz() {
@@ -90,7 +87,7 @@ function fizzBuzz() {
 // Desafio 9
 function encode(codigo) {
   // seu código aqui
-let mensagem = ' ' ;
+let mensagem = ' ';
 for (let index = 0; index <= codigo.length; index += 1) {
   if (codigo[index] === 'a') {
     mensagem = '1';
