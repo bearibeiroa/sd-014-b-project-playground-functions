@@ -2,9 +2,8 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
-   }
+  }
+  return false;
 }
 
 // Desafio 2
@@ -19,7 +18,7 @@ function splitSentence(sentence) {
   for (let caracter in sentence) {
     if (sentence[caracter] !== ' ') {
       palavra += sentence[caracter];
-      if (caracter == sentence.length - 1) {
+      if (parseInt(caracter, 10) === sentence.length - 1) {
         sentenceSplited.push(palavra);
       }
     } else {
@@ -78,11 +77,9 @@ function fizzBuzz(array) {
   for (let index in array) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       array[index] = 'fizzBuzz';
-    }
-    else if (array[index] % 3 === 0) {
+    }  else if (array[index] % 3 === 0) {
       array[index] = 'fizz';
-    }
-    else if (array[index] % 5 === 0) {
+    }  else if (array[index] % 5 === 0) {
       array[index] = 'buzz';
     } else { array[index] = 'bug!'; }
   }

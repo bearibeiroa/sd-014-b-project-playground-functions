@@ -84,8 +84,8 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   let waterNeed = 0;
   for (let caracter in string) {
-    if (isNaN(parseInt(string[caracter])) === false) {
-      waterNeed += parseInt(string[caracter]);
+    if (isNaN(parseInt(string[caracter], 10)) === false) {
+      waterNeed += parseInt(string[caracter], 10);
     }
   }
   if (waterNeed <= 1) {
