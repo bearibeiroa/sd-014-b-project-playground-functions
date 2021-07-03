@@ -35,10 +35,21 @@ function generatePhoneNumber(numbers) {
   return "(" + ddd.join('') + ") " + contactPart1.join('') + '-' + contactPart2.join('');
 }
 
+console.log(generatePhoneNumber([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
 
 // Desafio 12
-function triangleCheck() {
+// Passou no requisito mas fiquei com duvidas.
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let somaAB = lineA + lineB;
+  let somaBC = lineB + lineC;
+  let somaCA = lineC + lineA;
+
+  if (lineA > somaBC || lineB > somaCA || lineC > somaAB) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 // Desafio 13
