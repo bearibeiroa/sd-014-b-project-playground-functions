@@ -30,7 +30,7 @@ function footballPoints(wins, ties) {
   let winsPoints = wins * 3;
   let tiesPoints = ties * 1;
   let totalPoints = winsPoints + tiesPoints
-  return (`Total de pontos: ${totalPoints}`)
+  return (totalPoints)
 }
 console.log(footballPoints(0, 0))
 
