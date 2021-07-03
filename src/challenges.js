@@ -98,17 +98,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(val1) {
-  // seu código aqui
+  // seu código aqui  
   let resultado = [];
   for (let index in val1) {
-   if(val1[index] % 3 == 0){
-   resultado.push('fizz');
-} else if(val1[index] % 5 == 0){
-  resultado.push('buzz');
+
+   if(val1[index] % 3 != 0 && val1[index] % 5 != 0){
+   resultado.push('bug!');
+
 } else if(val1[index] % 3 == 0 && val1[index] % 5 == 0){
   resultado.push('fizzBuzz');
-} else if(val1[index] % 3 != 0 && val1[index] % 5 != 0){
-  resultado.push('bug!');
+
+} else if(val1[index] % 5 == 0){
+  resultado.push('buzz');
+
+} else if(val1[index] % 3 == 0){
+  resultado.push('fizz');
 }
   
 }
