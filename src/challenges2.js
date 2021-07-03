@@ -30,25 +30,20 @@ let resposta;
 
 for (let index9 = 0; index9 < numero.length; index9 += 1) {
  if (numero[index9] > 9) {
-  //   maiorQue9 = true;
-  //   break;
-  // }
-  return 'não é possível gerar um número de telefone com esses valores';
+    maiorQue9 = true;
+    break;
+  }
  }
-}
 
 for (let index0 = 0; index0 < numero.length; index0 += 1){
   if (numero[index0] < 0) {
-  //   menorQue0 = true;
-  //   break;
-  // }
-  return 'não é possível gerar um número de telefone com esses valores';
-}
+    menorQue0 = true;
+    break;
+  }
 }
 
 if (numero.length != 11) {
-  // naoTem11 = true;
-  return 'Array com tamanho incorreto.' 
+  naoTem11 = true;
 }
 
 for (let index = 0; index < numero.length; index +=1) {   
@@ -61,23 +56,23 @@ for (let index = 0; index < numero.length; index +=1) {
         }
     }
     if (repete3 > 2); {
-    return 'não é possível gerar um número de telefone com esses valores';
+    repetidos3 = true;
     break;
-    }    
-    }
-  
-// if (maiorQue9 == true) {
-//   resposta = 'não é possível gerar um número de telefone com esses valores';
-// } else if (menorQue0 == true) {
-//   resposta = 'não é possível gerar um número de telefone com esses valores';
-// } else if (repetidos3 == true) {
-//   resposta = 'não é possível gerar um número de telefone com esses valores';
-// } else if (naoTem11 == true) {
-//   resposta = 'Array com tamanho incorreto.'   
-// } else {
-//   resposta = '(' + numero[0] + numero[1] + ') ' + numero[2] + numero[3] + numero[4] + numero[5] + numero[6] + '-' + numero[7] + numero[8] + numero[9] + numero[10];
-// }
-return '(' + numero[0] + numero[1] + ') ' + numero[2] + numero[3] + numero[4] + numero[5] + numero[6] + '-' + numero[7] + numero[8] + numero[9] + numero[10];
+    } 
+}
+
+if (maiorQue9 == true) {
+  resposta = 'não é possível gerar um número de telefone com esses valores';
+} else if (menorQue0 == true) {
+  resposta =  'não é possível gerar um número de telefone com esses valores';
+} else if (repetidos3 == true) {
+  resposta =  'não é possível gerar um número de telefone com esses valores';
+} else if (naoTem11 == true) {
+  resposta =  'Array com tamanho incorreto.'   
+} else {
+  resposta =  '(' + numero[0] + numero[1] + ') ' + numero[2] + numero[3] + numero[4] + numero[5] + numero[6] + '-' + numero[7] + numero[8] + numero[9] + numero[10];
+}
+return resposta;
 }
 
 // Desafio 12
