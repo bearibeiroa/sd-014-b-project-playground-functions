@@ -51,7 +51,7 @@ function highestCount(array) {
       contRepetido = contNumero;
       indexNumeroRepetido = i;
     }
-      contNumero = 0;
+    contNumero = 0;
   }
   return array[indexNumeroRepetido];
 }
@@ -62,12 +62,20 @@ console.log(highestCount([0, 0, 0]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let maisPerto;
-  if ((cat1 - mouse) < (cat2 - mouse)) {
-    maisPerto = 'cat1';
-  } else if (cat1 === cat2) {
-    maisPerto = 'os gatos trombam e o rato foge';
+  let distanciaPrimeiro = cat1 - mouse;
+  if (distanciaPrimeiro < 0) {
+      distanciaPrimeiro = -distanciaPrimeiro;
+  }
+  let distanciaSegundo = cat2 - mouse;
+  if (distanciaSegundo < 0) {
+      distanciaSegundo = -distanciaSegundo;
+  }
+  if (distanciaPrimeiro < distanciaSegundo) {
+      maisPerto = "cat1";
+  } else if (distanciaPrimeiro === distanciaSegundo) {
+      maisPerto = "os gatos trombam e o rato foge";
   } else {
-    maisPerto = 'cat2';
+      maisPerto = "cat2";
   }
   return maisPerto;
 }
@@ -76,13 +84,13 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   for (let i in array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-        array[i] = "fizzBuzz";
+        array[i] = 'fizzBuzz';
     } else if (array[i] % 3 !== 0 && array[i] % 5 !== 0) {
-        array[i] = "bug!";
+        array[i] = 'bug!';
     } else if (array[i] % 3 === 0) {
-        array[i] = "fizz";
+        array[i] = 'fizz';
     } else if (array[i] % 5 === 0) {
-        array[i] = "buzz";
+        array[i] = 'buzz';
     }
   }
   return array;
