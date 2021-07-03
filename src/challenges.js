@@ -88,27 +88,72 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let fizzBuzz = [];
+  let returnFizzBuzz = [];
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
-      fizzBuzz.push('fizzBuzz');
+      returnFizzBuzz.push('fizzBuzz');
     } else if (numbers[i] % 3 === 0) {
-      fizzBuzz.push('fizz');
+      returnFizzBuzz.push('fizz');
     } else if (numbers[i] % 5 === 0) {
-      fizzBuzz.push('buzz');
+      returnFizzBuzz.push('buzz');
     } else {
-      fizzBuzz.push('bug!');
+      returnFizzBuzz.push('bug!');
     }
   }
-  return fizzBuzz;
+  return returnFizzBuzz;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let textCode = '';
+  for (let i = 0; i < text.length; i += 1) {
+    switch (text[i]) {
+      case 'a':
+        textCode += 1;
+        break;
+      case 'e':
+        textCode += 2;
+        break;
+      case 'i':
+        textCode += 3;
+        break;
+      case 'o':
+        textCode += 4;
+        break;
+      case 'u':
+        textCode += 5;
+        break;
+      default:
+        textCode += text[i];
+    }
+  }
+  return textCode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(text) {
+  let textUncode = '';
+  for (let i = 0; i < text.length; i += 1) {
+    switch (text[i]) {
+      case '1':
+        textUncode += 'a';
+        break;
+      case '2':
+        textUncode += 'e';
+        break;
+      case '3':
+        textUncode += 'i';
+        break;
+      case '4':
+        textUncode += 'o';
+        break;
+      case '5':
+        textUncode += 'u';
+        break;
+      default:
+        textUncode += text[i];
+    }
+  }
+  return textUncode;
 }
 
 module.exports = {
