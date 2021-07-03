@@ -64,18 +64,18 @@ function catAndMouse(mouse, cat1, cat2) {
   let maisPerto;
   let distanciaPrimeiro = cat1 - mouse;
   if (distanciaPrimeiro < 0) {
-      distanciaPrimeiro = -distanciaPrimeiro;
+    distanciaPrimeiro = -distanciaPrimeiro;
   }
   let distanciaSegundo = cat2 - mouse;
   if (distanciaSegundo < 0) {
-      distanciaSegundo = -distanciaSegundo;
+    distanciaSegundo = -distanciaSegundo;
   }
   if (distanciaPrimeiro < distanciaSegundo) {
-      maisPerto = "cat1";
+    maisPerto = 'cat1';
   } else if (distanciaPrimeiro === distanciaSegundo) {
-      maisPerto = "os gatos trombam e o rato foge";
+    maisPerto = 'os gatos trombam e o rato foge';
   } else {
-      maisPerto = "cat2";
+    maisPerto = 'cat2';
   }
   return maisPerto;
 }
@@ -84,13 +84,13 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   for (let i in array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-        array[i] = 'fizzBuzz';
+      array[i] = 'fizzBuzz';
     } else if (array[i] % 3 !== 0 && array[i] % 5 !== 0) {
-        array[i] = 'bug!';
+      array[i] = 'bug!';
     } else if (array[i] % 3 === 0) {
-        array[i] = 'fizz';
+      array[i] = 'fizz';
     } else if (array[i] % 5 === 0) {
-        array[i] = 'buzz';
+      array[i] = 'buzz';
     }
   }
   return array;
