@@ -18,9 +18,9 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-    return frase.split('');
+    return frase.split(' ');
 }
-// console.log(splitSentence('Go trybe'));
+console.log(splitSentence('Go trybe'));
 
 // Desafio 4
 function concatName(listnames) {
@@ -54,8 +54,8 @@ let count = 0;
       count += 1;
     }
   }
-  //console.log('o maior número é:', maior);
-  //console.log('quantas vezes aparece', count);
+    // console.log('o maior número é:', maior);
+    // console.log('quantas vezes aparece', count);
 }
 highestCount([4,8,9,9,9,0]);
 
@@ -64,16 +64,16 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
       let calcDistance1 = (mouse - cat1);
       let calcDistance2 = (mouse - cat2);
-  if(calcDistance1 > calcDistance2) {
-   //console.log("o gato mais próximo é: cat 1")
-     return('cat1 está mais próximo');
+  if (calcDistance1 > calcDistance2) {
+  // console.log("o gato mais próximo é: cat 1")
+     return ('cat1 está mais próximo');
     }
-  if(calcDistance1 < calcDistance2) {
-   //console.log("o gato mais próximo é: cat 2")
+  if (calcDistance1 < calcDistance2) {
+  // console.log("o gato mais próximo é: cat 2")
     return('cat2 está mais próximo');
     }
   if (mouse === cat1 && mouse === cat2) {
-   //console.log("os gatos trombam e o rato foge")
+  // console.log("os gatos trombam e o rato foge")
     return ('os gatos trombam e o rato foge');
     }
   }
