@@ -58,9 +58,8 @@ function catAndMouse (mouse, cat1, cat2) {
   else if (Math.abs (cat1Mouse) > Math.abs(cat2Mouse)) {
     return 'cat2';
   } 
-  else (Math.abs (cat1Mouse) < Math.abs (cat2Mouse)) {
-    return 'cat1';
-  } 
+  else (Math.abs (cat1Mouse) < Math.abs (cat2Mouse))
+    return 'cat1'; 
 }
 
 // Desafio 8
