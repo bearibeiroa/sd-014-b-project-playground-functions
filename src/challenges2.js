@@ -22,24 +22,62 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(numero) {
 
-if (numero.length !== 11) {
-  return 'Array com tamanho incorreto.'
+let maiorQue9 = false;
+let menorQue0 = false;
+let naoTem11 = false;
+let repetidos3 = false;
+let resposta;
+
+for (let index9 = 0; index9 < numero.length; index9 += 1) {
+ if (numero[index9] > 9) {
+  //   maiorQue9 = true;
+  //   break;
+  // }
+  return 'não é possível gerar um número de telefone com esses valores';
+ }
 }
 
-// for (let index11 = 0; index11 < numero.length; index11 += 1) {
-//   if (numero[index11] < 0) {
-//     mensagem11 = 'não é possível gerar um número de telefone com esses valores';
-//   } else if (numero[index11] > 9) {
-//     mensagem11 = 'não é possível gerar um número de telefone com esses valores'; 
-//   } else if (repete3x === true) {
-//     mensagem11 = 'não é possível gerar um número de telefone com esses valores';
-//   } else if (numero.length != 11) {
-//     mensagem11 = 'Array com tamanho incorreto.'
-//   } else {
-//     mensagem11 = '(' + numero[0] + numero[1] + ') ' + numero[2] + numero[3] + numero[4] + numero[5] + numero[6] + '-' + numero[7] + numero[8] + numero[9] + numero[10];
-//   }
+for (let index0 = 0; index0 < numero.length; index0 += 1){
+  if (numero[index0] < 0) {
+  //   menorQue0 = true;
+  //   break;
+  // }
+  return 'não é possível gerar um número de telefone com esses valores';
+}
+}
+
+if (numero.length != 11) {
+  // naoTem11 = true;
+  return 'Array com tamanho incorreto.' 
+}
+
+for (let index = 0; index < numero.length; index +=1) {   
+    let current3 = numero[index];
+    let repete3 = 0;
+
+    for (let indexRep = 0; indexRep < numero.length; indexRep += 1) {
+        if (current3 === numero[indexRep]) {
+            repete3 += 1;
+        }
+    }
+    if (repete3 > 2); {
+    return 'não é possível gerar um número de telefone com esses valores';
+    break;
+    }    
+    }
+  
+// if (maiorQue9 == true) {
+//   resposta = 'não é possível gerar um número de telefone com esses valores';
+// } else if (menorQue0 == true) {
+//   resposta = 'não é possível gerar um número de telefone com esses valores';
+// } else if (repetidos3 == true) {
+//   resposta = 'não é possível gerar um número de telefone com esses valores';
+// } else if (naoTem11 == true) {
+//   resposta = 'Array com tamanho incorreto.'   
+// } else {
+//   resposta = '(' + numero[0] + numero[1] + ') ' + numero[2] + numero[3] + numero[4] + numero[5] + numero[6] + '-' + numero[7] + numero[8] + numero[9] + numero[10];
 // }
-// return mensagem11;
+return '(' + numero[0] + numero[1] + ') ' + numero[2] + numero[3] + numero[4] + numero[5] + numero[6] + '-' + numero[7] + numero[8] + numero[9] + numero[10];
 }
 
 // Desafio 12
