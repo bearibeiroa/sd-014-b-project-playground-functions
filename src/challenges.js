@@ -25,10 +25,10 @@ return frase.split(" ");
 // Desafio 4
 function concatName(listnames) {
   // seu código aqui
-  let listaConcat = (listnames[listnames.length - 1] + ' , ' + listnames[0]);
+  let listaConcat = (listnames[listnames.length - 1] + ', ' + listnames[0]);
   return listaConcat;
 }
-let listnames = (['Lucas' , 'Cassiano' , 'Ferraz' , 'Paolillo'])
+let listnames = (['foguete', 'não', 'tem', 'ré']);;
 //console.log(concatName(listnames));
 
 // Desafio 5
@@ -37,7 +37,7 @@ function footballPoints(wins , ties) {
   let vitorias = (wins * 3);
   return vitorias + ties;
 }
-//console.log(footballPoints(1 , 1));
+  console.log(footballPoints(1,1));;
 
 // Desafio 6
 function highestCount(listaNumeros) {
@@ -50,14 +50,14 @@ function highestCount(listaNumeros) {
   }  
 let count = 0;
   for (let index = 0; index < listaNumeros.length; index = index + 1) {
-    if(listaNumeros[index] === maior) {
-    count += 1;
+    if (listaNumeros[index] === maior) {
+      count += 1;
     }
   }
-  console.log('o maior número é:',maior);
-  console.log('quantas vezes aparece',count);
+  console.log('o maior número é:' , maior);
+  console.log('quantas vezes aparece' , count);
 }
-highestCount([4 , 8 , 9 , 9 , 9 , 0]);
+highestCount([4,8,9,9,9,0]);;
 
 // Desafio 7
 function catAndMouse(mouse, cat1 , cat2) {
