@@ -24,7 +24,6 @@ function biggerAndSmaller(phone) {
     }
   }
 }
-
 function phoneNumber(phone) {
   let num = '(';
   for (let index = 0; index < phone.length; index += 1) {
@@ -40,17 +39,34 @@ function phoneNumber(phone) {
   }
   return num;
 }
-function counterNumbers(phone) {
+function printerCouter(contador, maiorContador) {
+  if (contador > maiorContador) {
+    maiorContador = contador;
+  }
+  return maiorContador;
+}
+function seInterno(phone, aux, index, contador) {
+  if (phone[aux] === index) {
+    contador += 1;
+  }
+  return contador;
+}
+
+function printer(phone) {
+  let maiorContador = 0;
   for (let index = 0; index < 9; index += 1) {
     let contador = 0;
     for (let aux = 0; aux < phone.length; aux += 1) {
-      if (phone[aux] === index) {
-        contador += 1;
-      }
-      if (contador >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
+      contador = seInterno(phone, aux, index, contador);
+      maiorContador = printerCouter(contador, maiorContador);
     }
+  }
+  return maiorContador;
+}
+function counterNumbers(phone) {
+  let maiorContador = printer(phone);
+  if (maiorContador >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
 }
 
