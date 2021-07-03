@@ -51,7 +51,6 @@ function seInterno(phone, aux, index, contador) {
   }
   return contador;
 }
-
 function printer(phone) {
   let maiorContador = 0;
   for (let index = 0; index < 9; index += 1) {
