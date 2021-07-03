@@ -1,24 +1,24 @@
 // Desafio 1
-function compareTrue(a1,a2) {
+function compareTrue(a1, a2) {
   // seu código aqui
-  if(a1 === true && a2 === true) {
-  return true;
+  if (a1 === true && a2 === true) {
+      return true;
   } else {
-     return false;
-     }
+        return false;
     }
+}
   
 // Desafio 2
-function calcArea(base , height) {
+function calcArea(base, height) {
   // seu código aqui
-  let triangulo = (base * height) /2;
+  let triangulo = (base * height) / 2;
   return triangulo;
 }
 
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-return frase.split(" ");
+    return frase.split('');
 }
 // console.log(splitSentence('Go trybe'));
 
@@ -32,7 +32,7 @@ let listnames = (['foguete', 'não', 'tem', 'ré']);;
 //console.log(concatName(listnames));
 
 // Desafio 5
-function footballPoints(wins , ties) {
+function footballPoints(wins, ties) {
   // seu código aqui 
   let vitorias = (wins * 3);
   return vitorias + ties;
@@ -54,10 +54,10 @@ let count = 0;
       count += 1;
     }
   }
-  console.log('o maior número é:' , maior);
-  console.log('quantas vezes aparece' , count);
+  //console.log('o maior número é:', maior);
+  //console.log('quantas vezes aparece', count);
 }
-highestCount([4,8,9,9,9,0]);;
+highestCount([4,8,9,9,9,0]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
