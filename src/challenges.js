@@ -24,10 +24,11 @@ return frase.split(" ");
 // Desafio 4
 function concatName(listnames) {
   // seu código aqui
-  let index = [listnames[0],listnames[listnames.length -1]];
-  return index;
+  let listaConcat = (listnames[0] +" , "+ listnames[listnames.length -1]);
+  return listaConcat;
 }
-//console.log(concatName(['Lucas' , 'Cassiano' , 'Ferraz' , 'Paolillo']));
+let listanomes = ['Lucas' , 'Cassiano' , 'Ferraz' , 'Paolillo']
+//console.log(concatName(listanomes));
 
 // Desafio 5
 function footballPoints(wins , ties) {
@@ -38,37 +39,61 @@ function footballPoints(wins , ties) {
 //console.log(footballPoints(1 , 1));
 
 // Desafio 6
-function highestCount(higestNumber) {
+function highestCount(listaNumeros) {
   // seu código aqui
-  let maior = higestNumber;
-  
-  for (let index = 0; index <= higestNumber.length; index += 1){
-    for (let repet = index += 1; repet <= higestNumber.length; repet += 1){
-      if(higestNumber[index] === maior[repet]) {
-        return repet;
+  let maior = 0;
+
+  for (let index = 0; index < listaNumeros.length; index += 1) {
+    if(listaNumeros[index] > maior){
+    maior = listaNumeros[index];
     }
-        
+  }  
+let count = 0;
+  for (let index = 0; index < listaNumeros.length; index = index + 1){
+    if(listaNumeros[index] === maior){
+    count +=1;
+    }
   }
- 
+  console.log("o maior número é:", maior);
+  console.log("quantas vezes aparece" , count);
 }
-  console.log(highestCount[9, 1, 9, 3, 9, 9, 7]);
-}
- 
-  // Desafio 7
-function catAndMouse() {
+  highestCount([4 , 8 , 9 , 9 , 9 , 0]);
+
+// Desafio 7
+function catAndMouse(mouse, cat1 , cat2) {
   // seu código aqui
-}
+  let calcDistance1 = (mouse - cat1);
+  let calcDistance2 = (mouse - cat2);
+
+  if(calcDistance1 > calcDistance2) {
+    //console.log("o gato mais próximo é: cat 1")
+     return("cat1 está mais próximo")
+    }
+
+  if(calcDistance1 < calcDistance2) {
+    //console.log("o gato mais próximo é: cat 2")
+    return("cat2 está mais próximo")
+    }
+ 
+ if (mouse === cat1 && mouse === cat2) {
+    //console.log("os gatos trombam e o rato foge")
+    return("os gatos trombam e o rato foge");
+    }
+  }
+  catAndMouse(10 , 8 , 3);
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(listaFiz) {
   // seu código aqui
+  for
 }
 
 // Desafio 9
-function encode() {
+function encode(codigo) {
   // seu código aqui
+  
 }
-function decode() {
+function decode(descodigo) {
   // seu código aqui
 }
 
