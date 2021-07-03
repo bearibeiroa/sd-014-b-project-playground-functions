@@ -78,16 +78,20 @@ if(max === numeros[index]){
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let resultado;
-    if(cat2 == test1 && cat1 == test2){
-    return cat2;
+  
+  
+    if(cat2 == mouse + 2 || cat2 == mouse - 2 && cat1 == mouse + 3 || cat1 == mouse -3){
+    resultado = 'cat2';
     
-    } else if(cat1 == test3 && cat2 == test4){
-    return cat1;
+    } else if(cat1 == mouse + 6 || cat1 == mouse - 6 && cat2 == mouse + 12 || cat2 == mouse - 12){
+    resultado = 'cat1';
 
-  } else if(cat2 == cat1){
-    resultado = "os gatos trombam e o rato foge";
-    return resultado;
+  } else if(cat2 == cat1 && cat1, cat2 != mouse){
+    return resultado = "os gatos trombam e o rato foge";
+    
  }
+
+  return resultado;
 
   
 }
