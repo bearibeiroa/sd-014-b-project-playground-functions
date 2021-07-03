@@ -15,7 +15,7 @@ console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
-  
+
 }
 
 // Desafio 4
@@ -26,9 +26,13 @@ function concatName(arrayOfStrings) {
 console.log(concatName(['Gabriel', 'Angus', 'Malcon', 'Eddie', 'Bryan']))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsPoints = wins * 3;
+  let tiesPoints = ties * 1;
+  let totalPoints = winsPoints + tiesPoints
+  return (`Total de pontos: ${totalPoints}`)
 }
+console.log(footballPoints(0, 0))
 
 // Desafio 6
 function highestCount() {
