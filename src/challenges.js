@@ -21,6 +21,8 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(palavra) {
+  let soma = palavra[palavra.length -1] + ', ' + palavra[0];
+  return soma;
 }
 
 // Desafio 5
