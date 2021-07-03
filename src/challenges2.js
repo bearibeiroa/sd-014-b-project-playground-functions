@@ -47,9 +47,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
   if (lineA > somaBC || lineB > somaCA || lineC > somaAB) {
     return false;
-  } else {
-    return true;
-  }
+  } return true;
 }
 
 // Desafio 13
