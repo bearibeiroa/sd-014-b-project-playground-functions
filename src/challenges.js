@@ -15,13 +15,15 @@ console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayOfStrings) {
+  let mixOfStrings = arrayOfStrings;
+  return(arrayOfStrings[arrayOfStrings.length-1] + ', ' + arrayOfStrings[0])
 }
+console.log(concatName(['Gabriel', 'Angus', 'Malcon', 'Eddie', 'Bryan']))
 
 // Desafio 5
 function footballPoints() {
