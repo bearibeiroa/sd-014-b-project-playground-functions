@@ -42,8 +42,15 @@ function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
 }
 
-// Desafio 13
-function hydrate() {
+// Desafio 13  =>Obs: Nessa eu busquei ajuda no Stackoverflow.   :D
+function hydrate(stringNum) {
+  let numbers = stringNum.match(/\d+/g);
+  let num = 0;
+  for (index = 0; index < numbers.length; index += 1) {
+      num += Number(numbers[index]);
+    }
+  if (num > 1) return num + ' copos de água';
+  if (num === 1 || num === 0) return num + ' copo de água';
   // seu código aqui
 }
 
