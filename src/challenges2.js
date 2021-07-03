@@ -14,8 +14,6 @@ function techList(technologies, personalName) {
   return myList;
 }
 
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
-
 // Desafio 11
 function splitDuplicates(array, number) {
   let numbers = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 };
@@ -64,8 +62,6 @@ function generatePhoneNumber(numbers) {
   return formatPhone;
 }
 
-console.log(generatePhoneNumber([8, 2, 8, 0, 5, 3, 7, 3, 9, 6, 5]));
-
 // Desafio 12
 function testB(lineA, lineB, lineC) {
   let checkB = [lineA + lineC, Math.abs(lineA - lineC)];
@@ -98,8 +94,6 @@ function triangleCheck(lineA, lineB, lineC) {
   return testA(lineA, lineB, lineC) || testB(lineA, lineB, lineC) || testC(lineA, lineB, lineC);
 }
 
-console.log(triangleCheck(2, 14, 8));
-
 // Desafio 13
 function hydrate(string) {
   let matches = string.match(/(\d+)/g);
@@ -116,8 +110,6 @@ function hydrate(string) {
   }
   return `${sum} copos de água`;
 }
-
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,

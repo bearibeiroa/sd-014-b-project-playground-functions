@@ -63,66 +63,88 @@ function catAndMouse(mouse, cat1, cat2) {
 function checkInt(divisor, dividendo) {
   return dividendo % divisor === 0;
 }
+
+function buzz(number) {
+  let resultBuzz = [];
+  if (checkInt(5, number) === true && checkInt(3, number) === false) {
+    resultBuzz.push('buzz');
+    return resultBuzz;
+  }
+}
+
+function fizz(number) {
+  let resultFizz = [];
+  if (checkInt(5, number) === false && checkInt(3, number) === true) {
+    resultFizz.push('fizz');
+    return resultFizz;
+  }
+}
+
+function bug(number) {
+  let resultBug = [];
+  if (checkInt(5, number) === false && checkInt(3, number) === false) {
+    resultBug.push('bug!');
+    return resultBug;
+  }
+}
+
 function fizzBuzz(arrayNumber) {
   let result = [];
-  let boolean = true;
   for (let number of arrayNumber) {
-    switch (boolean) {
-      case checkInt(5, number) && checkInt(3, number):
-        result.push('fizzBuzz');
-        break;
-      case checkInt(5, number):
-        result.push('buzz');
-        break;
-      case checkInt(3, number):
-        result.push('fizz');
-        break;
-      default:
-        result.push('bug!')
-      break;
+    if (checkInt(5, number) && checkInt(3, number)) {
+      result.push('fizzBuzz');
+    } else {
+      result.push(fizz(number), buzz(number), bug(number));
     }
-  } return result;
+  }
+  return result;
 }
 
 // Desafio 9
-function encode(string) {
+function stringToArray(string) {
   let letters = [];
   for (let letter of string) {
     letters.push(letter);
   }
-  for (let index = 0; index < letters.length; index += 1) {
-    if (letters[index] === 'a') {
-      letters[index] = 1;
-    } else if (letters[index] === 'e') {
-      letters[index] = 2;
-    } else if (letters[index] === 'i') {
-      letters[index] = 3;
-    } else if (letters[index] === 'o') {
-      letters[index] = 4;
-    } else if (letters[index] === 'u') {
-      letters[index] = 5;
+  return letters;
+}
+
+function conversionEncode(index, letters) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let numbers = { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5 };
+  for (let vowel of vowels) {
+    if (letters[index] === vowel) {
+      letters[index] = numbers[vowels.indexOf(vowel)];
     }
+  }
+}
+
+function conversionDecode(index, letters) {
+  let numbers = ['1', '2', '3', '4', '5'];
+  let vowels = { 0: 'a', 1: 'e', 2: 'i', 3: 'o', 4: 'u' };
+  for (let number of numbers) {
+    if (letters[index] === number) {
+      letters[index] = vowels[numbers.indexOf(number)];
+    }
+  }
+}
+
+function encode(string) {
+  let letters = stringToArray(string);
+  let index = 0;
+  while (index < letters.length) {
+    conversionEncode(index, letters);
+    index += 1;
   }
   return letters.join('');
 }
 
 function decode(string) {
-  let letters = [];
-  for (let letter of string) {
-    letters.push(letter);
-  }
-  for (let index = 0; index < letters.length; index += 1) {
-    if (letters[index] === '1') {
-      letters[index] = 'a';
-    } else if (letters[index] === '2') {
-      letters[index] = 'e';
-    } else if (letters[index] === '3') {
-      letters[index] = 'i';
-    } else if (letters[index] === '4') {
-      letters[index] = 'o';
-    } else if (letters[index] === '5') {
-      letters[index] = 'u';
-    }
+  let letters = stringToArray(string);
+  let index = 0;
+  while (index < letters.length) {
+    conversionDecode(index, letters);
+    index += 1;
   }
   return letters.join('');
 }
