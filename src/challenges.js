@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 === true && valor2 === true) { 
-  return true; {
-  }
-  else return false;
+  if (valor1 === true && valor2 === true) {
+    return true;
+  } else {
+    return false;
   }
 }
 
@@ -14,13 +14,17 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let split = [];
+  for (let index = 0; index < frase; index += 1) {
+    split = frase.push(frase[index]);
+  }
+  return split;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(palavra) {
+  let soma = palavra[palavra.length -1]+ ',' + palavra[0];
 }
 
 // Desafio 5
