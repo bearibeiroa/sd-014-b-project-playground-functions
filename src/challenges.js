@@ -105,9 +105,9 @@ function fizzBuzz(val1) {
    resultado.push('fizz');
 } else if(val1[index] % 5 == 0){
   resultado.push('buzz');
-} else if(val1[index] % 3 == 0 && val1 % 5 == 0){
+} else if(val1[index] % 3 == 0 && val1[index] % 5 == 0){
   resultado.push('fizzBuzz');
-} else if(val1[index] % 3 != 0 && val1 % 5 != 0){
+} else if(val1[index] % 3 != 0 && val1[index] % 5 != 0){
   resultado.push('bug!');
 }
   
@@ -116,13 +116,36 @@ function fizzBuzz(val1) {
 }
 
 // Desafio 9
-function encode() {
+function encode(texto) {
   // seu código aqui
+  for (let index in texto) {
+     //método que encontrei na internet
+    //para a substituição de caractere: o .replace
+    texto = texto.replace("a", "1");
+    texto = texto.replace("e", "2");
+    texto = texto.replace("i", "3");
+    texto = texto.replace("o", "4");
+    texto = texto.replace("u", "5");
+  
+}
+    return texto;
 
 
 }
-function decode() {
+function decode(texto) {
   // seu código aqui
+  for (let index in texto) {
+    //método que encontrei na internet
+   //para a substituição de caractere: o .replace
+   texto = texto.replace("1", "a");
+   texto = texto.replace("2", "e");
+   texto = texto.replace("3", "i");
+   texto = texto.replace("4", "o");
+   texto = texto.replace("5", "u");
+ 
+}
+   return texto;
+
 }
 
 module.exports = {
