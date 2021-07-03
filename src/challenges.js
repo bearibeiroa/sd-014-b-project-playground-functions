@@ -91,12 +91,49 @@ function fizzBuzz(numeros) {
 
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let newString = "";
+for (let index = 0; index < string.length; index += 1){
+  if (string[index] === "a"){
+    newString += 1;
+  }else if (string[index] === "e"){
+    newString += 2;
+  }else if (string[index] === "i"){
+    newString += 3;
+  }else if (string[index] === "o"){
+    newString += 4;
+  }else if (string[index] === "u"){
+    newString += 5;
+  }else {
+    newString += string[index];
+    } 
+  }
+  return newString;
 }
-function decode() {
+
+
+function decode(string) {
   // seu código aqui
-}
+  let newString = "";
+  for (let index = 0; index < string.length; index += 1){
+    if (string[index] === "1"){
+      newString += "a";
+    }else if (string[index] === "2"){
+      newString += "e";
+    }else if (string[index] === "3"){
+      newString += "i";
+    }else if (string[index] === "4"){
+      newString += "o";
+    }else if (string[index] === "5"){
+      newString += "u";
+    }else {
+      newString += string[index];
+      } 
+    }
+    return newString;
+  }
+
 
 module.exports = {
   calcArea,
