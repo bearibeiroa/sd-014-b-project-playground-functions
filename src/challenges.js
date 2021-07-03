@@ -75,18 +75,46 @@ if(max === numeros[index]){
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let resultado;
+    if(cat2 == test1 && cat1 == test2){
+    return cat2;
+    
+    } else if(cat1 == test3 && cat2 == test4){
+    return cat1;
+
+  } else if(cat2 == cat1){
+    resultado = "os gatos trombam e o rato foge";
+    return resultado;
+ }
+
+  
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(val1) {
   // seu código aqui
+  let resultado = [];
+  for (let index in val1) {
+   if(val1[index] % 3 == 0){
+   resultado.push('fizz');
+} else if(val1[index] % 5 == 0){
+  resultado.push('buzz');
+} else if(val1[index] % 3 == 0 && val1 % 5 == 0){
+  resultado.push('fizzBuzz');
+} else if(val1[index] % 3 != 0 && val1 % 5 != 0){
+  resultado.push('bug!');
+}
+  
+}
+  return resultado;
 }
 
 // Desafio 9
 function encode() {
   // seu código aqui
+
 
 }
 function decode() {
