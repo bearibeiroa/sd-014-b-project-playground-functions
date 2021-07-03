@@ -64,14 +64,13 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let pos1 = Math.abs(cat1 - mouse);
   let pos2 = Math.abs(cat2 - mouse);
+  let msg = '';
   if (pos1 === pos2) {
-    return 'os gatos trombam e o rato foge';
-  }
-  else if (pos1 < pos2) {
-    return 'cat1';
-  } else {
-    return 'cat2';
-  }
+    msg = 'os gatos trombam e o rato foge';
+  } else if (pos1 < pos2) {
+    msg = 'cat1';
+  } else { msg = 'cat2'; }
+  return msg;
 }
 
 // Desafio 8
@@ -95,23 +94,23 @@ function encode(texto) {
   let novoTexto = '';
   for (let index = 0; index < texto.length; index += 1) {
     switch (texto[index]) {
-      case 'a':
-        novoTexto += '1';
-        break;
-      case 'e':
-        novoTexto += '2';
-        break;
-      case 'i':
-        novoTexto += '3';
-        break;
-      case 'o':
-        novoTexto += '4';
-        break;
-      case 'u':
-        novoTexto += '5';
-        break;
-      default:
-        novoTexto += texto[index];
+    case 'a':
+      novoTexto += '1';
+      break;
+    case 'e':
+      novoTexto += '2';
+      break;
+    case 'i':
+      novoTexto += '3';
+      break;
+    case 'o':
+      novoTexto += '4';
+      break;
+    case 'u':
+      novoTexto += '5';
+      break;
+    default:
+      novoTexto += texto[index];
     }
   }
   return novoTexto;
@@ -119,7 +118,7 @@ function encode(texto) {
 
 function decode(texto) {
   let novoTexto = texto;
-  for (i = 0; i < texto.length; i += 1) {
+  for (let i = 0; i < texto.length; i += 1) {
     novoTexto = novoTexto.replace('1', 'a');
     novoTexto = novoTexto.replace('2', 'e');
     novoTexto = novoTexto.replace('3', 'i');

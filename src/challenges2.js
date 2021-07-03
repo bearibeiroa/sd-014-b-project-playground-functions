@@ -1,13 +1,10 @@
 // Desafio 10
 function techList(tech, name) {
   let lista = [];
-
   if (tech.length <= 0) {
     return 'Vazio!';
   }
-
   tech = tech.sort();
-  
   for (let index in tech) {
     lista.push(
       object = {
@@ -23,14 +20,13 @@ function techList(tech, name) {
 function generatePhoneNumber(array) {
   // validando se array pode ser usado
   // se mais de 11 numeros tamanho incorreto
-  if (array.length != 11) {
-    return 'Array com tamanho incorreto.'
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
-  
   // numero deve ser maior que 0 e menor que 9
   for (let numero in array) {
     if (array[numero] < 0 || array[numero] > 9) {
-      return "não é possível gerar um número de telefone com esses valores"
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     else {
       // numero não deve repetir 3x ou mais
