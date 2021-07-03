@@ -32,7 +32,9 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(array) {
   let string = '';
-  string = (array[array.length - 1] + ', ' + array[0]);
+  // template literals
+  // corrige eslint Unexpected string concatenation
+  string = `${array[array.length - 1]}, ${array[0]}`;
   return string;
 }
 
@@ -77,9 +79,9 @@ function fizzBuzz(array) {
   for (let index in array) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       array[index] = 'fizzBuzz';
-    }  else if (array[index] % 3 === 0) {
+    } else if (array[index] % 3 === 0) {
       array[index] = 'fizz';
-    }  else if (array[index] % 5 === 0) {
+    } else if (array[index] % 5 === 0) {
       array[index] = 'buzz';
     } else { array[index] = 'bug!'; }
   }
