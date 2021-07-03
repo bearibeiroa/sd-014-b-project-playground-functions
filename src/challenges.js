@@ -14,9 +14,12 @@ function calcArea(triangleBase, triangleHeigth) {
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-
+function splitSentence(string) {
+  let sentence = string;
+  let arrayOfStrings = sentence.split(' ');
+  return(arrayOfStrings)
 }
+console.log(splitSentence('Olá pessoas eu sou Lucas'))
 
 // Desafio 4
 function concatName(arrayOfStrings) {
