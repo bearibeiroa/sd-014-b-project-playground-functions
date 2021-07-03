@@ -83,19 +83,58 @@ function catAndMouse(mouse, cat1 , cat2) {
   catAndMouse(10 , 8 , 3);
 
 // Desafio 8
-function fizzBuzz(listaFiz) {
+function fizzBuzz() {
   // seu código aqui
-  for
 }
 
 // Desafio 9
 function encode(codigo) {
   // seu código aqui
-  
+let mensagem = " ";
+for (index = 0; index <= codigo.length; index += 1){
+  if(codigo[index] === "a"){
+    mensagem = "1";
+  }
+    if(codigo[index] === "e"){
+      mensagem = "2";
+    }
+    if(codigo[index] === "i"){
+      mensagem = "3";
+    }
+    if(codigo[index] === "o"){
+      mensagem = "4";
+    }
+    if(codigo[index] === "u"){
+      mensagem = "5";
+    }
+  }
+  return codigo;
 }
+console.log(encode("hi there!"));
+
 function decode(descodigo) {
   // seu código aqui
-}
+
+  for (index = 0; index <= descodigo.length; index += 1){
+    if(descodigo[index] === "1"){
+      descodigo = "a";
+    }
+      if(descodigo[index] === "2"){
+        descodigo = "e";
+      }
+      if(descodigo[index] === "3"){
+        descodigo = "i";
+      }
+      if(descodigo[index] === "4"){
+        descodigo = "o";
+      }
+      if(descodigo[index] === "5"){
+        descodigo = "u";
+  }
+return descodigo;
+    }
+       }
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
