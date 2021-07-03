@@ -31,13 +31,13 @@ function generatePhoneNumber(array) {
     else {
       // numero não deve repetir 3x ou mais
       let count = 0;
-      for (compare in array) {
+      for (let compare in array) {
         if (array[numero] === array[compare]) {
           count += 1;
         }
       }
       if (count >= 3) {
-        return "não é possível gerar um número de telefone com esses valores"
+        return 'não é possível gerar um número de telefone com esses valores';
       }
     }
   }
@@ -47,9 +47,9 @@ function generatePhoneNumber(array) {
   array.splice(3, 0, ')');
   array.splice(4, 0, ' ');
   array.splice(10, 0, '-');
-  let phone = ''
-  for (index in array) {
-    phone += array[index]
+  let phone = '';
+  for (let index in array) {
+    phone += array[index];
   }
   return phone;
 }
@@ -58,24 +58,24 @@ function generatePhoneNumber(array) {
 function triangleCheck(lineA, lineB, lineC) {
   // Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois.
   if (lineA > lineB + lineC) {
-    return false
+    return false;
   }
   if (lineB > lineA + lineC) {
-    return false
+    return false;
   }
   if (lineC > lineA + lineB) {
-    return false
+    return false;
   }
   
   // Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
   if (lineA < Math.abs(lineB - lineC)) {
-    return false
+    return false;
   }
   if (lineB < Math.abs(lineA - lineC)) {
-    return false
+    return false;
   }
   if (lineC < Math.abs(lineA - lineB)) {
-    return false
+    return false;
   }
   return true
 }
@@ -84,14 +84,14 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   let waterNeed = 0;
   for (let caracter in string) {
-    if (isNaN(parseInt(string[caracter])) === false ) {
+    if (isNaN(parseInt(string[caracter])) === false) {
       waterNeed += parseInt(string[caracter]);
     }
   }
   if (waterNeed <= 1) {
-    waterNeed = waterNeed + ' copo de água';
+    waterNeed += ' copo de água';
   } else {
-    waterNeed = waterNeed + ' copos de água';
+    waterNeed += ' copos de água';
   }
   return (waterNeed);
 }
