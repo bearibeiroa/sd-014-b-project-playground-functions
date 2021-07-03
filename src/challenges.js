@@ -1,5 +1,3 @@
-const { techList } = require("./challenges2");
-
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
@@ -65,18 +63,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(list) {
+  
+  let result = [];
 
-  for (let index in list) {
+  for (let index= 0; index < list.length; index +=1) {
     if (list[index] % 3 === 0 && list[index] % 5 === 0) {
-    return "fizzBuzz";
-  } else if (list[index] % 3 === 0) {
-    return "fizz";
-  } else if (list[index] % 5 === 0) {
-    return "buzz";
-  } else if (list[index] % 3 !== 0 && list[index] % 5 !== 0) {
-    return "bug!";
+      result.push("fizzBuzz");
+    } else if (list[index] % 3 === 0) {
+        result.push("fizz");
+    } else if (list[index] % 5 === 0) {
+        result.push("buzz");
+    } else if (list[index] % 3 !== 0 && list[index] % 5 !== 0) {
+        result.push("bug!");
+    }
   }
-  return list;
+  return result;
 }
 
 // Desafio 9
