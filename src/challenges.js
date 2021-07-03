@@ -20,7 +20,8 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let ultimo = array.length - 1;
-  let primeiroUltimo = array[ultimo] + ', ' + array[0];
+  let virgula = ', ';
+  let primeiroUltimo = array[ultimo] + virgula + array[0];
   return primeiroUltimo;
 }
 
@@ -51,25 +52,25 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
-    return "os gatos trombam e o rato foge";
-  } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
-    return "cat1";
-  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)){
-    return "cat2";
+    return 'os gatos trombam e o rato foge';
+  } if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return 'cat1';
+  } if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+    return 'cat2';
   }
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   for (let numero in array) {
-    if (array[numero] % 3 == 0 && array[numero] % 5 == 0){
-      array.splice(numero, 1, "fizzBuzz");
-    } else if (array[numero] % 3 != 0 && array[numero] % 5 != 0) {
-      array.splice(numero, 1, "bug!");
-    } else if (array[numero] % 3 == 0) {
-      array.splice(numero, 1, "fizz");
-    } else{
-      array.splice(numero, 1, "buzz");
+    if (array[numero] % 3 === 0 && array[numero] % 5 === 0) {
+      array.splice(numero, 1, 'fizzBuzz');
+    } else if (array[numero] % 3 !== 0 && array[numero] % 5 !== 0) {
+      array.splice(numero, 1, 'bug!');
+    } else if (array[numero] % 3 === 0) {
+      array.splice(numero, 1, 'fizz');
+    } else {
+      array.splice(numero, 1, 'buzz');
     }
   }
   return array;
@@ -79,22 +80,22 @@ function fizzBuzz(array) {
 function encode(string) {
   let codigo = '';
   let split = string.split('');
-  for(let index in split){
-    if(split[index] === 'a'){
-      split.splice(index,1,1)
+  for (let index in split) {
+    if (split[index] === 'a') {
+      split.splice(index, 1, 1);
     }
-   else if(split[index] === 'e'){
-      split.splice(index,1,2)
+    else if (split[index] === 'e') {
+      split.splice(index, 1, 2);
     }
-    else if(split[index] === 'i'){
-      split.splice(index,1,3)
+    else if (split[index] === 'i') {
+      split.splice(index, 1, 3);
     }
-    else if(split[index] === 'o'){
-      split.splice(index,1,4)
+    else if (split[index] === 'o') {
+      split.splice(index, 1, 4);
     }
-    else if(split[index] === 'u'){
-      split.splice(index,1,5)
-    }
+    else if (split[index] === 'u') {
+      split.splice(index, 1, 5);
+}
     codigo += (split[index]);
   }
   return codigo;

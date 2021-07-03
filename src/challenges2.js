@@ -36,7 +36,7 @@ function generatePhoneNumber(array) {
       }
     }
   }
-let ddd = '('+ array[0] + array[1] + ') ';
+let ddd = '('+ array[0] + array[1] + ') ';  
 array.splice(7, 0,'-');
 array.splice(0,2);
 array = array.join('');
@@ -62,8 +62,8 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let reg = /\d+/g;
-  let result = string.match(reg);
+  let reg = /\d+/g; // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#special-word-boundary
+  let result = string.match(reg); // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
   let contador = 0;
   for(let index in result){
     contador += parseInt(result[index],10);
