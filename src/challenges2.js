@@ -1,21 +1,14 @@
 // Desafio 10
 function techList(tech1, nome) {
+  tech1 = tech1.sort();
+  let list = [];
   if (tech1.length === 0) {
     return 'Vazio!';
   }
-  let aux = tech1.length;
-  tech1 = tech1.sort();
-
-  let technology = {
-    tech: '',
-    name: '',
-  };
-
-  for (let key = 0; key < aux; key += 1) {
-    technology.tech = tech1[key];
-    technology.name = nome;
-    return technology;
+  for (let index = 0; index < tech1.length; index += 1) {
+    list.push({ tech: tech1[index], name: nome });
   }
+  return list;
 }
 
 // Desafio 11
@@ -74,7 +67,7 @@ function generatePhoneNumber(phone) {
   if (phoneNumber(phone) !== undefined) {
     return phoneNumber(phone);
   }
- }
+}
 
 // Desafio 12
 // comando Math.abs explicado no arquivo challenges, desafio 7.
