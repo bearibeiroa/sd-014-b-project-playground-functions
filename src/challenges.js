@@ -64,27 +64,21 @@ function checkInt(divisor, dividendo) {
   return dividendo % divisor === 0;
 }
 
-function buzz(number) {
-  let resultBuzz = [];
+function buzz(number, result) {
   if (checkInt(5, number) === true && checkInt(3, number) === false) {
-    resultBuzz.push('buzz');
-    return resultBuzz;
+    result.push('buzz');
   }
 }
 
-function fizz(number) {
-  let resultFizz = [];
+function fizz(number, result) {
   if (checkInt(5, number) === false && checkInt(3, number) === true) {
-    resultFizz.push('fizz');
-    return resultFizz;
+    result.push('fizz');
   }
 }
 
-function bug(number) {
-  let resultBug = [];
+function bug(number, result) {
   if (checkInt(5, number) === false && checkInt(3, number) === false) {
-    resultBug.push('bug!');
-    return resultBug;
+    result.push('bug!');
   }
 }
 
@@ -94,11 +88,15 @@ function fizzBuzz(arrayNumber) {
     if (checkInt(5, number) && checkInt(3, number)) {
       result.push('fizzBuzz');
     } else {
-      result.push(fizz(number), buzz(number), bug(number));
+      fizz(number, result);
+      buzz(number, result);
+      bug(number, result);
     }
   }
   return result;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function stringToArray(string) {
