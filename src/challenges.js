@@ -27,23 +27,34 @@ function concatName(listnames) {
   let index = [listnames[0],listnames[listnames.length -1]];
   return index;
 }
-console.log(concatName(['Lucas' , 'Cassiano' , 'Ferraz' , 'Paolillo']));
+//console.log(concatName(['Lucas' , 'Cassiano' , 'Ferraz' , 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins , ties) {
   // seu código aqui 
-  //recebe número de vitórias e empates // retorne quantidade de pontos
   let vitorias = (wins * 3);
   return vitorias + ties;
 }
-console.log(footballPoints(1 , 1));
+//console.log(footballPoints(1 , 1));
 
 // Desafio 6
-function highestCount() {
+function highestCount(higestNumber) {
   // seu código aqui
+  let maior = higestNumber;
+  
+  for (let index = 0; index <= higestNumber.length; index += 1){
+    for (let repet = index += 1; repet <= higestNumber.length; repet += 1){
+      if(higestNumber[index] === maior[repet]) {
+        return repet;
+    }
+        
+  }
+ 
 }
-
-// Desafio 7
+  console.log(highestCount[9, 1, 9, 3, 9, 9, 7]);
+}
+ 
+  // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
