@@ -49,7 +49,7 @@ function highestCount(listaNumeros) {
     }
   }  
 let count = 0;
-  for (let index = 0; index < listaNumeros.length; index = index + 1) {
+  for (let index = 0; index < listaNumeros.length; index += 1) {
     if (listaNumeros[index] === maior) {
       count += 1;
     }
@@ -57,7 +57,7 @@ let count = 0;
     // console.log('o maior número é:', maior);
     // console.log('quantas vezes aparece', count);
 }
-highestCount([4,8,9,9,9,0]);
+highestCount([4,9,9,9,9,0]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -77,7 +77,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return ('os gatos trombam e o rato foge');
     }
   }
-  catAndMouse(10, 8, 3);
+  catAndMouse(10, 8, 9);
 
 // Desafio 8
 function fizzBuzz() {
@@ -91,7 +91,7 @@ let mensagem = ' ';
 for (let index = 0; index <= codigo.length; index += 1) {
   if (codigo[index] === 'a') {
     mensagem = '1';
-  }
+    }
     if (codigo[index] === 'e') {
       mensagem = '2';
     }
