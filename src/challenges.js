@@ -51,12 +51,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let distMouseCat2 = (mouse - cat2) ** 2;
   if (distMouseCat1 < distMouseCat2) {
     return ('cat1');
-  } else {
-    if (distMouseCat2 < distMouseCat1) {
-      return ('cat2');
-    } else {
-      return ('os gatos trombam e o rato foge');
-    }
+  } if (distMouseCat2 < distMouseCat1) {
+    return ('cat2');
+  } if (distMouseCat1 === distMouseCat2) {
+    return ('os gatos trombam e o rato foge');
   }
 }
 

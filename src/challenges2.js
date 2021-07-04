@@ -1,6 +1,6 @@
 // Desafio 10
 
-function techList (techs, nome){
+function techList (techs, nome) {
   let info = [];
   if (techs.length === 0) { return ('Vazio!');}
   else {
@@ -70,19 +70,11 @@ for (n in numbers){
 // Desafio 12
 
 function triangleCheck(lineA, lineB, lineC) {
-  let difAB = Math.abs(lineA - lineB);
-  let difBC = Math.abs(lineB - lineC);
-  let difAC = Math.abs(lineA - lineC);
+  let difAB = Math.abs(lineA - lineB); let difBC = Math.abs(lineB - lineC); let difAC = Math.abs(lineA - lineC);
 
-  let sumAB = (lineA + lineB);
-  let sumBC = (lineB + lineC);
-  let sumAC = (lineA + lineC);
-
-  let checkA = ((lineA < sumBC) && (lineA > difBC));
-  let checkB = ((lineB < sumAC) && (lineB > difAC));
-  let checkC = ((lineC < sumAB) && (lineC > difAB));
+  let sumAB = (lineA + lineB); let sumBC = (lineB + lineC); let sumAC = (lineA + lineC);
+  let checkA = ((lineA < sumBC) && (lineA > difBC)); let checkB = ((lineB < sumAC) && (lineB > difAC)); let checkC = ((lineC < sumAB) && (lineC > difAB));
   let resultado = false;
-
   if ((lineA > sumBC) || (lineB > sumAC) || (lineC > sumAB)) {
     return false;
   }
@@ -102,7 +94,6 @@ function hydrate(bebidas) {
   for (let x = 0; x < numbers.length; x += 1) {
     copoAgua = copoAgua + numbers[x]
   }
-  
   if (copoAgua === 1) {
     return ('1 copo de água');
   } else if (copoAgua > 1) {
