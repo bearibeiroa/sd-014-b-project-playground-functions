@@ -72,7 +72,20 @@ else {
 // Desafio 13
 function hydrate(string) {
   // seu código aqui
+  let regExp = /\d+/g; // Retirado como referência do link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+  let array = string.match(regExp); // Retirado como referência do link https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
 
+  let number = 0;
+  let soma = 0;
+
+  for (let index = 0; index < array.length; index += 1){
+    number = Number.parseInt(array[index]); // Referência do link https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt
+    soma += number;
+  }
+  if (soma === 1){
+    return soma + ' copo de água';
+  }
+  return soma + ' copos de água';
 }
 
 module.exports = {
