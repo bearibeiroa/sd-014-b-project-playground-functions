@@ -16,13 +16,61 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let phoneNumber = '';
+  let ddd = '';
+  let firstNumbers = '';
+  let lastNumbers = '';
+  let numeroRepetido = 0;
+  if (array.length != 11) {
+    return 'Array com tamanho incorreto.'
+  }
+  for (let index = 0; index < array.length; index++) {
+    let numeroDeRepeticoes;
+    if (array[index] === array[index+1] || numeroRepetido === array[index]) {
+      numeroDeRepeticoes += 1;
+      numeroRepetido += array[index];
+    } else {
+      numeroDeRepeticoes = 0;
+      numeroRepetido = 0;
+    }
+    if (array[index] < 0 || array[index] > 9 || numeroDeRepeticoes >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+  }
+  for (let index = 0; index < 2; index++) {
+    ddd += array[index];
+  }
+  phoneNumber += '(' + ddd + ')';
+  for (let index = 2; index < 7; index++) {
+    firstNumbers += array[index];
+  }
+  phoneNumber += ' ' + firstNumbers + '-';
+  for (let index = 7; index < 11; index++) {
+    lastNumbers += array[index];
+  }
+  phoneNumber += lastNumbers;
+  return phoneNumber;
 }
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let lineAPossibility;
+  let lineBPossibility;
+  let lineCPossibility;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    lineAPossibility = true;
+  } 
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    lineBPossibility = true;
+  }
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    lineCPossibility = true;
+  }
+  if (lineAPossibility === true && lineBPossibility === true && lineCPossibility === true) {
+    return true
+  } else {
+    return false
+  }
 }
 
 // Desafio 13
