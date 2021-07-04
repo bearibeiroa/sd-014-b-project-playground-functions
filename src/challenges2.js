@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(techs, name) {
-   
+  
 }
 
 // Desafio 11

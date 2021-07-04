@@ -100,13 +100,13 @@ function fizzBuzz(array) {
   let result = [];
 
   for (let i = 0; i < array.length; i += 1) {
-    if (array % 3 === 0 && array % 5 === 0) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       result.push("fizzBuzz");
-    } else if (array % 3 === 0 && array % 5 != 0) {
+    } else if (array[i] % 3 === 0 && array[i] % 5 != 0) {
       result.push("fizz");
-    } else if (array % 5 === 0 && array % 3 != 0) {
+    } else if (array[i] % 5 === 0 && array[i] % 3 != 0) {
       result.push("buzz");
-    } else if (array % 3 != 0 && array % 5 != 0) {
+    } else if (array[i] % 3 != 0 && array[i] % 5 != 0) {
       result.push("bug!");
     }
   }
