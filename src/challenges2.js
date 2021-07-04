@@ -38,7 +38,7 @@ function generatePhoneNumber(numbers) {
         countRepeated = count[x]; // então é atribuída a contagem de "x" no contador countRepeated
       }
     }
-    return countRepeated; //maior valor de repetições
+    return countRepeated; // maior valor de repetições
   }
   // --function acima verifica repetições
   let verifyZeroNine = 0;
@@ -51,7 +51,7 @@ function generatePhoneNumber(numbers) {
     return ('não é possível gerar um número de telefone com esses valores');
   } else if (mostRepeated(numbers) > 2) {return ('não é possível gerar um número de telefone com esses valores');
 } else {
-  let phoneNumber = ('(' + numbers[0] + numbers[1] +') '+ numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]);
+  let phoneNumber = ('(' + numbers[0] + numbers[1] + ') ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]);
   return phoneNumber;
   }
 }
