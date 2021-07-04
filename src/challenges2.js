@@ -19,8 +19,8 @@ function techList(techs, nome) {
 // Desafio 11
 
 function generatePhoneNumber(numbers) {
-  //------------------------------------------------------------------------------------
-  //Função abaixo foi baseada em solution do bloco - Gabarito JavaScript / Parte 4 / Parte I - Objetos e For/In - Exercício 5
+// ------------------------------------------------------------------------------------
+// Função abaixo foi baseada em solution do bloco - Gabarito JavaScript / Parte 4 / Parte I - Objetos e For/In - Exercício 5
   function mostRepeated(numbers) {
     let count = {};
     for (let index = 0; index < numbers.length; index += 1) {
@@ -49,7 +49,7 @@ function generatePhoneNumber(numbers) {
   
   let verifyZeroNine = 0;
 for (n in numbers){
-  if (numbers[n] < 0 || numbers[n] > 9) {verifyZeroNine = verifyZeroNine +1}
+  if (numbers[n] < 0 || numbers[n] > 9) {verifyZeroNine = verifyZeroNine +1};
 }
 
   if (numbers.length !== 11) {
@@ -60,7 +60,7 @@ for (n in numbers){
     else {
       if (mostRepeated(numbers) > 2) {return ('não é possível gerar um número de telefone com esses valores')}
     else {
-          let phoneNumber = ('(' + numbers[0] + numbers[1] +') ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10])
+          let phoneNumber = ('(' + numbers[0] + numbers[1] +') ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]);
           return phoneNumber;
         }
     }
