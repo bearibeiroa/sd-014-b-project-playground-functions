@@ -14,6 +14,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 function splitSentence(frase) {
   let fraseArray = frase.split(' ');
   return fraseArray;
@@ -89,11 +90,22 @@ function fizzBuzz(n) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+//https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
+function encode(n) {
+  var n2 = n.replace(/a/g, '1');
+  var n3 = n2.replace(/e/g, '2');
+  var n4 = n3.replace(/i/g, '3');
+  var n5 = n4.replace(/o/g, '4');
+  var n6 = n5.replace(/u/g, '5');
+  return n6;
 }
-function decode() {
-  // seu código aqui
+function decode(n7) {
+  var n8 = n7.replace(/1/g, 'a');
+  var n9 = n8.replace(/2/g, 'e');
+  var n10 = n9.replace(/3/g, 'i');
+  var n11 = n10.replace(/4/g, 'o');
+  var n12 = n11.replace(/5/g, 'u');
+  return n12;
 }
 
 module.exports = {
