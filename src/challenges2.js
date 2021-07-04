@@ -82,8 +82,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  
+function hydrate(quantoBebi) {
+
+  let coposDeAgua = 0;
+  let quantidadeBebida = quantoBebi.match(/\d+/g);
+  for (let i = 0; i < quantidadeBebida.length; i += 1) {
+    coposDeAgua += parseInt(quantidadeBebida[i]);
+  }
+  if (coposDeAgua === 1) {
+    coposDeAgua += ' copo de água';
+  } else {
+    coposDeAgua += ' copos de água';
+  }
+  return coposDeAgua;
 }
 
 module.exports = {
