@@ -23,7 +23,7 @@ function generatePhoneNumber(numbers) {
   function mostRepeated() {
     let count = {};
     for (let index = 0; index < numbers.length; index += 1) {
-      let number = numbers[index]; // atribuição de number de verificação com número de entr
+      let number = numbers[index]; // atribuição de number de verificação com número de entrada
       if (count[number] === undefined) { // se objeto de contagem para 'number' está vazio
         count[number] = 1; // atribui 1 contagem para o valor number = numbers[index]
       } else { // senão ...
