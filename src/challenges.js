@@ -20,8 +20,9 @@ function splitSentence(string) {
 //referencias .split: https://www.w3schools.com/jsref/jsref_split.asp e https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let result = array[array.length - 1] + ', ' + array[0];
+  return result;
 }
 
 // Desafio 5
