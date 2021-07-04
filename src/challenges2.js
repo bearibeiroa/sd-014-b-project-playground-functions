@@ -20,7 +20,7 @@ function techList(techs, nome) {
 
 function generatePhoneNumber(numbers) {
 // Função abaixo foi baseada em solution do bloco - Gabarito JavaScript / Parte 4 / Parte I - Objetos e For/In - Exercício 5
-  function mostRepeated(numbers) {
+  function mostRepeated() {
     let count = {};
     for (let index = 0; index < numbers.length; index += 1) {
       let number = numbers[index]; // atribuição de number de verificação com número de entr
@@ -30,9 +30,8 @@ function generatePhoneNumber(numbers) {
         count[number] += 1; // soma no contador 1 a mais do valor anterior
       }
     }
-// verificar repetições
+    // verificar repetições
     let countRepeated = 0; // contador de repetições inicia zerado
-
     for (let x in count) { // loop para cada valor "x" no objeto "count" com as repetições
       if (countRepeated < count[x]) { // se o contador countRepeated, inicializado em 0, é menor que a contagem do valor "x" ...
         countRepeated = count[x]; // então é atribuída a contagem de "x" no contador countRepeated
