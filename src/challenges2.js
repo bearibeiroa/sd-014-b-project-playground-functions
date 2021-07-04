@@ -14,12 +14,10 @@ function techList(technologies, name) {
 
 // Desafio 11
 function generatePhoneNumber(phoneNumbers) {
-
   let number = '(';
   let repeatNumber = 0;
   let generate = true;
   let stopForRepeat = false;
-
   if (phoneNumbers.length === 11) {
     // Verifica se tem algum numero que repete mais ou igual a 3 vezes
     for (let i = 0; i < phoneNumbers.length; i++) {
@@ -64,13 +62,28 @@ function generatePhoneNumber(phoneNumbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let isTriangle = 0;
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+    isTriangle += 1;
+  }
+  if (lineB < (lineA + lineC) && lineA > Math.abs(lineA - lineC)) {
+    isTriangle += 1;
+  }
+  if (lineC < (lineA + lineB) && lineA > Math.abs(lineA - lineB)) {
+    isTriangle += 1;
+  }
+  if (isTriangle === 3) {
+    isTriangle = true;
+  } else {
+    isTriangle = false;
+  }
+  return isTriangle;
 }
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  
 }
 
 module.exports = {
