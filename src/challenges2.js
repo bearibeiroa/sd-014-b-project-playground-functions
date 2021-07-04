@@ -97,8 +97,22 @@ function generatePhoneNumber(numerosTelefonicos) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function validarLadoA(lineA, lineB, lineC) {
+  return lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC);
+}
+
+function validarLadoB(lineA, lineB, lineC) {
+  return lineB < Math.abs(lineA + lineC) && lineB > Math.abs(lineA - lineC);
+}
+
+function validarLadoC(lineA, lineB, lineC) {
+  return lineC < Math.abs(lineA + lineB) && lineC > Math.abs(lineA - lineB);
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  return validarLadoA(lineA, lineB, lineC)
+    && validarLadoB(lineA, lineB, lineC)
+    && validarLadoC(lineA, lineB, lineC);
 }
 
 // Desafio 13
