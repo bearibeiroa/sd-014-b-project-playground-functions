@@ -82,22 +82,22 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(str1ng) {
-  let encodedString = str1ng
-  encodedString = encodedString.replace(/a/gi,'1'); // propriedade 'g' de global e 'i' de ignore case flag (maiusculas, minúsculas)
-  encodedString = encodedString.replace(/e/gi,'2');
-  encodedString = encodedString.replace(/i/gi,'3');
-  encodedString = encodedString.replace(/o/gi,'4');
-  encodedString = encodedString.replace(/u/gi,'5');
+  let encodedString = str1ng;
+  encodedString = encodedString.replace(/a/gi, '1'); // propriedade 'g' de global e 'i' de ignore case flag (maiusculas, minúsculas)
+  encodedString = encodedString.replace(/e/gi, '2');
+  encodedString = encodedString.replace(/i/gi, '3');
+  encodedString = encodedString.replace(/o/gi, '4');
+  encodedString = encodedString.replace(/u/gi, '5');
   return encodedString;
 }
 
 function decode(encodedString) {
-  let decodedString = encodedString
-  decodedString = decodedString.replace(/1/g,'a'); // propriedade 'g' de global
-  decodedString = decodedString.replace(/2/g,'e');
-  decodedString = decodedString.replace(/3/g,'i');
-  decodedString = decodedString.replace(/4/g,'o');
-  decodedString = decodedString.replace(/5/g,'u');
+  let decodedString = encodedString;
+  decodedString = decodedString.replace(/1/g, 'a'); // propriedade 'g' de global
+  decodedString = decodedString.replace(/2/g, 'e');
+  decodedString = decodedString.replace(/3/g, 'i');
+  decodedString = decodedString.replace(/4/g, 'o');
+  decodedString = decodedString.replace(/5/g, 'u');
   return (decodedString);
 }
 

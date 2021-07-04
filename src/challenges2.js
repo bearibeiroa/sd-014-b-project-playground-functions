@@ -42,10 +42,10 @@ function generatePhoneNumber(numbers) {
       }
     }
     return countRepeated; //maior valor de repetições
-  //return count;
+  // return count;
   }
-  //--function acima verifica repetições
-  //------------------------------------------------------------------------------------
+  // --function acima verifica repetições
+  // ------------------------------------------------------------------------------------
   
   let verifyZeroNine = 0;
 for (n in numbers){
@@ -61,7 +61,7 @@ for (n in numbers){
       if (mostRepeated(numbers) > 2) {return ('não é possível gerar um número de telefone com esses valores')}
     else {
           let phoneNumber = ('(' + numbers[0] + numbers[1] +') ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10])
-          return phoneNumber
+          return phoneNumber;
         }
     }
   }
@@ -91,12 +91,12 @@ function hydrate(bebidas) {
   // linha de código abaixo foi adaptada de: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript - Acessado em: 01/07/2021
   let numbers = bebidas.match(/\d+/g).map(Number); // regex - regular expressions -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
   for (let x = 0; x < numbers.length; x += 1) {
-    copoAgua = copoAgua + numbers[x]
+    copoAgua = copoAgua + numbers[x];
   }
   if (copoAgua === 1) {
     return ('1 copo de água');
   } else if (copoAgua > 1) {
-    return (copoAgua + ' copos de água')
+    return (copoAgua + ' copos de água');
   }
 }
 
