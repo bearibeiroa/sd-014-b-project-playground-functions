@@ -65,9 +65,29 @@ function highestCount(exer6) {
 // esse foi osso dms
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  dist1 = 0;
+  dist2 = 0;
+  dist1 = mouse - cat1; 
+  dist1 = dist1 * Math.sign(dist1)
+  dist2 = mouse - cat2;
+  dist2 = dist2 * Math.sign(dist2)
+  if (dist1 === dist2) {
+    return "os gatos trombam e o rato foge";
+  } else if (dist2 > dist1) {
+    return "cat1";
+  } else {
+    return "cat2";
+  }
 }
+
+// a distância dos gatos em relação ao rato estão nas formulas dist1 e dist2
+// como algum dos gatos pode estar na frente do rato, e o outro atrás, eu multipliquei os
+// resultados das distancias pelo seu próprio sinal, p ficar um valor positivo
+// então se a dist1 for menor, quer dizer que o gato 2 está mais perto, 
+// se a dist2 for maior, representa que o gato 1 está mais perto,
+// se a distancia for a mesma representa que eles irão se trombar no caminho.
 
 // Desafio 8
 function fizzBuzz() {
