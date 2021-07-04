@@ -38,8 +38,11 @@ function concatName(exer4) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let pontosCorridos = 0;
+  pontosCorridos = (wins*3 + ties*1);
+  return pontosCorridos;
 }
 
 // Desafio 6
