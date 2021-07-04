@@ -50,7 +50,8 @@ function generatePhoneNumber(numbers) {
     return ('não é possível gerar um número de telefone com esses valores');
   }
   if (mostRepeated() > 2) {
-    return ('não é possível gerar um número de telefone com esses valores');};
+    return ('não é possível gerar um número de telefone com esses valores');
+  }
   let phoneNumber = ('(' + numbers[0] + numbers[1] + ') ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]);
   return phoneNumber;
 }
