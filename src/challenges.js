@@ -37,25 +37,24 @@ function footballPoints(wins, ties) {
   let vitorias = (wins * 3);
   return vitorias + ties;
 }
-  console.log(footballPoints(1,1));;
+  // console.log(footballPoints(1,1));;
 
 // Desafio 6
 function highestCount(listaNumeros) {
   // seu código aqui
   let maior = 0;
   for (let index = 0; index < listaNumeros.length; index += 1) {
-    if(listaNumeros[index] > maior) {
+    if (listaNumeros[index] > maior) {
     maior = listaNumeros[index];
     }
   }  
 let count = 0;
   for (let index = 0; index < listaNumeros.length; index += 1) {
-    if (listaNumeros[index] === maior) {
-      count += 1;
+    if (listaNumeros[index] === maior)
+      count += 1
     }
-  }
-    // console.log('o maior número é:', maior);
-    // console.log('quantas vezes aparece', count);
+    console.log('o maior número é:', maior);
+    console.log('quantas vezes aparece:', count);
 }
 highestCount([4,9,9,9,9,0]);
 
@@ -65,16 +64,16 @@ function catAndMouse(mouse, cat1, cat2) {
       let calcDistance1 = (mouse - cat1);
       let calcDistance2 = (mouse - cat2);
   if (calcDistance1 > calcDistance2) {
-  // console.log("o gato mais próximo é: cat 1")
-     return ('cat1 está mais próximo');
+  console.log("o gato mais próximo é: cat 1")
+     return ('cat1 está mais próximo')
     }
   if (calcDistance1 < calcDistance2) {
-  // console.log("o gato mais próximo é: cat 2")
-    return('cat2 está mais próximo');
+  console.log("o gato mais próximo é: cat 2")
+    return('cat2 está mais próximo')
     }
   if (mouse === cat1 && mouse === cat2) {
-  // console.log("os gatos trombam e o rato foge")
-    return ('os gatos trombam e o rato foge');
+  console.log("os gatos trombam e o rato foge")
+    return ('os gatos trombam e o rato foge')
     }
   }
   catAndMouse(10, 8, 9);
