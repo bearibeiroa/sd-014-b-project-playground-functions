@@ -1,6 +1,6 @@
 // Desafio 10
 
-function techList (techs, nome) {
+function techList(techs, nome) {
   let info = [];
   if (techs.length === 0) { return ('Vazio!');}
   else {
@@ -71,7 +71,6 @@ for (n in numbers){
 
 function triangleCheck(lineA, lineB, lineC) {
   let difAB = Math.abs(lineA - lineB); let difBC = Math.abs(lineB - lineC); let difAC = Math.abs(lineA - lineC);
-
   let sumAB = (lineA + lineB); let sumBC = (lineB + lineC); let sumAC = (lineA + lineC);
   let checkA = ((lineA < sumBC) && (lineA > difBC)); let checkB = ((lineB < sumAC) && (lineB > difAC)); let checkC = ((lineC < sumAB) && (lineC > difAB));
   let resultado = false;
