@@ -96,7 +96,8 @@ function hydrate(bebidas) {
   if (copoAgua === 1) {
     return ('1 copo de água');
   } if (copoAgua > 1) {
-    return (copoAgua + ' copos de água');
+    copoAgua += ' copos de água';
+    return (copoAgua);
   }
 }
 
