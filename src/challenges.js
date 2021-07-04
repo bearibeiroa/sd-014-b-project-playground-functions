@@ -42,7 +42,7 @@ function highestCount(listNumbers) {
   let highestNumber = Math.max.apply(null, listNumbers);
   let occurrence = 0;
   for (let index = 0; index < listNumbers.length; index += 1) {
-    if (listNumbers[index] == highestNumber) {
+    if (listNumbers[index] === highestNumber) {
       occurrence += 1
     }
   } return (occurrence) 
@@ -58,7 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (cat2Position < cat1Position) {
     return('cat2')
   } else {
-    return('os gatos trombam e o rato foge')
+    return ('os gatos trombam e o rato foge')
   }
 }
 console.log(catAndMouse(1, 0, 2));
@@ -76,17 +76,32 @@ function fizzBuzz(arrayOfNumbers) {
     } else {
       fizzBuzzString.push('bug!')
     }
-  } return(fizzBuzzString)
+  } return (fizzBuzzString)
 }
 console.log(fizzBuzz([9, 25]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let phraseToEncode = string;
+  phraseToEncode = phraseToEncode.replace(/a/g, '1')
+  phraseToEncode = phraseToEncode.replace(/e/g, '2')
+  phraseToEncode = phraseToEncode.replace(/i/g, '3')
+  phraseToEncode = phraseToEncode.replace(/o/g, '4')
+  phraseToEncode = phraseToEncode.replace(/u/g, '5')
+  return(phraseToEncode)
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hi there'))
+
+function decode(stringCoded) {
+  let stringToDecode = stringCoded;
+  stringToDecode = stringToDecode.replace(/1/g, 'a')
+  stringToDecode = stringToDecode.replace(/2/g, 'e')
+  stringToDecode = stringToDecode.replace(/3/g, 'i')
+  stringToDecode = stringToDecode.replace(/4/g, 'o')
+  stringToDecode = stringToDecode.replace(/5/g, 'u')
+  return (stringToDecode)
 }
+console.log(decode("h3 th2r2"))
 
 module.exports = {
   calcArea,
