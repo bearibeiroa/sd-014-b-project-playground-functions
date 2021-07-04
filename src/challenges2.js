@@ -27,7 +27,7 @@ function generatePhoneNumber(numbers) {
       if (count[number] === undefined) { // se objeto de contagem para 'number' está vazio
         count[number] = 1; // atribui 1 contagem para o valor number = numbers[index]
       } else { // senão ...
-        count[number] = count[number] + 1; // soma no contador 1 a mais do valor anterior
+        count[number] += 1; // soma no contador 1 a mais do valor anterior
       }
     }
 // verificar repetições
@@ -44,7 +44,7 @@ function generatePhoneNumber(numbers) {
   // --function acima verifica repetições
   let verifyZeroNine = 0;
 for (let n in numbers){
-  if (numbers[n] < 0 || numbers[n] > 9) {verifyZeroNine = verifyZeroNine +1};
+  if (numbers[n] < 0 || numbers[n] > 9) {verifyZeroNine +=1};
 }
   if (numbers.length !== 11) {
     return ('Array com tamanho incorreto.');}
