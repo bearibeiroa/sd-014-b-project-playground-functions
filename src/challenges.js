@@ -81,8 +81,8 @@ function fizzBuzz(numbers) {
 // Para realizar a substiruição na string foi utilizado o comando >> variavel.replace('valor', 'substituicao'), foi pesquisado externamente. Link: https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex?gclid=CjwKCAjwz_WGBhA1EiwAUAxIca0fY8zQHM6xYQgI-hKes8EKeh6B07ZqQgsCJHMBklMFy1TMihK4ixoC8SUQAvD_BwE
 function encode(phrase) {
   let changeVowels = phrase;
-  for (let letter in phrase) {
 
+  for (let letter in phrase) {
     if (phrase[letter] === "a") {
       changeVowels = changeVowels.replace("a", 1);
     } else if (phrase[letter] === "e") {
@@ -100,8 +100,8 @@ function encode(phrase) {
 
 function decode(phrase) {
   let changeNumber = phrase;
-  for (let letter in phrase) {
 
+  for (let letter in phrase) {
     if (phrase[letter] === "1") {
       changeNumber = changeNumber.replace("1", "a");
     } else if (phrase[letter] === "2") {
