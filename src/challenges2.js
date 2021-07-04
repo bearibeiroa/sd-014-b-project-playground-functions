@@ -59,10 +59,10 @@ function generatePhoneNumber(numbers) {
 // Desafio 12
 // eslint-disable-next-line complexity
 function triangleCheck(lineA, lineB, lineC) {
-  let checkA = ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC)));
-  let checkB = ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC)));
-  let checkC = ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB)));
-  if ((checkA === true) || (checkB === true) || (checkC === true)) {
+  let checkA = ((lineA < (lineB + lineC)) * (lineA > Math.abs(lineB - lineC)));
+  let checkB = ((lineB < (lineA + lineC)) * (lineB > Math.abs(lineA - lineC)));
+  let checkC = ((lineC < (lineA + lineB)) * (lineC > Math.abs(lineA - lineB)));
+  if ((checkA === 1) || (checkB === 1) || (checkC === 1)) {
     return true;
   }
   return false;
