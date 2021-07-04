@@ -22,7 +22,7 @@ function splitSentence(str) {
 function concatName(array) {
   let firstElement = array[0];
   let lastElement = array[array.length - 1];
-  let result = lastElement + ',' + firstElement;
+  let result = (lastElement + ',' + firstElement);
   return result;
 }
 
@@ -36,11 +36,12 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let maxNumber = Math.max(array);
   let repetitions = 0;
-  for (let index = 0; index < array.length; index ++)
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] === maxNumber) {
-      repetitions ++;
+      repetitions += 1;
     }
-  return repetitions
+  return repetitions;
+  }
 }
 
 // Desafio 7
