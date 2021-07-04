@@ -74,9 +74,28 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let coposDeAgua = 0;
+  // Funções parseFloat, split, isNaN e filter retiradas da Documentação JavaScript Mozilla, código de apoio : Source: https://www.youtube.com/watch?v=X81umaNHnIk
+  let stringSeparada = string.split(' '); // Separando a String nos espaços e formando uma array com o retorno 
+  let numbersInString = stringSeparada.filter(function(element) { // Filtrando os números com a função filter usando uma função que retorna true ou false com determinado parametro
+    return !isNaN(element); // Checando se uma função é um número retornando True caso seja. Para isso é informado que caso o valor da função isNaN (not a number) seja false (ou seja, o elemento É um número), o valor retornado é true. 
+  });
+  let numbersReal = numbersInString.map(function (valor) { // A função .map cria uma nova array baseada em um parametro que retorna valores.
+    return parseFloat(valor); // A função parseFloat transforma as Strings que continham números em números. Dessa forma criando uma nova array com números.
+  });
+  for (let index = 0; index < numbersReal.length; index++) {
+    coposDeAgua += numbersReal[index];
+  }
+  let bebaAgua = '';
+  if (coposDeAgua === 1) {
+    bebaAgua += coposDeAgua + ' copo de água';
+  } else {
+    bebaAgua += coposDeAgua + ' copos de água'
+  }
+  return bebaAgua;
 }
+
 
 module.exports = {
   generatePhoneNumber,
