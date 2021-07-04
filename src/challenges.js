@@ -19,7 +19,7 @@ let arrayFrase = string.split (" ");
 }
 
 // Desafio 4
-function concatName(elementos) {
+function (elementos) {
 let arrayElementos = elementos[elementos.length -1] + ", " + elementos[0];
  return arrayElementos; 
 }
@@ -40,23 +40,36 @@ let maiorNumero = numbers[0];
 //encontrando o maior numéro 
 for (let index = 1; index < numbers.length; index ++) {
 
-if(numbers[index] > maiorNumero) {
+ if(numbers[index] > maiorNumero) {
   maiorNumero = numbers[index]
-}
+ }
 }
 
 // vezes que o numero se repete
-for (let repete = 0 ; repete < numbers.length; repete ++) {
-if(numbers[repete] == maiorNumero) {
-  vezesNumero.push(numbers[repete])
+  for (let repete = 0 ; repete < numbers.length; repete ++) {
+    if(numbers[repete] == maiorNumero) {
+      vezesNumero.push(numbers[repete])
   }
 }
 return vezesNumero.length
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  // calculando distancia entre os ratos e cada um dos gatos
+  let positionCat1 = Math.abs (mouse - cat1)
+  let positionCat2 = Math.abs (mouse - cat2)
+  
+  //calculando chegada dos felinos 
+  
+  if (positionCat1 > positionCat2) {
+    return 'cat2';
+  } else if (positionCat2 > positionCat1) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
+
 }
 
 // Desafio 8
