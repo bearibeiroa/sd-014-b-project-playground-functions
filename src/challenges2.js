@@ -40,14 +40,17 @@ function generatePhoneNumber(numbers) {
     return countRepeated; // maior valor de repetições
   } // --function acima verifica repetições
   let verifyZeroNine = 0;
-  for (let n in numbers){
-    if (numbers[n] < 0 || numbers[n] > 9) { verifyZeroNine += 1 };
-  };
+  for (let n in numbers) {
+    if (numbers[n] < 0 || numbers[n] > 9) { verifyZeroNine += 1; }
+  }
   if (numbers.length !== 11) {
     return ('Array com tamanho incorreto.');
-  } else if (verifyZeroNine > 0) {
+  }
+  if (verifyZeroNine > 0) {
     return ('não é possível gerar um número de telefone com esses valores');
-  } else if (mostRepeated() > 2) { return ('não é possível gerar um número de telefone com esses valores');};
+  }
+  if (mostRepeated() > 2) {
+    return ('não é possível gerar um número de telefone com esses valores');};
   let phoneNumber = ('(' + numbers[0] + numbers[1] + ') ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]);
   return phoneNumber;
 }
