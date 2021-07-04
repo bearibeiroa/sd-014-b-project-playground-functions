@@ -19,7 +19,6 @@ function techList(techs, nome) {
 // Desafio 11
 
 function generatePhoneNumber(numbers) {
-// ------------------------------------------------------------------------------------
 // Função abaixo foi baseada em solution do bloco - Gabarito JavaScript / Parte 4 / Parte I - Objetos e For/In - Exercício 5
   function mostRepeated(numbers) {
     let count = {};
@@ -30,18 +29,19 @@ function generatePhoneNumber(numbers) {
       } else { // senão ...
         count[number] = count[number] + 1; // soma no contador 1 a mais do valor anterior
       }
-    }// verificar repetições:
+    }
+// verificar repetições
     let countRepeated = 0; // contador de repetições inicia zerado
-    let countedNumber = 0; // variável auxiliar, para coletar número repetido, inicia zerada
+
     for (let x in count) { // loop para cada valor "x" no objeto "count" com as repetições
       if (countRepeated < count[x]) { // se o contador countRepeated, inicializado em 0, é menor que a contagem do valor "x" ...
         countRepeated = count[x]; // então é atribuída a contagem de "x" no contador countRepeated
-        countedNumber = x; // valor repetido countedNumber é atribuído com o valor "x"
       }
     }
     return countRepeated; //maior valor de repetições
   // return count;
-  }// --function acima verifica repetições -----------------------------------------------
+  }
+  // --function acima verifica repetições
   let verifyZeroNine = 0;
 for (let n in numbers){
   if (numbers[n] < 0 || numbers[n] > 9) {verifyZeroNine = verifyZeroNine +1};
@@ -69,7 +69,8 @@ function triangleCheck(lineA, lineB, lineC) {
   let checkC = ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB)));
   if ((checkA === true) || (checkB === true) || (checkC === true)) {
     return true;
-  } else { return false; }
+  }
+  else { return false;}
 }
 
 // let difAB = Math.abs(lineA - lineB);
