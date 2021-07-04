@@ -108,23 +108,23 @@ function encode(text) {
   let textCode = '';
   for (let i = 0; i < text.length; i += 1) {
     switch (text[i]) {
-      case 'a':
-        textCode += 1;
-        break;
-      case 'e':
-        textCode += 2;
-        break;
-      case 'i':
-        textCode += 3;
-        break;
-      case 'o':
-        textCode += 4;
-        break;
-      case 'u':
-        textCode += 5;
-        break;
-      default:
-        textCode += text[i];
+    case 'a':
+      textCode += 1;
+      break;
+    case 'e':
+      textCode += 2;
+      break;
+    case 'i':
+      textCode += 3;
+      break;
+    case 'o':
+      textCode += 4;
+      break;
+    case 'u':
+      textCode += 5;
+      break;
+    default:
+      textCode += text[i];
     }
   }
   return textCode;
@@ -134,23 +134,23 @@ function decode(text) {
   let textUncode = '';
   for (let i = 0; i < text.length; i += 1) {
     switch (text[i]) {
-      case '1':
-        textUncode += 'a';
-        break;
-      case '2':
-        textUncode += 'e';
-        break;
-      case '3':
-        textUncode += 'i';
-        break;
-      case '4':
-        textUncode += 'o';
-        break;
-      case '5':
-        textUncode += 'u';
-        break;
-      default:
-        textUncode += text[i];
+    case '1':
+      textUncode += 'a';
+      break;
+    case '2':
+      textUncode += 'e';
+      break;
+    case '3':
+      textUncode += 'i';
+      break;
+    case '4':
+      textUncode += 'o';
+      break;
+    case '5':
+      textUncode += 'u';
+      break;
+    default:
+      textUncode += text[i];
     }
   }
   return textUncode;

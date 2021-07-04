@@ -20,10 +20,10 @@ function generatePhoneNumber(phoneNumbers) {
   let stopForRepeat = false;
   if (phoneNumbers.length === 11) {
     // Verifica se tem algum numero que repete mais ou igual a 3 vezes
-    for (let i = 0; i < phoneNumbers.length; i++) {
-      for (let k = 0; k < phoneNumbers.length; k++) {
+    for (let i = 0; i < phoneNumbers.length; i += 1) {
+      for (let k = 0; k < phoneNumbers.length; k += 1) {
         if (phoneNumbers[i] === phoneNumbers[k]) {
-          repeatNumber++;
+          repeatNumber += 1;
         }
       }
       if (repeatNumber >= 3) {
@@ -33,22 +33,22 @@ function generatePhoneNumber(phoneNumbers) {
       repeatNumber = 0;
     }
     // Verifica todos os requisitos
-    for (let i = 0; i < phoneNumbers.length; i++) {
+    for (let i = 0; i < phoneNumbers.length; i += 1) {
       if (phoneNumbers[i] < 0 || phoneNumbers[i] > 9 || stopForRepeat) {
         number = 'não é possível gerar um número de telefone com esses valores';
         generate = false;
-      }  
+      }
     }
     // Verifica se pode transformar a array em um numero de telefone
     if (generate) {
       for (let i = 0; i < phoneNumbers.length; i += 1) {
         if (i < 2) {
           number += phoneNumbers[i];
-        } else if (i == 2) {
+        } else if (i === 2) {
           number += (') ' + phoneNumbers[i]);
         } else if (i > 2 && i < 7) {
           number += phoneNumbers[i];
-        } else if (i == 7) {
+        } else if (i === 7) {
           number += ('-' + phoneNumbers[i]);
         } else {
           number += phoneNumbers[i];
@@ -83,7 +83,6 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(quantoBebi) {
-
   let coposDeAgua = 0;
   let quantidadeBebida = quantoBebi.match(/\d+/g);
   for (let i = 0; i < quantidadeBebida.length; i += 1) {
