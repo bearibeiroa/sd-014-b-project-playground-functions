@@ -67,10 +67,10 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     isTriangle += 1;
   }
-  if (lineB < (lineA + lineC) && lineA > Math.abs(lineA - lineC)) {
+  if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
     isTriangle += 1;
   }
-  if (lineC < (lineA + lineB) && lineA > Math.abs(lineA - lineB)) {
+  if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
     isTriangle += 1;
   }
   if (isTriangle === 3) {
