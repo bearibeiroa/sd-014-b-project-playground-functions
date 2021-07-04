@@ -73,16 +73,6 @@ function triangleCheck(lineA, lineB, lineC) {
   else { return false;}
 }
 
-// let difAB = Math.abs(lineA - lineB);
-// let difBC = Math.abs(lineB - lineC);
-// let difAC = Math.abs(lineA - lineC);
-// let sumAB = (lineA + lineB);
-// let sumBC = (lineB + lineC);
-// let sumAC = (lineA + lineC);
-// let checkA = ((lineA < sumBC) && (lineA > difBC));
-// let checkB = ((lineB < sumAC) && (lineB > difAC));
-// let checkC = ((lineC < sumAB) && (lineC > difAB));
-
 // Desafio 13
 function hydrate(bebidas) {
   let copoAgua = 0;
