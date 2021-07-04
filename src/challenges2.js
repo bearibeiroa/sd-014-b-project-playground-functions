@@ -25,16 +25,19 @@ function generatePhoneNumber(array) {
   if (array.length != 11) {
     return 'Array com tamanho incorreto.'
   }
-  for (let index = 0; index < array.length; index++) {
-    let numeroDeRepeticoes;
-    if (array[index] === array[index+1] || numeroRepetido === array[index]) {
-      numeroDeRepeticoes += 1;
-      numeroRepetido += array[index];
-    } else {
-      numeroDeRepeticoes = 0;
-      numeroRepetido = 0;
+  for (let index = 0; index < array.length; index++) { // Estava com dúvida sobre como fazer essa parte, mas após pedir ajuda no Slack, descobri o erro dos meus códigos anteriores. 
+    let numeroDeRepeticoes = 0;
+    for (let numero of array) {
+      if (index === numero) {
+        numeroDeRepeticoes += 1;
     }
-    if (array[index] < 0 || array[index] > 9 || numeroDeRepeticoes >= 3) {
+    if (numeroDeRepeticoes >= 3){
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+  }
+}
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] < 0 || array[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
   }
