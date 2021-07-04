@@ -62,14 +62,13 @@ function hydrate(text) {
   let stringNumbers = text.replace(/[^0-9]/g, '');
   let numbers = stringNumbers.split('').map(Number);
   let soma = 0;
-  for (index = 0; index < numbers.length; index += 1) {
+  for (let index = 0; index < numbers.length; index += 1) {
     soma += numbers[index];
   }
   if (soma === 1) {
     return soma + ' copo de água';
-  } else {
-    return soma + ' copos de água';
   }
+    return soma + ' copos de água';
 }
 
 module.exports = {
