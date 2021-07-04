@@ -74,9 +74,24 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(9, 8, 7))
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbers = /[0-9]/g;
+  let result = string.match(numbers);
+  let number = 0;
+  for (let index in result) {
+    number = number + parseInt(result[index]);
+    // Fonte parseInt: https://www.alura.com.br/artigos/convertendo-string-para-numero-em-javascript
+  }
+  water = number.toString();
+  // Fonte toString(): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
+  if (number === 1) {
+    glassesOfWater = water + " copo de água"
+  } else {
+    glassesOfWater = water + " copos de água"
+  }
+  return glassesOfWater;
 }
+console.log(hydrate("1 cachaça"))
 
 module.exports = {
   generatePhoneNumber,
