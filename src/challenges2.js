@@ -46,7 +46,6 @@ function generatePhoneNumber(numbers) {
   }
   // --function acima verifica repetições
   // ------------------------------------------------------------------------------------
-  
   let verifyZeroNine = 0;
 for (n in numbers){
   if (numbers[n] < 0 || numbers[n] > 9) {verifyZeroNine = verifyZeroNine +1};

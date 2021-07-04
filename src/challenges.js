@@ -16,8 +16,9 @@ function splitSentence(mergedSentence) {
 }
 
 // Desafio 4
-function concatName(array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
-  let nameConcat = (array[(array.length - 1)] + ', ' + array[0]);
+function concatName(array) {
+  let nameConcat = '';
+  nameConcat += (`${array[(array.length - 1)]}, ${array[0]}`); // Adequação conforme sugestão ESLint: https://eslint.org/docs/rules/prefer-template
   return (nameConcat);
 }
 
