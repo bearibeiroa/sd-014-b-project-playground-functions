@@ -47,10 +47,18 @@ function generatePhoneNumber(phone) {
 }
 
 // Desafio 12
+/*
 function triangleCheck(a, b, c) {
-  let checkA = a < b + c && a > Math.abs(b - c);
-  let checkB = b < a + c && b > Math.abs(a - c);
-  let checkC = c < b + a && c > Math.abs(b - a);
+  let checkA = (a < b + c) && a > Math.abs(b - c);
+  let checkB = (b < a + c) && b > Math.abs(a - c);
+  let checkC = (c < b + a) && c > Math.abs(b - a);
+  return checkA && checkB && checkC;
+}
+*/
+function triangleCheck(a, b, c) {
+  let checkA = (a < b + c);
+  let checkB = (b < a + c);
+  let checkC = (c < b + a);
   return checkA && checkB && checkC;
 }
 
