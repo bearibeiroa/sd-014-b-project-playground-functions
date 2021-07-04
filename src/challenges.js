@@ -28,9 +28,13 @@ function splitSentence(exer3) {
   return resultado;
 }
 
+
 // Desafio 4
-function concatName() {
+function concatName(exer4) {
   // seu código aqui
+
+  let arrayList = exer4;
+  return (arrayList[arrayList.length -1] + ", " + arrayList[0]);
 }
 
 // Desafio 5
