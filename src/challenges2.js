@@ -15,8 +15,85 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function verificarTamanhoDoArray(numerosTelefonicos) {
+  let erro = null;
+
+  if (numerosTelefonicos.length !== 11) {
+    erro = 'Array com tamanho incorreto.';
+  }
+
+  return erro;
+}
+
+function verificarIntervaloDeNumeros(numerosTelefonicos) {
+  let erro = null;
+
+  for (let i = 0; i < numerosTelefonicos.length; i += 1) {
+    if (numerosTelefonicos[i] < 0 || numerosTelefonicos[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+
+  return erro;
+}
+
+function contarRepeticoes(numeroAtual, numerosTelefonicos) {
+  let contador = 0;
+
+  for (let j = 0; j < numerosTelefonicos.length; j += 1) {
+    if (numeroAtual === numerosTelefonicos[j]) {
+      contador += 1;
+    }
+  }
+
+  return contador;
+}
+
+function verificarSeNumerosSeRepetem(numerosTelefonicos, quantidadeDeRepeticoes) {
+  for (let i = 0; i < numerosTelefonicos.length; i += 1) {
+    const contador = contarRepeticoes(numerosTelefonicos[i], numerosTelefonicos);
+
+    if (contador >= quantidadeDeRepeticoes) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
+
+function verificarSeExisteErro(numerosTelefonicos) {
+  let erro = null;
+
+  erro = verificarTamanhoDoArray(numerosTelefonicos);
+
+  if (!erro) {
+    erro = verificarIntervaloDeNumeros(numerosTelefonicos);
+  }
+
+  if (!erro) {
+    erro = verificarSeNumerosSeRepetem(numerosTelefonicos, 3);
+  }
+
+  return erro;
+}
+
+function generatePhoneNumber(numerosTelefonicos) {
+  const erro = verificarSeExisteErro(numerosTelefonicos);
+  let numeroTelefonico = '(';
+
+  if (erro) {
+    return erro;
+  }
+
+  for (let i = 0; i < numerosTelefonicos.length; i += 1) {
+    numeroTelefonico += numerosTelefonicos[i];
+
+    if (i === 1) {
+      numeroTelefonico += ') ';
+    } else if (i === 6) {
+      numeroTelefonico += '-';
+    }
+  }
+
+  return numeroTelefonico;
 }
 
 // Desafio 12
