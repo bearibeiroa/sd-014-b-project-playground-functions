@@ -31,7 +31,7 @@ function generatePhoneNumber(numbers) {
         count[number] = count[number] + 1; // soma no contador 1 a mais do valor anterior
       }
     }
-  // verificar repetições
+// verificar repetições
     let countRepeated = 0; // contador de repetições inicia zerado
     let countedNumber = 0; // variável auxiliar, para coletar número repetido, inicia zerada
 
@@ -47,10 +47,9 @@ function generatePhoneNumber(numbers) {
   // --function acima verifica repetições
   // ------------------------------------------------------------------------------------
   let verifyZeroNine = 0;
-for (n in numbers){
+for (let n in numbers){
   if (numbers[n] < 0 || numbers[n] > 9) {verifyZeroNine = verifyZeroNine +1};
 }
-
   if (numbers.length !== 11) {
     return ('Array com tamanho incorreto.');}
   else {
