@@ -46,20 +46,31 @@ function highestCount(listNumbers) {
     if (numbers[index] > numbers[0]) {
        highNumber = numbers[index]
     }
-    if (numbers[index] > highNumber)
+    if (numbers[index] > highNumber) {
       highNumber = numbers[index]
-  } for (let count = 0; count < numbers.length; count++)
+    }
+  } 
+  for (let count = 0; count < numbers.length; count++) { 
     if (numbers[count] === highNumber) {
      countOfHighNumber += 1
     }
+  } 
   return (countOfHighNumber)
-}
-console.log(highestCount([0, 0 ,0]))
+} 
+console.log(highestCount([0,0,0]))
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Position = Math.abs(cat1 - mouse);
+  let cat2Position = Math.abs(cat2 - mouse);
+  if (cat1Position < cat2Position) {
+    return('cat1')
+  } else if (cat2Position < cat1Position) {
+    return('cat2')
+  } else {
+    return('os gatos trombam e o rato foge')
+  }
 }
-
+console.log(catAndMouse(1, 0, 2))  
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
@@ -84,4 +95,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
