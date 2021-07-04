@@ -14,7 +14,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
-  let result = str.split();
+  let result = str.split("");
   return result;
 }
 
@@ -22,7 +22,8 @@ function splitSentence(str) {
 function concatName(array) {
   let firstElement = array[0];
   let lastElement = array[array.lenght - 1];
-  return firstElement + "," + lastElement;
+  let result = firstElement + lastElement;
+  return result
 }
 
 // Desafio 5
