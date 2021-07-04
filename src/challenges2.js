@@ -67,20 +67,14 @@ for (let n in numbers){
 
 // Desafio 12
 
+// eslint-disable-next-line complexity
 function triangleCheck(lineA, lineB, lineC) {
-  let difAB = Math.abs(lineA - lineB); let difBC = Math.abs(lineB - lineC); let difAC = Math.abs(lineA - lineC);
-  let sumAB = (lineA + lineB); let sumBC = (lineB + lineC); let sumAC = (lineA + lineC);
-  let checkA = ((lineA < sumBC) && (lineA > difBC)); let checkB = ((lineB < sumAC) && (lineB > difAC)); let checkC = ((lineC < sumAB) && (lineC > difAB));
-  let resultado = false;
-  if ((lineA > sumBC) || (lineB > sumAC) || (lineC > sumAB)) {
-    return false;
-  }
-  else if ((lineA < difBC) || (lineB < difAC) || (lineC < difAB)) {
-      return false;
-  }
-  else if ((checkA === true) || (checkB === true) || (checkC === true)) {
+  let checkA = ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC)));
+  let checkB = ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC)));
+  let checkC = ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB)));
+  if ((checkA === true) || (checkB === true) || (checkC === true)) {
     return true;
-  }
+  } return false;
 }
 
 // Desafio 13
