@@ -49,10 +49,10 @@ function generatePhoneNumber(numbers) {
     return ('Array com tamanho incorreto.');
   } else if (verifyZeroNine > 0) {
     return ('não é possível gerar um número de telefone com esses valores');
-  } else if (mostRepeated(numbers) > 2) {return ('não é possível gerar um número de telefone com esses valores');
+  } else if (mostRepeated(numbers) > 2) { return ('não é possível gerar um número de telefone com esses valores');
 } else {
   let phoneNumber = ('(' + numbers[0] + numbers[1] + ') ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]);
-  return phoneNumber;
+    return phoneNumber;
   }
 }
 
