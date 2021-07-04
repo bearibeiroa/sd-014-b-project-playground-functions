@@ -30,11 +30,9 @@ function generatePhoneNumber(numbers) {
       } else { // senão ...
         count[number] = count[number] + 1; // soma no contador 1 a mais do valor anterior
       }
-    }
-// verificar repetições
+    }// verificar repetições:
     let countRepeated = 0; // contador de repetições inicia zerado
     let countedNumber = 0; // variável auxiliar, para coletar número repetido, inicia zerada
-
     for (let x in count) { // loop para cada valor "x" no objeto "count" com as repetições
       if (countRepeated < count[x]) { // se o contador countRepeated, inicializado em 0, é menor que a contagem do valor "x" ...
         countRepeated = count[x]; // então é atribuída a contagem de "x" no contador countRepeated
@@ -43,9 +41,7 @@ function generatePhoneNumber(numbers) {
     }
     return countRepeated; //maior valor de repetições
   // return count;
-  }
-  // --function acima verifica repetições
-  // ------------------------------------------------------------------------------------
+  }// --function acima verifica repetições -----------------------------------------------
   let verifyZeroNine = 0;
 for (let n in numbers){
   if (numbers[n] < 0 || numbers[n] > 9) {verifyZeroNine = verifyZeroNine +1};
