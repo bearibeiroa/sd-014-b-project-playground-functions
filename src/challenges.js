@@ -17,7 +17,7 @@ function splitSentence(Value) {
 function concatName(arrayIn) {
 arrayIn.splice(0,0, arrayIn[arrayIn.length-1]);
   arrayIn.splice(2,arrayIn.length-2);
-return arrayIn.join(', ');
+  return arrayIn.join(', ');
 }
 
 // Desafio 5
@@ -30,11 +30,11 @@ function highestCount(parameter) {
   let cont = 0; 
   let max = Math.max.apply(null,parameter);
     for (let index = 0; index < parameter.length; index += 1){
-      if (parameter[index] === max){
-       cont = cont + 1; 
+    if (parameter[index] === max) {
+    cont = cont + 1; 
       }
     }
-    return(cont)
+    return (cont);
 }
   
 // Desafio 7
@@ -76,14 +76,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(number) {
   let numbersFizzBuzz = [];
   for (let index = 0; index < number.length; index += 1) {
-    if (number[index] % 3 === 0 && number[index] % 5 === 0){
+    if (number[index] % 3 === 0 && number[index] % 5 === 0) {
       numbersFizzBuzz.push('fizzBuzz');
-    } else if (number[index] % 5 === 0){
-         numbersFizzBuzz.push('buzz');
-    } else if (number[index] % 3 === 0){
-        numbersFizzBuzz.push('fizz');
+    } else if (number[index] % 5 === 0) {
+      numbersFizzBuzz.push('buzz');
+    } else if (number[index] % 3 === 0) {
+      numbersFizzBuzz.push('fizz');
     } else {
-      numbersFizzBuzz.push('bug!')
+      numbersFizzBuzz.push('bug!');
     }
   }
   return numbersFizzBuzz;
@@ -91,22 +91,21 @@ function fizzBuzz(number) {
 
 // Desafio 9
 function encode(stringrray) {
-  let result = stringrray.replace(/a/g, "1")
-  result = result.replace(/e/g, "2");
-  result = result.replace(/i/g, "3");
-  result = result.replace(/o/g, "4");
-  result = result.replace(/u/g, "5");
+  let result = stringrray.replace(/a/g, "1");
+  result = result.replace(/e/g, '2');
+  result = result.replace(/i/g, '3');
+  result = result.replace(/o/g, '4');
+  result = result.replace(/u/g, '5');
   return result;
 }
 function decode(raystring) {
-  let result2 = raystring.replace(/1/g, "a")
-  result2 = result2.replace(/2/g, "e");
-  result2 = result2.replace(/3/g, "i");
-  result2 = result2.replace(/4/g, "o");
-  result2 = result2.replace(/5/g, "u");
+  let result2 = raystring.replace(/1/g, 'a');
+  result2 = result2.replace(/2/g, 'e');
+  result2 = result2.replace(/3/g, 'i');
+  result2 = result2.replace(/4/g, 'o');
+  result2 = result2.replace(/5/g, 'u');
   return result2;
 }
-
 
 module.exports = {
   calcArea,
