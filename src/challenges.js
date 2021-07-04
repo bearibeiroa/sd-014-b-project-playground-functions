@@ -10,13 +10,22 @@ function compareTrue(valor1, valor2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+
+  let areatri = 0;
+  areatri = (base * height) / 2;
+  return areatri;
 }
 
+
 // Desafio 3
-function splitSentence() {
+function splitSentence(exer3) {
   // seu código aqui
+
+  let frase = exer3;
+  let resultado = frase.split(" ");
+  return resultado;
 }
 
 // Desafio 4
