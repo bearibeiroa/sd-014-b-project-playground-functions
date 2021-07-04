@@ -19,7 +19,7 @@ let arrayFrase = string.split (" ");
 }
 
 // Desafio 4
-function (elementos) {
+function concatName(elementos) {
 let arrayElementos = elementos[elementos.length -1] + ", " + elementos[0];
  return arrayElementos; 
 }
@@ -63,19 +63,32 @@ function catAndMouse(mouse, cat1, cat2) {
   //calculando chegada dos felinos 
   
   if (positionCat1 > positionCat2) {
-    return 'cat2';
+     return 'cat2';
   } else if (positionCat2 > positionCat1) {
-    return 'cat1';
+     return 'cat1';
   } else {
-    return 'os gatos trombam e o rato foge';
+     return 'os gatos trombam e o rato foge';
   }
 
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(arrayFizzBuzz) {
+  
+  let arrayFinal = [];
+    for (let index = 0; index < arrayFizzBuzz.length; index ++) {
+        if (arrayFizzBuzz[index] % 3 === 0 && arrayFizzBuzz[index] % 5 === 0) {
+            arrayFinal.push("fizzBuzz");
+        } else if (arrayFizzBuzz[index] % 3 === 0) {
+            arrayFinal.push("fizz");
+        } else if (arrayFizzBuzz[index] % 5 === 0) {
+            arrayFinal.push("buzz");
+        } else {
+            arrayFinal.push("bug!")
+        }
+    }
+    return arrayFinal;
+  }
 
 // Desafio 9
 function encode() {
