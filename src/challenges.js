@@ -79,9 +79,9 @@ function fizzBuzz(arrayFizzBuzz) {
     for (let index = 0; index < arrayFizzBuzz.length; index ++) {
         if (arrayFizzBuzz[index] % 3 === 0 && arrayFizzBuzz[index] % 5 === 0) {
             arrayFinal.push("fizzBuzz");
-        } else if (arrayFizzBuzz[index] % 3 === 0) {
+        } else if (arrayFizzBuzz[index] % 3 === 0 && arrayFizzBuzz[index] % 5 !== 0) {
             arrayFinal.push("fizz");
-        } else if (arrayFizzBuzz[index] % 5 === 0) {
+        } else if (arrayFizzBuzz[index] % 5 === 0 && arrayFizzBuzz[index] % 3 !== 0) {
             arrayFinal.push("buzz");
         } else {
             arrayFinal.push("bug!")
@@ -91,11 +91,44 @@ function fizzBuzz(arrayFizzBuzz) {
   }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let frase ='';
+  for (let letter in str) {
+    if (letter === 'a') {
+      frase+= '1';
+    } else if (letter === 'e') {
+      frase += '2';
+    } else if (letter === 'i') {
+      frase += '3'; 
+    } else if (letter === 'o') {
+      frase += '4';
+    } if (letter === 'u') {
+      frase += '5';
+    } else {
+      frase += letter
+    }
+  return frase;  
+  }
+ 
 }
 function decode() {
-  // seu código aqui
+  let fraseDecode ='';
+  for (let letter in str) {
+    if (letter === '1') {
+      fraseDecode += 'a';
+    } else if (letter === '2') {
+      fraseDecode += 'e';
+    } else if (letter === '3') {
+      fraseDecode += 'i'; 
+    } else if (letter === '4') {
+      fraseDecode += 'o';
+    } if (letter === '5') {
+      fraseDecode += 'u';
+    } else {
+      fraseDecode += letter
+    }
+  return fraseDecode;  
+  } 
 }
 
 module.exports = {
