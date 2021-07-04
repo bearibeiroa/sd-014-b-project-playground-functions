@@ -51,13 +51,28 @@ return number;
   
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let somaLineAB = lineA + lineB;
+  let somaLineAC = lineA + lineC;
+  let somaLineBC = lineB + lineC;
+
+  let difLineAB = Math.abs (lineA - lineB);
+  let difLineAC = Math.abs (lineA - lineC);
+  let difLineBC = Math.abs (lineB - lineC);
+ 
+if (lineC < somaLineAB && lineB < somaLineAC && lineA < somaLineBC && lineC > difLineAB && lineB > difLineAC && lineA > difLineBC){
+  return true;
+}
+else {
+  return false;
+}
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+
 }
 
 module.exports = {
