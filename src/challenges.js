@@ -2,7 +2,7 @@
 function compareTrue(value1, value2) {
   return(value1 && value2)
 }
-console.log(compareTrue(false,true))
+console.log(compareTrue(false,true));
 
 // Desafio 2
 function calcArea(triangleBase, triangleHeigth) {
@@ -26,7 +26,7 @@ function concatName(arrayOfStrings) {
   let mixOfStrings = arrayOfStrings;
   return(arrayOfStrings[arrayOfStrings.length-1] + ', ' + arrayOfStrings[0])
 }
-console.log(concatName(['Gabriel', 'Angus', 'Malcon', 'Eddie', 'Bryan']))
+console.log(concatName(['Gabriel', 'Angus', 'Malcon', 'Eddie', 'Bryan']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -35,7 +35,7 @@ function footballPoints(wins, ties) {
   let totalPoints = winsPoints + tiesPoints
   return (totalPoints)
 }
-console.log(footballPoints(0, 0))
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(listNumbers) {
@@ -47,7 +47,7 @@ function highestCount(listNumbers) {
     }
   } return (occurrence) 
 }   
-console.log(highestCount([0, 0, 0]))
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -61,11 +61,24 @@ function catAndMouse(mouse, cat1, cat2) {
     return('os gatos trombam e o rato foge')
   }
 }
-console.log(catAndMouse(1, 0, 2))  
+console.log(catAndMouse(1, 0, 2));
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayOfNumbers) {
+  let fizzBuzzString = [];
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+    if (arrayOfNumbers[index] % 3 === 0 && arrayOfNumbers[index] % 5 === 0) {
+      fizzBuzzString.push('fizzBuzz')
+    } else if (arrayOfNumbers[index] % 3 === 0){
+      fizzBuzzString.push('fizz')
+    } else if (arrayOfNumbers[index] % 5 === 0) {
+      fizzBuzzString.push('buzz')
+    } else {
+      fizzBuzzString.push('bug!')
+    }
+  } return(fizzBuzzString)
 }
+console.log(fizzBuzz([9, 25]))
 
 // Desafio 9
 function encode() {
