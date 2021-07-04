@@ -2,18 +2,18 @@
 
 function techList(techs, nome) {
   let info = [];
-  if (techs.length === 0) { return ('Vazio!');}
-  else {
+  if (techs.length === 0) { return ('Vazio!'); }
+  if (techs.length !== 0) {
     techs = techs.sort();
-    console.log(techs)
-    for (let index = 0 ; index < techs.length ; index += 1 ) {
+    console.log(techs);
+    for (let index = 0; index < techs.length; index += 1) {
       info[index] = {
         tech: techs[index],
         name: nome,
-      }
+      };
     }
     return info;
-}
+  }
 }
 
 // Desafio 11
