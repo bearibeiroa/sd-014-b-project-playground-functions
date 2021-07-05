@@ -82,8 +82,8 @@ function fizzBuzz(fizzOuBuzz) {
       fizzOuBuzz[index8] = 'buzz';
     } else {
       fizzOuBuzz[index8] = 'bug!';
-      }
-      }
+    }
+    }
   return fizzOuBuzz;
 }
 

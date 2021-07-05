@@ -116,9 +116,8 @@ for (let indexBev = 0; indexBev < bebidas.length; indexBev += 1) {
 if (quantBebidas == 1) {
   return quantBebidas + ' copo de água';
 } else {
-  return quantBebidas + ' copos de água'
-}
-
+  return quantBebidas + ' copos de água';
+  }
 }
 
 module.exports = {
