@@ -27,7 +27,8 @@ function isSizeIncorrect(array) {
 function isValuesIncorrect(array) {
   for (let index = 0; index < array.length; index += 1) {
     const element = array[index];
-    if (element < 0 || element > 9 || array.filter((x) => x === element).length >= 3) {
+    if (element < 0 || element > 9 || array.filter((x) => x === element).length >= 3
+    ) {
       return true;
     }
   }
@@ -53,8 +54,19 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let deltaAB = Math.abs(lineA - lineB);
+  let deltaAC = Math.abs(lineA - lineC);
+  let deltaBC = Math.abs(lineB - lineC);
+  let sideA = lineA < lineB + lineC && lineA > deltaBC;
+  let sideB = lineB < lineA + lineC && lineB > deltaAC;
+  let sideC = lineC < lineA + lineB && lineC > deltaAB;
+  let sideABC = sideA + sideB + sideC;
+  if (sideABC === 3) {
+    return true;
+  }
+  return false;
+  // return !!sideABC;
 }
 
 // Desafio 13
