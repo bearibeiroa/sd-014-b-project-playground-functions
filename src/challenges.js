@@ -14,7 +14,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split(' ');
+  return sentence.split(' '); //Função vista em: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,determinado%20por%20uma%20express%C3%A3o%20regular.
 }
 
 // Desafio 4
@@ -30,7 +30,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let highestNumber = Math.max.apply(null, numbers);
+  let highestNumber = Math.max.apply(null, numbers); //Função vista em: https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
   let count = 0;
 
   for (let index = 0; index < numbers.length; index += 1) {
@@ -43,23 +43,19 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = cat1 - (mouse);
+  let distCat1 = cat1 - (mouse); //Calculo visto em: https://www.tutorialspoint.com/operations_with_integers/computing_distance_between_two_integers_on_number_line.htm
   let distCat2 = cat2 - (mouse);
   let resultado = '';
 
   if (mouse > cat1) {
     distCat1 = mouse - (cat1);
-  }
-  if (mouse > cat2) {
+  }if (mouse > cat2) {
     distCat2 = mouse - (cat2);
-  }
-  if (distCat1 < distCat2) {
+  }if (distCat1 < distCat2) {
     resultado = 'cat1';
-  }
-  else if (distCat2 < distCat1) {
+  }else if (distCat2 < distCat1) {
     resultado = 'cat2';
-  }
-  else {
+  }else {
     resultado = 'os gatos trombam e o rato foge';
   }
   return resultado;
@@ -72,14 +68,11 @@ function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       fizzBuzzArray.push('fizzBuzz');
-    }
-    else if (array[index] % 3 === 0) {
+    }else if (array[index] % 3 === 0) {
       fizzBuzzArray.push('fizz');
-    }
-    else if (array[index] % 5 === 0) {
+    }else if (array[index] % 5 === 0) {
       fizzBuzzArray.push('buzz');
-    }
-    else if (array[index] % 3 > 0 && array[index] % 5 > 0) {
+    }else if (array[index] % 3 > 0 && array[index] % 5 > 0) {
       fizzBuzzArray.push('bug!');
     }
   }
@@ -91,23 +84,18 @@ function fizzBuzz(array) {
 function encode(string) {
   let encodedString = '';
 
-  for (index = 0; index < string.length; index += 1) {
+  for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 'a') {
       encodedString += '1';
-    }
-    else if (string[index] === 'e') {
+    }else if (string[index] === 'e') {
       encodedString += '2';
-    }
-    else if (string[index] === 'i') {
+    }else if (string[index] === 'i') {
       encodedString += '3';
-    }
-    else if (string[index] === 'o') {
+    }else if (string[index] === 'o') {
       encodedString += '4';
-    }
-    else if (string[index] === 'u') {
+    }else if (string[index] === 'u') {
       encodedString += '5';
-    }
-    else {
+    }else {
       encodedString += string[index];
     }
   }
@@ -116,23 +104,18 @@ function encode(string) {
 function decode(string) {
   let decodedString = '';
 
-  for (index = 0; index < string.length; index += 1) {
+  for (let index = 0; index < string.length; index += 1) {
     if (string[index] === '1') {
       decodedString += 'a';
-    }
-    else if (string[index] === '2') {
+    }else if (string[index] === '2') {
       decodedString += 'e';
-    }
-    else if (string[index] === '3') {
+    }else if (string[index] === '3') {
       decodedString += 'i';
-    }
-    else if (string[index] === '4') {
+    }else if (string[index] === '4') {
       decodedString += 'o';
-    }
-    else if (string[index] === '5') {
+    }else if (string[index] === '5') {
       decodedString += 'u';
-    }
-    else {
+    }else {
       decodedString += string[index];
     }
   }
