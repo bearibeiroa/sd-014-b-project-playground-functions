@@ -43,7 +43,19 @@ function generatePhoneNumber(arrayOfnumbers) {
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
+  let subtrationLineA = Math.abs(lineB - lineC);
+  let subtrationLineB = Math.abs(lineA - lineC);
+  let subtrationLineC = Math.abs(lineA - lineB);
+  let sumLineA = lineB + lineC;
+  let sumLineB = lineA + lineC;
+  let sumLineC = lineA + lineB;
+  let triangleResult = false;
+
+  if (lineA > subtrationLineA && lineA < sumLineA && lineB > subtrationLineB && lineB < sumLineB && lineC > subtrationLineC && lineC < sumLineC) {
+    triangleResult = true;
+  }
+  return triangleResult;
+
 }
 
 // Desafio 13
