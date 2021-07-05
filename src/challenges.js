@@ -113,7 +113,7 @@ function decode(palavra) {
     };
    };
    return numbers.join('');
-}; console.log(decode('b41 n43t2 p2ss41l'))
+}; console.log(decode('b41 n43t2 p2ss41l')) .
 
 module.exports = {
   calcArea,
