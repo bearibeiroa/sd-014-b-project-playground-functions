@@ -21,29 +21,26 @@ function generatePhoneNumber(numbersPhone) {
   // seu código aqui
   if (numbersPhone.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else {
-    for (let index of numbersPhone) {
-      if (index < 0 || index > 9) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-    }
-    for (let index of numbersPhone) { //  verificando se o número repete 3 vezes ou mais.
-      let repete = []; // criei um array para colocar o número caso ele se repita.
-      for (let indexComparativo of numbersPhone) {
-        if (index === indexComparativo) {
-          repete.push(index);
-        }
-      }
-      if (repete.length >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
+  }
+  for (let index of numbersPhone) {
+    if (index < 0 || index > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-
+  for (let index of numbersPhone) {
+    //  verificando se o número repete 3 vezes ou mais.
+    let repete = []; // criei um array para colocar o número caso ele se repita.
+    for (let indexComparativo of numbersPhone) {
+      if (index === indexComparativo) {
+        repete.push(index);
+      }
+    }
+    if (repete.length >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
   return `(${numbersPhone[0]}${numbersPhone[1]}) ${numbersPhone[2]}${numbersPhone[3]}${numbersPhone[4]}${numbersPhone[5]}${numbersPhone[6]}-${numbersPhone[7]}${numbersPhone[8]}${numbersPhone[9]}${numbersPhone[10]}`;
 }
-numbersPhone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-generatePhoneNumber(numbersPhone);
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
