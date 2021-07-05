@@ -14,8 +14,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(tuca) {
+  return tuca.split(' ')
 }
 
 // Desafio 4
