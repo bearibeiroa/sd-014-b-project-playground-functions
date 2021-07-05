@@ -26,6 +26,14 @@ function generatePhoneNumber(numbers) {
   }
   let contador = 0;
   for (let index = 0; index < numbers.length; index += 1) {
+    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+      if (numbers[index] === numbers[index2]) {
+        contador += 1;
+      } else if (contador > 2) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+    contador = 0;
     if (numbers[index] < 0 || numbers[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
@@ -36,7 +44,7 @@ function generatePhoneNumber(numbers) {
   return '(' + ddd.join('') + ') ' + contactPart1.join('') + '-' + contactPart2.join('');
 }
 
-console.log(generatePhoneNumber([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 // Passou no requisito mas fiquei com duvidas.
