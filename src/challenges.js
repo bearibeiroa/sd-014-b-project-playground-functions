@@ -25,10 +25,12 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(indexName) {
+  let primeiro = indexName[0];
+  let ultimo = indexName[indexName.length - 1];
+  let retorno = ultimo.concat(', ', primeiro);
+  return retorno
 }
-
 // Desafio 5
 function footballPoints(wins,ties) {
   let points = 0;
@@ -90,5 +92,4 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence,
-};
+  splitSentence,};
