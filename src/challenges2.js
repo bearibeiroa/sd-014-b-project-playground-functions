@@ -16,8 +16,31 @@ function techList(tech, nome) {
 // let tech = techList(["React", "HTML"], "Lucas");
 // console.log(tech);
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(number) {
   // seu código aqui
+let phoneNumber = [];
+
+
+  if (number.length != 11) {
+    return "Array com tamanho incorreto.";
+  } 
+
+for (let index = 0; index < number.length; index += 1) {
+  if (number[index] < 0 || number[index] > 9) {
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+}
+for (let index = 0; index <= 10; index += 1) {
+  let contador = 0;
+  for (let indexContador = 0; indexContador < number.length; indexContador += 1) {
+    if (number[index] === number[indexContador]) {
+      contador += 1;
+    } if (contador >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+  }
+return  "(" + number[0] + number[1] + ")" + " " + number[2] + number[3] + number[4] + number[5] + number[6] + "-" + number[7] + number[8] + number[9] + number[10];
 }
 
 // Desafio 12
