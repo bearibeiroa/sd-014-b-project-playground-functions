@@ -64,31 +64,47 @@ function fizzBuzz(num) {
   let len=num.length;
   let text=[];
   for(let c=0;c<len;c++){
-    switch(num[c]){
-      case num[c]%3==0:
-        text.push("fizz");
-        break;
-      case num[c]%5==0:
-        text.push("buzz");
-        break;
-      case num[c]%3==0 &&num[c]%5==0:
-        text.push("fizzbuzz");
-        break;
-      case num[c]%3!=0 &&num[c]%5!=0:
-        text.push("bug!");
-        break;    
-      }
+    if(num[c]%3==0 &&num[c]%5==0){
+      text.push("fizzBuzz");}
+
+    else if(num[c]%3!=0 &&num[c]%5!=0){
+      text.push("bug!");}
+
+    else if (num[c]%3==0){
+      text.push("fizz");}
+
+    else if(num[c]%5==0){
+      text.push("buzz");}
+
   }
   return text;
  
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(w) {
+  let frase='';
+  for (let l in w) {
+  if(w[l]=='a'){frase+='1';}
+  else if(w[l]=='e'){frase+='2';}
+  else if(w[l]=='i'){frase+='3';}
+  else if(w[l]=='o'){frase+='4';}
+  else if(w[l]=='u'){frase+='5';}
+  else{frase+=w[l];}
+  }
+  return frase;
 }
-function decode() {
-  // seu código aqui
+function decode(w) {
+  let frase='';
+  for (let l in w){
+    if(w[l]=='1'){frase+='a';}
+  else if(w[l]=='2'){frase+='e';}
+  else if(w[l]=='3'){frase+='i';}
+  else if(w[l]=='4'){frase+='o';}
+  else if(w[l]=='5'){frase+='u';}
+  else{frase+=w[l];}
+  }
+  return frase;
 }
 
 module.exports = {
