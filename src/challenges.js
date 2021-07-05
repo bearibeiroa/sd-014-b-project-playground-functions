@@ -16,10 +16,10 @@ function calcArea(base, altura) {
 // Desafio 3
 // ref: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 function splitSentence(string) {
-  let resultado = string.split(' '); 
+  let resultado = string.split(' ');
   return resultado;
 }
-// Para realizar esse desafio, consultei a documentação do método '.split'. Essa função recebe uma string como parâmetro e retorna um array de strings separadas por espaço. 
+// Para realizar esse desafio, consultei a documentação do método '.split'. Essa função recebe uma string como parâmetro e retorna um array de strings separadas por espaço.
 
 // Desafio 4
 function concatName(array) {
@@ -49,7 +49,8 @@ function highestCount(array) {
     }
   }
   return numberCount;
-} // Essa função recebe um array numérico como parâmetro. Nesse desafio usei o médoto "Math.max.apply()" consultando a documentação no site do MDN. A primeira variável "highNumber" armazena o maior número entre os números recebidos no array. A segunda variávvel "numberCount" é um contador, para conferir quantas vezes o número se repete dentro do array. Usando o 'for' para percorrer as posições do array, se o número da posição do array for igual ao maior número, a variável "numberCount" é incrementada em uma unidade. Após esse processo, a função retorna o valor de "numberCount".  
+}
+// Essa função recebe um array numérico como parâmetro. Nesse desafio usei o médoto "Math.max.apply()" consultando a documentação no site do MDN. A primeira variável "highNumber" armazena o maior número entre os números recebidos no array. A segunda variávvel "numberCount" é um contador, para conferir quantas vezes o número se repete dentro do array. Usando o 'for' para percorrer as posições do array, se o número da posição do array for igual ao maior número, a variável "numberCount" é incrementada em uma unidade. Após esse processo, a função retorna o valor de "numberCount".  
 
 // Desafio 7
 // ref : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs

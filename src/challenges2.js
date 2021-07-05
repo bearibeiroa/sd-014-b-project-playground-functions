@@ -1,22 +1,23 @@
 // Desafio 10
+// Para resolver esse desafio, consultei a lógica do Matheus Kaffka ref: "https://github.com/tryber/sd-014-b-project-playground-functions/pull/90"
 function techList(techName, name) {
-  techName.sort();
   let techVector = [];
    
   if (techName.length > 0) {
-     for (let index of techName) {
+     for (let index of techName.sort()) {
        techVector.push({ tech: index, name: name });
      }
     } else {
     return 'Vazio!'
-  }
+  } 
  
   return techVector;
  
- } console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Enzo'))
+ } console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
+ "Lucas"))
  // A função techList recebe como parâmetros um array e uma string. O '.sort' é utilizado para colocar o array recebido em ordem alfabética. A variável "techVector" é um array vazio, criado para armazenar propiedades da minha lista. Se o tamanho do meu array for maior que zero, com o uso do 'for', os valores do meu array são percorridos em loop, e à cada loop, é armazenado no final do array, com o uso do '.push', uma nova propriedade, contendo o item de uma posição do array e o nome recebido na função. Se o array recebido for vazio, a função retorna "Vazio!". Depois desses processos de verificação, a função retorna o array 'techVector'.
  
- 
+
  // Desafio 11
  function generatePhoneNumber(numbers) {
    
@@ -42,15 +43,13 @@ function techList(techName, name) {
    let sizeB = lineB < lineA + lineC && lineB > diffAC
    let sizeC = lineC < lineA + lineB && lineC > diffAB
    let triangle = sizeA + sizeB + sizeC 
-   if (triangle === 3) {
-     return true;
-   }
-   return false;
+    return !!triangle;
   
- } console.log(triangleCheck(10, 14, 8))
+ } 
  
  // Desafio 13
- function hydrate() {
+ function hydrate(bebidas) {
+
    
  }
 
