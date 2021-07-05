@@ -80,11 +80,48 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let array = [string];
+  for (let i = 0; i < array.length; i += 1){
+    if (array[i]==="a"){
+      array[i] = 1;
+    }
+    else if (array[i]==="e"){
+      array[i] = 2;
+    }
+    else if (array[i]==="i"){
+      array[i] = 3;
+    }
+    else if (array[i]==="o"){
+      array[i] = 4;
+    }
+    else if (array[i]==="u"){
+      array[i] = 5;
+    }
+  }
+  return array.join ('', ',')
 }
-function decode() {
-  // seu código aqui
+function decode(string2) {
+  let array2 = [string2];
+  for ( let i = 0; i< array2.length; i +=1){
+    if (array2[i]==="1"){
+      array2[i] = "a";
+    }
+    else if (array2[i]==="2"){
+      array2[i] = "e";
+    }
+    else if (array2[i]==="3"){
+      array2[i] = "i";
+    }
+    else if (array2[i]==="4"){
+      array2[i] = "o";
+    }
+    else if (array2[i]==="5"){
+      array2[i] = "u";
+    }
+
+  }
+  return array2.join ('', ',')
 }
 module.exports = {
   calcArea,
