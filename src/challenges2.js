@@ -52,7 +52,7 @@ function generatePhoneNumber(t) {
 
 // Desafio 12
 function triangleCheck(a, b, c) {
-  return a < (b + c) && a > Math.abs(b - c) && b < (a + c) && b > Math.abs(a - c) && c < (a + b) && c > Math.abs(a - b)
+  return a < (b + c) && a > Math.abs(b - c) && b < (a + c) && b > Math.abs(a - c) && c < (a + b) && c > Math.abs(a - b);
 
 }
 
