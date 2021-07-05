@@ -1,6 +1,4 @@
-/* eslint-disable brace-style */
-/* eslint-disable max-lines-per-function */
-/* eslint-disable complexity */
+
 // Desafio 1
 function compareTrue(n1, n2) {
   // eslint-disable-next-line sonarjs/prefer-single-boolean-return
@@ -63,8 +61,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 // Desafio 8
-// eslint-disable-next-line complexity
-// eslint-disable-next-line sonarjs/cognitive-complexity
 function fizzBuzz(array) {
   let ArrayNumbers = [];
   for (let index = 0; index < array.length; index += 1) {
@@ -81,7 +77,6 @@ function fizzBuzz(array) {
   return ArrayNumbers;
 }
 // Desafio 9
-// eslint-disable-next-line max-lines-per-function
 function encode(string) {
   let encoding = '';
   for (let index = 0; index < string.length; index += 1) {
