@@ -28,8 +28,45 @@ function techList(technologies, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(arraysOfNumbers) {
   // seu código aqui
+   // Verifica se o tamanho do array é diferente de 11
+  if (arraysOfNumbers.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  }
+  let invalidValues = 'não é possível gerar um número de telefone com esses valores';
+  // Verifica se existem números maiores que 9
+  for (index = 0; index < arraysOfNumbers.length; index += 1) {
+    if (arraysOfNumbers[index] > 9 || arraysOfNumbers[index] < 0) {
+      return invalidValues;
+    }
+  }
+  // Verifica se algum número se repete três vezes
+  for (let index = 0; index < arraysOfNumbers.length; index += 1) {
+    // O trecho a seguir usei o código de Natalia Martins como modelo para encontrar a solução
+    let repetead = 0;
+    for (let indexComparator = 0; indexComparator < arraysOfNumbers.length; indexComparator += 1) {
+      if (arraysOfNumbers[indexComparator] === arraysOfNumbers[index]) {
+        repetead += 1;
+      }
+    }
+    if (repetead > 2) {
+      return invalidValues;
+    }
+  }
+  // Pegando as duas primeiras posições
+  let prefixArray = arraysOfNumbers.slice(0,2);
+  prefixArray.unshift('(');
+  prefixArray.push(')');
+  let prefix = prefixArray.join('');
+  // Pegando cinco posições a partir do index 2
+  let firstGroupArray = arraysOfNumbers.slice(2,7);
+  let firstGroup = firstGroupArray.join('');
+  // Pegando os últimos números
+  let lastGroupArray = arraysOfNumbers.slice(7);
+  let lastGroup = lastGroupArray.join('');
+  let phoneNumber = prefix + ' ' + firstGroup + '-' + lastGroup;
+  return phoneNumber;
 }
 
 // Desafio 12
