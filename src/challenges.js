@@ -9,6 +9,30 @@ function countReptition(lista, number) {
   return value;
 }
 
+// Verifica se um número é divisivel por 3 e 5;
+function numberDivision3And5(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return true;
+  }
+  return false;
+}
+
+// Verifica se um número é divisivel por 3;
+function numberDivision3(number) {
+  if (number % 3 === 0) {
+    return true;
+  }
+  return false;
+}
+
+// Verifica se um número é divisivel por 5;
+function numberDivision5(number) {
+  if (number % 5 === 0) {
+    return true;
+  }
+  return false;
+}
+
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
@@ -83,11 +107,11 @@ function fizzBuzz(numbers) {
   // seu código aqui
   let result = [];
   for (let value of numbers) {
-    if (value % 3 === 0 && value % 5 === 0) {
+    if (numberDivision3And5(value)) {
       result.push('fizzBuzz');
-    } else if (value % 3 === 0) {
+    } else if (numberDivision3(value)) {
       result.push('fizz');
-    } else if (value % 5 === 0) {
+    } else if (numberDivision5(value)) {
       result.push('buzz');
     } else {
       result.push('bug!');
@@ -151,7 +175,7 @@ function decode(string) {
         newString += valorAtual;
         break;
     }
-}
+  }
   return newString;
 }
 
