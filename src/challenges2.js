@@ -33,8 +33,23 @@ function generatePhoneNumber(n) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  let fabs = Math.abs(b - c);
+  let fcheck = false;
+  if ((a < b + c) && (a > fabs)) {
+    fcheck = true;
+  }
+  let sabs = Math.abs(a - c);
+  let scheck = false;
+  if ((b < a + c) && (b > sabs)) {
+    scheck = true;
+  }
+  let tabs = Math.abs(c - a);
+  let tcheck = false;
+  if ((c < b + a) && (c > tabs)) {
+    tcheck = true;
+  }
+  return fcheck && scheck && tcheck;
 }
 
 // Desafio 13
