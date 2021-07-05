@@ -111,8 +111,8 @@ function encode(string) {
     }
   }
   return newString;
-}
-console.log(encode("hi there!"))
+};
+console.log(encode("hi there!"));
 
 function decode(reverseVogal) {
   let newStringReverse = '';
