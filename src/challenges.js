@@ -44,15 +44,34 @@ footballPoints(14,8)
 footballPoints(1,2)
 footballPoints(0,0)
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(repeat) {
+  let repeatmax = 0;
+  for(let index = 0; index < repeat.length; index += 1){
+    repeatMax = Math.max(...repeat);
+
+    index = repeatmax + 1;
+  }
+
 }
+highestCount([9, 1, 2, 3, 9, 5, 7]);
+highestCount([0, 4, 4, 4, 9, 2, 1]);
+highestCount([0, 0, 0]);
+
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1, cat2) {
+  
+  if(cat2 > cat1){
+    console.log("cat2")
+  }else if(cat1 > cat2){
+    console.log("cat1")
+  }else{
+    console.log("os gatos trombam e o rato foge")
+  }
 }
-
+catAndMouse(0,-3,-2)
+catAndMouse(0,-6,-12)
+catAndMouse(0,-3,-3)
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
