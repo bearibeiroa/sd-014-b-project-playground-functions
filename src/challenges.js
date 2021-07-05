@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(parameter) {
   let cont = 0; 
-  let max = Math.max.apply(null,parameter);
+  let max = Math.max.apply(null, parameter);
   for (let index = 0; index < parameter.length; index += 1) {
     if (parameter[index] === max) {
       cont = cont + 1; 
@@ -43,7 +43,7 @@ function catAndMouse(mouse, cat1, cat2) {
   cont2 = 0;
 
   while (mouse !== cat1) {
-    if (mouse > cat1 ){
+    if (mouse > cat1 ) {
       cat1 = cat1 + 1;
       cont1 = cont1 + 1;
     } else {
