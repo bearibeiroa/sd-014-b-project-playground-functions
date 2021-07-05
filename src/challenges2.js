@@ -22,6 +22,8 @@ function isSizeIncorrect(array) {
   return false;
 }
 
+// referência: https://stackoverflow.com/a/59573631
+// usada para verificar quantas vezes um valor é repetido na array
 function isValuesIncorrect(array) {
   for (let index = 0; index < array.length; index += 1) {
     const element = array[index];
