@@ -16,12 +16,14 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(olatrybe) {
   return olatrybe.split(' ');
-  
+
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lista) {
+  let resultado = lista[lista.length -1] + ', ' + lista[0];
+  return resultado;
+  
 }
 
 // Desafio 5
