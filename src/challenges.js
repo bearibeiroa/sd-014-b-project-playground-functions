@@ -40,41 +40,60 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(1,1));;
 
 // Desafio 6
-function highestCount(listaNums) {
+function highestCount(listNums) {
   // seu código aqui
-  let maior = 0
-  for (let index = 0; index < listaNums.length; index ++) {
-    if (listaNums[index] > maior) {
-      maior = listaNums[index];
+  let maior = listNums[0];
+  for (let index = 0; index < listNums.length; index += 1) {
+    if (listNums[index] >= maior) {
+      maior = listNums[index];
     } 
-let count = 0
-  for (let index = 0; index < listaNums.length; index ++) {
-    if (listaNums[index] === maior) {
+  }
+let count = 0;
+  for (let index2 = 0; index2 < listNums.length; index2 += 1) {
+    if (listNums[index2] === maior) {
       count += 1;
     }
   }
   return count;
 }
- }
  
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
-      let calcDistance1 = (mouse - cat1)
-      let calcDistance2 = (mouse - cat2)
+      let calcDistance1 = 0
+      let calcDistance2 = 0
+if (mouse > cat1 && mouse > cat2) {
+  for (let indexCat1 = cat1; indexCat1 < mouse; indexCat1 += 1) {
+    calcDistance1 += 1;
+  }
+  for (let indexCat2 = cat2; indexCat2 < mouse; indexCat2 +=1) {
+    calcDistance2 += 1;
+  }
+} if (cat1 < mouse && cat2 > mouse) {
+  for  (let indexCat1 = cat1; indexCat1 < mouse; indexCat1 += 1) {
+    calcDistance1 += 1;
+  }
+  for (let indexCat2 = mouse; indexCat2 < cat2; indexCat2 += 1) {
+    calcDistance2 += 1;
+  } 
+  else if (mouse < cat1 && mouse < cat2) {
+    for (let indexCat1 = mouse; indexCat1 < cat1; indexCat1 += 1) {
+      calcDistance1 += 1;
+    }
+    for (let indexCat2 = mouse; indexCat2 < cat2; indexCat2 += 1) {
+      calcDistance2 += 1;
+    }
   if (calcDistance1 > calcDistance2) {
   // console.log ("o gato mais próximo é: cat 1")
      return 'cat1';
-  }
-  if (calcDistance1 < calcDistance2) {
+  } else if (calcDistance1 < calcDistance2) {
   // console.log("o gato mais próximo é: cat 2")
-    return 'cat2';
-  }
-  if (mouse === cat1 && mouse === cat2) {
+     return 'cat2';
+  } else {
   // console.log("os gatos trombam e o rato foge")
-    return ('os gatos trombam e o rato foge');
+     return 'os gatos trombam e o rato foge';
   }
-}
+ catAndMouse (9,5,3);
 
 // Desafio 8
 function fizzBuzz() {
@@ -142,3 +161,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
