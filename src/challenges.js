@@ -95,8 +95,6 @@ function fizzBuzz(array) {
     }
     return fizzBuzzResult;
 }
-let a = [2, 15, 7, 9, 45];
-fizzBuzz(a);
 
 // Desafio 9
 function encode(value1) {
