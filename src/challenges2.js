@@ -35,6 +35,8 @@ function techList(techName, name) {
  } 
  
  // Desafio 12
+ // Para resolver esse desafio, usei a lógica e a dica do Thomas Ferreira no Slack. ref : "https://github.com/tryber/sd-014-b-project-playground-functions/pull/90https://github.com/tryber/sd-014-b-project-playground-functions/pull/90"
+ // ref : "https://trybecourse.slack.com/archives/C023YHXAEGM/p1625455870052700"
  function triangleCheck(lineA, lineB, lineC) {
    let diffAB = Math.abs(lineA - lineB)
    let diffAC = Math.abs(lineA - lineC)
