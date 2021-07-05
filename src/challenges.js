@@ -33,11 +33,9 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(valores) {
-
   // Função para o highestNumber encontrada na documentação, em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max e https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce onde
   // math.max seleciona o maior valor entre 2 elementos do array e
   // reduce executa esta função para todos os elementos do array.
-
   let highestNumber = valores.reduce(function (a, b) {
     return Math.max(a, b);
   });
@@ -70,33 +68,30 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
-  }  
+  }
 }
 
 // Desafio 8
 function fizzBuzz(fizzOuBuzz) {
-
-for (let index8 = 0; index8 < fizzOuBuzz.length; index8 += 1) {
-  if (fizzOuBuzz[index8] % 3 === 0 && fizzOuBuzz[index8] % 5 === 0) {
-    fizzOuBuzz[index8] = 'fizzBuzz';
-  } else if (fizzOuBuzz[index8] % 3 === 0 && fizzOuBuzz[index8] % 5 !== 0) {
-    fizzOuBuzz[index8] = 'fizz';
-  } else if (fizzOuBuzz[index8] % 3 !== 0 && fizzOuBuzz[index8] % 5 === 0) {
-    fizzOuBuzz[index8] = 'buzz';
-  } else {
-    fizzOuBuzz[index8] = 'bug!';
-    }
-    }
+  for (let index8 = 0; index8 < fizzOuBuzz.length; index8 += 1) {
+    if (fizzOuBuzz[index8] % 3 === 0 && fizzOuBuzz[index8] % 5 === 0) {
+      fizzOuBuzz[index8] = 'fizzBuzz';
+    } else if (fizzOuBuzz[index8] % 3 === 0 && fizzOuBuzz[index8] % 5 !== 0) {
+      fizzOuBuzz[index8] = 'fizz';
+    } else if (fizzOuBuzz[index8] % 3 !== 0 && fizzOuBuzz[index8] % 5 === 0) {
+      fizzOuBuzz[index8] = 'buzz';
+    } else {
+      fizzOuBuzz[index8] = 'bug!';
+      }
+      }
   return fizzOuBuzz;
-  }
-  
+}
+
 // Desafio 9
 function encode(codifique) {
-
   // recurso Replace encontrado no site https://blog.betrybe.com/javascript/javascript-replace/
   // nomeDaString.replace('valor a ser substituído', 'novo valor')
   // inclusão de / antes e depois do valor a ser substituído para incluir a especificação global g, para substituir todos valores requeridos e a tag i, para ignorar o case sensitive.
-
   let mensagemCodA = codifique.replace(/a/gi, '1');
   let mensagemCodE = mensagemCodA.replace(/e/gi, '2');
   let mensagemCodI = mensagemCodE.replace(/i/gi, '3');
@@ -107,7 +102,6 @@ function encode(codifique) {
 }
 
 function decode(decodifique) {
-
   let mensagemDecA = decodifique.replace(/1/gi, 'a');
   let mensagemDecE = mensagemDecA.replace(/2/gi, 'e');
   let mensagemDecI = mensagemDecE.replace(/3/gi, 'i');
