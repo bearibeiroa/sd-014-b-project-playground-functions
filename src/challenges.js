@@ -35,7 +35,17 @@ return contadorGame
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numeros) {
+  let maxima = Math.max(...numeros)
+  let contador = 0;
+  for (let index = 0; index < numeros.length; index +=1){
+    if (numeros[index] === maxima){
+      contador +=1;
+    }
+
+  }
+  return contador
+
   // seu código aqui
 }
 
