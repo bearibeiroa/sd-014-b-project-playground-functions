@@ -59,6 +59,7 @@ function triangleCheck(a, b, c) {
 // Desafio 13
 function hydrate(drinks) {
   let total = 0;
+  //Codigo da linha abaixo adaptado do site: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994.
   let numbers = drinks.match(/\d+/g).map(Number);
   for (let i = 0; i < numbers.length; i += 1) {
     total += numbers[i];

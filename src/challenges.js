@@ -83,19 +83,20 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let fizzBuzzResult = [];
     for (let i = 0; i < array.length; i += 1) {
-        if (array[i] / 3 >= 1 && array[i] / 5 >= 1 && Number.isInteger(array[i] / 3) && Number.isInteger(array[i] / 5)) {
+        if (Number.isInteger(array[i] / 3) && Number.isInteger(array[i] / 5)) {
             fizzBuzzResult.push("fizzBuzz");
-        } else if (array[i] / 3 >= 1 && Number.isInteger(array[i] / 3)){
+        } else if (Number.isInteger(array[i] / 3)){
             fizzBuzzResult.push("fizz");
-        } else if (array[i] / 5 >= 1 && Number.isInteger(array[i] / 5)) {
+        } else if (Number.isInteger(array[i] / 5)) {
             fizzBuzzResult.push("buzz");
         } else {
-            fizzBuzzResult.push("bug!");
+            fizzBuzzResult.push("bug!"); 
         }
     }
     return fizzBuzzResult;
 }
-
+let a = [2, 15, 7, 9, 45];
+fizzBuzz(a);
 
 // Desafio 9
 function encode(value1) {
