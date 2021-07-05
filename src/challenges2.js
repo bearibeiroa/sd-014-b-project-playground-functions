@@ -1,6 +1,17 @@
 // Desafio 10
 function techList(techs, name) {
-  
+  techs.sort();
+  let result = [];
+
+  for (element of techs) {
+    result.push({'tech': element, 'name': name});
+  }
+
+  if (result.length == 0) { //se o array estiver vazio, retorna "Vazio!"
+    return "Vazio!";
+  } else {
+    return result;
+  }
 }
 
 // Desafio 11
