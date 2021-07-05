@@ -69,7 +69,7 @@ if (mouse > cat1 && mouse > cat2) {
   for (let indexCat2 = cat2; indexCat2 < mouse; indexCat2 +=1) {
     calcDistance2 += 1;
   }
-} if (cat1 < mouse && cat2 > mouse); {
+} if (cat1 < mouse && cat2 > mouse) {
   for  (let indexCat1 = cat1; indexCat1 < mouse; indexCat1 += 1) {
     calcDistance1 += 1;
   }
@@ -103,30 +103,30 @@ function fizzBuzz() {
   // seu código aqui
 }
 
-// Desafio 9
-function encode(stringCode) {
-  // seu código aqui
-let mensagem = ''
-for (let index = 0; index <= codigo.length; index += 1) {
-  if (codigo[index] === 'a') {
-    mensagem = '1';
-    }
-    if (codigo[index] === 'e') {
-      mensagem = '2';
-    }
-    if (codigo[index] === 'i') {
-      mensagem = '3';
-    }
-    if (codigo[index] === 'o') {
-      mensagem = '4';
-    }
-    if (codigo[index] === 'u') {
-      mensagem = '5';
-    }
-  }
-  return codigo;
-}
-console.log(encode('hi there!'));
+// // Desafio 9
+ function encode(stringCode) {
+ // seu código aqui
+// //let mensagem = ''
+// //for (let index = 0; index <= codigo.length; index += 1) {
+//   if (codigo[index] === 'a') {
+//     mensagem = '1';
+//     }
+//     if (codigo[index] === 'e') {
+//       mensagem = '2';
+//     }
+//     if (codigo[index] === 'i') {
+//       mensagem = '3';
+//     }
+//     if (codigo[index] === 'o') {
+//       mensagem = '4';
+//     }
+//     if (codigo[index] === 'u') {
+//       mensagem = '5';
+//     }
+//   }
+//   return codigo;
+ }
+// console.log(encode('hi there!'));
 
 function decode(descodigo) {
   // seu código aqui
@@ -150,7 +150,7 @@ function decode(descodigo) {
 return descodigo;
     }
        }
-console.log(decode('h3 th2r2!'));
+//console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
