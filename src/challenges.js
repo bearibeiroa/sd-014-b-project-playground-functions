@@ -38,16 +38,16 @@ function highestCount(Array, maior, count) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
  if( cat1 > cat2 && cat1 > mouse && (cat1 - mouse) > (mouse - cat2)) {
-  console.log("o cat2 (" + cat2 + ") esta mais perto")
+  return ("cat2")
  }
  if((cat1 - mouse) ==  (mouse - cat2) && cat1 > cat2) {
-  console.log("os gatos trombam e o rato foge")
+  return ("os gatos trombam e o rato foge")
  }
  if (cat2 > cat1 && cat2 > mouse && (cat2 - mouse) > (mouse - cat1)){
-  console.log("o cat1 (" + cat1 + ") esta mais perto") 
+  return ("cat1")
  }
  if((cat2 - mouse) ==  (mouse - cat1) && cat2 > cat1) {
-  console.log("os gatos trombam e o rato foge")
+  return ("os gatos trombam e o rato foge")
 }
 }
 
