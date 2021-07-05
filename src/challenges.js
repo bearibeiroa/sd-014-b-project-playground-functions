@@ -105,8 +105,25 @@ function encode(string) {
   }
   return letters.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let letters = [];
+  for (let letter of string) {
+    letters.push(letter);
+  }
+  for (let i = 0; i < letters.length; i += 1) {
+    if (letters[i] === '1') {
+      letters[i] = 'a';
+    } else if (letters[i] === '2') {
+      letters[i] = 'e';
+    } else if (letters[i] === '3') {
+      letters[i] = 'i';
+    } else if (letters[i] === '4') {
+      letters[i] = 'o';
+    } else if (letters[i] === '5') {
+      letters[i] = 'u';
+    }
+  }
+  return letters.join('');
 }
 
 module.exports = {
