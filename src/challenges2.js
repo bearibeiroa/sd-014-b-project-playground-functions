@@ -1,5 +1,10 @@
 // Desafio 10
-function techList(nomeTech) {
+function techList(nomeTech, name) {
+  
+  // criar um array vazio
+ // criar um objeto vazio
+ // o for vai jogar dentro do objeto
+ 
   let nameListTech = {
     tech: 'CSS',
     name: 'Thiago',
