@@ -48,7 +48,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let y = Math.abs(cat2 - mouse);
 
   if (x === y) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   } else if (x < y) {
     return 'cat1';
   }
@@ -59,7 +59,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let x = array.map(function(n){
     if (n % 3 === 0 && n % 5 === 0) {
-      return 'fizzbuzz';
+      return 'fizzBuzz';
     } else if (n % 5 === 0) {
       return 'buzz';
     } else if (n % 3 === 0) {
