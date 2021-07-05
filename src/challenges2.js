@@ -8,7 +8,7 @@ function techList(techs, nome) {
     };
     objectArray.push(object);
   }
-  return objectArray.length === 0 ? 'Vazio!' : objArray;
+  return objectArray.length === 0 ? 'Vazio!' : objectArray;
 }
  
 // Desafio 11
