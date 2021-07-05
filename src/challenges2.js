@@ -46,53 +46,34 @@ if (numero.length != 11) {
   naoTem11 = true;
 }
 
-
-let count = 0;
-for (let index = 0; index < numero.length; index +=1) {
-  let current = numero[index]
-
-  for (let indexCount = 0; indexCount < numero.length; indexCount +=1) {    
-    let numeroAtual = numero[indexCount]
-    
-    if (current == numeroAtual) {
-      count =+1
+for (let index = 0; index < numero.length; index += 1) {
+  let count = 0;
+        for (let indexCount = 0; indexCount < numero.length; indexCount += 1) {
+            if (numero[index] === numero[indexCount]) {
+                count += 1;
+            }
+        }
+        if (count > 2) {
+            repetidos3 = true;
+            break;
+        }
+        count = 0;
     }
-    if (count > 2) {
-      repetidos3 = true;
-      break;
-    }    
-    }  
-}
-
-// for (let index = 0; index < numero.length; index +=1) {   
-//     let current3 = numero[index];
-//     let repete3 = 0;
-
-//     for (let indexRep = 0; indexRep < numero.length; indexRep += 1) {
-//         if (current3 === numero[indexRep]) {
-//             repete3 += 1;
-//         }
-//     }
-//     if (repete3 > 2); {
-//     repetidos3 = true;
-//     break;
-//     } 
-// }
-
 
 if (naoTem11 == true) {
-  resposta =  'Array com tamanho incorreto.'
+  return  'Array com tamanho incorreto.'
+
 } else if (maiorQue9 == true) {
-  resposta = 'não é possível gerar um número de telefone com esses valores';
+  return 'não é possível gerar um número de telefone com esses valores';
  
 } else if (menorQue0 == true) {
-  resposta =  'não é possível gerar um número de telefone com esses valores';
+  return 'não é possível gerar um número de telefone com esses valores';
   
 } else if (repetidos3 == true) {
-  resposta =  'não é possível gerar um número de telefone com esses valores';
+  return 'não é possível gerar um número de telefone com esses valores';
   
 } else {
-  resposta =  '(' + numero[0] + numero[1] + ') ' + numero[2] + numero[3] + numero[4] + numero[5] + numero[6] + '-' + numero[7] + numero[8] + numero[9] + numero[10];
+  return  '(' + numero[0] + numero[1] + ') ' + numero[2] + numero[3] + numero[4] + numero[5] + numero[6] + '-' + numero[7] + numero[8] + numero[9] + numero[10];
 }
 return resposta;
 }
