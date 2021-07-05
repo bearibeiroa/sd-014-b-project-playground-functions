@@ -110,12 +110,21 @@ function encode(stringRecebida) {
   }
   return stringModificada;
 }
-console.log(encode('danilo'));
 
 function decode(stringEcode) {
-  // seu código aqui
+  let stringNormal = '';
+  let listaNumeros = ['1', '2', '3', '4', '5'];
+  for (let letraAtual of stringEcode) {
+    if (listaNumeros.indexOf(letraAtual) === -1) {
+      stringNormal += letraAtual;
+    }
+    else {
+      let listaVogais = ['a', 'e', 'i', 'o', 'u'];
+      stringNormal += listaVogais[letraAtual - 1];
+    }
+  }
+  return stringNormal;
 }
-
 
 module.exports = {
   calcArea,
