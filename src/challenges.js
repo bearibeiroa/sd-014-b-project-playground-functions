@@ -80,8 +80,30 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let letters = [];
+  for (let letter of string){
+    letters.push (letter);
+  }
+  for (let i = 0; i < letters.length; i += 1){
+    if (letters[i]==='a'{
+      letters[i] = 1;
+    })
+    else if (letters[i]==='e'){
+      letters[i]= 2;
+    }
+    else if (letters[i]==='i'){
+      letters[i]= 3;
+    }
+    else if (letters[i]==='o'){
+      letters[i]= 4;
+    }
+    else if (letters[i]==='u'){
+      letters[i]= 5;
+    }
+
+  }
+  return letters.join('');
 }
 function decode() {
   // seu código aqui
