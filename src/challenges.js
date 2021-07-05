@@ -46,10 +46,10 @@ console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(numbers) {
-  maior = 0;
-  numeroDeVezes = 0;
+  let maior = 0;
+  let numeroDeVezes = 0;
   for (let indice in numbers) {
-    if (maior < numbers[indice]) {
+    if (maior < Math.abs(numbers[indice])) {
         maior = numbers[indice];
     }
   }
@@ -81,7 +81,7 @@ console.log(catAndMouse(0, 3, 2));
 console.log(catAndMouse(10, 4, 22));
 console.log(catAndMouse(1, 0, 2));
 
-//console.log(Math.abs(mouse - cat1))
+
 
 // Desafio 8
 function fizzBuzz(arrayDeNumero) {
