@@ -116,8 +116,15 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let matches = string.match(/\d/g);
+  let resultado = 0;
+
+  for (let i = 0; i < matches.length; i += 1) {
+    resultado += parseInt(matches[i], 10);
+  }
+
+  return `${resultado} ${resultado > 1 ? 'copos' : 'copo'} de água`;
 }
 
 module.exports = {
