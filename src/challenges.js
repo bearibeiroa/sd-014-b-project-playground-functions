@@ -4,9 +4,8 @@ function compareTrue(a, b) {
   // seu código aqui
   if (a === true && b === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -25,7 +24,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(palavras) {
   // seu código aqui
-  let frase = palavras[palavras.length - 1] + ', ' + palavras[0];
+  let frase = `${palavras[palavras.length - 1]}, ${palavras[0]}`;
   return frase;
 }
 
@@ -39,7 +38,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(valores) {
   // seu código aqui
-  let ordem = valores.sort((a, b) => a - b);// função encontrada na documentação, para ser utilizada dentro do .sort() para ordenar os números sem ser por UNICODE, a-b fica crescente e b-a fica descrescente.
+  let ordem = valores.sort((a, b) => a - b); // função encontrada na documentação, para ser utilizada dentro do .sort() para ordenar os números sem ser por UNICODE, a-b fica crescente e b-a fica descrescente.
   let quantosIguais = [];
   for (let index of ordem) {
     if (index === ordem[ordem.length - 1]) {
@@ -54,11 +53,11 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if (mouse + mouse === cat2 + cat1) {
     return 'os gatos trombam e o rato foge';
-  } else if (cat1 - mouse < cat2 - mouse) {
-    return 'cat1';
-  } else {
-    return 'cat2';
   }
+  if (cat1 - mouse < cat2 - mouse) {
+    return 'cat1';
+  }
+  return 'cat2';
 }
 
 // Desafio 8
@@ -85,7 +84,7 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(vogais) {
-// seu código aqui
+  // seu código aqui
   let codificado = [];
 
   for (let letra of vogais) {
@@ -112,7 +111,7 @@ function encode(vogais) {
 }
 
 function decode(codigo) {
-// seu código aqui
+  // seu código aqui
   let fraseDecodificada = [];
   for (let numero of codigo) {
     if (numero === '1') {
