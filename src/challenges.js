@@ -20,7 +20,7 @@ function splitSentence(frase) {
   // seu código aqui
     return frase.split(' ');
 }
-console.log(splitSentence('Go trybe'));
+// console.log(splitSentence('Go trybe'));
 
 // Desafio 4
 function concatName(listnames) {
@@ -42,39 +42,39 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(listaNums) {
   // seu código aqui
-  let maior = 0;
+  let maior = 0
   for (let index = 0; index < listaNums.length; index += 1) {
     if (listaNums[index] > maior) {
       maior = listaNums[index];
-    }
-}  
-let count = 0;
+    } 
+let count = 0
   for (let index = 0; index < listaNums.length; index += 1) {
     if (listaNums[index] === maior) {
       count += 1;
+  }
     }
   }
-    return count;
+  return count;
 }
  
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-      let calcDistance1 = (mouse - cat1);
-      let calcDistance2 = (mouse - cat2);
+      let calcDistance1 = (mouse - cat1)
+      let calcDistance2 = (mouse - cat2)
   if (calcDistance1 > calcDistance2) {
   // console.log ("o gato mais próximo é: cat 1")
-     return cat1;
+     return 'cat1';
     }
   if (calcDistance1 < calcDistance2) {
   // console.log("o gato mais próximo é: cat 2")
-    return cat2;
+    return 'cat2';
     }
   if (mouse === cat1 && mouse === cat2) {
   // console.log("os gatos trombam e o rato foge")
-    return ('os gatos trombam e o rato foge')
+    return ('os gatos trombam e o rato foge');
     }
-  }
+}
 
 // Desafio 8
 function fizzBuzz() {
@@ -82,9 +82,9 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode(codigo) {
+function encode(stringCode) {
   // seu código aqui
-let mensagem = ' ';
+let mensagem = ''
 for (let index = 0; index <= codigo.length; index += 1) {
   if (codigo[index] === 'a') {
     mensagem = '1';
