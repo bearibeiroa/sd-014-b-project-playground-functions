@@ -35,19 +35,29 @@ return contadorGame
 }
 
 // Desafio 6
-function highestCount(numeros) {
-  let maxima = Math.max(...numeros)
-  let contador = 0;
-  for (let index = 0; index < numeros.length; index +=1){
-    if (numeros[index] === maxima){
-      contador +=1;
-    }
+function highestCount(vetor) {
+    let c = 0
+    let maior = 0
+    let qtM = 1
 
-  }
-  return contador
+    for(c=0 ; c < vetor.length; c++){
+        if(c == 0){
+        maior = vetor[c]
+    } else {
+        if(vetor[c] > maior){
+            qtM = 1
+            maior = vetor[c]
+        } else if(vetor[c] == maior) {
+            qtM++
+          }
+        }
+    }
+    return qtM
+}
+  
 
   // seu código aqui
-}
+
 
 // Desafio 7
 function catAndMouse() {
