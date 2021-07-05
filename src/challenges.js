@@ -23,7 +23,7 @@ function splitSentence(string) {
 // Desafio 4
 
 function concatName(frase) {
-  let a = frase[frase.length - 1]; 
+  let a = frase[frase.length - 1];
   let b = frase[0];
   return (a + ', ' + b);
 }
@@ -52,7 +52,6 @@ function highestCount(num) {
   return count;
 }
 
-
 // Desafio 7
 
 function catAndMouse(mouse, cat1, cat2) {
@@ -60,13 +59,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist2 = mouse - cat2;
 
   if (dist1 < 0) {
-    dist1 = dist1 * -1;
+    dist1 += * -1;
   }
 
   if (dist2 < 0) {
-    dist2 = dist2 * -1;
+    dist2 += * -1;
   }
-  
+
   if (dist1 === dist2) {
     return 'os gatos trombam e o rato foge';
   } else if (dist1 > dist2) {
@@ -100,24 +99,24 @@ function encode(palavra) {
   let result = '';
   for (let index of palavra) {
     switch (index) {
-      case 'a':
-        result += '1';
-        break;
-      case 'e':
-        result += '2';
-        break;
-      case 'i':
-        result += '3';
-        break;
-      case 'o':
-        result += '4';
-        break;
-      case 'u':
-        result += '5';
-        break;
-      default:
-        result += index;
-        break;
+    case 'a':
+      result += '1';
+      break;
+    case 'e':
+      result += '2';
+      break;
+    case 'i':
+      result += '3';
+      break;
+    case 'o':
+      result += '4';
+      break;
+    case 'u':
+      result += '5';
+      break;
+    default:
+      result += index;
+      break;
     }
   }
   return result;
@@ -127,24 +126,24 @@ function decode(palavra) {
   let result = '';
   for (let index of palavra) {
     switch (index) {
-      case '1':
-        result += 'a';
-        break;
-      case '2':
-        result += 'e';
-        break;
-      case '3':
-        result += 'i';
-        break;
-      case '4':
-        result += 'o';
-        break;
-      case '5':
-        result += 'u';
-        break;
-      default:
-        result += index;
-        break;
+    case '1':
+      result += 'a';
+      break;
+    case '2':
+      result += 'e';
+      break;
+    case '3':
+      result += 'i';
+      break;
+    case '4':
+      result += 'o';
+      break;
+    case '5':
+      result += 'u';
+      break;
+    default:
+      result += index;
+      break;
     }
   }
   return result;
