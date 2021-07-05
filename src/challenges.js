@@ -19,8 +19,13 @@ function splitSentence(tuca) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+function concatName(junior) {
+  let primeiroNome = junior[0];
+  let ultimoNome = junior[junior.length - 1];
+  return ultimoNome + ', ' + primeiroNome;
+
+  
 }
 
 // Desafio 5
