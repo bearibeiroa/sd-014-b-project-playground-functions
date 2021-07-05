@@ -1,3 +1,5 @@
+const { techList } = require("./challenges2");
+
 // Desafio 1
 function compareTrue(valor1,valor2) {
   if (valor1 === true && valor2 === true) {
@@ -10,16 +12,16 @@ function compareTrue(valor1,valor2) {
 }
 
 
-// Desafio 2W
+// Desafio 2
 function calcArea(base,height) {
   let area = 0;
   area = (base * height) / 2;
-  return area
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  return sentence.split(" ")
 }
 
 // Desafio 4
@@ -28,20 +30,22 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  let points = 0;
+  points = (wins * 3) + ties;
+  return points;
+
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(count) {
+
 }
 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
