@@ -74,14 +74,40 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+function fizzBuzz(numbers) {
+  let result = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if ((numbers[index] % 3) === 0 && (numbers[index] % 5) === 0) {
+      result.push('fizzBuzz');
+    } else if ((numbers[index] % 3) === 0) {
+      result.push('fizz');
+    } else if ((numbers[index] % 5) === 0) {
+      result.push('buzz');
+    } else {
+      result.push('bug!');
+    }
+  }
+return result;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let string = 'matheus';
+let array = '';
+function encode(string) {
+  
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'a') {
+      string[index] = '1';
+      array = array + '1';
+    } else if (string[index] !== 'a') {
+      
+    }
+  }
+  return array;
 }
+console.log(encode(string));
+
 function decode() {
   // seu código aqui
 }
