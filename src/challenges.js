@@ -90,8 +90,21 @@ function catAndMouse(mouse, cat1, cat2) {
 // se a distancia for a mesma representa que eles irão se trombar no caminho.
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(exer8) {
   // seu código aqui
+  let resultado = [];
+  for (index = 0; index < exer8.length; index +=1) {
+    if (exer8[index] % 3 === 0 && exer8[index] % 5 === 0) {
+    resultado.push("fizzBuzz");
+    } else if (exer8[index] % 3 === 0) {
+    resultado.push("fizz");
+    } else if (exer8[index] % 5 === 0) {
+    resultado.push("buzz");
+    } else {
+    resultado.push("bug!");
+    } 
+  }
+  return resultado;
 }
 
 // Desafio 9
