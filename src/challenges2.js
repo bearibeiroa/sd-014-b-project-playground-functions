@@ -4,8 +4,8 @@ function techList(tech, name) {
   let newTechList = [];
   for (let index of tech.sort()) {
     let objetoList = {};
-    objetoList["tech"] = index;
-    objetoList["name"] = name;
+    objetoList.tech = index;
+    objetoList.name = name;
     newTechList.push(objetoList);
   }
   if (!newTechList.length) {
