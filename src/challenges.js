@@ -41,7 +41,7 @@ function highestCount(arrayNum) {
   for (let index = 0; index < arrayNum.length; index += 1) {
     
     highNum = Math.max.apply(null, arrayNum);
-    
+
     for (let index = 0; index < arrayNum.length; index += 1) {
       if (arrayNum[index] === highNum) {
         count += 1;
@@ -52,8 +52,17 @@ function highestCount(arrayNum) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let cat1Pos = Math.abs(mouse-cat1);
+  let cat2Pos = Math.abs(mouse-cat2);
+
+  if (cat1Pos < cat2Pos) {
+    return 'cat1';
+  } else if (cat2Pos < cat1Pos) {
+    return 'cat2';
+  } else 
+    return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
