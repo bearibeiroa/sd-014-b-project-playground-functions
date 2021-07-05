@@ -61,11 +61,23 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(texto) {
+let palavra = "";
+palavra = texto.replace(/a/g, "1");
+palavra = palavra.replace(/e/g, "2");
+palavra = palavra.replace(/i/g, "3");
+palavra = palavra.replace(/o/g, "4");
+palavra = palavra.replace(/u/g, "5");
+return palavra;
 }
-function decode() {
-  // seu código aqui
+function decode(texto) {
+let palavra = "";
+palavra = texto.replace(/1/g, "a");
+palavra = palavra.replace(/2/g, "e");
+palavra = palavra.replace(/3/g, "i");
+palavra = palavra.replace(/4/g, "o");
+palavra = palavra.replace(/5/g, "u");
+return palavra;
 }
 
 module.exports = {
