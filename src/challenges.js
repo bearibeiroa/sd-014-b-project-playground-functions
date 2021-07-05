@@ -1,4 +1,5 @@
 // Desafio 1
+
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
@@ -8,11 +9,13 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
+
 function calcArea(base, height) {
   return (base * height) / 2;
 }
 
 // Desafio 3
+
 function splitSentence(string) {
   return string.split(' ');
 }
@@ -88,28 +91,63 @@ function fizzBuzz(numbers) {
       result.push('bug!');
     }
   }
-return result;
+  return result;
 }
 
 // Desafio 9
-let string = 'matheus';
-let array = '';
-function encode(string) {
-  
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'a') {
-      string[index] = '1';
-      array = array + '1';
-    } else if (string[index] !== 'a') {
-      
+
+function encode(palavra) {
+  let result = '';
+  for (let index of palavra) {
+    switch (index) {
+      case 'a':
+        result += '1';
+        break;
+      case 'e':
+        result += '2';
+        break;
+      case 'i':
+        result += '3';
+        break;
+      case 'o':
+        result += '4';
+        break;
+      case 'u':
+        result += '5';
+        break;
+      default:
+        result += index;
+        break;
     }
   }
-  return array;
+  return result;
 }
-console.log(encode(string));
 
-function decode() {
-  // seu código aqui
+function decode(palavra) {
+  let result = '';
+  for (let index of palavra) {
+    switch (index) {
+      case '1':
+        result += 'a';
+        break;
+      case '2':
+        result += 'e';
+        break;
+      case '3':
+        result += 'i';
+        break;
+      case '4':
+        result += 'o';
+        break;
+      case '5':
+        result += 'u';
+        break;
+      default:
+        result += index;
+        break;
+    }
+  }
+  return result;
 }
 
 module.exports = {
