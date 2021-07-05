@@ -2,9 +2,8 @@
 function compareTrue(name1, name2) {
   if (name1 === true && name2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -52,9 +51,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   } else if (x < y) {
     return 'cat1';
-  } else {
-    return 'cat2';
   }
+  return 'cat2';
 }
 
 // Desafio 8
@@ -66,12 +64,10 @@ function fizzBuzz(array) {
       return 'buzz';
     } else if (n % 3 === 0) {
       return 'fizz';
-    } else {
-      return 'bug!';
     }
+    return 'bug!';
   });
   return x;
-
 }
 
 // Desafio 9
