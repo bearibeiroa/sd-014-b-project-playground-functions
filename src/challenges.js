@@ -87,6 +87,7 @@ function fizzBuzz(numeros) {
 function encode(vogais) {
 // seu código aqui
   let codificado = [];
+
   for (let letra of vogais) {
     if (letra === 'a') {
       letra = 1;
