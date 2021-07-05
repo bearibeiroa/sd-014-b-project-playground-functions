@@ -91,23 +91,27 @@ function fizzBuzz(arrayDeNumeros) {
 
 // Desafio 9
 function encode(stringRecebida) {
-  // trocar todas as vogais minusculas por numeros
   // criar variavel pra modificar a frase 
   let stringModificada = '';
   // criar array com letras
-  let listaVogais = ['a','e','i','o','u']; 
+  let listaVogais = ['a', 'e', 'i', 'o', 'u'];
   // percorrer letras da string
   for (let letraAtual of stringRecebida) {
     // comparar letra atual com vogais
     if (listaVogais.indexOf(letraAtual) === -1) {
-
-
-      // se for igual a 'a' guarda 1 na string modificada
-      
-    } // senão ele continua...
-      }
-  // retornar frase modificada
+      // se não for vogal coloque do mesmo jeito
+      stringModificada += letraAtual;
+    }
+    else {
+      // se for igual a 'vogais' guarda número na string modificada
+      let numero = listaVogais.indexOf(letraAtual) + 1;
+      stringModificada += numero;
+    }
+  }
+  return stringModificada;
 }
+console.log(encode('danilo'));
+
 function decode(stringEcode) {
   // seu código aqui
 }
