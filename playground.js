@@ -1,5 +1,6 @@
+// Desafio 1
 function compareTrue(n1, n2) {
-  if ((n1 >= 10) && (n2 >= 100)) console.log(true);
-  else (console.log(false));
+  if (n1 && n2) {
+    return true;
+  } return false;
 }
-compareTrue(10, 10);
