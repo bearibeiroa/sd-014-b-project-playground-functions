@@ -35,9 +35,19 @@ function techList(techName, name) {
  
  // Desafio 12
  function triangleCheck(lineA, lineB, lineC) {
-   
- 
- }
+   let diffAB = Math.abs(lineA - lineB)
+   let diffAC = Math.abs(lineA - lineC)
+   let diffBC = Math.abs(lineB - lineC)
+   let sizeA = lineA < lineB + lineC && lineA > diffBC
+   let sizeB = lineB < lineA + lineC && lineB > diffAC
+   let sizeC = lineC < lineA + lineB && lineC > diffAB
+   let triangle = sizeA + sizeB + sizeC 
+   if (triangle === 3) {
+     return true;
+   }
+   return false;
+  
+ } console.log(triangleCheck(10, 14, 8))
  
  // Desafio 13
  function hydrate() {
