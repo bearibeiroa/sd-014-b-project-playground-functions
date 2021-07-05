@@ -3,7 +3,7 @@ function compareTrue(a1, a2) {
   // seu código aqui
   if (a1 === true && a2 === true) {
       return true;
-  } else {
+  } else { 
         return false;
     }
 }
@@ -69,17 +69,19 @@ if (mouse > cat1 && mouse > cat2) {
   for (let indexCat2 = cat2; indexCat2 < mouse; indexCat2 +=1) {
     calcDistance2 += 1;
   }
-} if (cat1 < mouse && cat2 > mouse) {
+} if (cat1 < mouse && cat2 > mouse); {
   for  (let indexCat1 = cat1; indexCat1 < mouse; indexCat1 += 1) {
     calcDistance1 += 1;
   }
+}
   for (let indexCat2 = mouse; indexCat2 < cat2; indexCat2 += 1) {
     calcDistance2 += 1;
-  } 
-  else if (mouse < cat1 && mouse < cat2) {
+}
+  if (mouse < cat1 && mouse < cat2) {
     for (let indexCat1 = mouse; indexCat1 < cat1; indexCat1 += 1) {
       calcDistance1 += 1;
     }
+  }
     for (let indexCat2 = mouse; indexCat2 < cat2; indexCat2 += 1) {
       calcDistance2 += 1;
     }
@@ -87,13 +89,14 @@ if (mouse > cat1 && mouse > cat2) {
   // console.log ("o gato mais próximo é: cat 1")
      return 'cat1';
   } else if (calcDistance1 < calcDistance2) {
-  // console.log("o gato mais próximo é: cat 2")
+  // console.log ("o gato mais próximo é: cat 2")
      return 'cat2';
   } else {
-  // console.log("os gatos trombam e o rato foge")
+  // console.log ("os gatos trombam e o rato foge")
      return 'os gatos trombam e o rato foge';
-  }
- catAndMouse (9,5,3);
+  } 
+}
+catAndMouse (9,5,3);
 
 // Desafio 8
 function fizzBuzz() {
@@ -161,4 +164,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
