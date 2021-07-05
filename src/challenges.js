@@ -49,7 +49,7 @@ function highestCount(contador) {
 
 // Desafio 7
 function catAndMouse(mousehunt) {
-  /* let posCat1 = 0;
+  /*let posCat1 = 0;
   let posCat2 = 0;
   let posMouse = 0;
   for (let index = 0; index < mousehunt.length; index += 1){
@@ -67,32 +67,75 @@ function catAndMouse(mousehunt) {
     return ("cat2");
   }else{
     return ("os gatos trombam e o rato foge");
-  }
-} */
+  }*/
+}
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
-  let newNumbers = [];
-  for(index = 0; index < arrayNumbers.length; index += 1){
-    if (arrayNumbers[index]%3 === 0 && arrayNumbers[index]%5 === 0){
-      newNumbers.push('fizzBuzz')
-    }else if(arrayNumbers[index]%3 === 0){
-      newNumbers.push('fizz');
-    }else if(arrayNumbers[index]%5 === 0){
-      newNumbers.push('buzz');
-    } else {
-      newNumbers.push('bug!'); 
-    }
+let newNumbers = [];
+for(index = 0; index < arrayNumbers.length; index += 1){
+  if (arrayNumbers[index]%3 === 0 && arrayNumbers[index]%5 === 0){
+    newNumbers.push('fizzBuzz')
+  }else if(arrayNumbers[index]%3 === 0){
+    newNumbers.push('fizz');
+  }else if(arrayNumbers[index]%5 === 0){
+    newNumbers.push('buzz');
+  }else{
+    newNumbers.push('bug!'); 
   }
-  return newNumbers;
+}
+return newNumbers;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(convertCode) {
+let convertedCode = '';
+for (let vogal of convertCode){
+  if (vogal === 'a'){
+    vogal = '1';
+    convertedCode += vogal;
+  }else if (vogal === 'e'){
+    vogal = '2';
+    convertedCode += vogal;
+  }else if (vogal === 'i'){
+    vogal = '3';
+    convertedCode += vogal;
+  }else if (vogal === 'o'){
+    vogal = '4';
+    convertedCode += vogal;
+  }else if (vogal === 'u'){
+    vogal = '5';
+    convertedCode += vogal;
+  }else{
+    convertedCode += vogal;
+  }
+}  
+  return convertedCode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(desconvertCode) {
+  let desconvertedCode = '';
+for (let number of desconvertCode){
+  if (number === '1'){
+    number = 'a';
+    desconvertedCode += number;
+  }else if (number === '2'){
+    number = 'e';
+    desconvertedCode += number;
+  }else if (number === '3'){
+    number = 'i';
+    desconvertedCode += number;
+  }else if (number === '4'){
+    number = 'o';
+    desconvertedCode += number;
+  }else if (number === '5'){
+    number = 'u';
+    desconvertedCode += number;
+  }else{
+    desconvertedCode += number;
+  }
+}  
+  return desconvertedCode;
 }
 
 module.exports = {
