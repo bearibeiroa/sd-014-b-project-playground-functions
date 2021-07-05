@@ -57,17 +57,17 @@ return vezesNumero.length
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // calculando distancia entre os ratos e cada um dos gatos
-  let positionCat1 = Math.abs (mouse - cat1)
-  let positionCat2 = Math.abs (mouse - cat2)
-  
-  //calculando chegada dos felinos 
-  
+  let positionCat1 = Math.abs(mouse - cat1);
+  let positionCat2 = Math.abs(mouse - cat2);
+
+// calculando chegada dos felinos
+
   if (positionCat1 > positionCat2) {
-     return 'cat2';
+    return 'cat2';
   } else if (positionCat2 > positionCat1) {
-     return 'cat1';
+    return 'cat1';
   } else {
-     return 'os gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   }
 
 }
@@ -76,59 +76,61 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayFizzBuzz) {
   
   let arrayFinal = [];
-    for (let index = 0; index < arrayFizzBuzz.length; index ++) {
-        if (arrayFizzBuzz[index] % 3 === 0 && arrayFizzBuzz[index] % 5 === 0) {
-            arrayFinal.push("fizzBuzz");
-        } else if (arrayFizzBuzz[index] % 3 === 0 && arrayFizzBuzz[index] % 5 !== 0) {
-            arrayFinal.push("fizz");
-        } else if (arrayFizzBuzz[index] % 5 === 0 && arrayFizzBuzz[index] % 3 !== 0) {
-            arrayFinal.push("buzz");
-        } else {
-            arrayFinal.push("bug!")
-        }
+
+  for (let index = 0; index < arrayFizzBuzz.length; index ++) {
+    if (arrayFizzBuzz[index] % 3 === 0 && arrayFizzBuzz[index] % 5 === 0) {
+      arrayFinal.push("fizzBuzz");
+    } else if (arrayFizzBuzz[index] % 3 === 0) {
+      arrayFinal.push("fizz");
+    } else if (arrayFizzBuzz[index] % 5 === 0) {
+      arrayFinal.push("buzz");
+    } else {
+      arrayFinal.push("bug!");
     }
-    return arrayFinal;
   }
+  return arrayFinal;
+}
 
 // Desafio 9
 function encode(str) {
   let frase ='';
-  for (let letter in str) {
-    if (letter === 'a') {
-      frase+= '1';
-    } else if (letter === 'e') {
-      frase += '2';
-    } else if (letter === 'i') {
-      frase += '3'; 
-    } else if (letter === 'o') {
-      frase += '4';
-    } if (letter === 'u') {
-      frase += '5';
-    } else {
-      frase += letter
+
+ for (letter of str) {
+        if (letter === 'a') {
+            frase += '1';
+        } else if (letter === 'e') {
+            frase += '2';
+        } else if (letter === 'i') {
+            frase += '3';
+        } else if (letter === 'o') {
+            frase += '4';
+        } else if (letter === 'u') {
+            frase += '5';
+        } else {
+            frase += letter;
+        }
     }
-  return frase;  
-  }
- 
+    return frase
 }
-function decode() {
-  let fraseDecode ='';
-  for (let letter in str) {
-    if (letter === '1') {
-      fraseDecode += 'a';
-    } else if (letter === '2') {
-      fraseDecode += 'e';
-    } else if (letter === '3') {
-      fraseDecode += 'i'; 
-    } else if (letter === '4') {
-      fraseDecode += 'o';
-    } if (letter === '5') {
-      fraseDecode += 'u';
+function decode(string) {
+  let frase ='';
+
+  for (number of string) {
+    if (number === '1') {
+        frase += 'a';
+    } else if (number === '2') {
+        frase += 'e';
+    } else if (number === '3') {
+        frase += 'i';
+    } else if (number === '4') {
+        frase += 'o';
+    } else if (number === '5') {
+        frase += 'u';
     } else {
-      fraseDecode += letter
+        frase += number;
     }
-  return fraseDecode;  
-  } 
+}
+return frase;
 }
 
 module.exports = {
