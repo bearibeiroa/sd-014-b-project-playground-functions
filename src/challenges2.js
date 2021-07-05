@@ -51,8 +51,22 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  phrase = phrase.split("");
+  let contador = 0
+  
+  for (element of phrase) {
+    if (element > 0) {
+      contador += parseInt(element); // parseInt é uma função que converte uma string em um número Documentação --> https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt
+    }
+  }
+
+  if (contador === 1) {
+    return contador + " copo de água";
+  } else {
+    return contador + " copos de água";
+  }
+
 }
 
 module.exports = {
