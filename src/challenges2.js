@@ -45,8 +45,6 @@ function generatePhoneNumber(numbers) {
   return '(' + ddd.join('') + ') ' + contactPart1.join('') + '-' + contactPart2.join('');
 }
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 6, 7, 8, 9, 0, 4]));
-
 // Desafio 12
 // Passou no requisito mas fiquei com duvidas.
 function triangleCheck(lineA, lineB, lineC) {
