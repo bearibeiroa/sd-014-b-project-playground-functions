@@ -29,9 +29,19 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse,cat1,cat2) {
+  if(cat1<=mouse&&cat1>cat2){
+    return "cat1"
+  }else(cat2<=mouse&&cat2>cat1){
+    return "cat2"
+    {
+      return "os gatosos trombam e o rato foge";
+    }
+  }
+  console.log(catAndMouse(10,7,8));
+  console.log(catAndMouse(14,8,2));
+  console.log(catAndMouse(20,15,15));
+
 
 // Desafio 8
 function fizzBuzz() {
