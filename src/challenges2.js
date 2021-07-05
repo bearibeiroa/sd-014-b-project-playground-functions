@@ -70,8 +70,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// referência: https://stackoverflow.com/a/56336929, uso de regex em = /\d+/g;
+// O construtor RegExp cria um objeto de expressão regular para realizar uma correspondência de texto com um padrão;
+// \d Encontra correspondência com um número. Equivalente a [0-9];
+// O método match() retorna uma correspondência entre uma string com uma expressão regular;
+// referência para match(): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match.
+
+function hydrate(string) {
+  let quantitySelector = /\d+/g;
+  let quantity = string.match(quantitySelector);
+  let glassesOfWater = 0;
+  quantity.forEach((element) => {
+    glassesOfWater += parseInt(element, 10);
+  });
+  if (glassesOfWater === 1) {
+    return `${glassesOfWater} copo de água`;
+  }
+  return `${glassesOfWater} copos de água`;
 }
 
 module.exports = {
