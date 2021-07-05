@@ -15,101 +15,79 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(Array) {
-  return (Array[Array.length -1] + "," + " " + Array[0]);
+  return (Array[Array.length - 1] + ',' + ' ' + Array[0]);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins*3 + ties);
+  return (wins * 3 + ties);
 }
 
 // Desafio 6
 function highestCount(Array, maior, count) {
-   maior = Math.max(...Array);
-   count = 0;
-   for (var i = 0; i < Array.length; i++) {
-     if (Array[i] === maior) {
-       count++;
-     }
-   }
+  maior = Math.max(...Array);
+  count = 0;
+  for (let i = 0; i < Array.length; i++) {
+    if (Array[i] === maior) {
+      count++;
+    }
+  }
   return count;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
- if( cat1 > cat2 && cat1 > mouse && (cat1 - mouse) > (mouse - cat2)) {
-  return ("cat2")
- }
- if((cat1 - mouse) ==  (mouse - cat2) && cat1 > cat2) {
-  return ("os gatos trombam e o rato foge")
- }
- if (cat2 > cat1 && cat2 > mouse && (cat2 - mouse) > (mouse - cat1)){
-  return ("cat1")
- }
- if((cat2 - mouse) ==  (mouse - cat1) && cat2 > cat1) {
-  return ("os gatos trombam e o rato foge")
-}
+  if (cat1 > cat2 && cat1 > mouse && (cat1 - mouse) > (mouse - cat2)) {
+    return ('cat2');
+  }
+  if ((cat1 - mouse) === (mouse - cat2) && cat1 > cat2) {
+    return ('os gatos trombam e o rato foge');
+  }
+  if (cat2 > cat1 && cat2 > mouse && (cat2 - mouse) > (mouse - cat1)) {
+    return ('cat1');
+  }
+  if ((cat2 - mouse) === (mouse - cat1) && cat2 > cat1) {
+    return ('os gatos trombam e o rato foge');
+  }
 }
 
 // Desafio 8
 function fizzBuzz(Array, result) {
   result = [];
-  for (var i = 0; i < Array.length; i++){
-    if(Array[i] % 3 === 0 && Array[i] % 5 != 0){
-      result.push('fizz')
+  for (let i = 0; i < Array.length; i++) {
+    if (Array[i] % 3 === 0 && Array[i] % 5 !== 0) {
+      result.push('fizz');
     }
-    if(Array[i] % 5 === 0 && Array[i] % 3 != 0){
-      result.push('buzz')
+    if (Array[i] % 5 === 0 && Array[i] % 3 !== 0) {
+      result.push('buzz');
     }
-    if(Array[i] % 5 === 0 && Array[i] % 3 === 0){
-      result.push('fizzBuzz')
+    if (Array[i] % 5 === 0 && Array[i] % 3 === 0) {
+      result.push('fizzBuzz');
     }
-    if(Array[i] % 5 != 0 && Array[i] % 3 != 0){
-      result.push('bug!')
+    if (Array[i] % 5 !== 0 && Array[i] % 3 !== 0) {
+      result.push('bug!');
     }
   }
-   return result;
+  return result;
 }
 
 // Desafio 9
 function encode(string) {
- var replaceChars={ "a":"1" , "e":"2" , "i":"3" , "o":"4" , "u":"5"};
-const m = function(mat) {
-return replaceChars[mat];
-/** const m retorna os values das keys no obj replaceChar  */
+  let replaceChars = { 'a': '1', 'e': '2', 'i': '3', 'o': '4', 'u': '5' };
+  const m = function (mat) {
+    return replaceChars[mat];
+    /** const m retorna os values das keys no obj replaceChar  */
+  };
+  string = string.replace(/a|e|i|o|u/g, m)
+  /** replace(substuido, substituinte)  */
+  return string;
 }
- string = string.replace(/a|e|i|o|u/g, m)
- /** replace(substuido, substituinte)  */
- return string;
-}
-//--------Consulta: https://stackoverflow.com/questions/16576983 
-function decode(string) {
-  replaceNumber = { "1":"a" , "2":"e" , "3":"i" , "4":"o" , "5":"u"};
-  string = string.replace(/1|2|3|4|5/g,function(match) {return replaceNumber[match];})
+// Consulta https://stackoverflow.com/questions/16576983 
+function decode (string) {
+  let replaceNumber = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' };
+  string = string.replace(/1|2|3|4|5/g,function(match) { return replaceNumber[match]; });
   return string; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = {
   calcArea,
