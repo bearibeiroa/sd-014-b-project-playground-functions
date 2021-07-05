@@ -14,24 +14,16 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentece) {
-
-  if (sentece === 'go Trybe') {
-    return ['go', 'Trybe'];
-  }
-  else if (sentece === 'vamo que vamo') {
-    return ['vamo', 'que', 'vamo'];
-  }
-  else if (sentece === 'foguete') {
-    return ['foguete'];
-  }
-}
+  return sentece.split(' ');
+ 
+} // outro jeito de dividir as palavras fonte: w3shools
 
 // Desafio 4
 function concatName(stringArray) {
   let firstName = stringArray[0];
   let lastName = stringArray[stringArray.length - 1];
   return `${lastName}, ${firstName}`;
-}
+} // outro jeito de concatenar as palavras fonte: w3shools
 
 
 // Desafio 5
@@ -61,35 +53,35 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(cat1 - mouse);
   let distanceCat2 = Math.abs(cat2 - mouse);
-  if (distanceCat2 <  distanceCat1) {
-    return "cat2";
+  if (distanceCat2 < distanceCat1) {
+    return 'cat2';
   }
   else if (distanceCat1 < distanceCat2) {
-    return "cat1";
+    return 'cat1';
   }
   else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
-}
+} //W3schools
 
 // Desafio 8
 function fizzBuzz(arrayOfnumbers) {
   let array = [];
   for (let index = 0; index < arrayOfnumbers.length; index += 1) {
     if (arrayOfnumbers[index] % 3 === 0 && arrayOfnumbers[index] % 5 === 0) {
-      array.push("fizzBuzz");
+      array.push('fizzBuzz');
     }
     else if (arrayOfnumbers[index] % 3 === 0) {
-      array.push("fizz");
+      array.push('fizz');
     }
     else if (arrayOfnumbers[index] % 5 === 0) {
-      array.push("buzz");
+      array.push('buzz');
     }
     else if (arrayOfnumbers[index] % 3 !== 0) {
-      array.push("bug!");
+      array.push('bug!');
     }
     else if (arrayOfnumbers[index] % 5 !== 0) {
-      array.push("bug!");
+      array.push('bug!');
     }
   }
   return array;
@@ -98,26 +90,26 @@ function fizzBuzz(arrayOfnumbers) {
 // Desafio 9
 //use for of
 function encode(encodeString) {
-  let stringWithNumber = "";
+  let stringWithNumber = ''
   for (let newString of encodeString) {
-    if (newString === "a") {
-      newString = "1";
+    if (newString === 'a') {
+      newString = '1';
       stringWithNumber += newString;
     }
-    else if (newString === "e") {
-      newString = "2";
+    else if (newString === 'e') {
+      newString = '2';
       stringWithNumber += newString;
     }
-    else if (newString === "i") {
-      newString = "3";
+    else if (newString === 'i') {
+      newString = '3';
       stringWithNumber += newString;
     }
-    else if (newString === "o") {
-      newString = "4";
+    else if (newString === 'o') {
+      newString = '4';
       stringWithNumber += newString;
     }
-    else if (newString === "u") {
-      newString = "5";
+    else if (newString === 'u') {
+      newString = '5';
       stringWithNumber += newString;
     }
     else {
@@ -127,26 +119,26 @@ function encode(encodeString) {
   return stringWithNumber;
 }
 function decode(decodeString) {
-  let string1 = "";
+  let string1 = '';
   for (let newString1 of decodeString) {
-    if (newString1 === "1") {
-      newString1 = "a";
+    if (newString1 === '1') {
+      newString1 = 'a';
       string1 += newString1;
     }
-    else if (newString1 === "2") {
-      newString1 = "e";
+    else if (newString1 === '2') {
+      newString1 = 'e';
       string1 += newString1;
     }
-    else if (newString1 === "3") {
-      newString1 = "i";
+    else if (newString1 === '3') {
+      newString1 = 'i';
       string1 += newString1;
     }
-    else if (newString1 === "4") {
-      newString1 = "o";
+    else if (newString1 === '4') {
+      newString1 = 'o';
       string1 += newString1;
     }
-    else if (newString1 === "5") {
-      newString1 = "u";
+    else if (newString1 === '5') {
+      newString1 = 'u';
       string1 += newString1;
     }
     else {

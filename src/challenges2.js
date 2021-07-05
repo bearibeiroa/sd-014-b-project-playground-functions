@@ -10,20 +10,39 @@ function techList(tech, name) {
     techList.push(objetos);
   }
   if (techList.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
-    return techList;
+  return techList;
   //.push() para acrescentar os novos objetos na lista.
   //.sort() para ordenar os elementos da lista.
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+function generatePhoneNumber(arrayOfnumbers) {
+  if (arrayOfnumbers.length > 11 || arrayOfnumbers.length < 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  let counter = 0;
+  for (let index = 0; index < arrayOfnumbers.length; index++) {
 
+    for (number of arrayOfnumbers) {
+      if (arrayOfnumbers[index] < 0 || arrayOfnumbers[index] > 9) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+      if (arrayOfnumbers[index] === number) {
+        counter++
+      }
+    }
+    if (counter >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    counter = 0
+  }
+  return `(${arrayOfnumbers[0]}${arrayOfnumbers[1]}) ${arrayOfnumbers[2]}${arrayOfnumbers[3]}${arrayOfnumbers[4]}${arrayOfnumbers[5]}${arrayOfnumbers[6]}-${arrayOfnumbers[7]}${arrayOfnumbers[8]}${arrayOfnumbers[9]}${arrayOfnumbers[10]}`
+
+}
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
 }
 
