@@ -2,7 +2,7 @@
 function compareTrue(par1, par2) {
   // seu código aqui
 if (par1 === true && par2 === true) {
-return;
+return true;
 }
 
 
