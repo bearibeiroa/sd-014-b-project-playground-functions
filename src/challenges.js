@@ -85,10 +85,9 @@ function fizzBuzz(nums) {
 }
 
 // Desafio 9
-// Referencia tirada do W3 school.
 function encode(parametro) {
   let e = parametro.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3).replace(/o/g, 4)
-    .replace(/u/g, 5);
+    .replace(/u/g, 5); // Referencia tirada do W3 school.
   return e;
 }
 
