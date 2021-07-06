@@ -51,8 +51,7 @@ function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
     return ('Array com tamanho incorreto.');
   }
-  let verifyZeroNine = zeroNine(numbers);
-  if (verifyZeroNine > 0) {
+  if (zeroNine(numbers) > 0) {
     return ('não é possível gerar um número de telefone com esses valores');
   }
   let mostRepeated = maisRepetido(numbers);
@@ -60,9 +59,8 @@ function generatePhoneNumber(numbers) {
     return ('não é possível gerar um número de telefone com esses valores');
   }
   let phoneNumber = ('(' + numbers[0] + numbers[1] + ') ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]);
-    return phoneNumber;
-  } 
-
+  return phoneNumber;
+}
 
 /* Outra solução do Desafio 11, com maior complexidade, segundo o ESLint:
 function generatePhoneNumber(numbers) {
