@@ -82,7 +82,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Estudando sobre RegExp na W3Schools, achei a solução do problema. Com método match (high order functions), dica do Iago na monitoria.
 
 function hydrate(bebeAgua) {
-  let pattern = /[1-9]/g;
+  let pattern = /[1-9]+/g;
   let patternSearch = bebeAgua.match(pattern);
   let contaDrink = 0;
 
@@ -90,10 +90,10 @@ function hydrate(bebeAgua) {
     contaDrink += patternSearch[i];
   }
 
-  return contaDrink + " copos de água";
+  return contaDrink + ' copos de água';
 }
 
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
