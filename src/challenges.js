@@ -15,12 +15,17 @@ function splitSentence() {
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+ let primeiroNome = "Lucas";
+ let segundoNome = "Cassiano";
+ let penultimoNome = "Ferraz";
+ let ultimoNome = 
+
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(win,ties) {
+ let totalPoints =(wins*3)+ ties;
+ return totalPoints;
 }
 
 // Desafio 6
@@ -29,17 +34,19 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
-  if(cat1 <= mouse && cat1 > cat2){
-    return "cat1"
-  }else(cat2 <= mouse && cat2 > cat1)
-    return "cat2"
-    {
-      return "os gatos trombam e o rato foge";
-    }
-  console.log(catAndMouse(10,7,8));
-  console.log(catAndMouse(14,8,2));
-  console.log(catAndMouse(20,15,15));
+function catAndMouse(mouse, cat1, cat2) {
+  const distanciaMouseParaCat1 = Math.abs(mouse - cat1);
+  const distanciaMouseParaCat2 = Math.abs(mouse - cat2);
+
+  if (distanciaMouseParaCat1 < distanciaMouseParaCat2) {
+    return 'cat1';
+  }
+
+  if (distanciaMouseParaCat2 < distanciaMouseParaCat1) {
+    return 'cat2';
+  }
+
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
