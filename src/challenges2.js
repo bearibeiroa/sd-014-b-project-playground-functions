@@ -80,15 +80,15 @@ function hydrate(drinks) {
   let sum = 0;
 
   for (let index = 0; index < quantDrinks.length; index += 1) {
-    let quant = parseInt(quantDrinks[index]);
+    let quant = parseInt(quantDrinks[index], 10);
     if (quant !== 0) {
       sum += quant;
     }
   }
   if (sum === 1) {
-  return sum + " copo de água"
+    return sum + " copo de água";
   } else {
-    return sum + " copos de água"
+    return sum + " copos de água";
   }
 }
 
