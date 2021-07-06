@@ -1,6 +1,6 @@
 // Desafio 10
 function techList() {
-  // seu código aqui
+
 }
 
 // Desafio 11
@@ -9,8 +9,16 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let check = true;
+ if (lineA < (lineB + lineC) && lineB < (lineC + lineA) && lineC < (lineA + lineB)){
+   if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineC - lineA) && lineC > Math.abs(lineA - lineB)) {
+     return check
+    }
+  } else {
+    check = false;
+    return check;
+  } 
 }
 
 // Desafio 13
