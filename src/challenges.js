@@ -73,9 +73,15 @@ function fizzBuzz(numbers) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  string = string.replace(/a/gi, '1');
+  string = string.replace(/e/gi, '2');
+  string = string.replace(/i/gi, '3');
+  string = string.replace(/o/gi, '4');
+  string = string.replace(/u/gi, '5');
+  return string;
 }
+
 function decode() {
   // seu código aqui
 }
