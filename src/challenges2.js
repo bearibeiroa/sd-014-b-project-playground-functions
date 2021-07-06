@@ -53,6 +53,7 @@ function zeroNine(phone) {
   }
   return verify;
 }
+
 // Function abaixo é a que resolve o desafio
 function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
@@ -65,7 +66,10 @@ function generatePhoneNumber(numbers) {
   if (mostRepeated > 2) {
     return ('não é possível gerar um número de telefone com esses valores');
   }
-  let phoneNumber = ('(' + numbers[0] + numbers[1] + ') ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]);
+  let ddd = `(${numbers[0]}${numbers[1]}) `;
+  let part1 = `${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-`;
+  let part2 = `${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+  let phoneNumber = `${ddd}${part1}${part2}`; // Sugestão ESLint: https://eslint.org/docs/rules/prefer-template
   return phoneNumber;
 }
 
