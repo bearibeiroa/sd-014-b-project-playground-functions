@@ -1,13 +1,14 @@
 // Desafio 1
 function compareTrue(v1, v2) {
   // seu código aqui
-  if (v1 && v2){ return true;}
-  else { return false; }
+  if (v1 && v2) { return true; }
+  return false;
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return (base * height) / 2;
 }
 
 // Desafio 3
