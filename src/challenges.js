@@ -86,12 +86,25 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
+function encode(letras) {
   // seu código aqui
+  letras = letras.replace(/a/g, '1');
+  letras = letras.replace(/e/g, '2');
+  letras = letras.replace(/i/g, '3');
+  letras = letras.replace(/o/g, '4');
+  letras = letras.replace(/u/g, '5');
+  return letras;
 }
-function decode() {
+function decode(numeros) {
   // seu código aqui
+  numeros = numeros.replace(/1/g, 'a');
+  numeros = numeros.replace(/2/g, 'e');
+  numeros = numeros.replace(/3/g, 'i');
+  numeros = numeros.replace(/4/g, 'o');
+  numeros = numeros.replace(/5/g, 'u');
+  return numeros;
 }
+//Documentação Consultada https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 
 module.exports = {
   calcArea,
