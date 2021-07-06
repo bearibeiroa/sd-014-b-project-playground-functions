@@ -29,6 +29,28 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function verificaMaior(numbers) {
+  let indiceMaior = 0;
+  for (let indice in numbers) {
+    if (numbers[indiceMaior] < numbers[indice]) {
+      indiceMaior = indice;
+    }
+  }
+  return numbers[indiceMaior];
+}
+
+function highestCount(numeros) {
+  let verificaNumero = verificaMaior(numeros);
+  let contNumero = 0;
+  for (let index2 in numeros) {
+    if (verificaNumero === numeros[index2]) {
+      contNumero += 1;
+    }
+  }
+  return contNumero;
+}
+
+/* Outra solução do Desafio 6, com maior complexidade, segundo o ESLint:
 function highestCount(numeros) {
   let indiceMaior = 0;
   for (let indice in numeros) {
@@ -44,7 +66,7 @@ function highestCount(numeros) {
     }
   }
   return contNumero;
-}
+} */
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -76,7 +98,7 @@ function fizzBuzz(numeros) {
   return arrayResultado;
 }
 
-/* Outra solução do Desafio 8:
+/* Outra solução do Desafio 8, com maior complexidade, segundo o ESLint:
 function fizzBuzz(numeros) {
   let fizzbuzzbug = [];
   for (let numero in numeros) {
