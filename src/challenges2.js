@@ -18,14 +18,57 @@ function techList(skills, nameTech) {
 console.log(techList(['Javascript', 'HTML', 'CSS', 'VB', 'C++'], 'Riba'));
 
 // Desafio 11
-function generatePhoneNumber() {
+function verifyNumber (numberArray, i) {
+  if (numberArray !== 11) {
+    return 'fizzBuzz';
+  }
+ 
+  if (numBuzz[i] % 3 === 0) {
+    return 'fizz';
+  } 
+  if (numBuzz[i] % 5 === 0) {
+    return 'buzz';
+  } 
+    return 'bug!';
+}
+
+function generatePhoneNumber(numberArray) {
+  let formattedPhone = [];
+  for (let i = 0; i < numberArray.length; i += 1) {
+    formattedPhone.push(tresporcinco(numberArray, i));
+  }
+  return 
   
 }
 
+
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+
+function checkSum (lineA, LineB, lineC) {
+  if (lineA > LineB + lineC || LineB > lineA + lineC || lineC > lineA + LineB) {
+    return false;
 }
+
+function checkSides (lineA, LineB, lineC) {
+  let difference = [lineA, LineB, lineC];
+  math.abs(difference);
+  for (let i of difference) {
+    if (i ) {
+
+    }
+  }
+  return false;
+}
+
+function triangleCheck(lineA, LineB, lineC) {
+  let tringleAngle = [];
+  if (lineA < LineB - lineC || LineB > lineA + lineC || lineC > lineA + LineB) {
+    return false;
+  }
+}
+
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {

@@ -22,7 +22,7 @@ function splitSentence(palavra) {
 function concatName(recebeItem) {
   let primeiroNome = recebeItem[0];
   let ultimoNome = recebeItem[recebeItem.length - 1];
-  let juntaNome = ultimoNome + ', ' + primeiroNome;
+  let juntaNome = `${ultimoNome}, ${primeiroNome}`;
 
   return juntaNome;
 }
@@ -64,16 +64,19 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
 }
 // Desafio 8
+
+/* Refatorado com monitoria do Iago, 02/07, explicando a diminuição da complexidade de funções através de funções auxiliares. */
 function tresporcinco(numBuzz, i) {
-  if ((numBuzz[i] % 3 == 0 && numBuzz[i] % 5 == 0)) {
+  if ((numBuzz[i] % 3 === 0 && numBuzz[i] % 5 === 0)) {
     return 'fizzBuzz';
-  } else if (numBuzz[i] % 3 == 0) {
+  } 
+  if (numBuzz[i] % 3 === 0) {
     return 'fizz';
-  } else if (numBuzz[i] % 5 == 0) {
+  } 
+  if (numBuzz[i] % 5 === 0) {
     return 'buzz';
-  } else {
-    return 'bug!';
-  }
+  } 
+  return 'bug!';
 }
 
 function fizzBuzz(numBuzz) {
@@ -86,7 +89,7 @@ function fizzBuzz(numBuzz) {
 
 // Desafio 9
 
-//Anna Hamann - 14A me ajudou com um método replace, encontrado na W3CSchools
+// Anna Hamann - 14A me ajudou com um método replace, encontrado na W3CSchools
 function encode(word) {
   let wordEncode = word;
 
