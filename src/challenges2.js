@@ -56,8 +56,6 @@ function generatePhoneNumber(cellnumber) {
   return stringFinal;      
 }
 
-let opa = [1,1,1,9,2,4,5,6,7,8,9]
-console.log(generatePhoneNumber(opa)) 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
 let result = true;

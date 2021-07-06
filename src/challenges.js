@@ -10,13 +10,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(Value) {
-  return Value.split(" ");
+  return Value.split(' ');
 }
 
 // Desafio 4
 function concatName(arrayIn) {
-  arrayIn.splice(0, 0, arrayIn[arrayIn.length -1]);
-  arrayIn.splice(2, arrayIn.length -2);
+  arrayIn.splice(0, 0, arrayIn[arrayIn.length - 1]);
+  arrayIn.splice(2, arrayIn.length - 2);
   return arrayIn.join(', ');
 }
 
@@ -27,16 +27,16 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(parameter) {
-  let cont = 0; 
+  let cont = 0;
   let max = Math.max.apply(null, parameter);
   for (let index = 0; index < parameter.length; index += 1) {
     if (parameter[index] === max) {
-      cont = cont + 1; 
+      cont += 1;
     }
   }
   return (cont);
 }
-  
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   cont1 = 0;
@@ -85,13 +85,12 @@ function fizzBuzz(number) {
     } else {
       numbersFizzBuzz.push('bug!');
     }
-  }
-  return numbersFizzBuzz;
+  } return numbersFizzBuzz;
 }
 
 // Desafio 9
 function encode(stringrray) {
-  let result = stringrray.replace(/a/g, "1");
+  let result = stringrray.replace(/a/g, '1');
   result = result.replace(/e/g, '2');
   result = result.replace(/i/g, '3');
   result = result.replace(/o/g, '4');
