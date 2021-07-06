@@ -3,7 +3,7 @@ function compareTrue() {
 let num1 = 10
 let num2 = 20
 
-if (num1 > 1 && par2 < 50 ) {
+if (num1 > 1 && num2 < 50 ) {
 return ;
 }
 
