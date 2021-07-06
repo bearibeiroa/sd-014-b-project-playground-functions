@@ -39,15 +39,26 @@ function generatePhoneNumber(numeros) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(frase) {
+  let pattern = /[1-9]/g;
+  let result = frase.match(pattern);
+  let numeroCopos = 0;
+  for ( let count=0; count<result.length;count++)
+  {
+    numeroCopos += parseInt(result[count]);
+  }
+  if ( numeroCopos === 1) {
+    return numeroCopos + ' copo de água';
+  } else { 
+    return numeroCopos + ' copos de água';
+  }
 }
-
+console.log(hydrate('alou 5 8 9 0 silvio'));
 module.exports = {
   generatePhoneNumber,
   techList,
