@@ -12,7 +12,7 @@ function techList(techs, nome) {
         name: nome,
       };
     }
-  }
+  } return lista;
 }
 
 // Desafio 11
