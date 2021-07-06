@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
@@ -31,18 +32,16 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let highestNumber = 0;
-  let amount = 0;
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > highestNumber) {
-      highestNumber = array[i];
-    }
-    if (highestNumber === array[i]) {
-      amount+=1; 
-    }
+  let higherNumber = Math.max.apply(null, array);
+  let count = 0;
+  for (let index = 0; index < array.length; index+=1) {
+    if (higherNumber === array[index])
+    count += 1;  
   }
-  return amount;
+  return count;
 }
+
+
 
 // Desafio 7
 function catAndMouse() {
