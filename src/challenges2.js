@@ -3,7 +3,7 @@ function techList(techs, nome) {
   // seu código aqui
   let lista = [];
   if (techs.length === 0) { return ('Vazio!'); }
-  if (techs.length != 0) {
+  if (techs.length !== 0) {
     techs = techs.sort();
     console.log(techs);
     for (let index = 0; index < techs.length; index += 1) {
