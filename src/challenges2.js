@@ -67,25 +67,33 @@ function checkSides(lineA, lineB, lineC) {
   return condition;
 }
 
-
 function triangleCheck(lineA, lineB, lineC) {
   let triangleAngle = [];
   let checkCondition = true;
   if (lineA < lineB - lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
     checkCondition = false;
-  }
-  if (checkSides(lineA, lineB, lineC) && checkSum(lineA, lineB, lineC) === true)   {
+  } else if (checkSides(lineA, lineB, lineC) && checkSum(lineA, lineB, lineC) === true)   {
     checkCondition = true;
   }
   return checkCondition;
 }
 
-console.log(triangleCheck(10, 14, 8));
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// Estudando sobre RegExp na W3Schools, achei a solução do problema. Com método match (high order functions), dica do Iago na monitoria.
+
+function hydrate(bebeAgua) {
+  let pattern = /[1-9]/g;
+  let patternSearch = bebeAgua.match(pattern);
+  let contaDrink = 0;
+
+  for (let i of patternSearch) {
+    contaDrink += patternSearch[i];
+  }
+
+  return contaDrink + " copos de água";
 }
+
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
