@@ -12,8 +12,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text) {
+  return text.split(' ');
 }
 
 // Desafio 4
@@ -43,7 +43,7 @@ function fizzBuzz() {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  
 }
 function decode() {
   // seu código aqui
