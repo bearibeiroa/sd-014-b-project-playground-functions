@@ -68,9 +68,26 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
-    // seu código aqui
+// Referências: 
+// Para string.replace(/\D/gim, '') - https: //pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript para o uso do 
+// Para uso do parseInt - thread do Slack de 02/07/2021 iniciada por Natalia Martins Turma14 - Tribo B.
+function hydrate(string) {
+    let number = [];
+    let SumOfDrink = 0;
+    number = string.replace(/\D/gim, '');
+
+    for (let index = 0; index < number.length; index += 1) {
+        SumOfDrink += parseInt(number[index]);
+    }
+    if (SumOfDrink == 1) {
+        return SumOfDrink + ' copo de água';
+    } else if (SumOfDrink > 1) {
+        return SumOfDrink + ' copos de água';
+    }
 }
+
+console.log(hydrate("1 cerveja"));
+
 
 module.exports = {
     generatePhoneNumber,
