@@ -48,11 +48,22 @@ function highestCount(contador) {
 }
 
 // Desafio 7
-function catAndMouse(mousehunt) {
-  /*let posCat1 = 0;
-  let posCat2 = 0;
-  let posMouse = 0;
-  for (let index = 0; index < mousehunt.length; index += 1){
+function catAndMouse(mouse, cat1, cat2) {
+  posCat1 = (mouse - cat1);
+  posCat2 = (mouse - cat2);
+    if (posCat1 < 0) {
+      posCat1 = (posCat1 * (-1));
+    } else if (posCat2 < 0) {
+      posCat2 = (posCat2 * (-1));
+    }
+    if (posCat1 < posCat2) {
+      return 'cat1';
+    } else if (posCat1 === posCat2){
+      return 'os gatos trombam e o rato foge';
+    } else {
+      return 'cat2';
+    }
+  /*for (let index = 0; index < mousehunt.length; index += 1){
     if (mousehunt[index] === "cat1"){
       posCat1 = mousehunt.index
     }else if (mousehunt[index] === "cat2"){
@@ -68,6 +79,7 @@ function catAndMouse(mousehunt) {
   }else{
     return ("os gatos trombam e o rato foge");
   }*/
+
 }
 
 // Desafio 8
