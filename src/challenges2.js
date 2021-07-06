@@ -40,7 +40,18 @@ function generatePhoneNumber(numeros) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  
+  if((lineA > lineB+lineC) || (lineB > lineC+lineA) || (lineC > lineA+lineB))
+  {
+    return false;
+  }
+  if(
+    (lineA > Math.abs(lineB-lineC)) &&
+    (lineB > Math.abs(lineA-lineC)) &&
+    (lineC > Math.abs(lineB-lineA))){ 
+      return true;
+    } else { 
+      return false;
+    }
 }
 
 // Desafio 13
@@ -58,7 +69,7 @@ function hydrate(frase) {
     return numeroCopos + ' copos de água';
   }
 }
-console.log(hydrate('alou 5 8 9 0 silvio'));
+
 module.exports = {
   generatePhoneNumber,
   techList,
