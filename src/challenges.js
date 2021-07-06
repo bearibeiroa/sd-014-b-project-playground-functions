@@ -63,23 +63,6 @@ function catAndMouse(mouse, cat1, cat2) {
     } else {
       return 'cat2';
     }
-  /*for (let index = 0; index < mousehunt.length; index += 1){
-    if (mousehunt[index] === "cat1"){
-      posCat1 = mousehunt.index
-    }else if (mousehunt[index] === "cat2"){
-    posCat2 = mousehunt.index;
-    }else if(mousehunt[index] === "mouse"){
-      posMouse = mousehunt.index;
-    }
-  }
-  if ((posMouse - posCat1) < (posMouse - posCat2)){
-    return ("cat1")
-  }else if ((posMouse - posCat1) > (posMouse - posCat2)){
-    return ("cat2");
-  }else{
-    return ("os gatos trombam e o rato foge");
-  }*/
-
 }
 
 // Desafio 8
