@@ -1,21 +1,24 @@
-// Desafio 10
-function techList(arrayTech, name) {
-  // seu código aqui
-  if (arrayTech.length === 0) {
-    return 'Vazio!';
-  }
-  for (let index = 0; index < arrayTech.length; index += 1) {
-    arrayTech[index] = {
-      'tech': arrayTech[index],
-      'name': name
+// Functions para ajudar no desafio #10.
+// Function mount: Monta o array como a tecnologia e o nome passado no parâmetro.
+function mount(array, paramName) {
+  for (let index = 0; index < array.length; index += 1) {
+    array[index] = {
+      tech: array[index],
+      name: paramName,
     };
   }
+
+  return array;
+}
+
+// Function order: Ordena o array pela propriedade Tech.
+function order(array) {
   /**
    * Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
    * Ordenados de acordo com o valor de uma de suas propriedades.
    * Comparando uma propriedade com outra.
    */
-  return arrayTech.sort(function (a, b) {
+  return array.sort(function (a, b) {
     if (a.tech > b.tech) {
       return 1;
     }
@@ -25,6 +28,18 @@ function techList(arrayTech, name) {
     // a must be equal to b
     return 0;
   });
+}
+
+// Desafio 10
+function techList(arrayTech, name) {
+  // seu código aqui
+  if (arrayTech.length === 0) {
+    return 'Vazio!';
+  }
+  let arrayReady = mount(arrayTech, name);
+  arrayReady = order(arrayReady);
+
+  return arrayReady;
 }
 
 // Desafio 11
@@ -63,7 +78,7 @@ function generatePhoneNumber(arrayNumber) {
   return stringNumber;
 }
 
-// Desafio 12            5      10     9
+// Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   /**
@@ -72,17 +87,17 @@ function triangleCheck(lineA, lineB, lineC) {
    */
   if (Math.abs(lineB - lineC) < lineA && lineA < lineB + lineC) {
     if (Math.abs(lineC - lineA) < lineB && lineB < lineA + lineC) {
-      if (Math.abs(lineA -lineB) < lineC && lineC < lineB + lineA) {
+      if (Math.abs(lineA - lineB) < lineC && lineC < lineB + lineA) {
         return true;
       }
     }
   }
-
+  
   return false;
 }
 
 // Desafio 13
-function hydrate( string =  "1 cachaça, 5 cervejas e 1 copo de vinho") {
+function hydrate(string) {
   // seu código aqui
   /**
    * Source: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
@@ -90,17 +105,16 @@ function hydrate( string =  "1 cachaça, 5 cervejas e 1 copo de vinho") {
    * Source: https://www.alura.com.br/artigos/convertendo-string-para-numero-em-javascript
    * Usei a function parseInt() para converter a string em um tipo inteiro.
    */
-  let number = string.replace(/[^0-9]/g, "");
+  let number = string.replace(/[^0-9]/g, '');
   let result = 0;
   for (let n of number) {
     result += parseInt(n);
   }
-  
-  if (result > 1){
-    return result + ' copos de água';
-  }
 
-  return result + ' copo de água';
+  if (result > 1) {
+    return `${result} copos de água`;
+  }
+  return `${result} copo de água`;
 }
 
 module.exports = {

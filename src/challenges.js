@@ -108,7 +108,7 @@ function checkItem(item) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayNumber = [7, 9]) {
+function fizzBuzz(arrayNumber) {
   // seu código aqui
   for (let index = 0; index < arrayNumber.length; index += 1) {
     arrayNumber[index] = checkItem(arrayNumber[index]);
