@@ -15,15 +15,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  string = 'vamo que vamo';
-  let result = string.split(' ');
-  return result;
-
+  return string.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(string) {
+  // eslint-disable-next-line prefer-template
+  return string[string.length - 1] + ', ' + string[0];
 }
 
 // Desafio 5
