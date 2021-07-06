@@ -1,8 +1,10 @@
 // Desafio 1
-function compareTrue(par1, par2) {
-  // seu código aqui
-if (par1 === true && par2 === true) {
-return true;
+function compareTrue() {
+let num1 = 10
+let num2 = 20
+
+if (num1 > 1 && par2 < 50 ) {
+return ;
 }
 
 
