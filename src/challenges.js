@@ -52,9 +52,21 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+  let dist1 = Math.abs(mouse - cat1);
+  let dist2 = Math.abs(mouse - cat2);
+  
+
+  if (dist2 > dist1) {
+    return 'cat1';
+  } else if (dist2 < dist1) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }    
+   }
+
+   // Documentação sobre o math.abs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 8
 function fizzBuzz() {
