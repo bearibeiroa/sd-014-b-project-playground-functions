@@ -72,7 +72,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(input) {
-  let dArr = [...input];
+  let dArr = Array.from(input);
   let encoded = '';
   for (let i = 0; i < dArr.length; i += 1) {
     if (dArr[i] === 'a') {
@@ -92,7 +92,7 @@ function encode(input) {
   return encoded;
 }
 function decode(input) {
-  let eArr = [...input];
+  let eArr = Array.from(input);
   let decoded = '';
   for (let i = 0; i < eArr.length; i += 1) {
     if (eArr[i] === '1') {
@@ -111,6 +111,10 @@ function decode(input) {
   }
   return decoded;
 }
+
+// Foi consultado a documentação do JavaScript no site https://www.w3schools.com/js/ e no site
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript, também consultei o stackoverflow e
+// descobri o comando: Array.from()
 
 module.exports = {
   calcArea,
