@@ -17,6 +17,9 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(String) {
   let result = String.split(' ');
+  /* Método String split () utilizado para separar uma string em um array de strings, nesse caso, o programa pede que retorne cada palavra como um elemento separado do array.
+  Método retirado de: https://www.w3schools.com/jsref/jsref_split.asp
+*/
   return result;
 }
 
@@ -30,8 +33,7 @@ function concatName(Array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let result = (wins * 3) + ties;
-  return result;
+  return wins * 3 + ties;
 }
 
 // Desafio 6
@@ -89,10 +91,11 @@ function fizzBuzz(numberArray) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  
 }
+
 function decode() {
-  // seu código aqui
+  
 }
 
 module.exports = {
