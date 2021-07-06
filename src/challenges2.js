@@ -18,6 +18,53 @@ function techList(techs, nome) {
 
 // Desafio 11
 
+// Função abaixo foi baseada em solution do bloco - Gabarito JavaScript / Parte 4 / Parte I - Objetos e For/In - Exercício 5
+function maisRepetido(numeros) {
+  let count = {};
+  for (let index = 0; index < numeros.length; index += 1) {
+    let number = numeros[index]; // Atribuição de number de verificação com número de entrada
+    if (count[number] === undefined) { // Se objeto de contagem para 'number' está vazio
+      count[number] = 1; // Atribui 1 contagem para o valor number = numbers[index]
+    } else { // Senão ...
+      count[number] += 1; // Soma no contador 1 a mais do valor anterior
+    }
+  }
+  // Verificar repetições
+  let countRepeated = 0; // Contador de repetições inicia zerado
+  for (let x in count) { // Loop para cada valor "x" no objeto "count" com as repetições
+    if (countRepeated < count[x]) { // Se o contador countRepeated, inicializado em 0, é menor que a contagem do valor "x" ...
+      countRepeated = count[x]; // Então é atribuída a contagem de "x" no contador countRepeated
+    }
+  }
+  return countRepeated; // Maior valor de repetições
+} // Function acima verifica repetições
+
+function zeroNine(phone) {
+  let verify = 0;
+  for (let n in phone) {
+    if (phone[n] < 0 || phone[n] > 9) { verify += 1; }
+  }
+  return verify;
+}
+
+function generatePhoneNumber(numbers) {
+  if (numbers.length !== 11) {
+    return ('Array com tamanho incorreto.');
+  }
+  let verifyZeroNine = zeroNine(numbers);
+  if (verifyZeroNine > 0) {
+    return ('não é possível gerar um número de telefone com esses valores');
+  }
+  let mostRepeated = maisRepetido(numbers);
+  if (mostRepeated > 2) {
+    return ('não é possível gerar um número de telefone com esses valores');
+  }
+  let phoneNumber = ('(' + numbers[0] + numbers[1] + ') ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]);
+    return phoneNumber;
+  } 
+
+
+/* Outra solução do Desafio 11, com maior complexidade, segundo o ESLint:
 function generatePhoneNumber(numbers) {
 // Função abaixo foi baseada em solution do bloco - Gabarito JavaScript / Parte 4 / Parte I - Objetos e For/In - Exercício 5
   function mostRepeated() {
@@ -54,7 +101,7 @@ function generatePhoneNumber(numbers) {
   }
   let phoneNumber = ('(' + numbers[0] + numbers[1] + ') ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]);
   return phoneNumber;
-}
+} */
 
 // Desafio 12
 // eslint-disable-next-line complexity
