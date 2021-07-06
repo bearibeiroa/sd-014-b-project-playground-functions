@@ -5,6 +5,7 @@ function techList(techs, nome) {
   if (techs.length === 0) { return ('Vazio!'); }
   if (techs.length !== 0) {
     techs = tech.sort();
+    console.log(techs);
     for (let index = 0; index < techs.length; index += 1) {
       lista[index] = {
         tech: techs[index],
