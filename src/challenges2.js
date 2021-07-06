@@ -1,14 +1,28 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(list, name) {
+  if (list.length === 0) {
+    return 'Vazio!'
+  }
+  let arrayFinal = [];
+  for (index = 0; index < list.length; index +=1){
+    let techName = {
+      tech: list[index],
+      name: name
+    }
+    arrayFinal = arrayFinal.push(techName);  
+  } 
+  return arrayFinal;
 }
+
+array = [];
+array = array.push({"a":"oi","b":"tchau"});
+console.log(array)
 
 // Desafio 11
 function generatePhoneNumber(cellnumber) {
   if (cellnumber.length != 11) {
     return 'Array com tamanho incorreto.';  
   }  
-
   let stringFinal = '(' 
   for (let i = 0; i < cellnumber.length; i += 1){
     let contador = 0;
@@ -46,11 +60,24 @@ let result = true;
 }
 }
 
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringBar) {
+  howManyGlasses = 0
+  for (index=0; index<stringBar.length; index+=1){
+    console.log((String(parseInt(stringBar[index]))))
+    if(String(parseInt(stringBar[index])) != "NaN"){
+      howManyGlasses += parseInt(stringBar[index])
+    }
+  }
+  copos = "copo"
+  if(howManyGlasses > 1){
+    copos = "copos"
+  }
+  return String(howManyGlasses) + " " + copos + " de água"
 }
+
+
+
 
 module.exports = {
   generatePhoneNumber,
