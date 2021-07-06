@@ -123,12 +123,48 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let fraseEncode = '';
+for(let count =0; count <frase.length; count++)
+{
+  if (frase[count] == 'a') {
+    fraseEncode += '1';
+  } else if (frase[count] == 'e') {
+      fraseEncode += '2';
+  }else if (frase[count] =='i') {
+      fraseEncode += '3';
+  }else if (frase[count] =='o') {
+      fraseEncode +='4';
+  }else if (frase[count] == 'u') {
+      fraseEncode += '5';
+  }else {
+      fraseEncode += frase[count];
+  }
 }
-function decode() {
-  // seu código aqui
+return fraseEncode;
 }
+
+function decode(frase) {
+  let fraseEncode = '';
+for(let count =0; count <frase.length; count++)
+{
+  if (frase[count] == '1') {
+    fraseEncode += 'a';
+  } else if (frase[count] == '2') {
+      fraseEncode += 'e';
+  }else if (frase[count] =='3') {
+      fraseEncode += 'i';
+  }else if (frase[count] =='4') {
+      fraseEncode +='o';
+  }else if (frase[count] == '5') {
+      fraseEncode += 'u';
+  }else {
+      fraseEncode += frase[count];
+  }
+}
+return fraseEncode;
+}
+
 
 module.exports = {
   calcArea,
