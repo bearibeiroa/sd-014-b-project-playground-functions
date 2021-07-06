@@ -46,32 +46,38 @@ function generatePhoneNumber(numberArray) {
 }
 
 // Desafio 12
-
-function checkSum (lineA, LineB, lineC) {
-  if (lineA > LineB + lineC || LineB > lineA + lineC || lineC > lineA + LineB) {
-    return false;
+// Retorne 'false' quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois.
+function checkSum(lineA, lineB, lineC) {
+  let checkSumBool = true;
+  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
+    checkSumBool = false;
+  }
+  return checkSumBool;
 }
 
-function checkSides (lineA, LineB, lineC) {
+// Retorne 'false' quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas.
+function checkSides(lineA, lineB, lineC) {
+  let condition = true;
   let diffOne = Math.abs(lineB - lineC);
   let diffTwo = Math.abs(lineA - lineB);
-  let verify;
-  if (lineA < diffOne ) {
-
+  let diffThree = Math.abs(lineB - lineC);
+  if (diffThree < diffOne || diffThree < diffTwo) {
+    condition = false;
   }
-  for (let i of difference) {
-    if (i ) {
-
-    }
-  }
-  return false;
+  return condition;
 }
 
-function triangleCheck(lineA, LineB, lineC) {
-  let tringleAngle = [];
-  if (lineA < LineB - lineC || LineB > lineA + lineC || lineC > lineA + LineB) {
-    return false;
+
+function triangleCheck(lineA, lineB, lineC) {
+  let triangleAngle = [];
+  let checkCondition = true;
+  if (lineA < lineB - lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
+    checkCondition = false;
   }
+  if (checkSides(lineA, lineB, lineC) && checkSum(lineA, lineB, lineC) === true)   {
+    checkCondition = true;
+  }
+  return checkCondition;
 }
 
 console.log(triangleCheck(10, 14, 8));
