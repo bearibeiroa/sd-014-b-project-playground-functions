@@ -1,6 +1,19 @@
 // Desafio 10
-function techList() {
+function techList(techy, name) {
   // seu código aqui
+  let lista = [];
+    for (index = 0; index < techy.length; index += 1) {
+        lista.push( 
+          techs = { tech: techy.sort()[index],
+                    names: name
+          }
+        )
+      }
+      if (techy.length === 0){
+       return 'Vazio!'
+      } else {
+  }
+    return lista
 }
 
 // Desafio 11
@@ -16,27 +29,11 @@ function triangleCheck() {
 // Desafio 13
 function hydrate(drinks) {
   // seu código aqui
-  let quantosDrinks = 0;
-  let somaDrinks = 0;
-  let agua = somaDrinks + ' ' + 'Copo(s) de água';
-
-    for (let index = 0; index < drinks.length; index += 1){
-    let numeroDrinks = drinks[index];
-    if ((drinks[index] >= 0) && (drinks[index] <= 9)) {
-      quantosDrinks += numeroDrinks;
-    } 
-  else
-  for (let index2 = 0; index2 < quantosDrinks.length; index2 += 1) {
-    somaDrinks += quantosDrinks[index2];
-  }
-  return (agua);
-  }
-  console.log(somaDrinks);
-}
 
 module.exports = {
   generatePhoneNumber,
   techList,
   hydrate,
   triangleCheck,
+}
 };

@@ -2,10 +2,10 @@
 function compareTrue(a1, a2) {
   // seu código aqui
   if (a1 === true && a2 === true) {
-      return true;
+  return true;
   } else { 
-        return false;
-    }
+      return false;
+  }
 }
   
 // Desafio 2
@@ -18,7 +18,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-    return frase.split(' ');
+  return frase.split(' ');
 }
 // console.log(splitSentence('Go trybe'));
 
@@ -28,12 +28,12 @@ function concatName(listnames) {
   let listaConcat = (listnames[listnames.length - 1] + ', ' + listnames[0]);
   return listaConcat;
 }
-let listnames = (['foguete', 'não', 'tem', 'ré']);;
-//console.log(concatName(listnames));
+let listnames = (['foguete', 'não', 'tem', 'ré']);
+// console.log(concatName(listnames));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui 
+  // seu código aqui
   let vitorias = (wins * 3);
   return vitorias + ties;
 }
@@ -48,7 +48,7 @@ function highestCount(listNums) {
       maior = listNums[index];
     } 
   }
-let count = 0;
+  let count = 0;
   for (let index2 = 0; index2 < listNums.length; index2 += 1) {
     if (listNums[index2] === maior) {
       count += 1;
@@ -58,45 +58,26 @@ let count = 0;
 }
  
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
-  // seu código aqui
-      let calcDistance1 = 0
-      let calcDistance2 = 0
-if (mouse > cat1 && mouse > cat2) {
-  for (let indexCat1 = cat1; indexCat1 < mouse; indexCat1 += 1) {
-    calcDistance1 += 1;
-  }
-  for (let indexCat2 = cat2; indexCat2 < mouse; indexCat2 +=1) {
-    calcDistance2 += 1;
-  }
-} if (cat1 < mouse && cat2 > mouse) {
-  for  (let indexCat1 = cat1; indexCat1 < mouse; indexCat1 += 1) {
-    calcDistance1 += 1;
-  }
-}
-  for (let indexCat2 = mouse; indexCat2 < cat2; indexCat2 += 1) {
-    calcDistance2 += 1;
-}
-  if (mouse < cat1 && mouse < cat2) {
-    for (let indexCat1 = mouse; indexCat1 < cat1; indexCat1 += 1) {
-      calcDistance1 += 1;
-    }
-  }
-    for (let indexCat2 = mouse; indexCat2 < cat2; indexCat2 += 1) {
-      calcDistance2 += 1;
-    }
-  if (calcDistance1 > calcDistance2) {
+function catAndMouse(mouse, cat1, cat2) {
+  // seu código aqui 
+  if (cat2 > cat1 && cat2 > mouse && (cat2 - mouse) > (mouse - cat1)) {
+    // console.log ("o gato mais próximo é: cat 2")
+      return 'cat1';
+    } 
+  if (cat1 > cat2 && cat1 > mouse && (cat1 - mouse) > (mouse - cat2)) {
   // console.log ("o gato mais próximo é: cat 1")
-     return 'cat1';
-  } else if (calcDistance1 < calcDistance2) {
-  // console.log ("o gato mais próximo é: cat 2")
-     return 'cat2';
-  } else {
+    return 'cat2';
+  }
+  if((cat2 - mouse) === (mouse - cat1) && cat2 > cat1){
+    // console.log ("os gatos trombam e o rato foge")
+    return 'os gatos trombam e o rato foge';
+  }
+  if ((cat2 - mouse) === (mouse - cat2) && cat1 > cat2) {
   // console.log ("os gatos trombam e o rato foge")
-     return 'os gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   } 
 }
-catAndMouse (9,5,3);
+catAndMouse (9,5,3); 
 
 // Desafio 8
 function fizzBuzz() {
@@ -120,10 +101,10 @@ for (let index = 0; index < stringCode.length; index += 1) {
     break;
     case 'u': mensagem1 = mensagem1 + '5';
     break;
-default: mensagem1 = mensagem1 + stringCode[index];
- }
-}
-return mensagem1;
+  default: mensagem1 = mensagem1 + stringCode[index];
+   }
+  }
+  return mensagem1;
 }
 function decode(stringDec) {
   // seu código aqui
@@ -140,11 +121,11 @@ function decode(stringDec) {
       break;
       case '5': mensagem2 = mensagem2 + 'u';
       break;
-  default: mensagem2 = mensagem2 + stringDec[index];
-   }
+    default: mensagem2 = mensagem2 + stringDec[index];
+    }
   }
   return mensagem2;
-  }
+}
 
 module.exports = {
   calcArea,
