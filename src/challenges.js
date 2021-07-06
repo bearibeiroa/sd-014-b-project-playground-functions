@@ -1,3 +1,5 @@
+//Todas as funções foram utilizadas com base no site https://www.w3schools.com/js/default.asp
+
 // Desafio 1
 function compareTrue(a,b) {
   // seu código aqui
@@ -85,11 +87,62 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(phrase) {
   // seu código aqui
+  let vector = phrase.split("");
+  let newPhrase = [];
+  
+  for (let index=0; index < phrase.length; index+=1) {
+    if (phrase[index] == "a") {
+      vector[index] = "1";
+      newPhrase.push(vector[index]);      
+    } else if (phrase[index] == "e") {
+      vector[index] = "2";
+      newPhrase.push(vector[index]);
+    } else if (phrase[index] == "i") {
+      vector[index] = "3";
+      newPhrase.push(vector[index]);
+    } else if (phrase[index] == "o") {
+      vector[index] = "4";
+      newPhrase.push(vector[index]);
+    } else if (phrase[index] == "u") {
+      vector[index] = "5";
+      newPhrase.push(vector[index]);
+    } else {
+      newPhrase.push(vector[index]);
+    }
+  }
+  let codedPhrase = newPhrase.join("");
+  return codedPhrase;
 }
-function decode() {
+
+function decode(decodePhrase) {
   // seu código aqui
+  let vector = decodePhrase.split("");
+  let newPhrase = [];
+  
+  for (let index=0; index < decodePhrase.length; index+=1) {
+    if (decodePhrase[index] == "1") {
+      vector[index] = "a";
+      newPhrase.push(vector[index]);      
+    } else if (decodePhrase[index] == "2") {
+      vector[index] = "e";
+      newPhrase.push(vector[index]);
+    } else if (decodePhrase[index] == "3") {
+      vector[index] = "i";
+      newPhrase.push(vector[index]);
+    } else if (decodePhrase[index] == "4") {
+      vector[index] = "o";
+      newPhrase.push(vector[index]);
+    } else if (decodePhrase[index] == "5") {
+      vector[index] = "u";
+      newPhrase.push(vector[index]);
+    } else {
+      newPhrase.push(vector[index]);
+    }
+  }
+  let incriptPhrase = newPhrase.join("");
+  return incriptPhrase;
 }
 
 module.exports = {
