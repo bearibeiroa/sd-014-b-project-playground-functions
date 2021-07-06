@@ -69,8 +69,21 @@ function catAndMouse(mouse, cat1, cat2) {
    // Documentação sobre o math.abs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumeros) {
+  let resultado = []
+
+
+  for (let index= 0; index < arrayNumeros.length; index +=1 ) {
+    if (arrayNumeros[index] % 3 === 0 && arrayNumeros[index] % 5 === 0) {
+    resultado.push('fizzBuzz');
+  } else if (arrayNumeros[index] % 3 === 0) {
+    resultado.push('fizz');
+  } else if (arrayNumeros[index] % 5 === 0) {
+    resultado.push('buzz');
+  } else {
+    resultado.push("bug!");
+  }
+ } return resultado;
 }
 
 // Desafio 9
