@@ -5,6 +5,7 @@ function compareTrue(param1, param2) {
   } else {
     return false;
   }
+}
 
 // Desafio 2
 function calcArea() {
