@@ -53,10 +53,10 @@ function generatePhoneNumber(arrayNumber) {
   for (let index = 0; index < arrayNumber.length; index += 1) {
     let cont = 0;
     for (let index2 = 0; index2 < arrayNumber.length; index2 += 1) {
-      if (arrayNumber[index] === arrayNumber[index2]){
+      if (arrayNumber[index] === arrayNumber[index2]) {
         cont += 1;
       }
-      if(cont >= 3){
+      if (cont >= 3) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
@@ -92,7 +92,6 @@ function triangleCheck(lineA, lineB, lineC) {
       }
     }
   }
-  
   return false;
 }
 
