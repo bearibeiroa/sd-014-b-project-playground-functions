@@ -69,13 +69,63 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  var splited = string.split('');
+
+  for (let key in splited) {
+    switch (splited[key]) {
+      case 'a':
+        splited[key] = '1';
+        break;
+      case 'e':
+        splited[key] = '2';
+        break;
+      case 'i':
+        splited[key] = '3';
+        break;
+      case 'o':
+        splited[key] = '4';
+        break;
+      case 'u':
+        splited[key] = "5";
+        break;
+    
+      default:
+        break;
+    }
+  }
+  return splited.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  var splited = string.split('');
+
+  for (let key in splited) {
+    switch (splited[key]) {
+      case '1':
+        splited[key] = 'a';
+        break;
+      case '2':
+        splited[key] = 'e';
+        break;
+      case '3':
+        splited[key] = 'i';
+        break;
+      case '4':
+        splited[key] = 'o';
+        break;
+      case '5':
+        splited[key] = "u";
+        break;
+    
+      default:
+        break;
+    }
+  }
+
+  return splited.join('');;
 }
 
+encode("This is an encoding test.");
 
 module.exports = {
   calcArea,
