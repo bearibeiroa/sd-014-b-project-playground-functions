@@ -43,7 +43,7 @@ function generatePhoneNumber(arraysOfNumbers) {
   }
   // Verifica se algum número se repete três vezes
   for (let index = 0; index < arraysOfNumbers.length; index += 1) {
-    // O trecho a seguir usei o código de Natalia Martins como modelo para encontrar a solução
+    // O trecho a seguir usei o código de Natalia Martins como modelo para encontrar a solução, segue o link do repositório: https://github.com/tryber/sd-014-b-project-playground-functions/pull/73
     let repetead = 0;
     for (let indexComparator = 0; indexComparator < arraysOfNumbers.length; indexComparator += 1) {
       if (arraysOfNumbers[indexComparator] === arraysOfNumbers[index]) {
@@ -77,7 +77,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let diferenceAc = Math.abs(lineA - lineC);
   let diferenceBc = Math.abs( lineB - lineC);
 
-  // Tive como base o código de Natália Martins para encontrar a solução
+  // Tive como base o código de Natália Martins para encontrar a solução, segue o link do repositório: https://github.com/tryber/sd-014-b-project-playground-functions/pull/73
   if ((lineA > lineB + lineC) || (lineB > lineA + lineC) ||(lineC > lineA + lineB)) {
     isTriangle = false;
   }
@@ -91,8 +91,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(drinks) {
   // seu código aqui
+  // Mais uma vez usei como base o código de Natália Martins, segue o link do repositório: https://github.com/tryber/sd-014-b-project-playground-functions/pull/73
+  let qtdDrinks = 0;
+  for (let index = 0; index < drinks.length; index += 1) {
+    let current = drinks[index];
+    if ((drinks[index] > 0) && (drinks[index] <= 9)) {
+      qtdDrinks += parseInt(current); 
+    }
+  }
+  if (qtdDrinks === 1) return qtdDrinks + ' copo de água'; 
+  else return qtdDrinks + ' copos de água';
+
 }
 
 module.exports = {
