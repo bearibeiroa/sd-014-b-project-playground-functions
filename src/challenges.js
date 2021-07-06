@@ -6,21 +6,20 @@
 
 // Desafio 2
 function calcArea() {
-  // seu código aqui
+  function calcArea(base,height) {
+    return (base * height) / 2;
+  }
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+  function splitSentence(frase) {
+    let quebraFrase = frase.split(" ");
+    return quebraFrase;
 }
 
 // Desafio 4
 function concatName() {
- let primeiroNome = "Lucas";
- let segundoNome = "Cassiano";
- let penultimoNome = "Ferraz";
- let ultimoNome = "Paolillo";
- let comma = ',';
+  ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
   return array[array.length - 1] + comma + array[0];
 
 // Desafio 5
@@ -63,8 +62,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+  function fizzBuzz(array) {
+    let resultado = [];
+    for (let i = 0; i < array.length; i += 1) {
+      if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
+        resultado.push('fizz');
+      } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
+        resultado.push('buzz');
+      } else if (array[i] % 5 === 0 && array[i] % 3 === 0) {
+        resultado.push('fizzBuzz');
+      } else {
+        resultado.push('bug!');
+      }
+    } return resultado;
+  }
 }
 
 // Desafio 9
@@ -85,5 +96,5 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence,
+  splitSentence
 }
