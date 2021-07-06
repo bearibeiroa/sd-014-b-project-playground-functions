@@ -77,6 +77,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let diferenceAc = Math.abs(lineA - lineC);
   let diferenceBc = Math.abs( lineB - lineC);
 
+  // Tive como base o código de Natália Martins para encontrar a solução
   if ((lineA > lineB + lineC) || (lineB > lineA + lineC) ||(lineC > lineA + lineB)) {
     isTriangle = false;
   }
