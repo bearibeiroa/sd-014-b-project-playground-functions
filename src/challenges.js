@@ -106,51 +106,45 @@ function fizzBuzz() {
 // // Desafio 9
  function encode(stringCode) {
  // seu código aqui
-// //let mensagem = ''
-// //for (let index = 0; index <= codigo.length; index += 1) {
-//   if (codigo[index] === 'a') {
-//     mensagem = '1';
-//     }
-//     if (codigo[index] === 'e') {
-//       mensagem = '2';
-//     }
-//     if (codigo[index] === 'i') {
-//       mensagem = '3';
-//     }
-//     if (codigo[index] === 'o') {
-//       mensagem = '4';
-//     }
-//     if (codigo[index] === 'u') {
-//       mensagem = '5';
-//     }
-//   }
-//   return codigo;
+ // Referência: https://www.javascriptprogressivo.net/2018/10/Comando-SWITCH-O-que-e-Como-Usar-Para-que-serve.html
+let mensagem1 = '';
+for (let index = 0; index < stringCode.length; index += 1) {
+  switch (stringCode[index]) {
+    case 'a': mensagem1 = mensagem1 + '1';
+    break;
+    case 'e': mensagem1 = mensagem1 + '2';
+    break;
+    case 'i': mensagem1 = mensagem1 + '3';
+    break;
+    case 'o': mensagem1 = mensagem1 + '4';
+    break;
+    case 'u': mensagem1 = mensagem1 + '5';
+    break;
+default: mensagem1 = mensagem1 + stringCode[index];
  }
-// console.log(encode('hi there!'));
-
-function decode(descodigo) {
+}
+return mensagem1;
+}
+function decode(stringDec) {
   // seu código aqui
-
-  for (let index = 0; index <= descodigo.length; index += 1) {
-          if (descodigo[index] === '1') {
-      descodigo = 'a';
-    }
-          if (descodigo[index] === '2') {
-        descodigo = 'e';
-      }
-          if (descodigo[index] === '3') {
-        descodigo = 'i';
-      }
-          if (descodigo[index] === '4') {
-        descodigo = 'o';
-      }
-          if (descodigo[index] === '5') {
-        descodigo = 'u';
+  let mensagem2 = '';
+  for (let index = 0; index < stringDec.length; index += 1) {
+    switch (stringDec[index]) {
+      case '1': mensagem2 = mensagem2 + 'a';
+      break;
+      case '2': mensagem2 = mensagem2 + 'e';
+      break;
+      case '3': mensagem2 = mensagem2 + 'i';
+      break;
+      case '4': mensagem2 = mensagem2 + 'o';
+      break;
+      case '5': mensagem2 = mensagem2 + 'u';
+      break;
+  default: mensagem2 = mensagem2 + stringDec[index];
+   }
   }
-return descodigo;
-    }
-       }
-//console.log(decode('h3 th2r2!'));
+  return mensagem2;
+  }
 
 module.exports = {
   calcArea,
