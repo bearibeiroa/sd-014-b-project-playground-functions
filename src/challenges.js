@@ -59,13 +59,67 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let pcat1=0;
+  let pcat2=0;
+  if(cat1<mouse)
+  {
+    for(let count=cat1; count<= mouse; count++)
+    {
+      pcat1++;
+    }
+  }else if ( cat1>mouse)
+  {
+    for(let count=cat1; count>= mouse; count--)
+    {
+      pcat1++;
+    }
+  }
+  if(cat2<mouse)
+  {
+    for(let count=cat2; count<= mouse; count++)
+    {
+      pcat2++;
+    }
+  }else if ( cat2>mouse)
+  {
+    for(let count=cat2; count>= mouse; count--)
+    {
+      pcat2++;
+    }
+  }
+  if (pcat1<pcat2)
+  {
+    return 'cat1';
+  } else if ( pcat2<pcat1)
+  {
+    return 'cat2';
+  }else {return "os gatos trombam e o rato foge";}
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let fizzreturn =[];
+  for( let count= 0;count<numeros.length;count++)
+  {
+    if(numeros[count] % 3 === 0 && numeros[count] % 5 === 0)
+    {
+      fizzreturn.push("fizzBuzz");
+    } 
+    else if ( numeros[count]% 3 ===0)
+    {
+      fizzreturn.push("fizz");
+    }
+    else if (numeros[count]% 5 ===0)
+    {
+      fizzreturn.push("buzz");
+    }
+    else if(numeros[count] % 3 !== 0 && numeros[count] % 5 !== 0)
+    {
+      fizzreturn.push("bug!");
+    } 
+  }
+  return fizzreturn;
 }
 
 // Desafio 9
