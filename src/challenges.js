@@ -8,7 +8,8 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2;
+  let area = ((base * height) / 2);
+  return area;
 }
 
 // Desafio 3
@@ -22,8 +23,9 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = ((wins * 3) + (ties));
+  return pontos;
 }
 
 // Desafio 6
@@ -43,10 +45,9 @@ function fizzBuzz() {
 
 // Desafio 9
 function encode() {
-  
 }
 function decode() {
-  // seu código aqui
+// seu código aqui
 }
 
 module.exports = {
