@@ -96,12 +96,57 @@ return result;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codificar) {
+  let noidea = codificar.split('')
+  for(let index in noidea){
+    switch(noidea[index]){
+    case 'a': 
+      noidea[index] = '1'
+      break;
+    case 'e':
+      noidea[index] = '2'
+      break;
+    case 'i':
+      noidea[index] = '3'
+      break;
+    case 'o':
+      noidea[index] = '4'
+    break;
+    case 'u':
+      noidea[index] = '5'
+    break;
+    }
+  } 
+  noidea = noidea.join ('');
+  return noidea
 }
-function decode() {
-  // seu código aqui
+
+function decode(whatever) {
+  let idea = whatever.split('');
+  for (let index in idea) {
+    switch (idea[index]) {
+      case '1':
+        idea[index] = 'a';
+        break;
+      case '2':
+        idea[index] = 'e';
+        break;
+      case '3':
+        idea[index] = 'i';
+        break;
+      case '4':
+        idea[index] = 'o';
+        break;
+      case '5':
+        idea[index] = 'u';
+        break;
+  
+    }
+  }
+  idea = idea.join('');
+  return idea;
 }
+
 
 module.exports = {
   calcArea,
