@@ -21,13 +21,12 @@ let array = [...names];
 let result = [];
 result.push(array[array.length - 1]);
 result.push(array[0]);
-return result.join(',');
+return result.join(', ');
 }
 
 // Desafio 5
-function footballPoints (win,ties) {
-let totalPoints=(wins*3) + (ties);
-return totalPoints;
+function footballPoints (wins,ties) {
+return wins * 3 + ties;
 }
 
 // Desafio 6
@@ -73,11 +72,21 @@ for (let i = 0; i < array.length; i += 1) {
 }
 
 // Desafio 9
-function encode() {
-// seu código aqui
+function encode(string) {
+  string = string.replace(/a/g, "1");
+  string = string.replace(/e/g, "2");
+  string = string.replace(/i/g, "3");
+  string = string.replace(/o/g, "4");
+  string = string.replace(/u/g, "5");
+  return string;
 }
-function decode() {
-// seu código aqui
+function decode(string) {
+  string = string.replace(/1/g, "a");
+  string = string.replace(/2/g, "e");
+  string = string.replace(/3/g, "i");
+  string = string.replace(/4/g, "o");
+  string = string.replace(/5/g, "u");
+  return string;
 }
 
 module.exports = {
