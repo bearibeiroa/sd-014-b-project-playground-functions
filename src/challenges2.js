@@ -3,20 +3,31 @@ function techList(list, name) {
   if (list.length === 0) {
     return 'Vazio!'
   }
-  let arrayFinal = [];
+  let arrayFinal = new Array(list.length);
+  for (index = 0; index < list.length-1; index += 1){
+    for (j = index+1; j < list.length; j += 1){
+      if(list[index] > list[j]){
+        aux = list[index];
+        list[index] = list[j]
+        list[j] = aux
+      }
+    }
+  }  
   for (index = 0; index < list.length; index +=1){
     let techName = {
       tech: list[index],
       name: name
     }
-    arrayFinal = arrayFinal.push(techName);  
+    arrayFinal[index] = techName;  
   } 
   return arrayFinal;
 }
+lista = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+nome = "Lucas";
+console.log(techList(lista, nome))
 
-array = [];
-array = array.push({"a":"oi","b":"tchau"});
-console.log(array)
+
+
 
 // Desafio 11
 function generatePhoneNumber(cellnumber) {
