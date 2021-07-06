@@ -3,12 +3,13 @@ function techList(list, name) {
   let listOfTechs = list;
   let myArray = [];
   for (let key of listOfTechs.sort()) {
-    myArray.push([{tech : key,
+    myArray.push(
+      [{tech : key,
       myName : name
     }])  
   }
   return(myArray.length === 0 ? 'Vazio!': myArray);
-}
+};
 console.log(techList(['HTML', 'CSS', 'JS', 'SQL', 'React', 'NodeJs', 'Mongo'],'Lucas'))
 // Desafio 11
 function generatePhoneNumber() {
