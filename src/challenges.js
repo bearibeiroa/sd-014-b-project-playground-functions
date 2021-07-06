@@ -23,7 +23,7 @@ function concatName(array) {
   // seu código aqui
   let last = array[array.length - 1];
   let first = array[0];
-  let result = `ÚLTIMO ITEM${last}PRIMEIRO ITEM${first}`;
+  let result = `${last}, ${first}`;
   return result;
 }
 
