@@ -12,6 +12,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+// Pesquisei sobre a função split nesse site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 function splitSentence(string) {
   return string.split(' ');
 }
@@ -45,6 +46,7 @@ function highestCount(string) {
 }
 
 // Desafio 7
+// como precisava do valor absoluto recorri a funcao Math.abs pesquisada nesse site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = Math.abs(mouse - cat1);
   let cat2Distance = Math.abs(mouse - cat2);
@@ -80,19 +82,41 @@ function fizzBuzz(string) {
 
 // Desafio 9
 function encode(string) {
-  let astring = string.replace(/a/g, 1);
-  let estring = astring.replace(/e/g, 2);
-  let istring = estring.replace(/i/g, 3);
-  let ostring = istring.replace(/o/g, 4);
-  let result = ostring.replace(/u/g, 5);
+  let result = '';
+  for (let index of string) {
+    if (index === 'a') {
+      result +='1';
+    } else if (index === 'e') {
+      result += '2';
+    } else if (index === 'i') {
+      result += '3';
+    } else if (index === 'o') {
+      result += '4';
+    } else if (index === 'u') {
+      result += '5';
+    } else {
+      result += index;
+    }
+  }
   return result;
 }
 function decode(string) {
-  let astring = string.replace(/1/g, 'a');
-  let estring = astring.replace(/2/g, 'e');
-  let istring = estring.replace(/3/g, 'i');
-  let ostring = istring.replace(/4/g, 'o');
-  let result = ostring.replace(/5/g, 'u');
+  let result = '';
+  for (let index of string) {
+    if (index === '1') {
+      result += 'a';
+    } else if (index === '2') {
+      result += 'e';
+    } else if (index === '3') {
+      result += 'i';
+    } else if (index === '4') {
+      result += 'o';
+    } else if (index === '5') {
+      result += 'u';
+    } else {
+      result += index;
+    }
+  }
   return result;
 }
 
