@@ -18,8 +18,11 @@ function splitSentence(text) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let firstName = names[0];
+  let lastName = names[names.length - 1];
+  let adicionando = (lastName + ', ' + firstName);
+  return adicionando;
 }
 
 // Desafio 5
@@ -30,7 +33,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
 }
 
 // Desafio 7
