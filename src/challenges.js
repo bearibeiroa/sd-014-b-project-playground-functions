@@ -63,7 +63,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numberArray) {
+  let result = [ ];
+  for ( let index = 0 ; index < numberArray.length; index ++ ) {
+    if (numberArray[index] % 3 === 0 && numberArray[index] % 5 === 0) {
+      result.push( "fizzBuzz" );
+    } else if (numberArray[index] % 3 === 0) {
+      result.push("fizz");
+    } else if (numberArray[index] % 5 === 0) {
+      result.push("buzz");
+    } else {
+      result.push("bug!");
+  }
+  }
+  return result;
 }
 
 // Desafio 9
