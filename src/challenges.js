@@ -1,6 +1,7 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+  function compareTrue(valor1, valor2) {
+    if (valor1 === true && valor2 === true) return true;
+    return false;
 }
 
 // Desafio 2
@@ -18,19 +19,31 @@ function concatName() {
  let primeiroNome = "Lucas";
  let segundoNome = "Cassiano";
  let penultimoNome = "Ferraz";
- let ultimoNome = 
-
-}
+ let ultimoNome = "Paolillo";
+ let comma = ',';
+  return array[array.length - 1] + comma + array[0];
 
 // Desafio 5
 function footballPoints(win,ties) {
- let totalPoints =(wins*3)+ ties;
+ let totalPoints=(wins*3)+ties;
  return totalPoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount9(){
+  let major = arr[0];
+  let count = 0;
+  for (let index = 0; index < arr.length; index += 1) {
+    if(major < arr[index]){
+      major = arr[index];
+    }
+  }
+  for (let index = 0; index < arr.length; index += 1) {
+    if (major === arr[index]) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
@@ -73,4 +86,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
