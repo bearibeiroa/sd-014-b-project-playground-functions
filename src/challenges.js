@@ -40,8 +40,8 @@ function footballPoints(wins, ties) {
 function highestCount(numeros) {
   let counter = 0;
   let bigValue = Math.max.apply(null, numeros); // comparacao de numeros
-  for (let i = 0; i < numeros.length; i+= 1) {
-    if (numeros[i] === bigValue){
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] === bigValue) {
       counter += 1;
     }
   }    

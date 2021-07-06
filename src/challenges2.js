@@ -18,30 +18,32 @@ function techList(skills, nameTech) {
 console.log(techList(['Javascript', 'HTML', 'CSS', 'VB', 'C++'], 'Riba'));
 
 // Desafio 11
-function verifyNumber (numberArray, i) {
-  if (numberArray !== 11) {
-    return 'fizzBuzz';
-  }
- 
-  if (numBuzz[i] % 3 === 0) {
-    return 'fizz';
-  } 
-  if (numBuzz[i] % 5 === 0) {
-    return 'buzz';
-  } 
-    return 'bug!';
+
+function formatNumber(numberArray) {
+  let formattedPhone = [];
+  return formattedPhone = "(" + numberArray[0] + numberArray[1] + ") " + numberArray[2] + numberArray[3] + numberArray[4] + numberArray[5] + numberArray[6] + "-" + numberArray[7] + numberArray[8] + numberArray[9] + numberArray[10];
 }
 
 function generatePhoneNumber(numberArray) {
-  let formattedPhone = [];
-  for (let i = 0; i < numberArray.length; i += 1) {
-    formattedPhone.push(tresporcinco(numberArray, i));
-  }
-  return 
+  let countDuplicate;
+  let numberCompare;
   
+  if(numberArray.length != 11) {
+    return "Array com tamanho incorreto";
+  }
+  for (let i of numberArray) {
+    numberCompare = numberArray[i];
+      if (numberArray[i] < 0 || numberArray[i] > 9) {
+        return "Não será possível gerar um número de telefone com esses valores";
+      }
+      if (numberCompare === numberArray[i]) {
+        countDuplicate += 1;
+      } else if (countDuplicate >= 3) {
+        return "Não será possível gerar um número de telefone com esses valores";
+      }
+    }
+  return formatNumber(numberArray);
 }
-
-
 
 // Desafio 12
 
@@ -51,8 +53,12 @@ function checkSum (lineA, LineB, lineC) {
 }
 
 function checkSides (lineA, LineB, lineC) {
-  let difference = [lineA, LineB, lineC];
-  math.abs(difference);
+  let diffOne = Math.abs(lineB - lineC);
+  let diffTwo = Math.abs(lineA - lineB);
+  let verify;
+  if (lineA < diffOne ) {
+
+  }
   for (let i of difference) {
     if (i ) {
 
