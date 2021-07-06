@@ -17,28 +17,35 @@ function techList(techs, nome) {
 }
 
 // Desafio 11
-
-// Função abaixo foi baseada em solution do bloco - Gabarito JavaScript / Parte 4 / Parte I - Objetos e For/In - Exercício 5
-function maisRepetido(numeros) {
+// Função abaixo verifica as repetições de números
+function counterRepeat(numbersPhone) {
   let count = {};
-  for (let index = 0; index < numeros.length; index += 1) {
-    let number = numeros[index]; // Atribuição de number de verificação com número de entrada
+  for (let index = 0; index < numbersPhone.length; index += 1) {
+    let number = numbersPhone[index]; // Atribuição de number de verificação com número de entrada
     if (count[number] === undefined) { // Se objeto de contagem para 'number' está vazio
       count[number] = 1; // Atribui 1 contagem para o valor number = numbers[index]
     } else { // Senão ...
       count[number] += 1; // Soma no contador 1 a mais do valor anterior
     }
   }
+  return count;
+}
+
+// Função abaixo verifica as repetições
+// baseada em solution do bloco - Gabarito JavaScript / Parte 4 / Parte I - Objetos e For/In - Exercício 5
+function maisRepetido(numeros) {
+  let counter = counterRepeat(numeros);
   // Verificar repetições
   let countRepeated = 0; // Contador de repetições inicia zerado
-  for (let x in count) { // Loop para cada valor "x" no objeto "count" com as repetições
-    if (countRepeated < count[x]) { // Se o contador countRepeated, inicializado em 0, é menor que a contagem do valor "x" ...
-      countRepeated = count[x]; // Então é atribuída a contagem de "x" no contador countRepeated
+  for (let x in counter) { // Loop para cada valor "x" no objeto "count" com as repetições
+    if (countRepeated < counter[x]) { // Se o contador countRepeated, inicializado em 0, é menor que a contagem do valor "x" ...
+      countRepeated = counter[x]; // Então é atribuída a contagem de "x" no contador countRepeated
     }
   }
   return countRepeated; // Maior valor de repetições
-} // Function acima verifica repetições
+}
 
+// Function abaixo verifica se numeros vão de 0 a 9
 function zeroNine(phone) {
   let verify = 0;
   for (let n in phone) {
@@ -46,7 +53,7 @@ function zeroNine(phone) {
   }
   return verify;
 }
-
+// Function abaixo é a que resolve o desafio
 function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
     return ('Array com tamanho incorreto.');
