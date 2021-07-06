@@ -125,8 +125,6 @@ function decode(string) {
   return splited.join('');;
 }
 
-encode("This is an encoding test.");
-
 module.exports = {
   calcArea,
   catAndMouse,
