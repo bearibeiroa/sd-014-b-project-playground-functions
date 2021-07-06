@@ -82,8 +82,13 @@ function encode(string) {
   return string;
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  string = string.replace(/1/gi, 'a');
+  string = string.replace(/2/gi, 'e');
+  string = string.replace(/3/gi, 'i');
+  string = string.replace(/4/gi, 'o');
+  string = string.replace(/5/gi, 'u');
+  return string;
 }
 
 module.exports = {
