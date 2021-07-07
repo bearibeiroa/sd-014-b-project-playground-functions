@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(num1, num2) {
   // seu código aqui
-  let compara = true;
+  compara = true;
   if (num1 <= 10 && num2 >= 20 ) {
     return compara;
   }
