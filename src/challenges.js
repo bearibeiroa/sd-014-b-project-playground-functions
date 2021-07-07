@@ -1,12 +1,17 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(num1, num2) {
   // seu código aqui
-  
+  if (num1 <= 10 && num2 >= 20 ) {
+    return true;
+  }
+  compareTrue(10, 20);
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  areaTotal = base*height/2;
+  return areaTotal;
 }
 
 // Desafio 3
