@@ -11,7 +11,7 @@ function compareTrue(num1, num2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  areaTotal = base*height/2;
+  areaTotal = (base*height)/2;
   return areaTotal;
   calcArea(10,20);
 }
