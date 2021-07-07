@@ -1,12 +1,10 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(num1, num2) {
   // seu código aqui
-  num1 = 10;
-  num2 = 20;
-
-  if (num1 === 10 && num2 === 20 ) {
-    return;
-  }
+if (num1 === 1 && num2 === 2) {
+  return true;
+}
+let result = compareTrue (1,2);
 }
 
 // Desafio 2
