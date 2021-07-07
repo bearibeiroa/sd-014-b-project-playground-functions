@@ -1,12 +1,14 @@
 // Desafio 1
-function compareTrue() {
-let num1 = 10
-let num2 = 20
+function compareTrue(num1, num2) {
+
+num1 = 10
+num2 = 20
 
 if (num1 > 1 && num2 < 50 ) {
-return ;
+  return true;
+}else{
+  return false;
 }
-
 
 }
 
