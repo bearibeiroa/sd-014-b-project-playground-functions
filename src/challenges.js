@@ -16,10 +16,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(separou) {
+function splitSentence(separando) {
   // seu código aqui
   // referencia https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
-separando = separou.split(' ')
+separou = separando.split(' ')
+return separou;
 
 }
 
