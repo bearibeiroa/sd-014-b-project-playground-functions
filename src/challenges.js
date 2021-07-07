@@ -2,7 +2,7 @@
 function compareTrue(num1, num2) {
   // seu código aqui
   compara = true;
-  if (num1 <= 10 && num2 >= 20 ) {
+  if (num1 === 10 && num2 === 20 ) {
     return compara;
   }
   compareTrue(10, 20);
