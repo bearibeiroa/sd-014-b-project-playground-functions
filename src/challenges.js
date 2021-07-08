@@ -50,9 +50,10 @@ function highestCount(maxCount) {
   // seu código aqui
 //identificando maior numero fonte = https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 totalShow = 0
-//contagem de repetição
+bigNumber = maxCount[Math.max(maxCount)]
+
 for (var index = 0; index < maxCount.length; i++) {
-  if (maxCount[index] === Math.max(maxCount)) totalShow++;
+  if (index === bigNumber) totalShow++;
 }
 return totalShow;
 }
