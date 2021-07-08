@@ -6,34 +6,34 @@ function techList() {
 // Desafio 11
   // seu código aqui
 
-  function checkNumbers(exer11) {
-    let numbersCount = {};
+function checkNumbers(exer11) {
+  let numbersCount = {};
   
-    for(let index of exer11) {
-      if(numbersCount[index] === undefined) 
-        numbersCount[index] = 1;
-      else
-        numbersCount[index]++;
-    }
-  
-    for(let index1 in numbersCount) {
-      if(index1 < 0 || index1 > 9) 
-        return false;
-      if(numbersCount[index1] >= 3)
-        return false;
-    }
-  
-    return true;
+  for(let index of exer11) {
+    if(numbersCount[index] === undefined) 
+      numbersCount[index] = 1;
+    else
+      numbersCount[index]++;
   }
   
-  function generatePhoneNumber(exer11) {
-    if(exer11.length !== 11)
-      return 'Array com tamanho incorreto.';
+  for(let index1 in numbersCount) {
+    if(index1 < 0 || index1 > 9) 
+      return false;
+    if(numbersCount[index1] >= 3)
+      return false;
+  }
   
-    if(!checkNumbers(exer11)) 
-      return 'não é possível gerar um número de telefone com esses valores';
+    return true;
+}
   
-    if(exer11.length === 11)
+function generatePhoneNumber(exer11) {
+  if(exer11.length !== 11)
+    return 'Array com tamanho incorreto.';
+  
+  if(!checkNumbers(exer11)) 
+    return 'não é possível gerar um número de telefone com esses valores';
+  
+  if(exer11.length === 11)
       phoneNumber = "(" + exer11[0] + exer11[1] + ")" + " " + exer11[2] + exer11[3] + exer11[4] + exer11[5] + exer11[6] + "-" + exer11[7] + exer11[8] + exer11[9] + exer11[10];
     return phoneNumber;
 
