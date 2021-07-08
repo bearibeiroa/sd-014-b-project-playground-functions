@@ -25,11 +25,13 @@ return separou;
 }
 
 // Desafio 4
-function concatName(totalNames) {
+function concatName(allNames) {
+  let lastName = allNames[allNames.length - 1];
+  let fistName = allNames[0];
+  return lastName + ', ' + fistName;
+
   // seu código aqui
-  let primeiro = totalNames[0];
-  let ultimo = totalNames[totalNames.lenght - 1];
-  return ultimo + ', ' + primeiro;
+
 }
 
 // Desafio 5
