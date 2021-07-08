@@ -4,9 +4,41 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
   // seu código aqui
+
+  function checkNumbers(exer11) {
+    let numbersCount = {};
+  
+    for(let index of exer11) {
+      if(numbersCount[index] === undefined) 
+        numbersCount[index] = 1;
+      else
+        numbersCount[index]++;
+    }
+  
+    for(let index1 in numbersCount) {
+      if(index1 < 0 || index1 > 9) 
+        return false;
+      if(numbersCount[index1] >= 3)
+        return false;
+    }
+  
+    return true;
+  }
+  
+  function generatePhoneNumber(exer11) {
+    if(exer11.length !== 11)
+      return 'Array com tamanho incorreto.';
+  
+    if(!checkNumbers(exer11)) 
+      return 'não é possível gerar um número de telefone com esses valores';
+  
+    if(exer11.length === 11)
+      phoneNumber = "(" + exer11[0] + exer11[1] + ")" + " " + exer11[2] + exer11[3] + exer11[4] + exer11[5] + exer11[6] + "-" + exer11[7] + exer11[8] + exer11[9] + exer11[10];
+    return phoneNumber;
+
 }
+
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -40,12 +72,12 @@ e no final botei para retornar o valor de triang */
 // Desafio 13
 function hydrate(exer13) {
   // seu código aqui
-  let nDrinks = exer13.match(/[0-9]/g);
-  let soma = 0;
-    for(let i of nDrinks){
-      soma += Number(i)
+  let nDrinks = exer13.match(/[0-9]/g); // puxa somente os numeros da string e transforma em array
+  let soma = 0;                         
+    for(let i of nDrinks){              // percorre os elementos da array      
+      soma += Number(i)                 // soma os elementos da array
     }
-    if(soma > 1){
+    if(soma > 1){                       // se a soma for maior que 1 retorna copoS, se não, se for 1, ela retorna copo.
       return soma + " copos de água"
     }
   return soma + " copo de água"
