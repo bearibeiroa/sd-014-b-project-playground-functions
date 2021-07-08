@@ -111,29 +111,51 @@ function fizzBuzz(exer8) {
 function encode(str) {
   // seu código aqui
 let array = str.split('');
-for (let i of array)
-  if (array[i] === "a") {
-    return a === 1;
+for (let i = 0; i < array.length; i +=1) {
+  if (array[i] ===  "a") {
+    array[i] = 1;
   }
-  if (array[i] === "e") {
-    return e === 2;
+  else if (array[i] === "e") {
+    array[i] = 2;
   }
-  if (array[i] === "i") {
-    return i === 3;
+  else if (array[i] === "i") {
+    array[i] = 3;
   }
-  if (array[i] === "o") {
-    return i === 4;
+  else if (array[i] === "o") {
+    array[i] = 4;
   }
-  if (array[i] === "u") {
-    return u === 5;
+  else if (array[i] === "u") {
+    array[i] = 5;
+  } else {
+    array [i] === array[i];
   }
-
-  return array.toString()
-
+}  
+  return array.join('');
 }
-function decode() {
+function decode(str1) {
   // seu código aqui
-}
+  let array1 = str1.split('');
+  for (let i2 = 0; i2 < array1.length; i2 +=1) {
+    if (array1[i2] === '1') {
+      array1[i2] = "a";
+    }
+    else if (array1[i2] === '2') {
+      array1[i2] = "e";
+    }
+    else if (array1[i2] === '3') {
+      array1[i2] = "i";
+    }
+    else if (array1[i2] === '4') {
+      array1[i2] = "o";
+    }
+    else if (array1[i2] === '5') {
+      array1[i2] = "u";
+    } else {
+      array1 [i2] === array1[i2];
+    }
+  }  
+    return array1.join('');
+  }
 
 module.exports = {
   calcArea,
