@@ -25,8 +25,11 @@ return separou;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(totalNames) {
   // seu código aqui
+  let primeiro = totalNames[0];
+  let ultimo = totalNames[totalNames.lenght - 1];
+  return ultimo + ', ' + primeiro;
 }
 
 // Desafio 5
