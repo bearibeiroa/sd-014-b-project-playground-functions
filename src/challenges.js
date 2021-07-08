@@ -49,13 +49,12 @@ function footballPoints(wins, ties) {
 function highestCount(maxCount) {
   // seu código aqui
 //identificando maior numero fonte = https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
-bigger = Math.max(maxCount);
 totalShow = 0
 //contagem de repetição
 for (var index = 0; index < maxCount.length; i++) {
-  if (maxCount[index] === bigger) totalShow++;
+  if (maxCount[index] === Math.max(maxCount)) totalShow++;
 }
-return total;
+return totalShow;
 }
 
 
