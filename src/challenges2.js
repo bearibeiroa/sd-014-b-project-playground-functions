@@ -46,9 +46,9 @@ function hydrate(exer13) {
       soma += Number(i)
     }
     if(soma > 1){
-      return `${soma} copos de água`
+      return soma + " copos de água"
     }
-  return `${soma} copo de água`
+  return soma + " copo de água"
 }
 
 module.exports = {
