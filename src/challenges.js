@@ -82,12 +82,12 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// a distância dos gatos em relação ao rato estão nas formulas dist1 e dist2
-// como algum dos gatos pode estar na frente do rato, e o outro atrás, eu multipliquei os
-// resultados das distancias pelo seu próprio sinal, p ficar um valor positivo
-// então se a dist1 for menor, quer dizer que o gato 2 está mais perto, 
-// se a dist2 for maior, representa que o gato 1 está mais perto,
-// se a distancia for a mesma representa que eles irão se trombar no caminho.
+/* a distância dos gatos em relação ao rato estão nas formulas dist1 e dist2
+como algum dos gatos pode estar na frente do rato, e o outro atrás, eu multipliquei os
+resultados das distancias pelo seu próprio sinal, p ficar um valor positivo
+então se a dist1 for menor, quer dizer que o gato 2 está mais perto, 
+se a dist2 for maior, representa que o gato 1 está mais perto,
+se a distancia for a mesma representa que eles irão se trombar no caminho. */
 
 // Desafio 8
 function fizzBuzz(exer8) {
