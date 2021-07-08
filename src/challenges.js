@@ -108,8 +108,28 @@ function fizzBuzz(exer8) {
 }
 
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
+let array = str.split('');
+for (let i of array)
+  if (array[i] === "a") {
+    return a === 1;
+  }
+  if (array[i] === "e") {
+    return e === 2;
+  }
+  if (array[i] === "i") {
+    return i === 3;
+  }
+  if (array[i] === "o") {
+    return i === 4;
+  }
+  if (array[i] === "u") {
+    return u === 5;
+  }
+
+  return array.toString()
+
 }
 function decode() {
   // seu código aqui
