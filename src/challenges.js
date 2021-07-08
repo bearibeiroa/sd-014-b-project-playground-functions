@@ -49,15 +49,15 @@ function footballPoints(wins, ties) {
 function highestCount(maxCount) {
   // seu código aqui
 //identificando maior numero fonte = https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
-totalShow = 0
 bigger = Math.max(maxCount);
+totalShow = 0
 //contagem de repetição
-for(let index = 0; index <= maxCount.length; index ++)
-if (index = bigger){
-  total++;
+for (var index = 0; index < maxCount.length; i++) {
+  if (maxCount[index] === bigger) totalShow++;
 }
 return total;
 }
+
 
 // Desafio 7
 function catAndMouse() {
