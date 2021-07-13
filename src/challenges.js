@@ -52,12 +52,37 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  const positionCat1 = Math.abs(mouse - cat1);
+  const positionCat2 = Math.abs(mouse - cat2);
+
+  if (positionCat1 < positionCat2) {
+    return 'cat1';
+  }
+
+  if (positionCat1 > positionCat2) {
+    return 'cat2';
+  }
+
+  if (positionCat1 === positionCat2) {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let result = [];
+  array.forEach((element) => {
+    if (element % 7 === 0 && element % 9 === 0) {
+      result.push('fizzBuzz');
+    } else if (element % 7 === 0) {
+      result.push('fizz');
+    } else if (element % 9 === 0) {
+      result.push('buzz');
+    } else {
+      result.push('bug!');
+    }
+  });
+  return result;
 }
 
 // Desafio 9
