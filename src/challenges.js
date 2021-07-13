@@ -50,10 +50,10 @@ function highestCount(maxCount) {
   // seu código aqui
 //identificando maior numero fonte = https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 totalShow = 0
-bigNumber = maxCount[Math.max(maxCount)]
+bigNumber = Math.max(maxCount)
 
-for (var index = 0; index < maxCount.length; i++) {
-  if (index === bigNumber) totalShow++;
+for (var index = 0; index < maxCount.length; index += 1) {
+   totalShow++;
 }
 return totalShow;
 }
