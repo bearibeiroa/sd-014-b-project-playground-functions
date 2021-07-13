@@ -51,7 +51,7 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   const positionCat1 = Math.abs(mouse - cat1);
   const positionCat2 = Math.abs(mouse - cat2);
 
@@ -86,7 +86,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   string = string.replace('a', 1);
   string = string.replace('e', 2);
   string = string.replace('i', 3);
@@ -94,7 +94,7 @@ function encode() {
   string = string.replace('u', 5);
   return string;
 }
-function decode() {
+function decode(string) {
   string = string.replace(1, 'a');
   string = string.replace(2, 'e');
   string = string.replace(3, 'i');
