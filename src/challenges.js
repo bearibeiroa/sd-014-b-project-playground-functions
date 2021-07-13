@@ -22,6 +22,7 @@ function concatName(nomesArrays) {
   const lastItem = nomesArrays.length - 1;
   let str = nomesArrays[lastItem];
   str = str.concat(', ', array[0]);
+  
   return str;
 }
 
@@ -41,8 +42,12 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  numbers = numbers.sort((a, b) => a - b);
+  function isHighest(value) {
+    return value === numbers[numbers.length - 1];
+  }
+  return numbers.filter(isHighest).length;
 }
 
 // Desafio 7
