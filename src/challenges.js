@@ -62,27 +62,24 @@ return totalShow;
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let felix = 0;
-  let mandaChuva = 0;
-
+  var felix = 0;
+  var mandaChuva = 0;
   if (mouse >= cat1) {
     felix = mouse - cat1;
   } else {
     felix = cat1 - mouse;
   }
-
   if (mouse >= cat2) {
     mandaChuva = mouse - cat2;
   } else {
     mandaChuva = cat2 - mouse;
   }
-
   if (felix < mandaChuva) {
-    return cat1;
+    return 'cat1';
   } else if (mandaChuva < felix) {
-    return cat2;
-  }else{
-    'os gatos trombam e o rato foge';
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
   }
 }
 // Desafio 8
