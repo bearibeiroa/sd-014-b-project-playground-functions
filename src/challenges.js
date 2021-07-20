@@ -18,12 +18,10 @@ function splitSentence(nomesArrays) {
 }
 
 // Desafio 4
-function concatName(nomesArrays) {
-  const primeiroIten = nomesArrays[0];
-  const ultimoIten = nomesArrays[nomesArrays.length - 1];
-  
-  
-  return '${ultimoIten}, ${primeiroIten}';
+function concatName(nomes) {
+  let resultado = '';
+  resultado = `${nomes[nomes.length - 1]}, ${nomes[0]}`;
+  return resultado;
 }
 
 // Desafio 5

@@ -24,8 +24,17 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function hasLessThanSum(x, y, z) {
+  let abs = Math.abs(y - z);
+  return x < y + z && x > abs;
+}
+
+function triangleCheck(lineX, lineY, lineZ) {
+  return (
+    hasLessThanSum(lineX, lineY, lineZ)
+    && hasLessThanSum(lineY, lineX, lineZ)
+    && hasLessThanSum(lineZ, lineX, lineY)
+  );
 }
 
 // Desafio 13
