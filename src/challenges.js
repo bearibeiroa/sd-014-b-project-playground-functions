@@ -62,8 +62,8 @@ return totalShow;
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  var felix = 0;
-  var mandaChuva = 0;
+  let felix = 0;
+  let mandaChuva = 0;
   if (mouse >= cat1) {
     felix = mouse - cat1;
   } else {
@@ -100,11 +100,46 @@ function fizzBuzz(divNumbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(misterM) {
   // seu código aqui
+  let any ='';
+  for (let index = 0; index < misterM.length; index += 1){
+    if (misterM[index] === 'a') {
+      any += '1';
+    } else if (misterM[index] === 'e') {
+      any += '2';
+    } else if (misterM[index] === 'i') {
+      any += '3';
+    } else if (misterM[index] === 'o') {
+      any += '4';
+    } else if (misterM[index] === 'u') {
+      any += '5';
+    } else {
+      any += misterM[index];
+    }
+  }
+  return any;
+
 }
-function decode() {
+function decode(houdini) {
   // seu código aqui
+  let any ='';
+  for (let index = 0; index < houdini.length; index += 1){
+    if (houdini[index] === '1') {
+      any += 'a';
+    } else if (houdini[index] === '2') {
+      any += 'e';
+    } else if (houdini[index] === '3') {
+      any += 'i';
+    } else if (houdini[index] === '4') {
+      any += 'o';
+    } else if (houdini[index] === '5') {
+      any += 'u';
+    } else {
+      any += houdini[index];
+    }
+  }
+  return any;
 }
 
 module.exports = {
