@@ -19,11 +19,11 @@ function splitSentence(nomesArrays) {
 
 // Desafio 4
 function concatName(nomesArrays) {
-  const lastItem = nomesArrays.length - 1;
-  let str = nomesArrays[lastItem];
-  str = str.concat(', ', array[0]);
+  const primeiroIten = nomesArrays[0];
+  const ultimoIten = nomesArrays[nomesArrays.length - 1];
   
-  return str;
+  
+  return '${ultimoIten}, ${primeiroIten}';
 }
 
 // Desafio 5
@@ -69,38 +69,73 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  let result = [];
-  array.forEach((element) => {
-    if (element % 7 === 0 && element % 9 === 0) {
-      result.push('fizzBuzz');
-    } else if (element % 7 === 0) {
-      result.push('fizz');
-    } else if (element % 9 === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
+function verificaFizBuzz(numero) {
+  let string = null;
+
+  if (numero % 3 === 0 && numero % 5 === 0) {
+    string = 'fizzBuzz';
+  } else if (numero % 3 === 0) {
+    string = 'fizz';
+  } else if (numero % 5 === 0) {
+    string = 'buzz';
+  }
+
+  return string;
+}
+
+function fizzBuzz(arrayNum) {
+  const arrayResult = [];
+
+  for (let i = 0; i < arrayNum.length; i += 1) {
+    let string;
+
+    string = verificaFizBuzz(arrayNum[i]);
+
+    if (string === null) {
+      string = 'bug!';
     }
-  });
-  return result;
+
+    arrayResult.push(string);
+  }
+
+  return arrayResult;
 }
 
 // Desafio 9
-function encode(string) {
-  string = string.replace('a', 1);
-  string = string.replace('e', 2);
-  string = string.replace('i', 3);
-  string = string.replace('o', 4);
-  string = string.replace('u', 5);
-  return string;
+function encode(str) {
+  let subList = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  let listEncoded = str.replace(/a|e|i|o|u/gi, (item) => {
+    let it = subList[item];
+    let listItem = it.replace(/(?:^|\s)\S/g, function (elemento) {
+      return elemento;
+    });
+    return listItem;
+  });
+  return listEncoded;
 }
-function decode(string) {
-  string = string.replace(1, 'a');
-  string = string.replace(2, 'e');
-  string = string.replace(3, 'i');
-  string = string.replace(4, 'o');
-  string = string.replace(5, 'u');
-  return string;
+
+function decode(str2) {
+  let subList = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let listEncoded = str2.replace(/1|2|3|4|5/gi, (item) => {
+    let itt = subList[item];
+    let listItem = itt.replace(/(?:^|\s)\S/g, function (elemento) {
+      return elemento;
+    });
+    return listItem;
+  });
+  return listEncoded;
 }
 
 module.exports = {
