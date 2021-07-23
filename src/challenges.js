@@ -52,6 +52,9 @@ function footballPoints(wins, ties) {
     let contTies = ties * 1;
     let resultado = contWin + contTies;
     return resultado;
+  } else{
+    resultado = 0;
+    return resultado;
   }
 }
 
