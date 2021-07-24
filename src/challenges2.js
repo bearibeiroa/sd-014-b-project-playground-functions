@@ -1,12 +1,36 @@
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
-  let resultado;
-  for (let index in tech, name) {
-    console.log(tech, name[index]);
+  let student = [];
+  let techs = [];
+  let org;
+
+  for(let index in tech){
+    org = tech.sort();
+    student.push(org[index]);
   }
 
+
+  if(student.length === 0){
+    return 'Vazio!';
+
+  } else {
+    for(let index = 0; index < student.length; index += 1){
+      techs.push({
+        tech: student[index],
+        name: name      
+        })
+      
+    }
+  }
+
+  return techs;
+
 }
+    
+
+
+
 
 // Desafio 11
 function generatePhoneNumber(numero) {
@@ -20,9 +44,6 @@ function generatePhoneNumber(numero) {
   let repeat = 0;
   let nmb;
 
-
-
-
   for(let i = 0; i < numero.length; i += 1){
     repeat = 0;
     for(let index = 0; index < numero.length; index += 1){
@@ -35,22 +56,14 @@ function generatePhoneNumber(numero) {
     }
   }
 
-
-
   for (let index in numero) {
-  
-    
-  
-
-    
+     
     nmb = "(" + numero[0] + numero[1] + ") " + 
     numero[2] + numero[3] + numero[4] + numero[5] + 
     numero[6] + "-" + numero[7] + numero[8] + numero[9] +
     numero[10];
     
-    resultado.push(numero[index]);
-
-    
+    resultado.push(numero[index]);    
 
     if(contx == 0){
       numeroTel.push("(");
