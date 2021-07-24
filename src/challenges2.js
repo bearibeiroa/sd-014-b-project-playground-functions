@@ -133,11 +133,35 @@ function generatePhoneNumber(numero) {
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let contMenor;
-  let cont2;
-  let cont3;
+  let somaAB = lineA + lineB;
+  let somaBC = lineB + lineC;
+  let somaAC = lineC + lineA;
 
+  if(lineA > somaBC || lineB > somaAC || lineC > somaAB){
+    return false;
+
+  } else{
+    
+  }
+  
   if(lineA || lineB > lineC){
     contMenor = 1;
+
+  } else if(lineB || lineC > lineA){
+    contMenor = 1;
+
+  } else if(lineA || lineC > lineB){
+    contMenor = 1;
+
+  } else {
+    contMenor = 0;
+  } 
+
+  if(contMenor > 1){
+    return false;
+  } else {
+
+    return true;
   }
   
 }
