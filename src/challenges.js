@@ -22,14 +22,18 @@ function splitSentence("go Trybe") {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+  function concatName(arrayOfNames) {
+  return (arrayOfNames[arrayOfNames.length-1] + ", " + arrayOfNames[0]);
 }
 
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints( wins, ties) {
+return ((3* wins) + ( 1* ties));
 }
+console.log(14 wins, 8 ties);
+console.log(1 wins, 2 ties);
+console.log(0 wins, 0 ties);
 
 // Desafio 6
 function highestCount() {
@@ -66,3 +70,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+// para este projeto eu fiz pesquisas nos seguintes sites: devmedia, w3Schools, stackoverflow e developer.mozila. e também pedi ajuda de um amigo
