@@ -18,9 +18,7 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 3
 function splitSentence("go Trybe") {
-  function splitSentence(frase) {
-    let
-  return frase.split(' ');
+  return frase.split(" ");
 }
 
 // Desafio 4
