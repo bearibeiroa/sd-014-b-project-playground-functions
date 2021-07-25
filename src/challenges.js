@@ -28,9 +28,6 @@ function splitSentence(frase) {
 function footballPoints( wins, ties) {
 return ((3* wins) + ( 1* ties));
 }
-console.log(14 wins, 8 ties);
-console.log(1 wins, 2 ties);
-console.log(0 wins, 0 ties);
 
 // Desafio 6
 function highestCount() {
