@@ -1,11 +1,5 @@
 // Desafio 1
-function compareTrue(valor1, valor2) {
-  if (valor1 === true && valor2 === true) {
-    return true;
-  } else {
-    return false;
-  }
-}
+
 
 // Desafio 2
  function calcArea(base, height) {
@@ -37,7 +31,7 @@ console.log(0 wins, 0 ties);
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  
 }
 
 // Desafio 7
